@@ -1,0 +1,4 @@
+#include "SharedConfiguration.xcconfig"
+PREPROCESSOR_MACROS = TEST_APP=1
+
+// configuration for creating MultiEnv TestApp 
