@@ -1,0 +1,66 @@
+disabled_rules:
+  - identifier_name
+  - nesting
+  - vertical_whitespace
+  - unused_optional_binding
+  - comment_spacing
+  - force-cast
+  
+opt_in_rules:
+- empty_count
+- empty_string
+
+included:
+  - SampleApp
+  - SampleAppTests
+  - SampleAppUITests
+  
+excluded:
+  - Pods
+  - SampleApp/R.generated.swift
+  - SwiftLint/Common/3rdPartyLib
+
+line_length:
+    warning: 150
+    error: 200
+    ignores_function_declarations: true
+    ignores_comments: true
+    ignores_urls: true
+    
+function_body_length:
+    warning: 300
+    error: 500
+    
+function_parameter_count:
+    warning: 6
+    error: 8
+    
+type_body_length:
+    warning: 300
+    error: 500
+    
+file_length:
+    warning: 1000
+    error: 1500
+    ignore_comment_only_lines: true
+    
+cyclomatic_complexity:
+    warning: 15
+    error: 25
+
+type_name:
+  min_length: 3
+  max_length:
+    warning: 40
+    error: 50
+  excluded: iPhone
+  allowed_symbols: ["_"]
+  
+identifier_name:
+  min_length:
+    error: 4
+  excluded:
+    - id
+    - URL
+    - GlobalAPIKey
+reporter: "xcode"

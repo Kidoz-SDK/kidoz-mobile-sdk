@@ -1,11 +1,13 @@
 //
 //  MainViewControllerHandler.swift
-//  CommonTestApp
+//  SampleApp
 //
-//  Created by Yarden Rosenberg on 17/08/2022.
+//  Created by Maria on 26/07/2023.
 //
 
-public protocol MainViewControllerHandler{
+import Foundation
+
+public protocol MainViewControllerHandler {
     func setViewController(baseMainViewController: BaseMainViewController)
     func getAppLabel() -> String
     func getSDKVersion() -> String

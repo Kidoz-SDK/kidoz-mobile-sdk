@@ -7,18 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C4048C92A712B0900230602 /* BaseMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4048C82A712B0900230602 /* BaseMainViewController.swift */; };
+		4C4048CD2A712BEB00230602 /* KidozSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C4048CC2A712BEB00230602 /* KidozSDK.xcframework */; };
+		4C4048CF2A712C3100230602 /* MainViewControllerHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4048CE2A712C3100230602 /* MainViewControllerHandler.swift */; };
 		4CE524982A6FBCCB0098022F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE524972A6FBCCB0098022F /* AppDelegate.swift */; };
 		4CE5249A2A6FBCCB0098022F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE524992A6FBCCB0098022F /* SceneDelegate.swift */; };
 		4CE5249F2A6FBCCB0098022F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CE5249D2A6FBCCB0098022F /* Main.storyboard */; };
 		4CE524A12A6FBCCC0098022F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CE524A02A6FBCCC0098022F /* Assets.xcassets */; };
 		4CE524A42A6FBCCC0098022F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CE524A22A6FBCCC0098022F /* LaunchScreen.storyboard */; };
-		4CE524AD2A6FC0F90098022F /* CommonSampleApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CE524AC2A6FC0F90098022F /* CommonSampleApp.framework */; };
 		4CE524C42A6FC5D00098022F /* MainViewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE524C32A6FC5D00098022F /* MainViewHandler.swift */; };
 		4CE524C62A6FC6470098022F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE524C52A6FC6470098022F /* MainViewController.swift */; };
 		4CE524C92A6FC7540098022F /* TestApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4CE524C72A6FC7540098022F /* TestApp.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4C4048C82A712B0900230602 /* BaseMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseMainViewController.swift; sourceTree = "<group>"; };
+		4C4048CC2A712BEB00230602 /* KidozSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = KidozSDK.xcframework; sourceTree = SOURCE_ROOT; };
+		4C4048CE2A712C3100230602 /* MainViewControllerHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerHandler.swift; sourceTree = "<group>"; };
 		4CE524942A6FBCCB0098022F /* SampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CE524972A6FBCCB0098022F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4CE524992A6FBCCB0098022F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,7 +31,6 @@
 		4CE524A02A6FBCCC0098022F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4CE524A32A6FBCCC0098022F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4CE524A52A6FBCCC0098022F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4CE524AC2A6FC0F90098022F /* CommonSampleApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CommonSampleApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CE524C32A6FC5D00098022F /* MainViewHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewHandler.swift; sourceTree = "<group>"; };
 		4CE524C52A6FC6470098022F /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		4CE524C82A6FC7540098022F /* TestApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TestApp.xcdatamodel; sourceTree = "<group>"; };
@@ -37,7 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4CE524AD2A6FC0F90098022F /* CommonSampleApp.framework in Frameworks */,
+				4C4048CD2A712BEB00230602 /* KidozSDK.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,11 +71,14 @@
 				4CE524972A6FBCCB0098022F /* AppDelegate.swift */,
 				4CE524992A6FBCCB0098022F /* SceneDelegate.swift */,
 				4CE524C52A6FC6470098022F /* MainViewController.swift */,
+				4C4048C82A712B0900230602 /* BaseMainViewController.swift */,
 				4CE524C32A6FC5D00098022F /* MainViewHandler.swift */,
+				4C4048CE2A712C3100230602 /* MainViewControllerHandler.swift */,
 				4CE5249D2A6FBCCB0098022F /* Main.storyboard */,
 				4CE524A02A6FBCCC0098022F /* Assets.xcassets */,
 				4CE524C72A6FC7540098022F /* TestApp.xcdatamodeld */,
 				4CE524A22A6FBCCC0098022F /* LaunchScreen.storyboard */,
+				4C4048CC2A712BEB00230602 /* KidozSDK.xcframework */,
 				4CE524A52A6FBCCC0098022F /* Info.plist */,
 			);
 			path = SampleApp;
@@ -80,7 +87,6 @@
 		4CE524AB2A6FC0F90098022F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4CE524AC2A6FC0F90098022F /* CommonSampleApp.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -156,8 +162,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C4048C92A712B0900230602 /* BaseMainViewController.swift in Sources */,
 				4CE524982A6FBCCB0098022F /* AppDelegate.swift in Sources */,
 				4CE524C92A6FC7540098022F /* TestApp.xcdatamodeld in Sources */,
+				4C4048CF2A712C3100230602 /* MainViewControllerHandler.swift in Sources */,
 				4CE524C42A6FC5D00098022F /* MainViewHandler.swift in Sources */,
 				4CE5249A2A6FBCCB0098022F /* SceneDelegate.swift in Sources */,
 				4CE524C62A6FC6470098022F /* MainViewController.swift in Sources */,
