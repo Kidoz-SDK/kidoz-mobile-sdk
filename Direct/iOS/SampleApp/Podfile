@@ -1,0 +1,12 @@
+workspace 'SampleApp.xcworkspace'
+platform :ios, '10.0'
+
+target 'SampleApp' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for SampleApp
+  pod ‘KidozSDK’, :podspec => 'https://github.com/Kidoz-SDK/kidoz-ios-frameworks/raw/main/KidozSDK/KidozSDK.podspec'
+  project 'SampleApp/SampleApp.xcodeproj'
+
+end

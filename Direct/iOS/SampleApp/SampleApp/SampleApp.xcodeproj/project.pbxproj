@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		4C4048C92A712B0900230602 /* BaseMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4048C82A712B0900230602 /* BaseMainViewController.swift */; };
-		4C4048CD2A712BEB00230602 /* KidozSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C4048CC2A712BEB00230602 /* KidozSDK.xcframework */; };
 		4C4048CF2A712C3100230602 /* MainViewControllerHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4048CE2A712C3100230602 /* MainViewControllerHandler.swift */; };
 		4CE524982A6FBCCB0098022F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE524972A6FBCCB0098022F /* AppDelegate.swift */; };
 		4CE5249A2A6FBCCB0098022F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE524992A6FBCCB0098022F /* SceneDelegate.swift */; };
@@ -22,7 +21,6 @@
 
 /* Begin PBXFileReference section */
 		4C4048C82A712B0900230602 /* BaseMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseMainViewController.swift; sourceTree = "<group>"; };
-		4C4048CC2A712BEB00230602 /* KidozSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = KidozSDK.xcframework; sourceTree = SOURCE_ROOT; };
 		4C4048CE2A712C3100230602 /* MainViewControllerHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerHandler.swift; sourceTree = "<group>"; };
 		4CE524942A6FBCCB0098022F /* SampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CE524972A6FBCCB0098022F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -41,7 +39,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C4048CD2A712BEB00230602 /* KidozSDK.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,7 +75,6 @@
 				4CE524A02A6FBCCC0098022F /* Assets.xcassets */,
 				4CE524C72A6FC7540098022F /* TestApp.xcdatamodeld */,
 				4CE524A22A6FBCCC0098022F /* LaunchScreen.storyboard */,
-				4C4048CC2A712BEB00230602 /* KidozSDK.xcframework */,
 				4CE524A52A6FBCCC0098022F /* Info.plist */,
 			);
 			path = SampleApp;
