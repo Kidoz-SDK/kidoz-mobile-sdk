@@ -10,13 +10,14 @@
 		00DC9A74031C5C51DEDC17E9 /* Pods_SampleAppObjc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BF4B0A7EA894541C9344311 /* Pods_SampleAppObjc.framework */; };
 		4C4114942A77A54D004FFE76 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4114932A77A54D004FFE76 /* AppDelegate.m */; };
 		4C4114972A77A54D004FFE76 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4114962A77A54D004FFE76 /* SceneDelegate.m */; };
-		4C41149A2A77A54D004FFE76 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4114992A77A54D004FFE76 /* ViewController.m */; };
 		4C41149D2A77A54D004FFE76 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C41149B2A77A54D004FFE76 /* Main.storyboard */; };
 		4C41149F2A77A54E004FFE76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C41149E2A77A54E004FFE76 /* Assets.xcassets */; };
 		4C4114A22A77A54E004FFE76 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C4114A02A77A54E004FFE76 /* LaunchScreen.storyboard */; };
 		4C4114A52A77A54E004FFE76 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4114A42A77A54E004FFE76 /* main.m */; };
 		4C4114B92A77B299004FFE76 /* CommonSampleApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C4114B82A77B299004FFE76 /* CommonSampleApp.framework */; };
 		4C4114BA2A77B299004FFE76 /* CommonSampleApp.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4C4114B82A77B299004FFE76 /* CommonSampleApp.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4C4114BE2A77C0A3004FFE76 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4114BD2A77C0A3004FFE76 /* MainViewController.m */; };
+		4C4114C12A77C3A7004FFE76 /* MainViewHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4114C02A77C3A7004FFE76 /* MainViewHandler.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -40,14 +41,16 @@
 		4C4114932A77A54D004FFE76 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		4C4114952A77A54D004FFE76 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		4C4114962A77A54D004FFE76 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		4C4114982A77A54D004FFE76 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		4C4114992A77A54D004FFE76 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		4C41149C2A77A54D004FFE76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4C41149E2A77A54E004FFE76 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4C4114A12A77A54E004FFE76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4C4114A32A77A54E004FFE76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C4114A42A77A54E004FFE76 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4C4114B82A77B299004FFE76 /* CommonSampleApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CommonSampleApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C4114BC2A77C0A3004FFE76 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		4C4114BD2A77C0A3004FFE76 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		4C4114BF2A77C3A7004FFE76 /* MainViewHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewHandler.h; sourceTree = "<group>"; };
+		4C4114C02A77C3A7004FFE76 /* MainViewHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewHandler.m; sourceTree = "<group>"; };
 		632C0C5C56BA503B80FB5086 /* Pods-SampleAppObjc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleAppObjc.debug.xcconfig"; path = "Target Support Files/Pods-SampleAppObjc/Pods-SampleAppObjc.debug.xcconfig"; sourceTree = "<group>"; };
 		6F7CC6C88BDA665B8BB15E77 /* Pods-SampleAppObjc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleAppObjc.release.xcconfig"; path = "Target Support Files/Pods-SampleAppObjc/Pods-SampleAppObjc.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -90,8 +93,10 @@
 				4C4114932A77A54D004FFE76 /* AppDelegate.m */,
 				4C4114952A77A54D004FFE76 /* SceneDelegate.h */,
 				4C4114962A77A54D004FFE76 /* SceneDelegate.m */,
-				4C4114982A77A54D004FFE76 /* ViewController.h */,
-				4C4114992A77A54D004FFE76 /* ViewController.m */,
+				4C4114BC2A77C0A3004FFE76 /* MainViewController.h */,
+				4C4114BF2A77C3A7004FFE76 /* MainViewHandler.h */,
+				4C4114C02A77C3A7004FFE76 /* MainViewHandler.m */,
+				4C4114BD2A77C0A3004FFE76 /* MainViewController.m */,
 				4C41149B2A77A54D004FFE76 /* Main.storyboard */,
 				4C41149E2A77A54E004FFE76 /* Assets.xcassets */,
 				4C4114A02A77A54E004FFE76 /* LaunchScreen.storyboard */,
@@ -235,10 +240,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C41149A2A77A54D004FFE76 /* ViewController.m in Sources */,
 				4C4114942A77A54D004FFE76 /* AppDelegate.m in Sources */,
 				4C4114A52A77A54E004FFE76 /* main.m in Sources */,
+				4C4114BE2A77C0A3004FFE76 /* MainViewController.m in Sources */,
 				4C4114972A77A54D004FFE76 /* SceneDelegate.m in Sources */,
+				4C4114C12A77C3A7004FFE76 /* MainViewHandler.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
