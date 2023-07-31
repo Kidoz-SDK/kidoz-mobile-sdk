@@ -81,7 +81,7 @@ public class MainViewHandler: NSObject, MainViewControllerHandler, KidozInitDele
         baseMainViewController.onBannerClosed()
     }
     
-    // MARK: - Interstitials
+    // MARK: - Interstitial ad
     public func loadInterstitial() {
         if Kidoz.instance().isSDKInitialized() {
             KidozInterstitialAd.load(delegate: self)
@@ -123,7 +123,7 @@ public class MainViewHandler: NSObject, MainViewControllerHandler, KidozInitDele
         baseMainViewController.onInterstitialClosed()
     }
     
-    // MARK: - Rewarded
+    // MARK: - Rewarded ad
     public func loadRewarded() {
         if Kidoz.instance().isSDKInitialized() {
             KidozRewardedAd.load(delegate: self)
@@ -189,13 +189,14 @@ public class MainViewHandler: NSObject, MainViewControllerHandler, KidozInitDele
                     attribute: .top,
                     multiplier: 1,
                     constant: 0),
-                 NSLayoutConstraint(item: bannerView!,
-                                    attribute: .centerX,
-                                    relatedBy: .equal,
-                                    toItem: view,
-                                    attribute: .centerX,
-                                    multiplier: 1,
-                                    constant: 0),
+                 NSLayoutConstraint(
+                    item: bannerView!,
+                    attribute: .centerX,
+                    relatedBy: .equal,
+                    toItem: view,
+                    attribute: .centerX,
+                    multiplier: 1,
+                    constant: 0),
                  NSLayoutConstraint(
                     item: bannerView!,
                     attribute: .height,
