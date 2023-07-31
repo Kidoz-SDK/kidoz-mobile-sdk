@@ -6,6 +6,8 @@
 //
 
 #import "MainViewController.h"
+#import "MainViewHandler.h"
+#import <CommonSampleApp/CommonSampleApp.h>
 
 @interface MainViewController ()
 
@@ -15,7 +17,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.view.backgroundColor = [UIColor redColor]; 
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 10 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+        [self openMain];
+    });
+}
+
+- (void)openMain {
+    [BaseMainViewController launchScreenWithViewController:self mainViewHandler:[MainViewHandler init]];
 }
 
 @end

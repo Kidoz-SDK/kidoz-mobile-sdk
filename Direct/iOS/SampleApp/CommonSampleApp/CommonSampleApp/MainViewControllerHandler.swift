@@ -7,7 +7,7 @@
 
 import Foundation
 
-public protocol MainViewControllerHandler {
+@objc public protocol MainViewControllerHandler {
     func setViewController(baseMainViewController: BaseMainViewController)
     func getAppLabel() -> String
     func getSDKVersion() -> String

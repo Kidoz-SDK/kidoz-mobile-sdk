@@ -9,7 +9,7 @@ import UIKit
 import MessageUI
 import KidozSDK
 
-public class BaseMainViewController: UIViewController, MFMailComposeViewControllerDelegate {
+@objc public class BaseMainViewController: UIViewController, MFMailComposeViewControllerDelegate {
     
     var mainViewHandler: MainViewControllerHandler!
     var firstTimeViewAppears = true
@@ -50,17 +50,12 @@ public class BaseMainViewController: UIViewController, MFMailComposeViewControll
         }
     }
     
-    public func setMainViewHandler(mainViewHandler: MainViewControllerHandler) {
+    @objc public func setMainViewHandler(mainViewHandler: MainViewControllerHandler) {
         self.mainViewHandler = mainViewHandler
         mainViewHandler.setViewController(baseMainViewController: self)
     }
     
-    public func hideBannerButtons() {
-        loadBannerBtn.isHidden = true
-        hideBannerBtn.isHidden = true
-    }
-    
-    public func logOut(message: String) {
+    @objc public func logOut(message: String) {
         logText.text = logText.text + message + "\n"
         let location = logText.text.count - 1
         let bottom = NSRange(location: location, length: 1)
@@ -68,20 +63,20 @@ public class BaseMainViewController: UIViewController, MFMailComposeViewControll
         NSLog(message)
     }
     
-    func getSDKVersion() -> String {
+    @objc func getSDKVersion() -> String {
         let sdkVersion: String = mainViewHandler.getSDKVersion(), build = Bundle.main.object(forInfoDictionaryKey: kCFBundleVersionKey as String) as! String
         return "\(sdkVersion)(\(build))"
     }
     
     // MARK: - SDK
-    public func onSDKInitSuccess() {
+    @objc public func onSDKInitSuccess() {
         logOut(message: "SDK Init Success")
         loadInterstitialBtn.isEnabled = true
         loadRewardedBtn.isEnabled = true
         loadBannerBtn.isEnabled = true
     }
     
-    public func onSDKInitFailure(error: String!) {
+    @objc public func onSDKInitFailure(error: String!) {
         logOut(message: "SDK Init Error: " + error)
     }
     
@@ -98,35 +93,35 @@ public class BaseMainViewController: UIViewController, MFMailComposeViewControll
         mainViewHandler.showInterstitial()
     }
     
-    public func onInterstitialClosed() {
+    @objc public func onInterstitialClosed() {
         logOut(message: "Interstitial Closed")
         loadInterstitialBtn.isEnabled = true
         showInterstitialBtn.isEnabled = false
     }
     
-    public func onInterstitialOpened() {
+    @objc public func onInterstitialOpened() {
         logOut(message: "Interstitial Shown")
     }
     
-    public func onInterstitialLoaded() {
+    @objc public func onInterstitialLoaded() {
         logOut(message: "Interstitial Loaded")
         loadInterstitialBtn.isEnabled = false
         showInterstitialBtn.isEnabled = true
     }
     
-    public func onInterstitialLoadFailed(error: String!) {
+    @objc public func onInterstitialLoadFailed(error: String!) {
         logOut(message: "Interstitial Failed to Load:: " + error)
         loadInterstitialBtn.isEnabled = true
         showInterstitialBtn.isEnabled = false
     }
     
-    public func onInterstitialShowFailed(error: String!) {
+    @objc public func onInterstitialShowFailed(error: String!) {
         logOut(message: "Interstitial Failed to Show:: " + error)
         loadInterstitialBtn.isEnabled = true
         showInterstitialBtn.isEnabled = false
     }
     
-    public func onInterstitialImpression() {
+    @objc public func onInterstitialImpression() {
         logOut(message: "Interstitial Impression")
     }
     
@@ -143,38 +138,38 @@ public class BaseMainViewController: UIViewController, MFMailComposeViewControll
         mainViewHandler.showRewarded()
     }
     
-    public func onRewardedClosed() {
+    @objc public func onRewardedClosed() {
         logOut(message: "Rewarded Closed")
         loadRewardedBtn.isEnabled = true
         showRewardedBtn.isEnabled = false
     }
     
-    public func onRewardedOpened() {
+    @objc public func onRewardedOpened() {
         logOut(message: "Rewarded Shown")
     }
     
-    public func onRewardedLoaded() {
+    @objc public func onRewardedLoaded() {
         logOut(message: "Rewarded Loaded")
         showRewardedBtn.isEnabled = true
     }
     
-    public func onRewardedLoadFailed(error: String!) {
+    @objc public func onRewardedLoadFailed(error: String!) {
         logOut(message: "Rewarded Failed to Load::" + error)
         loadRewardedBtn.isEnabled = true
         showRewardedBtn.isEnabled = false
     }
     
-    public func onRewardedShowFailed(error: String!) {
+    @objc public func onRewardedShowFailed(error: String!) {
         logOut(message: "Rewarded Failed to Show::" + error)
         loadRewardedBtn.isEnabled = true
         showRewardedBtn.isEnabled = false
     }
     
-    public func onRewardAchieved() {
+    @objc public func onRewardAchieved() {
         logOut(message: "Reward Received")
     }
     
-    public func onRewardedImpression() {
+    @objc public func onRewardedImpression() {
         logOut(message: "Rewarded Impression")
     }
     
@@ -191,43 +186,43 @@ public class BaseMainViewController: UIViewController, MFMailComposeViewControll
         hideBannerBtn.isEnabled = false
     }
     
-    public func onBannerClosed() {
+    @objc public func onBannerClosed() {
         logOut(message: "Banner Closed")
         loadBannerBtn.isEnabled = true
         hideBannerBtn.isEnabled = false
         
     }
     
-    public func onBannerOpened() {
+    @objc public func onBannerOpened() {
         logOut(message: "Banner Shown")
     }
     
-    public func onBannerLoaded() {
+    @objc public func onBannerLoaded() {
         logOut(message: "Banner Loaded")
         hideBannerBtn.isEnabled = true
     }
     
-    public func onBannerLoadFailed(error: String!) {
+    @objc public func onBannerLoadFailed(error: String!) {
         logOut(message: "Banner Failed to Load::" + error)
         loadBannerBtn.isEnabled = true
         hideBannerBtn.isEnabled = false
     }
     
-    public func onBannerShowFailed(error: String!) {
+    @objc public func onBannerShowFailed(error: String!) {
         logOut(message: "Banner Failed to Show::" + error)
         loadBannerBtn.isEnabled = true
         hideBannerBtn.isEnabled = false
     }
     
-    public func onBannerImpression() {
+    @objc public func onBannerImpression() {
         logOut(message: "Banner Impression")
     }
     
-    public func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+    @objc public func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         controller.dismiss(animated: true)
     }
     
-    public static func launchScreen(viewController: UIViewController, mainViewHandler: MainViewControllerHandler) {
+    @objc public static func launchScreen(viewController: UIViewController, mainViewHandler: MainViewControllerHandler) {
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle(for: BaseMainViewController.self))
         
         if let mainViewController = storyboard.instantiateViewController(withIdentifier: "baseMainViewController") as? BaseMainViewController {

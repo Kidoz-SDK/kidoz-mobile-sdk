@@ -13,11 +13,8 @@ public class MainViewHandler: NSObject, MainViewControllerHandler, KidozInitDele
     
     var baseMainViewController: BaseMainViewController!
     var bannerView: KidozBannerView!
-    
     var interstitialAd: KidozSDK.KidozInterstitialAd?
-    
     var rewardedAd: KidozSDK.KidozRewardedAd?
-    var rewardedAd2: KidozSDK.KidozRewardedAd?
     
     public func setViewController(baseMainViewController: BaseMainViewController) {
         self.baseMainViewController = baseMainViewController

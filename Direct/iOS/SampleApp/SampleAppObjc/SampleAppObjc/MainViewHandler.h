@@ -6,11 +6,9 @@
 //
 
 #import <Foundation/Foundation.h>
-
-NS_ASSUME_NONNULL_BEGIN
+#import <CommonSampleApp/CommonSampleApp.h>
+#import <KidozSDK/KidozSDK.h>
 
 @interface MainViewHandler : NSObject
 
 @end
-
-NS_ASSUME_NONNULL_END
