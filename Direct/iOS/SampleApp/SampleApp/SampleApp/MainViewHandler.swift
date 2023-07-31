@@ -7,6 +7,7 @@
 
 import Foundation
 import KidozSDK
+import CommonSampleApp
 
 public class MainViewHandler: NSObject, MainViewControllerHandler, KidozInitDelegate, KidozInterstitialDelegate, KidozRewardedDelegate, KidozBannerDelegate {
     

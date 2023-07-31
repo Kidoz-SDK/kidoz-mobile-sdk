@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4C4048C92A712B0900230602 /* BaseMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4048C82A712B0900230602 /* BaseMainViewController.swift */; };
-		4C4048CF2A712C3100230602 /* MainViewControllerHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4048CE2A712C3100230602 /* MainViewControllerHandler.swift */; };
+		4C4114B02A77A764004FFE76 /* CommonSampleApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C4114AF2A77A764004FFE76 /* CommonSampleApp.framework */; };
+		4C4114B12A77A764004FFE76 /* CommonSampleApp.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4C4114AF2A77A764004FFE76 /* CommonSampleApp.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4CE524982A6FBCCB0098022F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE524972A6FBCCB0098022F /* AppDelegate.swift */; };
 		4CE5249A2A6FBCCB0098022F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE524992A6FBCCB0098022F /* SceneDelegate.swift */; };
 		4CE5249F2A6FBCCB0098022F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CE5249D2A6FBCCB0098022F /* Main.storyboard */; };
@@ -20,11 +20,24 @@
 		DBAD52A475ECBF5ED9F76FE5 /* Pods_SampleApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 922DEA9E8A5B32EBBE5889E2 /* Pods_SampleApp.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		4C4114B22A77A764004FFE76 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				4C4114B12A77A764004FFE76 /* CommonSampleApp.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		2F3020E4840AC0CD2D602120 /* Pods-SampleApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleApp.release.xcconfig"; path = "Target Support Files/Pods-SampleApp/Pods-SampleApp.release.xcconfig"; sourceTree = "<group>"; };
 		321D40711CA044CE36FE33F6 /* Pods-SampleApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleApp.debug.xcconfig"; path = "Target Support Files/Pods-SampleApp/Pods-SampleApp.debug.xcconfig"; sourceTree = "<group>"; };
-		4C4048C82A712B0900230602 /* BaseMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseMainViewController.swift; sourceTree = "<group>"; };
-		4C4048CE2A712C3100230602 /* MainViewControllerHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerHandler.swift; sourceTree = "<group>"; };
+		4C4114AF2A77A764004FFE76 /* CommonSampleApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CommonSampleApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CE524942A6FBCCB0098022F /* SampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CE524972A6FBCCB0098022F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4CE524992A6FBCCB0098022F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -44,6 +57,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBAD52A475ECBF5ED9F76FE5 /* Pods_SampleApp.framework in Frameworks */,
+				4C4114B02A77A764004FFE76 /* CommonSampleApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,9 +88,7 @@
 				4CE524972A6FBCCB0098022F /* AppDelegate.swift */,
 				4CE524992A6FBCCB0098022F /* SceneDelegate.swift */,
 				4CE524C52A6FC6470098022F /* MainViewController.swift */,
-				4C4048C82A712B0900230602 /* BaseMainViewController.swift */,
 				4CE524C32A6FC5D00098022F /* MainViewHandler.swift */,
-				4C4048CE2A712C3100230602 /* MainViewControllerHandler.swift */,
 				4CE5249D2A6FBCCB0098022F /* Main.storyboard */,
 				4CE524A02A6FBCCC0098022F /* Assets.xcassets */,
 				4CE524C72A6FC7540098022F /* TestApp.xcdatamodeld */,
@@ -89,6 +101,7 @@
 		4CE524AB2A6FC0F90098022F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4C4114AF2A77A764004FFE76 /* CommonSampleApp.framework */,
 				922DEA9E8A5B32EBBE5889E2 /* Pods_SampleApp.framework */,
 			);
 			name = Frameworks;
@@ -116,6 +129,7 @@
 				4CE524912A6FBCCB0098022F /* Frameworks */,
 				4CE524922A6FBCCB0098022F /* Resources */,
 				39DE1E7FFECF5D4E31911480 /* [CP] Embed Pods Frameworks */,
+				4C4114B22A77A764004FFE76 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -219,10 +233,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C4048C92A712B0900230602 /* BaseMainViewController.swift in Sources */,
 				4CE524982A6FBCCB0098022F /* AppDelegate.swift in Sources */,
 				4CE524C92A6FC7540098022F /* TestApp.xcdatamodeld in Sources */,
-				4C4048CF2A712C3100230602 /* MainViewControllerHandler.swift in Sources */,
 				4CE524C42A6FC5D00098022F /* MainViewHandler.swift in Sources */,
 				4CE5249A2A6FBCCB0098022F /* SceneDelegate.swift in Sources */,
 				4CE524C62A6FC6470098022F /* MainViewController.swift in Sources */,

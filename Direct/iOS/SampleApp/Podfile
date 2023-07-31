@@ -10,3 +10,13 @@ target 'SampleApp' do
   project 'SampleApp/SampleApp.xcodeproj'
 
 end
+
+target 'CommonSampleApp' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for SampleApp
+  pod ‘KidozSDK’, :podspec => 'https://github.com/Kidoz-SDK/kidoz-ios-frameworks/raw/main/KidozSDK/KidozSDK.podspec'
+  project 'CommonSampleApp/CommonSampleApp.xcodeproj'
+
+end
