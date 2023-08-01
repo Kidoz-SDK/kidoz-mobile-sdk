@@ -8,9 +8,12 @@
 #import <Foundation/Foundation.h>
 #import <CommonSampleApp/CommonSampleApp.h>
 #import <KidozSDK/KidozSDK.h>
+#import <KidozSDK/KidozSDK-Swift.h>
+@class MainViewControllerHandler;
 
-@interface MainViewHandler : NSObject <MainViewControllerHandler, KidozInitDelegate, KidozInterstitialDelegate, KidozRewardedDelegate, KidozBannerDelegate>
+@interface MainViewHandler : NSObject <KidozInitDelegate, KidozInterstitialDelegate, KidozRewardedDelegate, KidozBannerDelegate>
 
+// MARK: - Kidoz SDK
 -(void) setViewController:(BaseMainViewController*) baseMainViewController;
 -(NSString*) getAppLabel;
 -(NSString*) getSDKVersion;

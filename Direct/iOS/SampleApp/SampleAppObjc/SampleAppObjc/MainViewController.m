@@ -9,22 +9,15 @@
 #import "MainViewHandler.h"
 #import <CommonSampleApp/CommonSampleApp.h>
 
-@interface MainViewController ()
-
-@end
-
 @implementation MainViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    self.view.backgroundColor = [UIColor redColor]; 
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 10 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
-        [self openMain];
-    });
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear: animated];
+    [self openMain];
 }
 
 - (void)openMain {
-    [BaseMainViewController launchScreenWithViewController:self mainViewHandler:[MainViewHandler init]];
+    [BaseMainViewController launchScreenWithViewController:self mainViewHandler:[[MainViewHandler alloc] init]];
 }
 
 @end

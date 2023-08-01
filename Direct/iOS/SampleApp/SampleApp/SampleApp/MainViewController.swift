@@ -11,11 +11,9 @@ import CommonSampleApp
 
 class MainViewController: UIViewController {
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.0) {
-            self.openMain()
-        }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.openMain()
     }
     
     func openMain() {
