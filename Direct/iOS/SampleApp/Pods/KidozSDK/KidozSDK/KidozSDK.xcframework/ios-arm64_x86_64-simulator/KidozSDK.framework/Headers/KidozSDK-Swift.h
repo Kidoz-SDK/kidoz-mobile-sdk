@@ -314,6 +314,10 @@ SWIFT_PROTOCOL("_TtP8KidozSDK19KidozBannerDelegate_")
 
 SWIFT_CLASS_NAMED("KidozBannerView")
 @interface KidozBannerView : UIView <KDZBannerDelegate>
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) CGFloat BANNER_WIDTH;)
++ (CGFloat)BANNER_WIDTH SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) CGFloat BANNER_HEIGHT;)
++ (CGFloat)BANNER_HEIGHT SWIFT_WARN_UNUSED_RESULT;
 @property (nonatomic, strong) id <KidozBannerDelegate> _Nullable delegate;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
@@ -755,6 +759,10 @@ SWIFT_PROTOCOL("_TtP8KidozSDK19KidozBannerDelegate_")
 
 SWIFT_CLASS_NAMED("KidozBannerView")
 @interface KidozBannerView : UIView <KDZBannerDelegate>
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) CGFloat BANNER_WIDTH;)
++ (CGFloat)BANNER_WIDTH SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) CGFloat BANNER_HEIGHT;)
++ (CGFloat)BANNER_HEIGHT SWIFT_WARN_UNUSED_RESULT;
 @property (nonatomic, strong) id <KidozBannerDelegate> _Nullable delegate;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;

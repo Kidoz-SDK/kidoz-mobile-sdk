@@ -50,8 +50,8 @@ import _StringProcessing
   @objc deinit
 }
 @_hasMissingDesignatedInitializers @objc(KidozBannerView) @_Concurrency.MainActor(unsafe) public class KidozBannerView : UIKit.UIView, KidozSDK.KDZBannerDelegate {
-  @_Concurrency.MainActor(unsafe) public static let BANNER_WIDTH: CoreFoundation.CGFloat
-  @_Concurrency.MainActor(unsafe) public static let BANNER_HEIGHT: CoreFoundation.CGFloat
+  @objc @_Concurrency.MainActor(unsafe) public static let BANNER_WIDTH: CoreFoundation.CGFloat
+  @objc @_Concurrency.MainActor(unsafe) public static let BANNER_HEIGHT: CoreFoundation.CGFloat
   @_Concurrency.MainActor(unsafe) public var isAutoShow: Swift.Bool
   @objc @_Concurrency.MainActor(unsafe) public var delegate: (any KidozSDK.KidozBannerDelegate)?
   @_Concurrency.MainActor(unsafe) @objc dynamic public init()

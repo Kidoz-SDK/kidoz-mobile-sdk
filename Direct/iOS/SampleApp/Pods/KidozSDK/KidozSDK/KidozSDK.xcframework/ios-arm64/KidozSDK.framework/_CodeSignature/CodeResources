@@ -8,54 +8,6 @@
 		<data>
 		oHpRPbybT93UuMWWPF7C6SLsJdg=
 		</data>
-		<key>Frameworks/libswiftCore.dylib</key>
-		<data>
-		l2vdSzi8d1aHRw2XsriH1ka+HuI=
-		</data>
-		<key>Frameworks/libswiftCoreFoundation.dylib</key>
-		<data>
-		DyfyzXskEBa5YzZvl5sNekA91ZA=
-		</data>
-		<key>Frameworks/libswiftCoreGraphics.dylib</key>
-		<data>
-		BL5KOGe7wMYk07P/ryR2+i7KbGM=
-		</data>
-		<key>Frameworks/libswiftCoreImage.dylib</key>
-		<data>
-		EiLbjYKVpF36zc4sQC+7JQYVXIE=
-		</data>
-		<key>Frameworks/libswiftDarwin.dylib</key>
-		<data>
-		SwAXGpC+vgAi6jeZQX1pL2gYJ0U=
-		</data>
-		<key>Frameworks/libswiftDispatch.dylib</key>
-		<data>
-		MDhkdlR2/ZwnB8utSEcre9NxbgE=
-		</data>
-		<key>Frameworks/libswiftFoundation.dylib</key>
-		<data>
-		BpfUD3hp6AHkwY1wWbCvgHJWNgA=
-		</data>
-		<key>Frameworks/libswiftMetal.dylib</key>
-		<data>
-		2v6h1AlYuPdMtw5HNEqHJKuk0So=
-		</data>
-		<key>Frameworks/libswiftObjectiveC.dylib</key>
-		<data>
-		jeRyq0CDW7Qpfr6L14xEQkrmKUY=
-		</data>
-		<key>Frameworks/libswiftQuartzCore.dylib</key>
-		<data>
-		W3zhnJQvdsIXjP+NOdlGj8EqEAw=
-		</data>
-		<key>Frameworks/libswiftUIKit.dylib</key>
-		<data>
-		+0YqmiXTxtojybAVp7Fn54TXohY=
-		</data>
-		<key>Frameworks/libswiftos.dylib</key>
-		<data>
-		nIxT8PaRFCap9WUx8XYiJfGXafM=
-		</data>
 		<key>Headers/DeviceUtils.h</key>
 		<data>
 		StfhXXgjnPwRTAVKvHpos39Fczk=
@@ -86,7 +38,7 @@
 		</data>
 		<key>Headers/KidozSDK-Swift.h</key>
 		<data>
-		q4O+v7UJH7uvWNdjTQjRmuHfnQc=
+		A3RuPsijgpSSbtb5/JdtK9cGFhw=
 		</data>
 		<key>Headers/KidozSDK.h</key>
 		<data>
@@ -102,15 +54,15 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		V80yG+vLl0tkcFWGwXx6gm9PUDU=
+		q4hCYI5fHS0wIGnBuvnl0w7gsA4=
 		</data>
 		<key>Modules/KidozSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		RC49VV6zV80/LI1HGrPWeEdnQpo=
+		7hu1lD4wo7bX/Fm0CyM1cVrBChY=
 		</data>
 		<key>Modules/KidozSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		7kJ6foiaeICbJ057CYEmZdICEyQ=
+		QHsSIEYcAykBXMpZIPVwDXERX+4=
 		</data>
 		<key>Modules/KidozSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
@@ -118,11 +70,11 @@
 		</data>
 		<key>Modules/KidozSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		7kJ6foiaeICbJ057CYEmZdICEyQ=
+		QHsSIEYcAykBXMpZIPVwDXERX+4=
 		</data>
 		<key>Modules/KidozSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		mqsKkkCyPnmiAx98NhnNrlwq8yM=
+		Md78ePodlnEURAboqlRVC7Nrw/o=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -152,138 +104,6 @@
 			<key>hash2</key>
 			<data>
 			EMnBhdwx64+wUkhx3TrYWWgQi6VCtfcvAk/5NmpP1mM=
-			</data>
-		</dict>
-		<key>Frameworks/libswiftCore.dylib</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			l2vdSzi8d1aHRw2XsriH1ka+HuI=
-			</data>
-			<key>hash2</key>
-			<data>
-			2TfZqFzMR1jUPmwQV/rMRA5GgrrzBbwEKDOna3WeYlQ=
-			</data>
-		</dict>
-		<key>Frameworks/libswiftCoreFoundation.dylib</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			DyfyzXskEBa5YzZvl5sNekA91ZA=
-			</data>
-			<key>hash2</key>
-			<data>
-			Nt42LwAkerO0TN32WK4+WdGoMTbbjIQ6EPDRN6mAVRU=
-			</data>
-		</dict>
-		<key>Frameworks/libswiftCoreGraphics.dylib</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			BL5KOGe7wMYk07P/ryR2+i7KbGM=
-			</data>
-			<key>hash2</key>
-			<data>
-			OrODjkTQcFPYD7aCOdJGL8H4ByhZaPM0XNcXMQw4Q/8=
-			</data>
-		</dict>
-		<key>Frameworks/libswiftCoreImage.dylib</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			EiLbjYKVpF36zc4sQC+7JQYVXIE=
-			</data>
-			<key>hash2</key>
-			<data>
-			NuTaPatfVt8D2xazA+wIZfYhrq8Apf1wwbs02iGUmmY=
-			</data>
-		</dict>
-		<key>Frameworks/libswiftDarwin.dylib</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			SwAXGpC+vgAi6jeZQX1pL2gYJ0U=
-			</data>
-			<key>hash2</key>
-			<data>
-			JnqPg1mfiNnDb0ZJXzBddhOKaJOfjais3spRcbI4LCc=
-			</data>
-		</dict>
-		<key>Frameworks/libswiftDispatch.dylib</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			MDhkdlR2/ZwnB8utSEcre9NxbgE=
-			</data>
-			<key>hash2</key>
-			<data>
-			e45zhsa2dt5V6jA0owV2SExOs8Ual9L/fvOW9mYx9+8=
-			</data>
-		</dict>
-		<key>Frameworks/libswiftFoundation.dylib</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			BpfUD3hp6AHkwY1wWbCvgHJWNgA=
-			</data>
-			<key>hash2</key>
-			<data>
-			Z8YOPa/NZ5Ncjz4TI5kDgLKUUlVCG+63wTVji9uN9ug=
-			</data>
-		</dict>
-		<key>Frameworks/libswiftMetal.dylib</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			2v6h1AlYuPdMtw5HNEqHJKuk0So=
-			</data>
-			<key>hash2</key>
-			<data>
-			20jH0Qbp7zL4WWgFLxyTJN5DjGepBujE3nQDhF5hqzM=
-			</data>
-		</dict>
-		<key>Frameworks/libswiftObjectiveC.dylib</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			jeRyq0CDW7Qpfr6L14xEQkrmKUY=
-			</data>
-			<key>hash2</key>
-			<data>
-			i0QZn4HdVDT+DYJgImHKOYCBVIO9WJah2y6XqeyDEys=
-			</data>
-		</dict>
-		<key>Frameworks/libswiftQuartzCore.dylib</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			W3zhnJQvdsIXjP+NOdlGj8EqEAw=
-			</data>
-			<key>hash2</key>
-			<data>
-			6mAGTkYP3DvPs30F5BNui2z1xCcHeWWEEqV8dEseWdU=
-			</data>
-		</dict>
-		<key>Frameworks/libswiftUIKit.dylib</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			+0YqmiXTxtojybAVp7Fn54TXohY=
-			</data>
-			<key>hash2</key>
-			<data>
-			heQr6TMnY8kKSyjgtsBzDXI89VUoM7p4HOm+cJg3WC4=
-			</data>
-		</dict>
-		<key>Frameworks/libswiftos.dylib</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			nIxT8PaRFCap9WUx8XYiJfGXafM=
-			</data>
-			<key>hash2</key>
-			<data>
-			SYMI0rzCdUDR6kZGt++yD5eLU+QrS+CFsU1NSXeL+BQ=
 			</data>
 		</dict>
 		<key>Headers/DeviceUtils.h</key>
@@ -367,11 +187,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			q4O+v7UJH7uvWNdjTQjRmuHfnQc=
+			A3RuPsijgpSSbtb5/JdtK9cGFhw=
 			</data>
 			<key>hash2</key>
 			<data>
-			PMLrACo7Z9q+PI7KE7+GxGXpfUK8Myr0rLYxZ+BWkVg=
+			5TePgaxaJ8mXvXi02X1/e0+NDZfjby6SHOVRjSLSH3g=
 			</data>
 		</dict>
 		<key>Headers/KidozSDK.h</key>
@@ -411,22 +231,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			RC49VV6zV80/LI1HGrPWeEdnQpo=
+			7hu1lD4wo7bX/Fm0CyM1cVrBChY=
 			</data>
 			<key>hash2</key>
 			<data>
-			8df0g+DaANth5d7KM9alPs8zGPkZR8pnyZRUTOyCFDg=
+			sw+881IG4DCUKLyVWFZjkXyCuDAuqPwkPMOiF6TGnik=
 			</data>
 		</dict>
 		<key>Modules/KidozSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			7kJ6foiaeICbJ057CYEmZdICEyQ=
+			QHsSIEYcAykBXMpZIPVwDXERX+4=
 			</data>
 			<key>hash2</key>
 			<data>
-			lq3t6qwpVQrh3aXjl+CNhQWMy21Z+Ig2qFd0ZDi9DmI=
+			5egwHNkuo51y0a/G8b6PC+P+OxCqCOAIvkj9hHnxl3g=
 			</data>
 		</dict>
 		<key>Modules/KidozSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
@@ -444,22 +264,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			7kJ6foiaeICbJ057CYEmZdICEyQ=
+			QHsSIEYcAykBXMpZIPVwDXERX+4=
 			</data>
 			<key>hash2</key>
 			<data>
-			lq3t6qwpVQrh3aXjl+CNhQWMy21Z+Ig2qFd0ZDi9DmI=
+			5egwHNkuo51y0a/G8b6PC+P+OxCqCOAIvkj9hHnxl3g=
 			</data>
 		</dict>
 		<key>Modules/KidozSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			mqsKkkCyPnmiAx98NhnNrlwq8yM=
+			Md78ePodlnEURAboqlRVC7Nrw/o=
 			</data>
 			<key>hash2</key>
 			<data>
-			dwoUo5m2ZA6iyLdoqNFo8WURJxrPAJGFSu3gOlZ9BF4=
+			8W5v+lKs6WqqkosSENXXwe9OARiir5aIrE5RjzMXLjw=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

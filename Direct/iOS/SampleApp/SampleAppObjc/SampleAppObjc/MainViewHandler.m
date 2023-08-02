@@ -213,7 +213,7 @@
             toItem:NULL
             attribute:NSLayoutAttributeNotAnAttribute
             multiplier:0
-            constant: 50
+            constant: KidozBannerView.BANNER_HEIGHT
         ];
         
         NSLayoutConstraint *width = [
@@ -223,7 +223,7 @@
             toItem:NULL
             attribute:NSLayoutAttributeNotAnAttribute
             multiplier:0
-            constant: 320
+            constant: KidozBannerView.BANNER_WIDTH
         ];
         
         [[baseMainViewController view] addConstraints:@[bottom, centerX, height, width]];

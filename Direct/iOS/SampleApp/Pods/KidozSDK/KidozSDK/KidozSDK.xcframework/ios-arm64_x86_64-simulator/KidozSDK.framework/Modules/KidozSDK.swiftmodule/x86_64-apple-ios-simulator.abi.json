@@ -986,16 +986,17 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:8KidozSDK0A10BannerViewC12BANNER_WIDTH14CoreFoundation7CGFloatVvpZ",
+            "usr": "c:@M@KidozSDK@objc(cs)KidozBannerView(cpy)BANNER_WIDTH",
             "mangledName": "$s8KidozSDK0A10BannerViewC12BANNER_WIDTH12CoreGraphics7CGFloatVvpZ",
             "moduleName": "KidozSDK",
             "static": true,
             "declAttributes": [
-              "Custom",
               "HasInitialValue",
               "Final",
+              "Custom",
               "HasStorage",
-              "AccessControl"
+              "AccessControl",
+              "ObjC"
             ],
             "isLet": true,
             "hasStorage": true,
@@ -1013,13 +1014,14 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:8KidozSDK0A10BannerViewC12BANNER_WIDTH14CoreFoundation7CGFloatVvgZ",
+                "usr": "c:@M@KidozSDK@objc(cs)KidozBannerView(cm)BANNER_WIDTH",
                 "mangledName": "$s8KidozSDK0A10BannerViewC12BANNER_WIDTH12CoreGraphics7CGFloatVvgZ",
                 "moduleName": "KidozSDK",
                 "static": true,
                 "implicit": true,
                 "declAttributes": [
-                  "Final"
+                  "Final",
+                  "ObjC"
                 ],
                 "accessorKind": "get"
               }
@@ -1038,16 +1040,17 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:8KidozSDK0A10BannerViewC13BANNER_HEIGHT14CoreFoundation7CGFloatVvpZ",
+            "usr": "c:@M@KidozSDK@objc(cs)KidozBannerView(cpy)BANNER_HEIGHT",
             "mangledName": "$s8KidozSDK0A10BannerViewC13BANNER_HEIGHT12CoreGraphics7CGFloatVvpZ",
             "moduleName": "KidozSDK",
             "static": true,
             "declAttributes": [
-              "Custom",
               "HasInitialValue",
               "Final",
+              "Custom",
               "HasStorage",
-              "AccessControl"
+              "AccessControl",
+              "ObjC"
             ],
             "isLet": true,
             "hasStorage": true,
@@ -1065,13 +1068,14 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:8KidozSDK0A10BannerViewC13BANNER_HEIGHT14CoreFoundation7CGFloatVvgZ",
+                "usr": "c:@M@KidozSDK@objc(cs)KidozBannerView(cm)BANNER_HEIGHT",
                 "mangledName": "$s8KidozSDK0A10BannerViewC13BANNER_HEIGHT12CoreGraphics7CGFloatVvgZ",
                 "moduleName": "KidozSDK",
                 "static": true,
                 "implicit": true,
                 "declAttributes": [
-                  "Final"
+                  "Final",
+                  "ObjC"
                 ],
                 "accessorKind": "get"
               }
@@ -4940,70 +4944,70 @@
     {
       "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdUnits\/Banner\/KidozBannerView.swift",
       "kind": "IntegerLiteral",
-      "offset": 347,
+      "offset": 353,
       "length": 3,
       "value": "320"
     },
     {
       "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdUnits\/Banner\/KidozBannerView.swift",
       "kind": "IntegerLiteral",
-      "offset": 398,
+      "offset": 410,
       "length": 2,
       "value": "50"
     },
     {
       "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdUnits\/Banner\/KidozBannerView.swift",
       "kind": "BooleanLiteral",
-      "offset": 434,
+      "offset": 446,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdUnits\/Banner\/KidozBannerView.swift",
       "kind": "IntegerLiteral",
-      "offset": 591,
+      "offset": 603,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdUnits\/Banner\/KidozBannerView.swift",
       "kind": "IntegerLiteral",
-      "offset": 597,
+      "offset": 609,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdUnits\/Banner\/KidozBannerView.swift",
       "kind": "StringLiteral",
-      "offset": 869,
+      "offset": 881,
       "length": 39,
       "value": "\"init(coder:) has not been implemented\""
     },
     {
       "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdUnits\/Banner\/KidozBannerView.swift",
       "kind": "StringLiteral",
-      "offset": 1111,
+      "offset": 1123,
       "length": 24,
       "value": "\"No internet connection\""
     },
     {
       "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdUnits\/Banner\/KidozBannerView.swift",
       "kind": "StringLiteral",
-      "offset": 1714,
+      "offset": 1726,
       "length": 18,
       "value": "\"Banner not ready\""
     },
     {
       "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdUnits\/Banner\/KidozBannerView.swift",
       "kind": "StringLiteral",
-      "offset": 2008,
+      "offset": 2020,
       "length": 8,
       "value": "\"deinit\""
     },
     {
       "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdUnits\/Banner\/KidozBannerView.swift",
       "kind": "StringLiteral",
-      "offset": 2596,
+      "offset": 2608,
       "length": 9,
       "value": "\"No fill\""
     },
