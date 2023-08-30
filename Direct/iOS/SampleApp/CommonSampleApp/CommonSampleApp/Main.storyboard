@@ -171,7 +171,7 @@
                                                     <action selector="showRewarded:" destination="MP5-5Y-NHi" eventType="touchUpInside" id="WGQ-b0-cbS"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JuP-hu-ytZ" userLabel="Hide Banner">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JuP-hu-ytZ" userLabel="Close Banner">
                                                 <rect key="frame" x="0.0" y="85.666666666666671" width="110" height="34.333333333333329"/>
                                                 <color key="backgroundColor" red="0.99775952830000003" green="1" blue="0.99592033010000003" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
@@ -190,7 +190,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="hideBanner:" destination="MP5-5Y-NHi" eventType="touchUpInside" id="7U1-B5-qV3"/>
+                                                    <action selector="closeBanner:" destination="MP5-5Y-NHi" eventType="touchUpInside" id="7U1-B5-qV3"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -237,7 +237,7 @@
                     </view>
                     <connections>
                         <outlet property="appLabel" destination="AyU-Bi-dNU" id="NXj-40-9Va"/>
-                        <outlet property="hideBannerBtn" destination="JuP-hu-ytZ" id="GfM-0C-qHh"/>
+                        <outlet property="closeBannerBtn" destination="JuP-hu-ytZ" id="guW-D2-daO"/>
                         <outlet property="loadBannerBtn" destination="Zif-5r-dMO" id="p3d-cD-z0d"/>
                         <outlet property="loadInterstitialBtn" destination="apP-qU-PYa" id="Xiz-0h-L3F"/>
                         <outlet property="loadRewardedBtn" destination="jkP-Z5-fmz" id="UIa-mN-M3G"/>
@@ -253,7 +253,7 @@
         <!--Main View Controller-->
         <scene sceneID="E2q-hS-zNL">
             <objects>
-                <viewController id="Hch-2U-cRq" customClass="MainViewController" customModule="SampleApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Hch-2U-cRq" customClass="MainViewController" customModule="CommonSampleApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Xt5-zI-ffH">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

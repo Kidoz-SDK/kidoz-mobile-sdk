@@ -13,10 +13,9 @@ import Foundation
     func getSDKVersion() -> String
     func initSDK()
     func loadBanner()
-    func hideBanner()
+    func closeBanner()
     func loadInterstitial()
     func showInterstitial()
     func loadRewarded()
     func showRewarded()
-    func onTestCampaignIdsChange()
 }

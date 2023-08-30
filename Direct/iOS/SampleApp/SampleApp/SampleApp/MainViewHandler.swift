@@ -29,7 +29,7 @@ public class MainViewHandler: NSObject, MainViewControllerHandler, KidozInitDele
     }
     
     public func initSDK() {
-        Kidoz.instance().initialize(withPublisherID: "8", securityToken: "QVBIh5K3tr1AxO4A1d4ZWx1YAe5567os", with: self)
+        Kidoz.instance().initialize(withPublisherID: "14428", securityToken: "6yAsKUngaG5yC4X5HsRoatKTso40NMoZ", with: self)
     }
     
     public func onInitSuccess() {
@@ -50,7 +50,7 @@ public class MainViewHandler: NSObject, MainViewControllerHandler, KidozInitDele
         }
     }
     
-    public func hideBanner() {
+    public func closeBanner() {
         bannerView.close()
         bannerView.removeFromSuperview()
         bannerView = nil
@@ -167,11 +167,6 @@ public class MainViewHandler: NSObject, MainViewControllerHandler, KidozInitDele
     
     public func onRewardedAdClosed(ad: KidozSDK.KidozRewardedAd) {
         baseMainViewController.onRewardedClosed()
-    }
-    
-    public func onTestCampaignIdsChange() {
-        bannerView.removeFromSuperview()
-        initBannerWithView()
     }
     
     func initBannerWithView() {

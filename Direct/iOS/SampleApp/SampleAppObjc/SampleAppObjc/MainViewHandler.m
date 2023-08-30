@@ -34,7 +34,7 @@
 }
 
 - (void)initSDK {
-    [Kidoz.instance initializeWithPublisherID: @"8" securityToken: @"QVBIh5K3tr1AxO4A1d4ZWx1YAe5567os" withDelegate: self];
+    [Kidoz.instance initializeWithPublisherID: @"14428" securityToken: @"6yAsKUngaG5yC4X5HsRoatKTso40NMoZ" withDelegate: self];
 }
 
 -(void) onInitSuccess {
@@ -55,7 +55,7 @@
     }
 }
 
-- (void)hideBanner {
+- (void)closeBanner {
     [bannerView close];
     [bannerView removeFromSuperview];
     bannerView = NULL;
@@ -172,11 +172,6 @@
 
 - (void)onRewardedAdClosedWithAd:(KidozRewardedAd *)ad {
     [baseMainViewController onRewardedClosed];
-}
-
-- (void)onTestCampaignIdsChange {
-    [bannerView removeFromSuperview];
-    [self initBannerWithView];
 }
 
 -(void) initBannerWithView {

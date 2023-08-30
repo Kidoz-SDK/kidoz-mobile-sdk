@@ -24,7 +24,7 @@ import KidozSDK
     @IBOutlet weak var showRewardedBtn: UIButton!
     
     @IBOutlet weak var loadBannerBtn: UIButton!
-    @IBOutlet weak var hideBannerBtn: UIButton!
+    @IBOutlet weak var closeBannerBtn: UIButton!
     
     override public func viewDidLoad() {
         super.viewDidLoad()
@@ -34,10 +34,7 @@ import KidozSDK
         loadRewardedBtn.isEnabled = false
         showRewardedBtn.isEnabled = false
         loadBannerBtn.isEnabled = false
-        hideBannerBtn.isEnabled = false
-        
-        TestUtils.setEnvironment(environment: .production)
-        TestUtils.setOverrideWaterfallUrl(waterfallUrl: nil)
+        closeBannerBtn.isEnabled = false
     }
     
     public override func viewDidAppear(_ animated: Bool) {
@@ -180,16 +177,16 @@ import KidozSDK
         mainViewHandler.loadBanner()
     }
     
-    @IBAction func hideBanner(_ sender: Any) {
+    @IBAction func closeBanner(_ sender: Any) {
         logOut(message: "----- Close Banner --")
-        mainViewHandler.hideBanner()
-        hideBannerBtn.isEnabled = false
+        mainViewHandler.closeBanner()
+        closeBannerBtn.isEnabled = false
     }
     
     @objc public func onBannerClosed() {
         logOut(message: "Banner Closed")
         loadBannerBtn.isEnabled = true
-        hideBannerBtn.isEnabled = false
+        closeBannerBtn.isEnabled = false
         
     }
     
@@ -199,27 +196,23 @@ import KidozSDK
     
     @objc public func onBannerLoaded() {
         logOut(message: "Banner Loaded")
-        hideBannerBtn.isEnabled = true
+        closeBannerBtn.isEnabled = true
     }
     
     @objc public func onBannerLoadFailed(error: String!) {
         logOut(message: "Banner Failed to Load::" + error)
         loadBannerBtn.isEnabled = true
-        hideBannerBtn.isEnabled = false
+        closeBannerBtn.isEnabled = false
     }
     
     @objc public func onBannerShowFailed(error: String!) {
         logOut(message: "Banner Failed to Show::" + error)
         loadBannerBtn.isEnabled = true
-        hideBannerBtn.isEnabled = false
+        closeBannerBtn.isEnabled = false
     }
     
     @objc public func onBannerImpression() {
         logOut(message: "Banner Impression")
-    }
-    
-    @objc public func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
-        controller.dismiss(animated: true)
     }
     
     @objc public static func launchScreen(viewController: UIViewController, mainViewHandler: MainViewControllerHandler) {

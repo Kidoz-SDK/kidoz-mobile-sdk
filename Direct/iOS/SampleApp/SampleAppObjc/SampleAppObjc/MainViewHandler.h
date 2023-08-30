@@ -23,7 +23,7 @@
 
 // MARK: - Banner
 -(void) loadBanner;
--(void) hideBanner;
+-(void) closeBanner;
 -(void) onBannerAdLoaded;
 -(void) onBannerAdFailedToLoad:(KidozError*) error;
 -(void) onBannerAdShown;
@@ -51,6 +51,5 @@
 -(void) onRewardedImpression;
 -(void) onRewardReceived:(KidozRewardedAd*) ad;
 -(void) onRewardedAdClosed:(KidozRewardedAd*) ad;
--(void) onTestCampaignIdsChange;
 
 @end
