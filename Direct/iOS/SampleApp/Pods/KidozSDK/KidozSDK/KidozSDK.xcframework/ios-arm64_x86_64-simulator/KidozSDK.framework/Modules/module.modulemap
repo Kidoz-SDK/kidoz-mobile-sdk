@@ -1,0 +1,11 @@
+framework module KidozSDK {
+  umbrella header "KidozSDK.h"
+
+  export *
+  module * { export * }
+}
+
+module KidozSDK.Swift {
+  header "KidozSDK-Swift.h"
+  requires objc
+}

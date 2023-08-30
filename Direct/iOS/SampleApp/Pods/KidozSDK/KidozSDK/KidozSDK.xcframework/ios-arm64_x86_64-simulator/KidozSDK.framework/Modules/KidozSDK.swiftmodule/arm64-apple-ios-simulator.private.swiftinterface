@@ -1,0 +1,154 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.8.1 (swiftlang-5.8.0.124.5 clang-1403.0.22.11.100)
+// swift-module-flags: -target arm64-apple-ios10.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name KidozSDK
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import Foundation
+@_exported import KidozSDK
+import StoreKit.SKStoreProductViewController
+import StoreKit
+import Swift
+import UIKit
+import _Concurrency
+import _StringProcessing
+@objc public protocol KidozInterstitialDelegate {
+  @objc func onInterstitialAdLoaded(ad: KidozSDK.KidozInterstitialAd)
+  @objc func onInterstitialAdFailedToLoad(error: KidozSDK.KidozError)
+  @objc func onInterstitialAdShown(ad: KidozSDK.KidozInterstitialAd)
+  @objc func onInterstitialAdFailedToShow(error: KidozSDK.KidozError)
+  @objc func onInterstitialImpression()
+  @objc func onInterstitialAdClosed(ad: KidozSDK.KidozInterstitialAd)
+}
+@objc public protocol KidozRewardedDelegate {
+  @objc func onRewardedAdLoaded(ad: KidozSDK.KidozRewardedAd)
+  @objc func onRewardedAdFailedToLoad(error: KidozSDK.KidozError)
+  @objc func onRewardedAdShown(ad: KidozSDK.KidozRewardedAd)
+  @objc func onRewardedAdFailedToShow(error: KidozSDK.KidozError)
+  @objc func onRewardReceived(ad: KidozSDK.KidozRewardedAd)
+  @objc func onRewardedImpression()
+  @objc func onRewardedAdClosed(ad: KidozSDK.KidozRewardedAd)
+}
+@objc public class SKAdNetworkParameters : ObjectiveC.NSObject {
+  @objc public init(responseData: [Swift.String : Swift.AnyObject])
+  @objc public func isViewThroughAd() -> Swift.Bool
+  @objc public func isStoreRenderedAd() -> Swift.Bool
+  @available(iOS 14.5, *)
+  @objc public func getSKAdImpression() -> StoreKit.SKAdImpression?
+  @objc public func getProductParameters() -> Foundation.NSDictionary?
+  @objc public static func mockProductParametersData() -> [Swift.String : Swift.AnyObject]?
+  @available(iOS 14.5, *)
+  @objc public func printSKAdImpression()
+  @objc public static func mockSKAdNetworkParameters() -> KidozSDK.SKAdNetworkParameters
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class StringUtils {
+  public static func convertJSONStringToDictionary(json: Swift.String?) -> [Swift.String : Swift.AnyObject]?
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class KidozLogger {
+  public static func d(_ tag: Swift.String, _ message: Swift.String)
+  public static func e(_ tag: Swift.String, _ message: Swift.String)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc(KidozBannerView) @_Concurrency.MainActor(unsafe) public class KidozBannerView : UIKit.UIView, KidozSDK.KDZBannerDelegate {
+  @objc @_Concurrency.MainActor(unsafe) public static let BANNER_WIDTH: CoreFoundation.CGFloat
+  @objc @_Concurrency.MainActor(unsafe) public static let BANNER_HEIGHT: CoreFoundation.CGFloat
+  @_Concurrency.MainActor(unsafe) public var isAutoShow: Swift.Bool
+  @objc @_Concurrency.MainActor(unsafe) public var delegate: (any KidozSDK.KidozBannerDelegate)?
+  @_Concurrency.MainActor(unsafe) @objc dynamic public init()
+  @objc @_Concurrency.MainActor(unsafe) public func load()
+  @objc @_Concurrency.MainActor(unsafe) public func show()
+  @objc @_Concurrency.MainActor(unsafe) public func setBannerPosition(_ bannerPosition: KidozSDK.BANNER_POSITION)
+  @objc @_Concurrency.MainActor(unsafe) public func close()
+  @objc deinit
+  @_Concurrency.MainActor(unsafe) @objc public func bannerDidInitialize()
+  @_Concurrency.MainActor(unsafe) @objc public func bannerDidClose()
+  @_Concurrency.MainActor(unsafe) @objc public func bannerDidOpen()
+  @_Concurrency.MainActor(unsafe) @objc public func bannerIsReady()
+  @_Concurrency.MainActor(unsafe) @objc public func bannerReturnedWithNoOffers()
+  @_Concurrency.MainActor(unsafe) @objc public func bannerLoadFailed(_ errorCode: Swift.Int32, andMessage errorMessage: Swift.String!)
+  @_Concurrency.MainActor(unsafe) @objc public func bannerShowFailed(_ errorCode: Swift.Int32, andMessage errorMessage: Swift.String!)
+  @_Concurrency.MainActor(unsafe) @objc public func bannerDidReciveError(_ errorMessage: Swift.String!)
+  @_Concurrency.MainActor(unsafe) @objc public func bannerImpression()
+  @_Concurrency.MainActor(unsafe) @objc public func bannerLeftApplication()
+}
+@objc(KidozError) public class KidozError : ObjectiveC.NSObject {
+  @objc public var errorCode: Swift.Int
+  @objc public var message: Swift.String
+  public static var GENERAL_ERROR: Swift.Int
+  @objc public static var LOAD_ERROR: Swift.Int
+  public static var NO_FILL: Swift.Int
+  @objc public static var SHOW_ERROR: Swift.Int
+  public static var INSTANCE_ALREADY_LOADING: Swift.Int
+  @objc public init(errorCode: Swift.Int, message: Swift.String)
+  @objc override dynamic public var description: Swift.String {
+    @objc get
+  }
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc(PlistUtil) public class PlistUtil : ObjectiveC.NSObject {
+  public static func getPListAsDictionary() -> [Swift.String : Any]?
+  @objc public static func checkSkAdNetworkExist(networkId: Swift.String) -> Swift.Bool
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc(AdParameters) public class AdParameters : ObjectiveC.NSObject {
+  @objc public var redirectType: KidozSDK.RedirectType
+  @objc public var skadNetworkParameters: KidozSDK.SKAdNetworkParameters?
+  @objc override dynamic public init()
+  @objc public init(data: Foundation.NSData)
+  @objc deinit
+}
+@objc public protocol KidozBannerDelegate {
+  @objc func onBannerAdLoaded()
+  @objc func onBannerAdFailedToLoad(error: KidozSDK.KidozError)
+  @objc func onBannerAdShown()
+  @objc func onBannerAdFailedToShow(error: KidozSDK.KidozError)
+  @objc func onBannerAdImpression()
+  @objc func onBannerAdClosed()
+}
+@_inheritsConvenienceInitializers @objc(TestUtils) public class TestUtils : ObjectiveC.NSObject {
+  public enum Environment : Swift.CaseIterable {
+    case production
+    case qa
+    case ext_qa
+    case dev
+    public var info: (label: Swift.String, envUrl: Swift.String, waterfallUrl: Swift.String, testWaterfallUrl: Swift.String) {
+      get
+    }
+    public static func == (a: KidozSDK.TestUtils.Environment, b: KidozSDK.TestUtils.Environment) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public typealias AllCases = [KidozSDK.TestUtils.Environment]
+    public static var allCases: [KidozSDK.TestUtils.Environment] {
+      get
+    }
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public static func getEnvLabels() -> [Swift.String]
+  @objc public static func getEnvApiUrl() -> Swift.String?
+  public static func setEnvApiUrl(apiUrl: Swift.String)
+  @objc public static func getOverrideWaterfallUrl() -> Swift.String?
+  public static func setOverrideWaterfallUrl(waterfallUrl: Swift.String?)
+  public static func getTestWaterfallUrl() -> Swift.String?
+  public static func setTestWaterfallUrl(waterfallUrl: Swift.String?)
+  @objc public static func setEnvironment(environmentStr: Swift.String)
+  public static func setEnvironment(environment: KidozSDK.TestUtils.Environment)
+  @objc public static func setCampaignIds(campaignIds: Swift.String?)
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc(KidozRewardedAd) public class KidozRewardedAd : ObjectiveC.NSObject {
+  @objc public static func load(delegate: any KidozSDK.KidozRewardedDelegate)
+  @objc public func isLoaded() -> Swift.Bool
+  @objc public func show(viewController: UIKit.UIViewController)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc(KidozInterstitialAd) public class KidozInterstitialAd : ObjectiveC.NSObject {
+  @objc public static func load(delegate: any KidozSDK.KidozInterstitialDelegate)
+  @objc public func isLoaded() -> Swift.Bool
+  @objc public func show(viewController: UIKit.UIViewController)
+  @objc deinit
+}
+extension KidozSDK.TestUtils.Environment : Swift.Equatable {}
+extension KidozSDK.TestUtils.Environment : Swift.Hashable {}
