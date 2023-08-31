@@ -10,7 +10,7 @@ This iOS application project provides an example of the KIDOZ SDK integration an
 
 ## Contents
 - [Running the SampleApp](#running-the-sampleapp)
-- [Getting Started](#installation)
+- [Kidoz SDK - Getting Started](#kidoz-sdk---getting-started)
     - [Adding Kidoz SDK to your iOS project with CocoaPods](#adding-kidoz-sdk-to-your-ios-project-with-cocoapods)
     - [Setup Kidoz SDK for Swift](#setup-kidoz-sdk-for-swift)
     - [Setup Kidoz SDK for Objective-C](#setup-kidoz-sdk-for-objective-c)
