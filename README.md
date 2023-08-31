@@ -1,8 +1,8 @@
 # Kidoz Mobile SDK
 
-**KIDOZ SDK and the sample App are compatible with iOS 10.0 and above.**
+**Kidoz SDK and the Sample App are compatible with iOS 10.0 and above.**
 
-**KIDOZ SDK is written in Objective C and Swift.**
+**Kidoz SDK is written in Objective-C and Swift.**
 
 ***This SDK version was verified not to contain the Advertiser Identifier (IDFA) as required by Apple App Store regulation for apps of Kids category.***
 
