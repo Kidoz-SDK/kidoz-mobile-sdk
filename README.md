@@ -30,14 +30,10 @@ This iOS application project provides an example of the KIDOZ SDK integration an
 - [Stay in touch](#stay-in-touch)
 - [License](#license)
 
-* KIDOZ Interstitial view  
-* KIDOZ Rewarded view
-* KIDOZ Banner view
-
 Before publishing your first app please finish the onboarding process for Kidoz's publishers [HERE](http://accounts.kidoz.net/publishers/register?utm_source=&utm_content=&utm_campaign=&utm_medium=).
 
 # Running the SampleApp
-To see Kidoz SDK in action go to the [SampleApp](https://github.com/Kidoz-SDK/kidoz-mobile-sdk/tree/main/Direct/iOS/SampleApp) folder and open `SampleApp.xcworkspace`. Inside the project you will find examples of how to use the Kidoz SDK in Swift and Objective-C.
+In order to see Kidoz SDK in action go to the [SampleApp](https://github.com/Kidoz-SDK/kidoz-mobile-sdk/tree/main/Direct/iOS/SampleApp) folder and open `SampleApp.xcworkspace`. Inside the project you will find examples of how to use the Kidoz SDK in Swift and Objective-C.
 
 # KIDOZ SDK - Getting Started
 
@@ -51,7 +47,7 @@ target 'YOUR_TARGET_NAME' do
   project 'YOUR_PROJECT_NAME.xcodeproj'
 end
 ```
-run `pod install from the root folder of your Podfile`.
+run in Terminal `pod install` from the root folder of your Podfile.
 
 #### Setup Kidoz SDK for Swift
 1. Make sure you add `import KidozSDK` to your ViewController.swift file.
