@@ -15,6 +15,15 @@ When initializing the SDK, please make sure to use your `publisherID` and `secur
 
 You may run the Sample App with Kidoz's <B>sample</B> `publisherID` and `securityToken` provided in the sample code but <B>be sure not to publish your app with them</B> . 
 
+## SKAdNetwork Support
+In order to support CPI attribution on iOS, please make sure to include the Kidoz ad network ID in your app property list file (Info.plist):
+
+```
+v79kvwwj4g.skadnetwork	
+```
+	
+For more information, see [Configuring a Source App for SKAdNetwork](https://developer.apple.com/documentation/storekit/skadnetwork/configuring_a_source_app). 
+
 </br>
 
 # Stay in touch 

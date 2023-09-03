@@ -11,8 +11,7 @@ on the following platforms:
 + [Native Android](https://github.com/Kidoz-SDK/kidoz-mobile-sdk/tree/main/KidozApplovinAdapter/Android)
 + [Native iOS](https://github.com/Kidoz-SDK/kidoz-mobile-sdk/tree/main/KidozApplovinAdapter/iOS)
 
-Prerequisites
-=================================
+# Prerequisites
 
 Before integrating your first app please finish the onboarding process for Kidoz's publishers [HERE](http://accounts.kidoz.net/publishers/register?utm_source=&utm_content=&utm_campaign=&utm_medium=)  
 and follow the instructions in the AppLovin Custom SDK Network Integration Guide [HERE](https://dash.applovin.com/documentation/mediation/android/mediation-setup/custom-sdk)
@@ -36,3 +35,24 @@ Place the json string in the Custom Parameters field and save.
   
   <img width="800" alt="AppLovin AdUnit Config" src="https://user-images.githubusercontent.com/86282008/197715891-2a6501d4-741e-4322-9343-fcbfe49db1a2.png">
 
+
+# Stay in touch 
+For any question or assistance, please contact us at SDK@kidoz.net.
+</br>
+
+# License
+--------
+
+    Copyright 2015 KIDOZ, Inc.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
