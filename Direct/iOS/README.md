@@ -1,4 +1,4 @@
-# Kidoz Mobile SDK
+# Kidoz iOS Mobile SDK
 
 **Kidoz SDK and the Sample App are compatible with iOS 10.0 and above.**
 
@@ -38,14 +38,10 @@ In order to see Kidoz SDK in action go to the [SampleApp](https://github.com/Kid
 # KIDOZ SDK - Getting Started
 
 ## Adding Kidoz SDK to your iOS project with CocoaPods
-add `pod ‘KidozSDK’` to your `Podfile`
+add to your `Podfile`:
 
 ```
-target 'YOUR_TARGET_NAME' do
-  use_frameworks!
-  pod ‘KidozSDK’,
-  project 'YOUR_PROJECT_NAME.xcodeproj'
-end
+pod ‘KidozSDK’, '9.0.0'
 ```
 run in Terminal `pod install` from the root folder of your Podfile.
 
