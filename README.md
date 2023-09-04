@@ -2,11 +2,19 @@
 
 ***This SDK version was verified not to contain the Advertiser Identifier (IDFA) as required by Apple App Store regulation for apps of Kids category.***
 
+The following mediation platforms are supported:
+- [Admob]()
+- [ironSource]()
+- [Applovin Max]()
+
+and Kidoz SDK as the sole monetization platform:
+- [Kidoz Direct]()
+
 # Prerequisites
-Before publishing your first app please finish the onboarding process for Kidoz's publishers [HERE](http://accounts.kidoz.net/publishers/register?utm_source=&utm_content=&utm_campaign=&utm_medium=).
+Before publishing your first app please finish the onboarding process for Kidoz's publishers [HERE](http://accounts.kidoz.net/publishers/register?utm_source=kidoz_github).
 
 # Stay in touch 
-For any question or assistance, please contact us at SDK@kidoz.net.
+For any question or assistance, please contact us at sdk@kidoz.net.
 
 # License
 --------
