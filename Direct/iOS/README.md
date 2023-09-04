@@ -51,7 +51,7 @@ For more information, see [Configuring a Source App for SKAdNetwork](https://dev
 add to your `Podfile`:
 
 ```
-pod ‘KidozSDK’, '9.0.0'
+pod 'KidozSDK', '9.0.0'
 ```
 run in Terminal `pod install` from the root folder of your Podfile.
 
