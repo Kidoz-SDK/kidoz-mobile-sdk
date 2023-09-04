@@ -1,506 +1,238 @@
-# Kidoz Mobile SDK
+# Kidoz Unity SDK
 
-**Kidoz SDK and the Sample App are compatible with iOS 10.0 and above.**
+Kidoz Android SDK Version: 9.0.0
+Kidoz iOS SDK Version: 9.0.0
+	
+Built with Unity 2020.3.16f1 Version
 
-**Kidoz SDK is written in Objective-C and Swift.**
+**Here you can get the Kidoz Unity plugin and a sample app for Unity. See integration instructions and additional information bellow.**
 
 ***This SDK version was verified not to contain the Advertiser Identifier (IDFA) as required by Apple App Store regulation for apps of Kids category.***
 
-This iOS application project provides an example of the KIDOZ SDK integration and usage.
+# General
 
-## Contents
-- [Running the SampleApp](#running-the-sampleapp)
-- [Kidoz SDK - Getting Started](#kidoz-sdk---getting-started)
-    - [Adding Kidoz SDK to your iOS project with CocoaPods](#adding-kidoz-sdk-to-your-ios-project-with-cocoapods)
-    - [Setup Kidoz SDK for Swift](#setup-kidoz-sdk-for-swift)
-    - [Setup Kidoz SDK for Objective-C](#setup-kidoz-sdk-for-objective-c)
-    - [Setup Kidoz credentials](#setup-kidoz-credentials)
-- [SKAdNetwork Support](#skadnetwork-support)
-- [Kidoz iOS Interstitial Ad](#kidoz-ios-interstitial-ad)
-    - [Setup Interstitial Ad for Swift](#setup-interstitial-ad-for-swift)
-    - [Setup Interstitial Ad for Objective-C](#setup-interstitial-ad-for-objective-c)
-    - [Kidoz iOS Interstitial best practices](#kidoz-ios-interstitial-best-practices)
-- [Kidoz iOS Rewarded Ad](#kidoz-ios-rewarded-ad)
-    - [Setup Rewarded Ad for Swift](#setup-rewarded-ad-for-swift)
-    - [Setup Rewarded Ad for Objective-C](#setup-rewarded-ad-for-objective-c)
-    - [Kidoz iOS Rewarded best practices](#kidoz-ios-rewarded-best-practices)
-- [Kidoz iOS Banner Ad](#kidoz-ios-banner)
-    - [Setup Banner Ad for Swift](#setup-banner-ad-for-swift)
-    - [Setup Banner Ad for Objective-C](#setup-banner-ad-for-objective-c)
-- [Stay in touch](#stay-in-touch)
-- [License](#license)
+This Unity application project provides an example of the [Kidoz](http://www.kidoz.net) SDK integration.
 
+The example application contains the following creative tools:
+
+_Recommended units_:
+* Kidoz Interstitial view `Rewarded View`
+* Kidoz Interstitial view `Interstitial View`
+* Kidoz Banner `Banner` 
+	
 Before publishing your first app please finish the onboarding process for Kidoz's publishers [HERE](http://accounts.kidoz.net/publishers/register?utm_source=&utm_content=&utm_campaign=&utm_medium=).
+	
+# iOS SKAdNetwork Support
 
-# Running the SampleApp
-In order to see Kidoz SDK in action go to the [SampleApp](https://github.com/Kidoz-SDK/kidoz-mobile-sdk/tree/main/Direct/iOS/SampleApp) folder and open `SampleApp.xcworkspace`. Inside the project you will find examples of how to use the Kidoz SDK in Swift and Objective-C.
-
-# KIDOZ SDK - Getting Started
-
-## Adding Kidoz SDK to your iOS project with CocoaPods
-add `pod ‘KidozSDK’` to your `Podfile`
-
-```
-target 'YOUR_TARGET_NAME' do
-  use_frameworks!
-  pod ‘KidozSDK’,
-  project 'YOUR_PROJECT_NAME.xcodeproj'
-end
-```
-run in Terminal `pod install` from the root folder of your Podfile.
-
-## Setup Kidoz SDK for Swift
-1. Make sure you add `import KidozSDK` to your ViewController.swift file.
-3. Conform to the `KidozInitDelegate` protocol and implement SDK delegate methods:  
-```
-    ViewController.swift
-    class MainViewHandler: NSObject, KidozInitDelegate {
-        func onInitSuccess() {
-            print("SDK Init success!")
-        }
-    
-        func onInitError(_ errorMessage: String!) {
-            print("Error occured during SDK Init: \(errorMessage)")
-        }
-    }
-```
-4. Init the SDK:
-```
-Kidoz.instance().initialize(withPublisherID: <enter your publisher ID>, securityToken: <enter your security Token>, with: self)
-```
-5. To check SDK state:  
-```
-var initialized = Kidoz.instance().isSDKInitialized();
-```
-
-## Setup Kidoz SDK for Objective-C
-1. Make sure you add `#import <KidozSDK/KidozSDK.h>` to your ViewController.h file.
-3. Conform to the `KidozInitDelegate` protocol and implement SDK delegate methods:  
-```
-    ViewController.h
-    @interface ViewController : UIViewController<KidozInitDelegate>  
-```
-```
-    ViewController.m  
-    -(void)onInitSuccess {}  
-    -(void)onInitError:(NSString *)error {}
-```
-4. Init the SDK:
-```
-[Kidoz.instance initializeWithPublisherID: <enter your publisher ID> securityToken: <enter your security Token> withDelegate: self];
-```
-5. To check SDK state:  
-```
-BOOL initislized = [Kidoz.instance isSDKInitialized];
-```
-
-## Setup Kidoz credentials
-When initializing the SDK, please make sure to use your `publisherID` and `securityToken`. To receive these credentials please sign up [HERE](http://accounts.kidoz.net/publishers/register?utm_source=&utm_content=&utm_campaign=&utm_medium=) if you haven't done so already.
-
-You may run the Sample App with Kidoz's <B>sample</B> `publisherID` and `securityToken` provided in the sample code but <B>be sure not to publish your app with them</B> . 
-
-# SKAdNetwork Support
 In order to support CPI attribution on iOS, please make sure to include the Kidoz ad network ID in your app property list file (Info.plist):
 
-```
+```java
 v79kvwwj4g.skadnetwork	
 ```
 	
-For more information, see [Configuring a Source App for SKAdNetwork](https://developer.apple.com/documentation/storekit/skadnetwork/configuring_a_source_app). 
+For more information, see [Configuring ad network IDs on Unity](https://docs.unity.com/ads/ConfiguringAdNetworkIDs.html) and  [Configuring a Source App for SKAdNetwork](https://developer.apple.com/documentation/storekit/skadnetwork/configuring_a_source_app).
 
+# Running the sample app
+
+1. Clone (or Download) the Unity project (download button located on the right) and unzip the downloaded .zip file
+2. Launch `Unity`, click `File` --> `Open Project` --> `Open`, navigate to unzipped project directory, select the whole directory and click `OK`
+3. In the Assets tab click on the `FirstScene` (See printscreen below)
+<br>
+<a href="url"><img src="http://d28lrrc51wcjkk.cloudfront.net/sdk/FirstScene_unity_-_sdk_-_Android__Personal_.png" align="center" height="150" width="700" ></a>
 </br>
+4. Go to `File` --> `Build Settings...` , in the opened menu select `Android` and click `Switch Platform` <br>
+5. To run the SDK Sample App go to `File` --> `Build & Run`
 
-# Kidoz iOS Interstitial Ad 
-**Intersitial** is a full screen widget which is designed for showing full screen advertisement.  
-## Setup Interstitial Ad for Swift
-1. In the selected view controller, conform to the  `KidozInterstitialDelegate`  protocol and implement all delegate methods:  
-```
-class ViewController: UIViewController, KidozInterstitialDelegate {
-    func onInterstitialAdLoaded(ad: KidozSDK.KidozInterstitialAd) {}
-    func onInterstitialAdFailedToLoad(error: KidozSDK.KidozError) {}
-    func onInterstitialAdShown(ad: KidozSDK.KidozInterstitialAd) {}
-    func onInterstitialAdFailedToShow(error: KidozSDK.KidozError) {}
-    func onInterstitialImpression() {}
-    func onInterstitialAdClosed(ad: KidozSDK.KidozInterstitialAd) {}
-}
-```
 
-* To check Interstitial state :  
-```
-var initislized = Kidoz.instance().isInterstitialInitialized();
-var ready = Kidoz.instance().isInterstitialReady();
-```
-  2. Init Interstitial: 
-```
-if(Kidoz.instance().isSDKInitialized()){
-   Kidoz.instance().initializeInterstitial(with: self)
- }
-```  
-3. Load Interstitial:  
-```
-if(Kidoz.instance().isInterstitialInitialized()){
-   Kidoz.instance().loadInterstitial()
- }
-```
+# Kidoz SDK - Getting Started
 
-4. Show Interstitial:  
-```
-if(Kidoz.instance().isInterstitialReady()){
-   Kidoz.instance().showInterstitial()
- }
-```
+1. Import the `KidozSDK` Unity package. `Assets` --> `Import Package` --> `Custom Package` --> select the extracted KidozSDK package.
+2. In the import window select all components. A new Prefabs object named `KidozObject` will appear in the Assets folder. 
+3. Open your requested Scene. 
+4. Drag the `KidozObject` into the selected scene.
+5. Select the `KidozObject` and enter your `Publisher ID` and `Security Token`. To receive these credentials please sign up [HERE](http://accounts.kidoz.net/publishers/register?utm_source=&utm_content=&utm_campaign=&utm_medium=) if you haven't done so already.
 
-## Setup Interstitial Ad for Objective-C
+6. If you're having issues with the 'KidozObject' you can open the SampleScene by double clicking it instead.
 
-1. In the selected view controller, conform to the  `KidozInterstitialDelegate`  protocol and implement all delegate methods:  
+<a href="url"><img src="http://d28lrrc51wcjkk.cloudfront.net/sdk/Unity_SDK_Publisher_Security_Token.png" align="center" height="250" width="400" ></a>
+
+*Note: When compiling for iOS please add the following frameworks: libsqlite3.tbd, webkit.framework*
+
+#### Using the SDK
+1. Select your relevant script file.
+2. Add ```using KidozSDK;``` in the using section of your code.
+
+# General Events
+The following general events are important if you wish to follow the SDK's initialization state:
+		Kidoz.initSuccess += onKidozInitSuccess;
+		Kidoz.initError += onKidozInitError;
+
+# Kidoz Banner 
+To load a banner ad:
+```java
+Kidoz.loadBanner (<AUTO_SHOW>, <BANNER_POSITION>);
+AUTO_SHOW - Should banner be shown as soon as it finishes loading
+
 ```
-ViewController.h  
-@interface ViewController : UIViewController<KidozInterstitialDelegate> 
-ViewController.m 
--(void) loadInterstitial {};
--(void) showInterstitial {};
--(void) onInterstitialAdLoaded:(KidozInterstitialAd*) ad {};
--(void) onInterstitialAdFailedToLoad:(KidozError*) error {};
--(void) onInterstitialAdFailedToShow:(KidozError*) error {};
--(void) onInterstitialAdShown:(KidozInterstitialAd*) ad {};
--(void) onInterstitialImpression {};
--(void) onInterstitialAdClosed:(KidozInterstitialAd*) ad {};
+The banner can be placed on one of six sides of the activity screen with BANNER_POSITION - `TOP_CENTER`, `BOTTOM_CENTER` ,`TOP_LEFT` ,`TOP_RIGHT` ,`BOTTOM_LEFT` ,`BOTTOM_RIGHT`.
+
+To show a non-autoShow banner:
+```java
+Kidoz.showBanner ();
 ```
 
-* To check Interstitial state :  
-```
-BOOL initislized = [[KidozSDK instance]isInterstitialInitialized];
-BOOL ready = [[KidozSDK instance]isInterstitialReady];
-```
-  2. Init Interstitial: 
-```
-if([[KidozSDK instance]isSDKInitialized])
-   [[KidozSDK instance]initializeInterstitialWithDelegate:self];
-```  
-3. Load Interstitial:  
-```
-if([[KidozSDK instance]isInterstitialInitialized])
-   [[KidozSDK instance]loadInterstitial];
+To hide a visible banner:
+```java
+Kidoz.hideBanner ();
 ```
 
-4. Show Interstitial:  
-```
-if([[KidozSDK instance]isInterstitialReady])
-   [[KidozSDK instance]showInterstitial:self];
+To change banner position:
+```java
+Kidoz.setBannerPosition(<BANNER_POSITION>);
 ```
 
-## Kidoz iOS Interstitial best practices
+Delegate callbacks:
+```java
+Kidoz.bannerReady += <bannerReady Callback>;
+Kidoz.bannerClose += <bannerClose Callback>;
+Kidoz.bannerLoadError += <bannerLoadError Callback>;
+Kidoz.bannerShowError += <bannerShowError Callback>;
+Kidoz.bannerNoOffers +=<bannerNoOffers Callback> ;
+```
+# Kidoz Interstitial / Rewarded View 
+
+KidozInterstitial is a full screen single ad unit which can be used as simple interstitial or rewared mode.
+
+You can activate the interstitial widget by first calling the load function
+```Kidoz.loadInterstitialAd(false); ```
+
+To request rewarded ad call this function
+```Kidoz.loadRewardedAd(false); ```
+
+
+The second stage after the ad was loaded (using the Kidoz.interstitialReady/rewardedReady callback you can call
+```Kidoz.showInterstitial(); ```
+or 
+```Kidoz.showRewarded(); ```
+
+ 
+It is possible to test if the ad was loaded using the following function:
+```Kidoz.getIsInterstitialLoaded() ```
+or
+```Kidoz.getIsRewardedLoaded() ```
+
+all listeners are of type: private void listenerName(string value)
+ 	Kidoz.bannerReady += bannerReady;
+		
+	Kidoz.interstitialOpen += listenerName;
+		
+	Kidoz.interstitialClose += listenerName;
+		
+	Kidoz.interstitialReady += listenerName;
+	
+	Kidoz.interstitialOnLoadFail += interstitialOnLoadFail;
+
+	Kidoz.interstitialOnNoOffers += interstitialOnNoOffers;
+	
+	Kidoz.onRewardedDone += onRewardedDone; 
+		
+	Kidoz.onRewardedVideoStarted += onRewardedVideoStarted;
+		
+	Kidoz.rewardedOpen += rewardedOpen;
+	
+	Kidoz.rewardedClose += rewardedClose;
+	
+	Kidoz.rewardedReady += rewardedReady;
+	
+	Kidoz.rewardedOnLoadFail += rewardedOnLoadFail;
+	
+	Kidoz.rewardedOnNoOffers += rewardedOnNoOffers;
+	
+
+**Kidoz iOS Interstitial best practices**
 - The preferred timing to show Interstitial Ads : Before the game ends, between game levels, after completing a game level .   
-- Some Interstitial Ads may contain video with sound. In order to maximise user experience, it is important to mute or pause game background sounds and pause the game while the Interstitial is displayed. This can be achieved by using `-interstitialDidOpen:` and `-interstitialDidClose:` callbacks:
+- Some Interstitial Ads may contain video with sound. In order to maximise user experience, it is important to mute or pause game background sounds and pause the game while the Interstitial is displayed. This can be achieved by using `interstitialOpen` and `interstitialClose` callbacks:
 ```
--(void)interstitialDidOpen {
+Kidoz.interstitialOpen += interstitialOpen;	
+Kidoz.interstitialClose += interstitialClose;
+```
+```
+private void interstitialOpen(string  value)  {
 // mute/pause background sounds
 // pause your game 
 }
 
--(void)interstitialDidClose {
+private void interstitialClose(string  value)
 // unmute/resume background sounds
 // resume your game 
 }
+
+OR
+
+Setting the Kidoz.SetiOSAppPauseOnBackground(true); 
 ```
 
-# Kidoz iOS Rewarded Ad
-`Rewarded`  is a full screen widget which is designed for showing full screen advertisement.  
-
-## Setup Rewarded Ad for Swift
-1. In the selected view controller , conform to the  `KidozRewardedDelegate`  protocol and implement all delegate methods:  
-```
-class  ViewController: UIViewController,KidozRewardedDelegate{
-func rewardedDidInitialize() {}
-func rewardedDidClose() {}
-func rewardedDidOpen() {} 
-func rewardedIsReady() {}  
-func rewardedReturnedWithNoOffers() {} 
-func rewardedDidPause() {}  
-func rewardedDidResume() {}  
-func rewardedLoadFailed() {}
-func rewardedDidReciveError(_ errorMessage: String!) {}
-func rewardReceived() {} 
-func rewardedStarted() {}
-func rewardedLeftApplication() {}
-}
-```
-* To check rewarded state :  
-```
-var initislized = Kidoz.instance().isRewardedInitialized();
-var ready = Kidoz.instance().isRewardedReady();
-```
-2. Init rewarded:  
-```
-if(Kidoz.instance().isSDKInitialized()){
-   Kidoz.instance().initializeRewarded(with: self) 
- }
-```
-3. Load rewarded:  
-```
-if(Kidoz.instance().isRewardedInitialized()){
-   Kidoz.instance().loadRewarded()
-}
-```
-4. Show rewarded:  
-```
-if(Kidoz.instance().isRewardedReady()){
-   Kidoz.instance().showRewarded()
-}
-```
-
-## Setup Rewarded Ad for Objective-C
-1. In the selected view controller , conform to the  `KidozRewardedDelegate`  protocol and implement all delegate methods:  
-```
-ViewController.h  
-@interface ViewController : UIViewController<KidozRewardedDelegate> 
-ViewController.m
--(void) loadRewarded {};
--(void) showRewarded {};
--(void) onRewardedAdLoaded:(KidozRewardedAd*) ad {};
--(void) onRewardedAdFailedToLoad:(KidozError*) error {};
--(void) onRewardedAdFailedToShow:(KidozError*) error {};
--(void) onRewardedAdShown:(KidozRewardedAd*) ad {};
--(void) onRewardedImpression {};
--(void) onRewardReceived:(KidozRewardedAd*) ad {};
--(void) onRewardedAdClosed:(KidozRewardedAd*) ad {};
-```
-* To check rewarded state :  
-```
-BOOL initislized = [[KidozSDK instance]isRewardedInitialized];
-BOOL ready = [[KidozSDK instance]isRewardedReady];
-```
-2. Init rewarded:  
-```
-if([[KidozSDK instance]isSDKInitialized])
-   [[KidozSDK instance]initializeRewardedWithDelegate:self];
-```
-3. Load rewarded:  
-```
-if([[KidozSDK instance]isRewardedInitialized])
-   [[KidozSDK instance]loadRewarded];
-```
-4. Show rewarded:  
-```
-if([[KidozSDK instance]isRewardedReady])
-   [[KidozSDK instance]showRewarded:self]; 
-```  
-
-## Kidoz iOS Rewarded best practices
+**Kidoz iOS Rewarded best practices**
 - The preferred timing to show Rewarded Ads : Based on the implementation of rewarded logics in your game .   
-- Some Rewarded Ads may contain video with sound. In order to maximise user experience, it is important to mute or pause game background sounds and pause the game flow while the Rewarded is displayed. This can be achieved by using `-rewardedDidOpen:` and `-rewardedDidClose:` callbacks:
+- Some Rewarded Ads may contain video with sound. In order to maximise user experience, it is important to mute or pause game background sounds and pause the game flow while the Rewarded is displayed. This can be achieved by using `rewardedOpen` and `rewardedClose` callbacks:
 ```
--(void)rewardedDidOpen {
+Kidoz.rewardedOpen += rewardedOpen;  
+Kidoz.rewardedClose += rewardedClose;
+```
+```
+
+-(void)rewardedOpen {
 //mute/pause background sounds
 //pause your game 
 }
 
--(void)rewardedDidClose {
+-(void)rewardedClose {
 //unmute/resume background sounds
 //resume your game 
 }
+
+OR
+
+Setting the Kidoz.SetiOSAppPauseOnBackground(true); 
 ```
 
-# Kidoz Banner 
-## Setup Banner Ad for Swift
-1. In the selected view controller , conform to the  `KidozBannerDelegate`  protocol and implement all delegate methods:  
-
+**Note for Android:**
 ```
-class  ViewController: UIViewController,KidozBannerDelegate{
-func bannerDidInitialize() {}
-func bannerDidClose() {}
-func bannerDidOpen() {}
-func bannerIsReady(){}
-func bannerReturnedWithNoOffers() {}
-func bannerLoadFailed() {}
-func bannerDidReciveError(_ errorMessage: String!) {}
-func bannerLeftApplication() {}
+If you are using the Minify option in the Player settings please add this to proguard-user.txt file:  
+  
+-keepclasseswithmembers class com.kidoz.sdk.** {*;}  
+-keep @interface org.greenrobot.eventbus.Subscribe  
+-keepclassmembers class * {  
+@org.greenrobot.eventbus.Subscribe <methods>;  
 }
 ```
 
-* To check banner state :  
-```
-var initislized = Kidoz.instance().isBannerInitialized();
-var ready = Kidoz.instance().isBannerReady();
-```
+Trouble Shooting
+================
+**Kidoz SDK and this sample app are compatible with Android 4.2 (API level 17) and above, iOS 8.0 and above and Unity versions greater than 5**
 
-2. Init banner:  
-The banner can be placed on one of six sides of the  screen with BANNER_POSITION - `TOP_CENTER`, `BOTTOM_CENTER` ,`TOP_LEFT` ,`TOP_RIGHT` ,`BOTTOM_LEFT` ,`BOTTOM_RIGHT`.
+**Kidoz plugin does not currently support Unity editor runtime. Please make sure you switch to a relevant platform (iOS/Android) before working or ignore any error in the Editor runtime.
 
-and initialized with: initializeBanner(with: KidozBannerDelegate ,with: UIViewController)
+**When comming from a previous version, please manually delete previous okhttp jar file, and use the attached onen**
 
-```
-if(Kidoz.instance().isSDKInitialized()){
-   Kidoz.instance().initializeBanner(with: self,with: self)
-   Kidoz.instance().setBannerPosition(BOTTOM_CENTER)
-}
-```
-Or The Banner can be initialized with custom UIView and positioned more flexibly with constraints with : initializeBanner(with: KidozBannerDelegate ,with: UIView)
+**When comming from a previous version,  please manually delete previous okio jar file, and use the attached onen**
 
-``` 
-let BANNER_WIDTH: CGFloat = 320
-let BANNER_HEIGHT: CGFloat = 50
+**When comming from a previous version, please manually delete the Kidoz.cs located in the root assetes folder , since we moved the file postion. also make sure that teh KidozObject points to the new Kidoz script**
 
-mBanner = UIView(frame: CGRect(x: 0, y: 0, width: BANNER_WIDTH, height: BANNER_HEIGHT))
-view.addSubview(mBanner)
-mBanner.translatesAutoresizingMaskIntoConstraints = false
-view.addConstraints([NSLayoutConstraint(
-      item: mBanner,
-      attribute: .bottom,
-      relatedBy: .equal,
-      toItem: bottomLayoutGuide,
-      attribute: .top,
-      multiplier: 1,
-      constant: 0),
-    NSLayoutConstraint(
-      item: mBanner,
-      attribute: .centerX,
-      relatedBy: .equal,
-      toItem: view,
-      attribute: .centerX,
-      multiplier: 1,
-      constant: 0),
-    NSLayoutConstraint(
-      item: mBanner,
-      attribute: .height,
-      relatedBy: .equal,
-      toItem: nil,
-      attribute: .notAnAttribute,
-      multiplier: 0,
-      constant: BANNER_HEIGHT),
-    NSLayoutConstraint(
-      item: mBanner,
-      attribute: .width,
-      relatedBy: .equal,
-      toItem: nil,
-      attribute: .notAnAttribute,
-      multiplier: 0,
-      constant: BANNER_WIDTH)])
+**Android Build Tools Version**
+This demo application uses `buildToolsVersion "22.0.1"`. if your `Android Studio` is not updated with this version you can follow one of these steps (or both):
+1. Inside `Android Studio` click the `SDK Manager` icon
+2. In the left side menu, navigate to `Appearance & Behavior` --> `System Settings` --> `Android SDK`
+3. Click the `SDK Tools` tab
+4. Check the `Android SDK Build Tools` and click `OK` 
 
-view.bringSubviewToFront(mBanner)
-Kidoz.instance().initializeBanner(with: self, with: mBanner)
-``` 
 
-3. Load banner :  
-```
-if(Kidoz.instance().isBannerInitialized()){
-   Kidoz.instance().loadBanner()
-}
-```
-4. Show banner:  
-```
-if(Kidoz.instance().isBannerReady()){
-   Kidoz.instance().showBanner()
-}
-```  
-
-5. Hide banner:  
-```
-   Kidoz.instance().hideBanner()
-```  
-
-## Setup Kidoz Banner for Objective-C
-1. In the selected view controller , conform to the  `KidozBannerDelegate`  protocol and implement all delegate methods:  
-
-```
-ViewController.h  
-@interface ViewController : UIViewController<KidozBannerDelegate> 
-ViewController.m
--(void) loadBanner {};
--(void) closeBanner {};
--(void) onBannerAdLoaded {};
--(void) onBannerAdFailedToLoad:(KidozError*) error {};
--(void) onBannerAdShown {};
--(void) onBannerAdFailedToShow:(KidozError*) error {};
--(void) onBannerAdImpression {};
--(void) onBannerAdClosed {};
-```
-
-* To check banner state :  
-```
-BOOL initislized = [[KidozSDK instance]isBannerInitialized];
-BOOL ready = [[KidozSDK instance]isBannerReady];
-```
-
-2. Init banner:  
-The banner can be placed on one of six sides of the  screen with BANNER_POSITION - `TOP_CENTER`, `BOTTOM_CENTER` ,`TOP_LEFT` ,`TOP_RIGHT` ,`BOTTOM_LEFT` ,`BOTTOM_RIGHT`.
-
-and initialized with: initializeBannerWithDelegate:(id<KidozBannerDelegate>)delegate withViewController:(UIViewController *)viewController
-```
-if([[KidozSDK instance]isSDKInitialized]){
-   [[KidozSDK instance]initializeBannerWithDelegate:self withViewController:self];
-   [[KidozSDK instance]setBannerPosition:BOTTOM_CENTER]
-}
-```
-Or The Banner can be initialized with custom UIView and positioned more flexibly with constraints with this method:  (void)initializeBannerWithDelegate:(id<KidozBannerDelegate>)delegate withView:(UIView*)view:
-
-``` 
-CGFloat BANNER_WIDTH = 320;
-CGFloat BANNER_HEIGHT = 50;
-
-mBanner = [[UIView alloc] initWithFrame:CGRectMake(0,0,BANNER_WIDTH,BANNER_HEIGHT)];
-[self.view addSubview:mBanner];
-mBanner.translatesAutoresizingMaskIntoConstraints = NO;
-[self.view addConstraints:@[[NSLayoutConstraint constraintWithItem:mBanner
-              attribute:NSLayoutAttributeBottom
-              relatedBy:NSLayoutRelationEqual
-              toItem:self.bottomLayoutGuide
-              attribute:NSLayoutAttributeTop
-              multiplier:1
-              constant:0],        
-[NSLayoutConstraint constraintWithItem:mBanner
-              attribute:NSLayoutAttributeCenterX
-              relatedBy:NSLayoutRelationEqual
-              toItem:self.view
-              attribute:NSLayoutAttributeCenterX
-              multiplier:1
-              constant:0],
-[NSLayoutConstraint  constraintWithItem:mBanner
-              attribute:NSLayoutAttributeHeight
-              relatedBy:NSLayoutRelationEqual
-              toItem:nil
-              attribute:NSLayoutAttributeNotAnAttribute
-              multiplier:0
-              constant:BANNER_HEIGHT],
-[NSLayoutConstraint  constraintWithItem:mBanner
-              attribute:NSLayoutAttributeWidth
-              relatedBy:NSLayoutRelationEqual
-              toItem:nil
-              attribute:NSLayoutAttributeNotAnAttribute
-              multiplier:0
-              constant:BANNER_WIDTH]]];
-
-[self.view bringSubviewToFront:mBanner];
-
-[[KidozSDK instance]initializeBannerWithDelegate:self withView:mBanner];
-
-}
-``` 
-3. Load banner :  
-```
-if([[KidozSDK instance]isBannerInitialized])
-   [[KidozSDK instance]loadBanner];
-```
-4. Show banner:  
-```
-if([[KidozSDK instance]isBannerReady])
-   [[KidozSDK instance]showBanner];
-```  
-
-5. Hide banner:  
-```
-   [[KidozSDK instance]hideBanner];
-```  
+# For any question or assistance, please contact us at SDK@kidoz.net.
 </br>
-
-# Stay in touch 
-For any question or assistance, please contact us at SDK@kidoz.net.
-</br>
-
-# License
+License
 --------
 
-    Copyright 2015 KIDOZ, Inc.
+    Copyright 2022 Kidoz, Inc.
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
