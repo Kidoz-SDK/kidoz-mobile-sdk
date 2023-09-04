@@ -1,40 +1,17 @@
 # Kidoz Mobile SDK
 
-**Kidoz SDK and the Sample App are compatible with iOS 10.0 and above.**
-
-**Kidoz SDK is written in Objective-C and Swift.**
-
 ***This SDK version was verified not to contain the Advertiser Identifier (IDFA) as required by Apple App Store regulation for apps of Kids category.***
 
 # Prerequisites
-## Kidoz Onboarding
 Before publishing your first app please finish the onboarding process for Kidoz's publishers [HERE](http://accounts.kidoz.net/publishers/register?utm_source=&utm_content=&utm_campaign=&utm_medium=).
-
-## Setup Kidoz credentials
-When initializing the SDK, please make sure to use your `publisherID` and `securityToken`. To receive these credentials please sign up [HERE](http://accounts.kidoz.net/publishers/register?utm_source=&utm_content=&utm_campaign=&utm_medium=) if you haven't done so already.
-
-You may run the Sample App with Kidoz's <B>sample</B> `publisherID` and `securityToken` provided in the sample code but <B>be sure not to publish your app with them</B> . 
-
-## SKAdNetwork Support
-In order to support CPI attribution on iOS, please make sure to include the Kidoz ad network ID in your app property list file (Info.plist):
-
-```
-v79kvwwj4g.skadnetwork	
-```
-	
-For more information, see [Configuring a Source App for SKAdNetwork](https://developer.apple.com/documentation/storekit/skadnetwork/configuring_a_source_app). 
-
-</br>
 
 # Stay in touch 
 For any question or assistance, please contact us at SDK@kidoz.net.
 
-</br>
-
 # License
 --------
 
-    Copyright 2015 KIDOZ, Inc.
+    Copyright 2023 KIDOZ, Inc.
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
