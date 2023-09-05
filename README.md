@@ -7,7 +7,7 @@ The following mediation platforms are supported:
 - [ironSource]()
 - [Applovin Max]()
 
-and Kidoz SDK as the sole monetization platform:
+and Kidoz SDK as a sole monetization platform:
 - [Kidoz Direct]()
 
 # Prerequisites
