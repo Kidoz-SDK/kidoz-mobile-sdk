@@ -11,7 +11,7 @@ and Kidoz SDK as a sole monetization platform:
 - [Kidoz Direct]()
 
 # Prerequisites
-Before publishing your first app please finish the onboarding process for Kidoz's publishers [HERE](http://accounts.kidoz.net/publishers/register?utm_source=kidoz_github).
+Before publishing your first app please finish the onboarding process for [Kidoz's publishers](http://accounts.kidoz.net/publishers/register?utm_source=kidoz_github).
 
 # Stay in touch 
 For any question or assistance, please contact us at sdk@kidoz.net.

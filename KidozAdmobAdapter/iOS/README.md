@@ -1,25 +1,21 @@
-# Kidoz Admob Adapters
+# Kidoz Admob iOS Adapter
 
-The Admob currently offers support for the following platforms:
-
-+ [Unity](https://github.com/Kidoz-SDK/kidoz-mobile-sdk/tree/main/KidozAdmobAdapter/Unity)
-+ [Native Android](https://github.com/Kidoz-SDK/kidoz-mobile-sdk/tree/main/KidozAdmobAdapter/Android)
-+ [Native iOS](https://github.com/Kidoz-SDK/kidoz-mobile-sdk/tree/main/KidozAdmobAdapter/iOS)
-
-# Prerequisites
-To use the Kidoz SDK adapter for AdMob you should make sure you have:
-1. Google Mobile Ads SDK 10.8.0 or higher integrated in your project as [explained here](https://developers.google.com/admob/ios/quick-start).
-2. A fully functional AdMob ad placement.
-3. A Kidoz Publisher account. See the onboarding process for [Kidoz's publishers](http://accounts.kidoz.net/publishers/register?utm_source=kidoz_github).
-
+To add Kidoz Admob iOS Adapter to your project with CocoaPods:
+```
+pod 'Google-Mobile-Ads-SDK','10.8.0'
+pod 'KidozSDK', '9.0.0'
+pod 'KidozAdmobAdapter', '1.0.1'
+```
 ***This SDK version was verified not to contain the Advertiser Identifier (IDFA) as required by Apple App Store regulation for apps of Kids category.***
 
-# SKAdNetwork Support
+# iOS SKAdNetwork Support
+
 In order to support CPI attribution on iOS, please make sure to include the Kidoz ad network ID in your app property list file (Info.plist):
 
-```
+```java
 v79kvwwj4g.skadnetwork	
 ```
+For more information, see [Configuring a Source App for SKAdNetwork](https://developer.apple.com/documentation/storekit/skadnetwork/configuring_a_source_app).
 
 # Stay in touch 
 For any question or assistance, please contact us at SDK@kidoz.net.

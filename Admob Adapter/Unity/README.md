@@ -17,9 +17,9 @@ Built using Unity 2020.3.16f1 Version and tested with:
 
 To use the Kidoz SDK adapter for AdMob you should make sure you have:
 
-1. AdMob Unity Plugin integrated into your project. Visit the integration documentation [HERE](https://developers.google.com/admob/unity/start).
+1. AdMob Unity Plugin integrated into your project. See [integration documentation](https://developers.google.com/admob/unity/start).
 2. A fully functional AdMob ad placement.
-3. A Kidoz publisher account. Visit our [Registration Form](https://accounts.kidoz.net/publishers/register). 
+3. Finish the onboarding process for [Kidoz's publishers](http://accounts.kidoz.net/publishers/register?utm_source=kidoz_github).
 
 ```
 The support of Admob mediation for Apps that opt-in to "Designed For Families program"
