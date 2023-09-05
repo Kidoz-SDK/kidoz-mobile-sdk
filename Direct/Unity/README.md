@@ -20,7 +20,7 @@ _Recommended units_:
 * Kidoz Interstitial view `Interstitial View`
 * Kidoz Banner `Banner` 
 	
-Before publishing your first app please finish the onboarding process for Kidoz's publishers [HERE](http://accounts.kidoz.net/publishers/register?utm_source=&utm_content=&utm_campaign=&utm_medium=).
+Before publishing your first app please finish the onboarding process for [Kidoz's publishers](http://accounts.kidoz.net/publishers/register?utm_source=kidoz_github).
 	
 # iOS SKAdNetwork Support
 
@@ -50,7 +50,7 @@ For more information, see [Configuring ad network IDs on Unity](https://docs.uni
 2. In the import window select all components. A new Prefabs object named `KidozObject` will appear in the Assets folder. 
 3. Open your requested Scene. 
 4. Drag the `KidozObject` into the selected scene.
-5. Select the `KidozObject` and enter your `Publisher ID` and `Security Token`. To receive these credentials please sign up [HERE](http://accounts.kidoz.net/publishers/register?utm_source=&utm_content=&utm_campaign=&utm_medium=) if you haven't done so already.
+5. Select the `KidozObject` and enter your `Publisher ID` and `Security Token`. To receive these credentials please finish the onboarding process for [Kidoz's publishers](http://accounts.kidoz.net/publishers/register?utm_source=kidoz_github) if you haven't done so already.
 
 6. If you're having issues with the 'KidozObject' you can open the SampleScene by double clicking it instead.
 

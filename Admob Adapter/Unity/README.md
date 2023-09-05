@@ -31,10 +31,9 @@ However, Kidoz ads can be integrated directly to your apps.
 ## Integration Steps:
 
 * Download and import the KidozAdMobUnity.unitypackage  Assets --> Import Package --> Custom Package --> select  the KidozAdMobUnity.unitypackage package.
-* Define Kidoz Banner , Interstitial and/or Rewarded Video Custom events as explained [HERE](https://support.google.com/admob/answer/3083407).</br>
+* Define Kidoz Banner , Interstitial and/or Rewarded Video Custom events as [explained here](https://support.google.com/admob/answer/3083407).</br>
 
-**Please make sure to set your AdMob app ID and not use Kidoz Sample AdMob app ID before you publish your apps.<br/>
-For exact instructions see [HERE](https://developers.google.com/admob/unity/quick-start#set_your_admob_app_id).**
+**Please make sure to set your AdMob app ID and not use Kidoz Sample AdMob app ID before you publish your apps like described in the [Admob Guide](https://developers.google.com/admob/unity/quick-start#set_your_admob_app_id).**
 
 ## Setup for Android 
  

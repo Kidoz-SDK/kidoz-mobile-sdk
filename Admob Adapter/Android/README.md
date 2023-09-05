@@ -19,7 +19,7 @@ Add the following dependencies to your app's build.gradle file:
 ```
 
 <BR>
-Define Kidoz Interstitial/Rewarded Video/Banner Custom events as explained [HERE](https://support.google.com/admob/answer/3083407):
+Define Kidoz Interstitial/Rewarded Video/Banner Custom events as [explained here](https://support.google.com/admob/answer/3083407):
  
 **Kidoz Interstitial Adapter**
 * Set the following full path in the `Class Name` field: </br>
@@ -33,7 +33,7 @@ Define Kidoz Interstitial/Rewarded Video/Banner Custom events as explained [HERE
 * Set the following json string in the `Parameter (optional)` field: </br>
 `{"AppID":"publisherId", "Token":"publisherToken"}` <B>*</B>
 
-**Kidoz Banner Adapter**
+**Kidoz Banner Adapter**x
 * Set the following full path in the `Class Name` field: </br>
 `com.kidoz.mediation.admob.adapters.KidozAdmobMediationBannerAdapter`
 * Set the following json string in the `Parameter (optional)` field: </br>
@@ -63,7 +63,7 @@ Once you add an app and generate the relevant entry for it, you can paste it int
   <img src="https://cdn.kidoz.net/new/sdk/GITHUB_GRAPHICS/Kidoz_SDK_Documentaions/admob_app_ads_txt2.png" />
 </p>
 
-2. Additionally, it is highly recommended to add the Kidoz app-ads.txt in order to increase the fill-rate of your application, as described [HERE](https://kidoz.net/introappadstext)
+2. Additionally, it is highly recommended to add the Kidoz app-ads.txt in order to increase the fill-rate of your application, as [described here](https://kidoz.net/introappadstext)
 
 3. Set up $9 CPM for Kidoz, to make sure the requests are being passed to Kidoz.
 

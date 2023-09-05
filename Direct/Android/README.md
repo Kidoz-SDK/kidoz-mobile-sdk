@@ -8,8 +8,7 @@ The Kidoz SDK contains support for the following ad types:
 + Kidoz Rewarded Video
 + Kidoz Banner
 
-Before publishing your first app please finish the onboarding process for Kidoz's publishers [HERE](http://accounts.kidoz.net/publishers/register?utm_source=&utm_content=&utm_campaign=&utm_medium=).
-
+Before publishing your first app please finish the onboarding process for [Kidoz's publishers](http://accounts.kidoz.net/publishers/register?utm_source=kidoz_github).
 
 
 ## Getting Started
@@ -32,7 +31,6 @@ Add the following permissions:
 
 ### Initialize the SDK
 The SDK should be initialized only once in an Activity lifecycle. 
-When initializing the SDK, please make sure to use your `publisherID` and `securityToken`. To receive these credentials please sign up [HERE](http://accounts.kidoz.net/publishers/register?utm_source=&utm_content=&utm_campaign=&utm_medium=) if you haven't done so already.
 
 You may run the Sample App with Kidoz's <B>sample</B> `publisherID` and `securityToken` provided in the sample code but <B>be sure not to publish your app with them</B> . 
 
