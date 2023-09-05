@@ -40,7 +40,7 @@ In order to see Kidoz SDK in action go to the [SampleApp](https://github.com/Kid
 # SKAdNetwork Support
 In order to support CPI attribution on iOS, please make sure to include the Kidoz ad network ID in your app property list file (Info.plist):
 
-```
+```Swift
 v79kvwwj4g.skadnetwork	
 ```
 For more information, see [Configuring a Source App for SKAdNetwork](https://developer.apple.com/documentation/storekit/skadnetwork/configuring_a_source_app). 
@@ -50,7 +50,7 @@ For more information, see [Configuring a Source App for SKAdNetwork](https://dev
 ## Adding Kidoz SDK to your iOS project with CocoaPods
 add to your `Podfile`:
 
-```
+```yaml
 pod 'KidozSDK', '9.0.0'
 ```
 run in Terminal `pod install` from the root folder of your Podfile.
@@ -58,19 +58,19 @@ run in Terminal `pod install` from the root folder of your Podfile.
 
 ## Initialize Kidoz SDK
 Call the initialize method with the publisher ID and Token which you received during the [Kidoz onboarding](http://accounts.kidoz.net/publishers/register?utm_source=kidoz_github).
-```
+```Swift
 Kidoz.instance().initialize(withPublisherID: <enter your publisher ID>, securityToken: <enter your security Token>, with: self)
 ```
 
 You can check Kidoz SDK state using the following method:  
-```
+```Swift
 var initialized = Kidoz.instance().isSDKInitialized();
 ```
 
 Report the `KidozInitDelegate` protocol's callbacks:  
-```
-   func onInitSuccess()
-   func onInitError(_ errorMessage: String!)
+```Swift
+func onInitSuccess()
+func onInitError(_ errorMessage: String!)
 ```
 
 
@@ -78,21 +78,21 @@ Report the `KidozInitDelegate` protocol's callbacks:
 ## Setup Kidoz SDK for Objective-C
 1. Make sure you add `#import <KidozSDK/KidozSDK.h>` to your ViewController.h file.
 3. Conform to the `KidozInitDelegate` protocol and implement SDK delegate methods:  
+```Swift
+ViewController.h
+@interface ViewController : UIViewController<KidozInitDelegate>  
 ```
-    ViewController.h
-    @interface ViewController : UIViewController<KidozInitDelegate>  
-```
-```
-    ViewController.m  
-    -(void)onInitSuccess {}  
-    -(void)onInitError:(NSString *)error {}
+```Swift
+ViewController.m  
+-(void)onInitSuccess {}  
+-(void)onInitError:(NSString *)error {}
 ```
 4. Init the SDK:
-```
+```Swift
 [Kidoz.instance initializeWithPublisherID: <enter your publisher ID> securityToken: <enter your security Token> withDelegate: self];
 ```
 5. To check SDK state:  
-```
+```Swift
 BOOL initislized = [Kidoz.instance isSDKInitialized];
 ```
 </br>
@@ -102,21 +102,21 @@ BOOL initislized = [Kidoz.instance isSDKInitialized];
 ## Add support for Interstitial ad unit
 
 Load Interstitial ad: 
-```
+```Swift
 if Kidoz.instance().isSDKInitialized() {
    KidozInterstitialAd.load(delegate: self)
 }
 ```
 
 Show Interstitial ad:  
-```
+```Swift
 if interstitialAd != nil && interstitialAd!.isLoaded() {
    interstitialAd!.show(viewController: <YourViewController>)
 }
 ```
 
 Report the `KidozInterstitialDelegate` protocol's callbacks: 
-```  
+```Swift  
 func onInterstitialAdLoaded(ad: KidozSDK.KidozInterstitialAd)
 func onInterstitialAdFailedToLoad(error: KidozSDK.KidozError)
 func onInterstitialAdShown(ad: KidozSDK.KidozInterstitialAd)
@@ -127,7 +127,7 @@ func onInterstitialAdClosed(ad: KidozSDK.KidozInterstitialAd)
 **Kidoz iOS Interstitial best practices**
 - The preferred timing to show Interstitial Ads : Before the game ends, between game levels, after completing a game level .   
 - Some Interstitial Ads may contain video with sound. In order to maximise user experience, it is important to mute or pause game background sounds and pause the game while the Interstitial is displayed. This can be achieved by using `-onInterstitialAdShown:` and `-onInterstitialAdClosed:` callbacks:
-```
+```Swift
 onInterstitialAdShown {
 // mute|pause background sounds
 // pause your game 
@@ -144,19 +144,19 @@ onInterstitialAdClosed(ad: KidozSDK.KidozInterstitialAd) {
 1. In the selected view controller, conform to the  `KidozInterstitialDelegate`  protocol and implement all delegate methods.
 
 2. Load Interstitial: 
-```
+```Swift
 if ([Kidoz.instance isSDKInitialized]) {
    [KidozInterstitialAd loadWithDelegate: self];
 }
 ```  
 3. Catch callback onInterstitialAdLoaded: 
-```
+```Swift
 - (void)onInterstitialAdLoadedWithAd:(KidozInterstitialAd *)ad {
     self.interstitialAd = ad;
 }
 ```
 4. Show Interstitial:  
-```
+```Swift
 if (interstitialAd != NULL && [interstitialAd isLoaded] ) {
    [interstitialAd showWithViewController: <YourViewController>];
 }
@@ -167,21 +167,21 @@ if (interstitialAd != NULL && [interstitialAd isLoaded] ) {
 ## Add support for Rewarded ad unit
 
 Load Interstitial ad: 
-```
+```Swift
 if Kidoz.instance().isSDKInitialized() {
    KidozRewardedAd.load(delegate: self)
 }
 ```
 
 Show Interstitial ad:  
-```
+```Swift
 if rewardedAd != nil && rewardedAd!.isLoaded() {
    rewardedAd!.show(viewController: <YourViewController>)
 }
 ```
 
 Report the `KidozRewardedDelegate` protocol's callbacks: 
-```  
+```Swift  
 func onRewardedAdLoaded(ad: KidozSDK.KidozRewardedAd)
 func onRewardedAdFailedToLoad(error: KidozSDK.KidozError)
 func onRewardedAdShown(ad: KidozSDK.KidozRewardedAd)
@@ -193,7 +193,7 @@ func onRewardedAdClosed(ad: KidozSDK.KidozRewardedAd)
 **Kidoz iOS Rewarded best practices**
 - The preferred timing to show Rewarded Ads : Based on the implementation of rewarded logics in your game .   
 - Some Rewarded Ads may contain video with sound. In order to maximise user experience, it is important to mute or pause game background sounds and pause the game flow while the Rewarded is displayed. This can be achieved by using `-onRewardedAdShownWithAd:` and `-onRewardedAdClosedWithAd:` callbacks:
-```
+```Swift
 -(void)onRewardedAdShownWithAd {
 //mute/pause background sounds
 //pause your game 
@@ -209,19 +209,19 @@ func onRewardedAdClosed(ad: KidozSDK.KidozRewardedAd)
 1. In the selected view controller , conform to the  `KidozRewardedDelegate`  protocol and implement all delegate methods. 
 
 2. Load Rewarded:  
-```
+```Swift
 if ([Kidoz.instance isSDKInitialized]) {
    [KidozRewardedAd loadWithDelegate: self];
 }
 ```
 3. Catch callback onRewardedAdLoaded:   
-```
+```Swift
 - (void)onRewardedAdLoadedWithAd:(KidozRewardedAd *)ad {
    rewardedAd = ad;
 }
 ```
 4. Show Rewarded:  
-```
+```Swift
 if (rewardedAd != NULL && [rewardedAd isLoaded] ) {
    [rewardedAd showWithViewController: <YourViewController>];
  }
@@ -233,7 +233,7 @@ if (rewardedAd != NULL && [rewardedAd isLoaded] ) {
 1. In the selected view controller , conform to the  `KidozBannerDelegate`  protocol and implement all delegate methods.
 
 2. Init banner (example):  
-```
+```Swift
 func initBannerWithView() {
         if let view = baseMainViewController.view {
             bannerView = KidozBannerView()
@@ -279,7 +279,7 @@ func initBannerWithView() {
 ``` 
 
 3. Load and Show banner :  
-```
+```Swift
 public func loadBanner() {
    if Kidoz.instance().isSDKInitialized() {
       bannerView.load()
@@ -288,7 +288,7 @@ public func loadBanner() {
 ``` 
 
 4. Close banner:  
-```
+```Swift
 public func closeBanner() {
    bannerView.close()
    bannerView.removeFromSuperview()
@@ -301,7 +301,7 @@ public func closeBanner() {
 1. In the selected view controller , conform to the  `KidozBannerDelegate`  protocol and implement all delegate methods.
 
 2. Init banner (example):  
-```
+```Swift
 -(void) initBannerWithView {
     if ([baseMainViewController view] != NULL) {
         bannerView = [[KidozBannerView alloc] init];
@@ -355,7 +355,7 @@ public func closeBanner() {
 ```
 
 3. Load and Show banner :  
-```
+```Swift
 - (void)loadBanner {
     if ([Kidoz.instance isSDKInitialized]) {
         [bannerView load];
@@ -364,7 +364,7 @@ public func closeBanner() {
 ``` 
 
 4. Close banner:  
-```
+```Swift
 - (void)closeBanner {
     [bannerView close];
 }
