@@ -3,12 +3,12 @@
 ***This SDK version was verified not to contain the Advertiser Identifier (IDFA) as required by Apple App Store regulation for apps of Kids category.***
 
 Kidoz SDK as a sole monetization platform:
-- [Kidoz Direct](https://github.com/Kidoz-SDK/kidoz-mobile-sdk/tree/main/Kidoz%20Direct)
+- [Kidoz Direct](/Kidoz%20Direct)
   
 The following mediation platforms are supported:
-- [AdMob](https://github.com/Kidoz-SDK/kidoz-mobile-sdk/tree/main/Mediation/AdMob%20Adapter)
-- [AppLovin Max](https://github.com/Kidoz-SDK/kidoz-mobile-sdk/tree/main/Mediation/AppLovin%20Max%20Adapter)
-- [LevelPlay ironSource](https://github.com/Kidoz-SDK/kidoz-mobile-sdk/tree/main/Mediation/LevelPlay%20IronSource%20Adapter)
+- [AdMob](/Mediation/AdMob%20Adapter)
+- [AppLovin Max](/Mediation/AppLovin%20Max%20Adapter)
+- [LevelPlay ironSource](/LevelPlay%20IronSource%20Adapter)
 
 
 # Prerequisites
