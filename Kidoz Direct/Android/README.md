@@ -64,110 +64,6 @@ protected void onCreate(Bundle savedInstanceState)
     ...
 }
 ```
-# Kidoz Banner
-
-KidozBannerView is a view that shows banner ads.
- 
-### Calling KidozBannerView Programmatically
-
-* Create a KidozBannerView instance:
-```java
-KidozBannerView kidozBannerView = new KidozBannerView(<Activity>); 
-```
-
-* Set banner position:
-```java
-kidozBannerView.setBannerPosition(BANNER_POSITION.TOP_CENTER / BOTTOM_CENTER); 
-```
-
-* Set banner listener:
-```java 
-kidozBannerView.setKidozBannerListener(new BannerAdCallback() {
-
-            @Override
-            public void onAdLoaded() {
-                // onBannerLoaded();
-            }
-
-            @Override
-            public void onAdFailedToLoad(KidozError error) {
-                // onBannerLoadFailed(...);
-            }
-
-            @Override
-            public void onAdShown() {
-               // onBannerShown();
-            }
-
-            @Override
-            public void onAdFailedToShow(KidozError error) {
-               // onBannerShowFailed(...);
-            }
-
-            @Override
-            public void onAdImpression() {
-                // onBannerImpression();
-            }
-
-            @Override
-            public void onAdClosed() {
-                // onBannerClosed();
-            }
-        });
-```
-
-* Call banner load before showing:
-```java
-kidozBannerView.load(); 
-```
-
-* Call banner show (banner needs to be ready before showing):
-
-```java
-kidozBannerView.show(); 
-```
-
-* To hide banner:
-```java
-kidozBannerView.hide(); 
-```
-
-### Showing KidozBannerView in View Hierarchy
-* Add KidozBannerView to your layout (in xml):
-```xml
-            <com.kidoz.sdk.api.ads.banner.KidozBannerView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/<YOUR_ID_NAME>"/>
-``` 
-
-* Find KidozBannerView instance in your layout by id:
-```java
-final KidozBannerView kidozBannerView = (KidozBannerView) findViewById(<your banner id>); 
-```
-
-
-
-* Required (atm) - Set banner to not show on layout():
-```java
-kidozBannerView.setLayoutWithoutShowing(); 
-```
-
-* Call banner load before showing:
-```java
-kidozBannerView.load(); 
-```
-
-* Call banner show (banner needs to be ready before showing):
-
-```java
-kidozBannerView.show(); 
-```
-
-* To hide banner:
-```java
-kidozBannerView.hide(); 
-```
 
 # Kidoz Interstitial
 The Kidoz InterstitialAd is a full screen single ad unit.
@@ -277,4 +173,109 @@ In order to show the ad once it is loaded call:
 
 ```java
 mRewardedAd.show();
+```
+
+# Kidoz Banner
+
+KidozBannerView is a view that shows banner ads.
+ 
+### Calling KidozBannerView Programmatically
+
+* Create a KidozBannerView instance:
+```java
+KidozBannerView kidozBannerView = new KidozBannerView(<Activity>); 
+```
+
+* Set banner position:
+```java
+kidozBannerView.setBannerPosition(BANNER_POSITION.TOP_CENTER / BOTTOM_CENTER); 
+```
+
+* Set banner listener:
+```java 
+kidozBannerView.setKidozBannerListener(new BannerAdCallback() {
+
+            @Override
+            public void onAdLoaded() {
+                // onBannerLoaded();
+            }
+
+            @Override
+            public void onAdFailedToLoad(KidozError error) {
+                // onBannerLoadFailed(...);
+            }
+
+            @Override
+            public void onAdShown() {
+               // onBannerShown();
+            }
+
+            @Override
+            public void onAdFailedToShow(KidozError error) {
+               // onBannerShowFailed(...);
+            }
+
+            @Override
+            public void onAdImpression() {
+                // onBannerImpression();
+            }
+
+            @Override
+            public void onAdClosed() {
+                // onBannerClosed();
+            }
+        });
+```
+
+* Call banner load before showing:
+```java
+kidozBannerView.load(); 
+```
+
+* Call banner show (banner needs to be ready before showing):
+
+```java
+kidozBannerView.show(); 
+```
+
+* To hide banner:
+```java
+kidozBannerView.hide(); 
+```
+
+### Showing KidozBannerView in View Hierarchy
+* Add KidozBannerView to your layout (in xml):
+```xml
+            <com.kidoz.sdk.api.ads.banner.KidozBannerView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/<YOUR_ID_NAME>"/>
+``` 
+
+* Find KidozBannerView instance in your layout by id:
+```java
+final KidozBannerView kidozBannerView = (KidozBannerView) findViewById(<your banner id>); 
+```
+
+
+
+* Required (atm) - Set banner to not show on layout():
+```java
+kidozBannerView.setLayoutWithoutShowing(); 
+```
+
+* Call banner load before showing:
+```java
+kidozBannerView.load(); 
+```
+
+* Call banner show (banner needs to be ready before showing):
+
+```java
+kidozBannerView.show(); 
+```
+
+* To hide banner:
+```java
+kidozBannerView.hide(); 
 ```
