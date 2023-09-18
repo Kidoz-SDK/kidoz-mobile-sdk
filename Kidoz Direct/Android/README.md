@@ -29,7 +29,7 @@ Add the following permissions:
  <uses-permission android:name="android.permission.INTERNET" />
 ``` 
 
-### Initialize the SDK
+# ISDK initialization
 The SDK should be initialized only once in an Activity lifecycle. 
 
 You may run the Sample App with Kidoz's <B>sample</B> `publisherID` and `securityToken` provided in the sample code but <B>be sure not to publish your app with them</B> . 
