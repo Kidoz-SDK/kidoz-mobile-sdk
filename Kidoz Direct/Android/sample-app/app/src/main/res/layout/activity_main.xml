@@ -1,0 +1,142 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    android:padding="4dp"
+    tools:context=".MainActivity">
+    <!-- Interface -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="4dp"
+            android:gravity="right"
+            android:text="Interstitial: " />
+
+        <Button
+            android:id="@+id/interstitial_load"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:text="Load" />
+
+        <Button
+            android:id="@+id/interstitial_show"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:text="Show" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="4dp"
+            android:gravity="right"
+            android:text="Rewarded: " />
+
+        <Button
+            android:id="@+id/rewarded_load"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:text="Load" />
+
+        <Button
+            android:id="@+id/rewarded_show"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:text="Show" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bannerButtonsContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="4dp"
+            android:gravity="right"
+            android:text="Banner:" />
+
+        <Button
+            android:id="@+id/banner_load"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:text="Load" />
+
+        <Button
+            android:id="@+id/banner_close"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:text="close" />
+    </LinearLayout>
+    <!-- Feedback -->
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/bannerContainer"
+            android:layout_marginTop="8pt"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:layout_marginBottom="8pt"
+            android:orientation="vertical"
+            android:weightSum="4">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                android:text="Feedback:"
+                />
+
+            <ScrollView
+                android:id="@+id/feedbackContainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#20000000">
+
+                <TextView
+                    android:id="@+id/feedbackTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="#000000"
+                    android:textSize="10sp" />
+            </ScrollView>
+        </LinearLayout>
+        <FrameLayout
+            android:id="@+id/bannerContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            />
+        <!-- Banner Issue: AdMob takes our banner's html, and uses its own defined body background color, if doesn't exist, it uses the html tag's background color. As long as we're transparent in both Admob will not show that color as a background to their own webview -->
+        <!-- adSize is a String constant from: https://developers.google.com/admob/android/banner#banner_sizes -->
+
+    </RelativeLayout>
+
+</LinearLayout>
