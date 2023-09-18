@@ -66,7 +66,7 @@ protected void onCreate(Bundle savedInstanceState)
 ```
 # Kidoz Banner
 
-'KidozBannerView` is a view that shows banner ads.
+KidozBannerView is a view that shows banner ads.
  
 ### Calling KidozBannerView Programmatically
 
@@ -170,7 +170,7 @@ kidozBannerView.hide();
 ```
 
 # Kidoz Interstitial
-Kidoz Interstitial is a full screen single ad unit.
+The Kidoz InterstitialAd is a full screen single ad unit.
 
 #### Displaying Interstitial Ads
 
@@ -222,7 +222,7 @@ mInterstitialAd.show();
 ```
 
 # Kidoz Rewarded
-Kidoz Interstitial is a full screen single ad unit.
+Kidoz RewardedAd is a full screen single ad unit.
 
 #### Displaying Rewarded Ads
 
