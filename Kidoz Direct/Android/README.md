@@ -215,9 +215,66 @@ InterstitialAd.load(<Activity>, new InterstitialAdCallback() {
 
 
 
-In order to show athw ad once it is loaded call:
+In order to show the ad once it is loaded call:
 
 ```java
 mInterstitialAd.show();
 ```
 
+# Kidoz Rewarded
+Kidoz Interstitial is a full screen single ad unit.
+
+#### Displaying Rewarded Ads
+
+To use the Rewarded Ad you first need to load an Ad instance with an RewardedAdCallback listener :
+
+```java
+RewardedAd mRewardedAd;
+
+RewardedAd.load(MainActivity.this, new RewardedAdCallback() {
+    @Override
+    public void onAdLoaded(RewardedAd ad) {
+        mRewardedAd = ad;
+        // onRewardedLoaded();
+    }
+
+    @Override
+    public void onAdFailedToLoad(KidozError error) {
+        // onRewardedLoadFailed(...);
+    }
+
+    @Override
+    public void onAdShown(RewardedAd ad) {
+        // onRewardedShown();
+    }
+
+    @Override
+    public void onAdFailedToShow(KidozError error) {
+        // onRewardedShowFailed(...);
+    }
+
+    @Override
+    public void onAdImpression() {
+        // onRewardedImpression();
+    }
+
+    @Override
+    public void onAdClosed(RewardedAd ad) {
+        // onRewardedClosed();
+    }
+
+    @Override
+    public void onRewardReceived() {
+        // onRewardAchieved();
+    }
+
+});
+```
+
+
+
+In order to show the ad once it is loaded call:
+
+```java
+mRewardedAd.show();
+```
