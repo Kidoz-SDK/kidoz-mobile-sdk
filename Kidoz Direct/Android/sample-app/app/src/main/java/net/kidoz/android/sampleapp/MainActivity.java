@@ -1,8 +1,7 @@
 package net.kidoz.android.sampleapp;
 
 import android.app.Activity;
-import android.content.pm.PackageInfo;
-import android.content.pm.PackageManager;
+
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
