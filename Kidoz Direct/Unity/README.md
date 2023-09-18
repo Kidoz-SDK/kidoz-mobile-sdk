@@ -3,7 +3,7 @@
 Kidoz Android SDK Version: 9.0.0
 Kidoz iOS SDK Version: 9.0.0
 	
-Built with Unity 2020.3.16f1 Version
+Built with Unity 2021.3.16f1 Version
 
 **Here you can get the Kidoz Unity plugin and a sample app for Unity. See integration instructions and additional information bellow.**
 
