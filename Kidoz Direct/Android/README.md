@@ -29,7 +29,7 @@ Add the following permissions:
  <uses-permission android:name="android.permission.INTERNET" />
 ``` 
 
-# SDK initialization
+## SDK initialization
 The SDK should be initialized only once in an Activity lifecycle. 
 
 You may run the Sample App with Kidoz's <B>sample</B> `publisherID` and `securityToken` provided in the sample code but <B>be sure not to publish your app with them</B> . 
@@ -65,7 +65,7 @@ protected void onCreate(Bundle savedInstanceState)
 }
 ```
 
-# Kidoz Interstitial
+## Kidoz Interstitial
 The Kidoz InterstitialAd is a full screen single ad unit.
 
 #### Displaying Interstitial Ads
@@ -117,7 +117,7 @@ In order to show the ad once it is loaded call:
 mInterstitialAd.show();
 ```
 
-# Kidoz Rewarded
+## Kidoz Rewarded
 Kidoz RewardedAd is a full screen single ad unit.
 
 #### Displaying Rewarded Ads
@@ -175,7 +175,7 @@ In order to show the ad once it is loaded call:
 mRewardedAd.show();
 ```
 
-# Kidoz Banner
+## Kidoz Banner
 
 KidozBannerView is a view that shows banner ads.
  
