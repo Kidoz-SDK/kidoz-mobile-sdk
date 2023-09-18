@@ -17,7 +17,7 @@ Before publishing your first app please finish the onboarding process for [Kidoz
 ```groovy
 dependencies {
     implementation 'org.greenrobot:eventbus:3.3.1'
-    implementation 'net.kidoz.sdk:kidoz-android-native:8.9.9'
+    implementation 'net.kidoz.sdk:kidoz-android-native:9.0.0'
 }
 ``` 
 
