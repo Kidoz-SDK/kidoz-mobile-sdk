@@ -1,20 +1,24 @@
 workspace 'SampleApp.xcworkspace'
 platform :ios, '10.0'
 
+def kidoz_pod
+    pod 'KidozSDK','9.0.0'
+end
+
 target 'SampleAppSwift' do
   use_frameworks!
-  pod ‘KidozSDK’, :podspec => 'https://github.com/Kidoz-SDK/kidoz-ios-frameworks/raw/main/KidozSDK/KidozSDK.podspec'
+  kidoz_pod
   project 'SampleAppSwift/SampleAppSwift.xcodeproj'
 end
 
 target 'SampleAppObjc' do
   use_frameworks!
-  pod ‘KidozSDK’, :podspec => 'https://github.com/Kidoz-SDK/kidoz-ios-frameworks/raw/main/KidozSDK/KidozSDK.podspec'
+  kidoz_pod
   project 'SampleAppObjc/SampleAppObjc.xcodeproj'
 end
 
 target 'CommonSampleApp' do
   use_frameworks!
-  pod ‘KidozSDK’, :podspec => 'https://github.com/Kidoz-SDK/kidoz-ios-frameworks/raw/main/KidozSDK/KidozSDK.podspec'
+  kidoz_pod
   project 'CommonSampleApp/CommonSampleApp.xcodeproj'
 end
