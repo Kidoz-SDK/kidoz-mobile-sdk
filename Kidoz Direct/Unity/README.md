@@ -60,7 +60,7 @@ For more information, see [Configuring ad network IDs on Unity](https://docs.uni
 
 #### Using the SDK
 
-See full usage example on our [Sample app](/SampleApp/Assets/Scenes/MainCode.cs)
+See full usage example on our [Sample app](/Kidoz%20Direct/Unity/SampleApp/Assets/Scenes/MainCode.cs)
 1. Select your relevant script file.
 2. Add ```using KidozSDK;``` in the using section of your code.
 
