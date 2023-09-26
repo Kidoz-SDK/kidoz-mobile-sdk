@@ -2,6 +2,7 @@
 
 ### Integration Steps:
 
+The Kidoz Applovin MAx adapater was built and tested with ApplovinSDK v11.10.1 .
 Include the following inside your app build.gradle dependencies:
 
 ```java
