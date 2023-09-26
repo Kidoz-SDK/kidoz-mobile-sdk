@@ -63,13 +63,13 @@ See full usage example on our [Sample app Main scene script](/Kidoz%20Direct/Uni
 
 Invoke the following method to load an interstitial ad. Set the flag isAutoShow to true if you want to automatically show ad when loaded.
 ```java
- 	Kidoz.loadInterstitialAd(false); // Set the flag isAutoShow to true if you want to automatically show ad when loaded.
+ Kidoz.loadInterstitialAd(false); // Set the flag isAutoShow to true if you want to automatically show ad when loaded.
   ```
 Invoke the Following method to show the ad afteronInterstitialLoaded callback is fired.
 ```java
-	Kidoz.showInterstitial();
+Kidoz.showInterstitial();
 ```
-
+Before loading the first interstitial ad set following callback event handlers
 ```java
         Kidoz.onInterstitialLoaded += < onInterstitialLoaded >;
         Kidoz.onInterstitialFailedToLoad += < onInterstitialFailedToLoad >;
