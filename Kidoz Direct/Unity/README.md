@@ -49,20 +49,26 @@ For more information, see [Configuring ad network IDs on Unity](https://docs.uni
 
 ## Using the SDK
 
-See full usage example on our [Sample app](/Kidoz%20Direct/Unity/SampleApp/Assets/Scenes/MainCode.cs)
+See full usage example on our [Sample app Main scene script](/Kidoz%20Direct/Unity/SampleApp/Assets/Scenes/MainCode.cs)
 1. Select your relevant script file.
 2. Add ```using KidozSDK;``` in the using section of your code.
 
 ### SDK init Callbacks Events
+```java
         Kidoz.initSuccess += < onSDKInit >;
         Kidoz.initError += < onSDKInitFailed >;
+```
 
 ### Interstitial load/show and Callbacks Events:
 
 Invoke the following method to load an interstitial ad. Set the flag isAutoShow to true if you want to automatically show ad when loaded.
-	```Kidoz.loadInterstitialAd(false);```
+```java
+ 	Kidoz.loadInterstitialAd(false); // Set the flag isAutoShow to true if you want to automatically show ad when loaded.
+  ```
 Invoke the Following method to show the ad afteronInterstitialLoaded callback is fired.
- 	```Kidoz.showInterstitial();```
+```java
+	Kidoz.showInterstitial();
+```
 
 ```java
         Kidoz.onInterstitialLoaded += < onInterstitialLoaded >;
