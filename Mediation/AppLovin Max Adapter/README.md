@@ -8,9 +8,9 @@ The Adapter currently offers support for the following ad types:
 
 on the following platforms:
 
-+ [Unity](https://github.com/Kidoz-SDK/kidoz-mobile-sdk/tree/main/KidozApplovinAdapter/Unity)
-+ [Native Android](https://github.com/Kidoz-SDK/kidoz-mobile-sdk/tree/main/KidozApplovinAdapter/Android)
-+ [Native iOS](https://github.com/Kidoz-SDK/kidoz-mobile-sdk/tree/main/KidozApplovinAdapter/iOS)
++ [Native Android](/Mediation/AppLovin%20Max%20Adapter/Android)
++ [Native iOS](/Mediation/AppLovin%20Max%20Adapter/iOS)
++ [Unity](/Mediation/AppLovin%20Max%20Adapter/Unity)
 
 # Prerequisites
 
