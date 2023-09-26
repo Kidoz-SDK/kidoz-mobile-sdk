@@ -55,8 +55,8 @@ See full usage example on our [Sample app Main scene script](/Kidoz%20Direct/Uni
 
 ### SDK init callbacks events
 ```java
-        Kidoz.initSuccess += < onSDKInit >;
-        Kidoz.initError += < onSDKInitFailed >;
+Kidoz.initSuccess += < onSDKInit >;
+Kidoz.initError += < onSDKInitFailed >;
 ```
 
 ### Interstitial lifecycle methods callbacks:
