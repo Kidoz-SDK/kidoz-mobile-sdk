@@ -1,8 +1,9 @@
 # Kidoz Applovin Android Adapter
 
+The kidoz Applovin Max Adapter was built and tested with ApplovinSDK v11.10.1.
+
 ### Integration Steps:
 
-The kidoz Applovin Max Adapter was built and tested with ApplovinSDK v11.10.1 .
 Include the following inside your app build.gradle dependencies:
 
 ```java
