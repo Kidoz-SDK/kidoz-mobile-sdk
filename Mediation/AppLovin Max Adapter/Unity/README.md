@@ -2,6 +2,6 @@
 
 ### Integration Steps:
 
-Download and import [Kidoz AppLovin Adapter](/Mediation/AppLovin%20Max%20Adapter/Unity/KidozApplovinAdapter.unitypackage) unity custom package into your Project's Asset Folder.
+Download and import [KidozApplovinAdapter.unitypackage](/Mediation/AppLovin%20Max%20Adapter/Unity/KidozApplovinAdapter.unitypackage) into your Project's Asset Folder.
 
 
