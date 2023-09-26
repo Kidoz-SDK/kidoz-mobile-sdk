@@ -65,7 +65,7 @@ Invoke the following method to load an interstitial ad.
 ```java
  Kidoz.loadInterstitialAd(false); // Set the flag isAutoShow to true if you want to automatically show ad when loaded.
   ```
-Invoke the Following method to show the ad after onInterstitialLoaded callback is invoked.
+Invoke the Following method to show the ad after onInterstitialLoaded callback is triggered.
 ```java
 Kidoz.showInterstitial();
 ```
@@ -84,7 +84,7 @@ Invoke the following method to load an rewarded ad. Set the flag isAutoShow to t
 ```java
  Kidoz.loadRewardedAd(false); // Set the flag isAutoShow to true if you want to automatically show ad when loaded.
   ```
-Invoke the Following method to show the ad after onRewardedLoaded callback is invoked.
+Invoke the Following method to show the ad after onRewardedLoaded callback is triggered.
 ```java
 Kidoz.showRewarded();
 ```
@@ -107,7 +107,7 @@ Invoke the following method to load and show a banner ad.
 // Set the requested banner position: BOTTOM_CENTER,TOP_CENTER,TOP_LEFT,TOP_RIGHT,BOTTOM_LEFT,BOTTOM_RIGHT. 
  Kidoz.loadBanner(true, Kidoz.BANNER_POSITION.BOTTOM_CENTER); 
   ```
-In case you choose to set the isAutoShow to false - invoke the Following method to show the banner after onBannerLoaded callback is invoked.
+In case you choose to set the isAutoShow to false - invoke the Following method to show the banner after onBannerLoaded callback is triggered.
 ```java
 Kidoz.showBanner();
 ```
