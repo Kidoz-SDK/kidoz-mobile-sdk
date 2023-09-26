@@ -1,6 +1,6 @@
 # Kidoz Applovin Adapters
 
-The kidoz Applovin Max Adapter was built against AppLovonSDK v11.4.4
+The kidoz Applovin Max Adapter was built and tested with AppLovinSDK v11.4.4
 
 To addthe adapter to your project with CocoaPods:
 ```
