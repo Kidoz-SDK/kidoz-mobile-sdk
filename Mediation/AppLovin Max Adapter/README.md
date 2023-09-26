@@ -9,7 +9,7 @@ The Adapter currently offers support for the following ad types:
 on the following platforms:
 
 + [Native Android](/Mediation/AppLovin%20Max%20Adapter/Android)
-+ + [Native iOS](/Mediation/AppLovin%20Max%20Adapter/iOS)
++ [Native iOS](/Mediation/AppLovin%20Max%20Adapter/iOS)
 + [Unity](/Mediation/AppLovin%20Max%20Adapter/Unity)
 
 # Prerequisites
