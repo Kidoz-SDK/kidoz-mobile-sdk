@@ -65,18 +65,18 @@ Invoke the following method to load an interstitial ad.
 ```java
  Kidoz.loadInterstitialAd(false); // Set the flag isAutoShow to true if you want to automatically show ad when loaded.
   ```
-Invoke the Following method to show the ad afteronInterstitialLoaded callback is fired.
+Invoke the Following method to show the ad after onInterstitialLoaded callback is fired.
 ```java
 Kidoz.showInterstitial();
 ```
 Before loading the first interstitial ad set following callback event handlers:
 ```java
-        Kidoz.onInterstitialLoaded += < onInterstitialLoaded >;
-        Kidoz.onInterstitialFailedToLoad += < onInterstitialFailedToLoad >;
-        Kidoz.onInterstitialShown += < onInterstitialShown >;
-        Kidoz.onInterstitialFailedToShow += < onInterstitialFailedToShow;
-        Kidoz.onInterstitialImpression += < onInterstitialImpression;
-        Kidoz.onInterstitialClosed += < onInterstitialClosed;
+Kidoz.onInterstitialLoaded += < onInterstitialLoaded >;
+Kidoz.onInterstitialFailedToLoad += < onInterstitialFailedToLoad >;
+Kidoz.onInterstitialShown += < onInterstitialShown >;
+Kidoz.onInterstitialFailedToShow += < onInterstitialFailedToShow;
+Kidoz.onInterstitialImpression += < onInterstitialImpression;
+Kidoz.onInterstitialClosed += < onInterstitialClosed;
 ```
 ### Rewarded lifecycle methods callbacks:
 
@@ -84,19 +84,19 @@ Invoke the following method to load an rewarded ad. Set the flag isAutoShow to t
 ```java
  Kidoz.loadRewardedAd(false); // Set the flag isAutoShow to true if you want to automatically show ad when loaded.
   ```
-Invoke the Following method to show the ad afteronInterstitialLoaded callback is fired.
+Invoke the Following method to show the ad after onRewardedLoaded callback is fired.
 ```java
 Kidoz.showRewarded();
 ```
 Before loading the first rewarded ad set following callback event handlers:
 ```java
-        Kidoz.onRewardedLoaded += < onRewardedLoaded >;
-        Kidoz.onRewardedFailedToLoad += < onRewardedFailedToLoad >;
-        Kidoz.onRewardedShown += < onRewardedShown >;
-        Kidoz.onRewardedFailedToShow += < onRewardedFailedToShow >;
-        Kidoz.onRewardedImpression += < onRewardedImpression >;
-        Kidoz.onRewardedReceived += < onRewardedReceived >;
-        Kidoz.onRewardedClosed += < onRewardedClosed >;
+Kidoz.onRewardedLoaded += < onRewardedLoaded >;
+Kidoz.onRewardedFailedToLoad += < onRewardedFailedToLoad >;
+Kidoz.onRewardedShown += < onRewardedShown >;
+Kidoz.onRewardedFailedToShow += < onRewardedFailedToShow >;
+Kidoz.onRewardedImpression += < onRewardedImpression >;
+Kidoz.onRewardedReceived += < onRewardedReceived >;
+Kidoz.onRewardedClosed += < onRewardedClosed >;
 ```
 
 ### Banner lifecycle methods callbacks:
@@ -104,20 +104,21 @@ Before loading the first rewarded ad set following callback event handlers:
 Invoke the following method to load and show a banner ad. 
 ```java
 // Set the flag isAutoShow to false if you <u>don't</u> want to automatically show the banner once loaded.
+// Set the requested banner position: BOTTOM_CENTER,TOP_CENTER,TOP_LEFT,TOP_RIGHT,BOTTOM_LEFT,BOTTOM_RIGHT. 
  Kidoz.loadBanner(true, Kidoz.BANNER_POSITION.BOTTOM_CENTER); 
   ```
-Invoke the Following method to show the ad afteronInterstitialLoaded callback is fired.
+In case you choose to set the isAutoShow to false - invoke the Following method to show the banner after onBannerLoaded callback is fired.
 ```java
-Kidoz.showRewarded();
+Kidoz.showBanner();
 ```
 Before loading the first rewarded ad set following callback event handlers:
 ```java
-        Kidoz.onBannerLoaded += onBannerLoaded;
-        Kidoz.onBannerFailedToLoad += onBannerFailedToLoad;
-        Kidoz.onBannerShown += onBannerShown;
-        Kidoz.onBannerFailedToShow += onBannerFailedToShow;
-        Kidoz.onBannerImpression += onBannerImpression;
-        Kidoz.onBannerClosed += onBannerClosed;
+Kidoz.onBannerLoaded += onBannerLoaded;
+Kidoz.onBannerFailedToLoad += onBannerFailedToLoad;
+Kidoz.onBannerShown += onBannerShown;
+Kidoz.onBannerFailedToShow += onBannerFailedToShow;
+Kidoz.onBannerImpression += onBannerImpression;
+Kidoz.onBannerClosed += onBannerClosed;
 ```
 
 **Kidoz iOS Interstitial best practices**
