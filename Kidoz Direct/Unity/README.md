@@ -9,7 +9,7 @@ Built with Unity 2021.3.16f1 Version
 
 ***This SDK version was verified not to contain the Advertiser Identifier (IDFA) as required by Apple App Store regulation for apps of Kids category.***
 
-# General
+## General
 
 This Unity application project provides an example of the [Kidoz](http://www.kidoz.net) SDK integration.
 
@@ -22,7 +22,7 @@ _Recommended units_:
 	
 Before publishing your first app please finish the onboarding process for [Kidoz's publishers](http://accounts.kidoz.net/publishers/register?utm_source=kidoz_github).
 	
-# iOS SKAdNetwork Support
+## iOS SKAdNetwork Support
 
 In order to support CPI attribution on iOS, please make sure to include the Kidoz ad network ID in your app property list file (Info.plist):
 
@@ -32,19 +32,8 @@ v79kvwwj4g.skadnetwork
 	
 For more information, see [Configuring ad network IDs on Unity](https://docs.unity.com/ads/ConfiguringAdNetworkIDs.html) and  [Configuring a Source App for SKAdNetwork](https://developer.apple.com/documentation/storekit/skadnetwork/configuring_a_source_app).
 
-# Running the sample app
 
-1. Clone (or Download) the Unity project (download button located on the right) and unzip the downloaded .zip file
-2. Launch `Unity`, click `File` --> `Open Project` --> `Open`, navigate to unzipped project directory, select the whole directory and click `OK`
-3. In the Assets tab click on the `FirstScene` (See printscreen below)
-<br>
-<a href="url"><img src="http://d28lrrc51wcjkk.cloudfront.net/sdk/FirstScene_unity_-_sdk_-_Android__Personal_.png" align="center" height="150" width="700" ></a>
-</br>
-4. Go to `File` --> `Build Settings...` , in the opened menu select `Android` and click `Switch Platform` <br>
-5. To run the SDK Sample App go to `File` --> `Build & Run`
-
-
-# Kidoz SDK - Getting Started
+## Kidoz SDK - Getting Started
 
 1. Import the `KidozSDK` Unity package. `Assets` --> `Import Package` --> `Custom Package` --> select the extracted KidozSDK package.
 2. In the import window select all components. A new Prefabs object named `KidozObject` will appear in the Assets folder. 
@@ -58,18 +47,49 @@ For more information, see [Configuring ad network IDs on Unity](https://docs.uni
 
 *Note: When compiling for iOS please add the following frameworks: libsqlite3.tbd, webkit.framework*
 
-#### Using the SDK
+## Using the SDK
 
 See full usage example on our [Sample app](/Kidoz%20Direct/Unity/SampleApp/Assets/Scenes/MainCode.cs)
 1. Select your relevant script file.
 2. Add ```using KidozSDK;``` in the using section of your code.
 
-# General Events
-The following general events are important if you wish to follow the SDK's initialization state:
-		Kidoz.initSuccess += onKidozInitSuccess;
-		Kidoz.initError += onKidozInitError;
+### SDK init Callbacks Events
+        Kidoz.initSuccess += < onSDKInit >;
+        Kidoz.initError += < onSDKInitFailed >;
 
-# Kidoz Banner 
+### Interstitial load/show and Callbacks Events:
+
+Invoke the following method to load an interstitial ad. Set the flag isAutoShow to true if you want to automatically show ad when loaded.
+	```Kidoz.loadInterstitialAd(false);```
+Invoke the Following method to show the ad afteronInterstitialLoaded callback is fired.
+ 	```Kidoz.showInterstitial();```
+
+```java
+        Kidoz.onInterstitialLoaded += < onInterstitialLoaded >;
+        Kidoz.onInterstitialFailedToLoad += < onInterstitialFailedToLoad >;
+        Kidoz.onInterstitialShown += < onInterstitialShown >;
+        Kidoz.onInterstitialFailedToShow += < onInterstitialFailedToShow;
+        Kidoz.onInterstitialImpression += < onInterstitialImpression;
+        Kidoz.onInterstitialClosed += < onInterstitialClosed;
+```
+### SDK init Callbacks Events
+        Kidoz.onRewardedLoaded += < onRewardedLoaded >;
+        Kidoz.onRewardedFailedToLoad += < onRewardedFailedToLoad >;
+        Kidoz.onRewardedShown += < onRewardedShown >;
+        Kidoz.onRewardedFailedToShow += < onRewardedFailedToShow >;
+        Kidoz.onRewardedImpression += < onRewardedImpression >;
+        Kidoz.onRewardedReceived += < onRewardedReceived >;
+        Kidoz.onRewardedClosed += < onRewardedClosed >;
+
+### SDK init Callbacks Events
+        Kidoz.onBannerLoaded += < onBannerLoaded >;
+        Kidoz.onBannerFailedToLoad += < onBannerFailedToLoad >;
+        Kidoz.onBannerShown += < onBannerShown >;
+        Kidoz.onBannerFailedToShow += < onBannerFailedToShow >;
+        Kidoz.onBannerImpression += < onBannerImpression >;
+        Kidoz.onBannerClosed += < onBannerClosed >;
+
+## Kidoz Banner 
 To load a banner ad:
 ```java
 Kidoz.loadBanner (<AUTO_SHOW>, <BANNER_POSITION>);
