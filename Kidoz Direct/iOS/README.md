@@ -11,12 +11,12 @@ pod 'KidozSDK', '9.0.0'
 
 ## API Usage and Sample APP
 
-See the following 
+See the following API integration documents:
 
 - [Swift](/Kidoz%20Direct/iOS/SampleApp/SampleAppSwift) 
 - [Objective-C](/Kidoz%20Direct/iOS/SampleApp/SampleAppObjc)
 
-In order to see Kidoz SDK in action go to the [SampleApp](https://github.com/Kidoz-SDK/kidoz-mobile-sdk/tree/main/Direct/iOS/SampleApp) folder and open `SampleApp.xcworkspace`.
+Or look into our [SampleApp project](https://github.com/Kidoz-SDK/kidoz-mobile-sdk/tree/main/Direct/iOS/SampleApp) workspace.
 
 #### SKAdNetwork Support
 In order to support CPI attribution on iOS, please make sure to include the Kidoz ad network ID in your app property list file (Info.plist):
