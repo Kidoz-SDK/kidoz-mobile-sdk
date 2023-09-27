@@ -1,13 +1,5 @@
 ## Kidoz iOS Mobile SDK Sample App - Objective-C
 
-#### Add Kidoz SDK to your iOS project with CocoaPods
-add to your `Podfile`:
-
-```yaml
-pod 'KidozSDK', '9.0.0'
-```
-run in Terminal `pod install` from the root folder of your Podfile.
-
 #### Initialize Kidoz SDK
 Call the initialize method with the publisher ID and Token which you received during the [Kidoz onboarding](http://accounts.kidoz.net/publishers/register?utm_source=kidoz_github).
 ```Objective-C 
