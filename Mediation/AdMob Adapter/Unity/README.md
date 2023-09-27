@@ -39,10 +39,10 @@ Follow instructins on how to [Set Up Custom Events](https://developers.google.co
 <B>*</B> Replace `publisherId` and `publisherToken` with the credentials received during the Kidoz Publisher Account sign up.
 * 
 ### Proguard rules
-If you are using the Minify option in the Player settings please add this to proguard-user.txt file:**  
+If you are using the Minify option in the Player settings please add this to your proguard-rules file:**  
 ```
 -keep @interface org.greenrobot.eventbus.Subscribe  
 -keepclassmembers class * {  
-@org.greenrobot.eventbus.Subscribe <methods>;  
+  @org.greenrobot.eventbus.Subscribe <methods>;  
 }
 ```
