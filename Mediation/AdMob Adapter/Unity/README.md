@@ -1,8 +1,7 @@
 # Kidoz AdMob Unity Adapter
 
 The kidoz Admob Adapter was built and tested with Google Mobile Ads Unity Plugin v8.5.1<BR>
-and Unity editor 2021.3.16f1 Version
-
+Check out the [AdMob Unity Plugin Documentation](https://developers.google.com/admob/unity/start) for app level integration.
 
 ## Contents
 - [Prerequisites](#prerequisites)
