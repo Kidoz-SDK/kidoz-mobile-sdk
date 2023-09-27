@@ -105,7 +105,7 @@ If you encounter issues while building your iOS application you may tryb the fol
 
 On project level and not on target Add:
 
-1. Library Search Path:
+1. Library Search Path: <BR>
 $(SDKROOT)/usr/lib/swift $(TOOLCHAIN_DIR)/usr/lib/swift-5.5/$(PLATFORM_NAME) $(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)
 
 See https://stackoverflow.com/a/65602500/5572423
