@@ -7,7 +7,6 @@ Check out the [ironSource Integration Documentation](https://developers.is.com/i
 
 To add Kidoz ironSource Adapter to your project with CocoaPods:
 ```
-pod 'IronSourceSDK','7.3.1.0'
 pod 'KidozSDK', '9.0.0'
 pod 'KidozIronSourceAdapter', '1.1.2'
 ```
