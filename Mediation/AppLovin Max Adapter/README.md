@@ -14,6 +14,7 @@ On the following platforms:
 
 # Prerequisites
 
+Before publishing your first app please finish the onboarding process for Kidoz's publishers HERE. <BR>
 Follow the instructions in the [AppLovin Custom SDK Network Integration Guide](https://dash.applovin.com/documentation/mediation/android/mediation-setup/custom-sdk)
 
 In the Manage Network form you should enter the following data:
