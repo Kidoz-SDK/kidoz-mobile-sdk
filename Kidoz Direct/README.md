@@ -1,7 +1,7 @@
 
 # Kidoz Mobile SDK
 
-Our SDK offer support for the following ad types:
+Kidoz SDK offer support for the following ad types:
 
 + Interstitial Mediation 
 + Rewarded Video Mediation 
