@@ -8,7 +8,7 @@ Kidoz SDK as a sole monetization platform:
 The following mediation platforms are supported:
 - [AdMob](/Mediation/AdMob%20Adapter)
 - [AppLovin Max](/Mediation/AppLovin%20Max%20Adapter)
-- [LevelPlay ironSource](/LevelPlay%20IronSource%20Adapter)
+- [ironSource LevelPlay](/Mediation/IronSource%20LevelPlay%20Adapter)
 
 
 # Prerequisites
