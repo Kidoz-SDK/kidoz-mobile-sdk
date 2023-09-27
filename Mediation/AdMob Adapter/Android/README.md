@@ -3,8 +3,8 @@ The kidoz Google Admob was built and tested with play-services-ad v22.1.0.<BR>
 Check out the [Max Mediation Documentation](https://dash.applovin.com/documentation/mediation/android/getting-started/integration) for app level integration.
 
 ### Integration Steps:
-Follow instructins on how to [Set Up Custom Events](https://developers.google.com/admob/android/custom-events/setup) on AdMob<BR>
-and include the following inside your app build.gradle dependencies:
+
+Include the following inside your app build.gradle dependencies:
 
 ```java
 dependencies {
@@ -13,7 +13,7 @@ dependencies {
     implementation "net.kidoz.sdk:kidoz-android-admob-adapter:1.9.0"
 }
 ```
-Follow the instructions for Custom Events setup [HERE](https://developers.google.com/admob/android/custom-events/setup)
+Follow instructins on how to [Set Up Custom Events](https://developers.google.com/admob/android/custom-events/setup) on AdMob<BR>
 **Kidoz Adapter**
 * Set the following full path in the `Class Name` field: </br>
 `com.kidoz.mediation.admob.adapters.KidozAdMobAdapter`
