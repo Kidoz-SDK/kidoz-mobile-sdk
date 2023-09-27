@@ -6,7 +6,7 @@ Our Adapters offer support for the following ad types:
 + Rewarded Video Mediation 
 + Banner Mediation 
 
-on the following platforms:
+On the following platforms:
 
 + [Native Android](/Mediation/IronSource%20LevelPlay%20Adapter/Android)
 + [Native iOS](/Mediation/IronSource%20LevelPlay%20Adapter/iOS)
