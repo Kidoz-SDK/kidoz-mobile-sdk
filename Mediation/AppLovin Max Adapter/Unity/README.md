@@ -1,6 +1,6 @@
 # Kidoz Applovin Unity Adapter
 
-The kidoz Applovin Max Adapter was built and tested with AppLovin MAx unity plugin v5.10.1
+The kidoz Applovin Max Adapter was built and tested with AppLovin Max unity plugin v5.10.1
 
 ### Integration Steps:
 
