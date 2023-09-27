@@ -1,4 +1,4 @@
-# Kidoz Unity SDK
+# Kidoz Unity Plugin
 
 Kidoz Android SDK Version: 9.0.0
 Kidoz iOS SDK Version: 9.0.0
