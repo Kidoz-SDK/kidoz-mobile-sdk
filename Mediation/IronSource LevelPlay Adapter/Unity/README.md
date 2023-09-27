@@ -1,13 +1,12 @@
 # Unity ironSource Adapter
 
-The Kidoz Unity ironSource Adapter SDK is built and tested with ironSource mediation v7.2.3.1.<BR>
-You should only use version 7.2.0.0 or above as it is the first stable custom mediation release with both Interstital and Rewarded support.<BR>
+The Kidoz Unity ironSource Adapter SDK is built and tested with ironSource unity plugin v7.5.0.<BR>
 
 This adapter offers support for the following ad types:
 
-+ ironSource Interstitial Mediation 
-+ ironSource Rewarded Video Mediation 
-
++ LevelPlay Interstitial Mediation 
++ LevelPlay Rewarded Video Mediation 
++ LevelPlay Banner
   
 Before publishing your first app please finish the onboarding process for Kidoz's publishers [HERE](http://accounts.kidoz.net/publishers/register?utm_source=&utm_content=&utm_campaign=&utm_medium=)  
 and follow the instructions for ironSource Custom Adapter setup [HERE](https://developers.is.com/ironsource-mobile/general/custom-adapter-setup/).<BR><BR>
