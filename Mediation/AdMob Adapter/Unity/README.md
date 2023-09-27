@@ -1,11 +1,8 @@
-# Kidoz AdMob mediation adapter for Unity  
+# Kidoz AdMob Unity Adapter
 
-Built using Unity 2020.3.16f1 Version and tested with:
-- Google Mobile Ads Unity Plugin v7.0.0
-- Kidoz Android SDK v9.0.0
-- Kidoz iOS SDK v9.0.0
-- Kidoz Android AdMob Adapter v1.0.1
-- Kidoz iOS AdMob Adapter v1.0.1
+The kidoz Admob Adapter was built and tested with Google Mobile Ads Unity Plugin v8.5.1<BR>
+and Unity editor 2021.3.16f1 Version
+
 
 ## Contents
 - [Prerequisites](#prerequisites)
