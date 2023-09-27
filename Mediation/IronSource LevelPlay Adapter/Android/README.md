@@ -8,8 +8,8 @@ Include the following inside your app build.gradle dependencies:
 
 ```java
 dependencies {
-    implementation 'org.greenrobot:eventbus:3.2.0'
-    implementation 'net.kidoz.sdk:kidoz-android-native:8.9.8'
+    implementation 'org.greenrobot:eventbus:3.3.1'
+    implementation 'net.kidoz.sdk:kidoz-android-native:9.0.0'
     implementation 'net.kidoz.sdk:kidoz-android-ironsource-adapter:1.1.2'
 }
 ``` 
