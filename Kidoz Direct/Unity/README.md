@@ -2,8 +2,18 @@
 
 ### Getting Started:
 
-Download and import [KidozUnityPlugin.unitypackage](/Kidoz%20Direct/Unity/KidozUnityPlugin.unitypackage) into your Project's Asset Folder.
-	
+1. Download and import [KidozUnityPlugin.unitypackage](/Kidoz%20Direct/Unity/KidozUnityPlugin.unitypackage) into your Project's Asset Folder.
+2. In the import window select all components. A new Prefabs object named `KidozObject` will appear in the Assets folder. 
+3. Open your requested Scene. 
+4. Drag the `KidozObject` into the selected scene.
+5. Select the `KidozObject` and enter your `Publisher ID` and `Security Token`. To receive these credentials please finish the onboarding process for [Kidoz's publishers](http://accounts.kidoz.net/publishers/register?utm_source=kidoz_github) if you haven't done so already.
+
+6. If you're having issues with the 'KidozObject' you can open the SampleScene by double clicking it instead.
+
+<a href="url"><img src="http://d28lrrc51wcjkk.cloudfront.net/sdk/Unity_SDK_Publisher_Security_Token.png" align="center" height="250" width="400" ></a>
+
+ *Note: When compiling for iOS please add the following frameworks: libsqlite3.tbd, webkit.framework*
+ 
 ## iOS SKAdNetwork Support
 
 In order to support CPI attribution on iOS, please make sure to include the Kidoz ad network ID in your app property list file (Info.plist):
@@ -14,20 +24,6 @@ v79kvwwj4g.skadnetwork
 	
 For more information, see [Configuring ad network IDs on Unity](https://docs.unity.com/ads/ConfiguringAdNetworkIDs.html) and  [Configuring a Source App for SKAdNetwork](https://developer.apple.com/documentation/storekit/skadnetwork/configuring_a_source_app).
 
-
-## Kidoz SDK - Getting Started
-
-1. Import the `KidozSDK` Unity package. `Assets` --> `Import Package` --> `Custom Package` --> select the extracted KidozSDK package.
-2. In the import window select all components. A new Prefabs object named `KidozObject` will appear in the Assets folder. 
-3. Open your requested Scene. 
-4. Drag the `KidozObject` into the selected scene.
-5. Select the `KidozObject` and enter your `Publisher ID` and `Security Token`. To receive these credentials please finish the onboarding process for [Kidoz's publishers](http://accounts.kidoz.net/publishers/register?utm_source=kidoz_github) if you haven't done so already.
-
-6. If you're having issues with the 'KidozObject' you can open the SampleScene by double clicking it instead.
-
-<a href="url"><img src="http://d28lrrc51wcjkk.cloudfront.net/sdk/Unity_SDK_Publisher_Security_Token.png" align="center" height="250" width="400" ></a>
-
-*Note: When compiling for iOS please add the following frameworks: libsqlite3.tbd, webkit.framework*
 
 ## Using the SDK
 
