@@ -9,8 +9,7 @@ Download and import [KidozAdmobAdapter.unitypackage](/Mediation/AdMob%20Adapter/
 
 ## iOS integration
 
-Follow instructins on how to [Set Up Custom Events](https://developers.google.com/admob/ios/custom-events/setup#create) on the AdMob dashboard<BR>
-and set up **Kidoz Adapter**:
+Follow instructins on how to [Set Up Custom Events](https://developers.google.com/admob/ios/custom-events/setup#create) on the AdMob dashboard and set up **Kidoz Adapter**:
 * Set the following full path in the `Class Name` field: </br>
 `KidozAdmobAdapter`
 * Set the following json string in the `Parameter (optional)` field: </br>
