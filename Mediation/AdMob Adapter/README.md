@@ -2,9 +2,9 @@
 
 The Admob currently offers support for the following platforms:
 
-+ [Unity](/Mediation/Admob%20Adapter/Unity)
-+ [Native Android](/Mediation/Admob%20Adapter/Android)
-+ [Native iOS](/Mediation/Admob%20Adapter/iOS)
++ [Unity](/Mediation/AdMob%20AdapterUnity)
++ [Native Android](/Mediation/AdMob%20Adapter/Android)
++ [Native iOS](/Mediation/AdMob%20Adapter/iOS)
 
 # Prerequisites
 To use the Kidoz SDK adapter for AdMob you should make sure you have:
