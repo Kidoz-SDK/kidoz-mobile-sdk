@@ -3,24 +3,18 @@
 The kidoz Admob Adapter was built and tested with Google Mobile Ads Unity Plugin v8.5.1<BR>
 Check out the [AdMob Unity Plugin Documentation](https://developers.google.com/admob/unity/start) for app level integration.
 
-## Contents
-- [Prerequisites](#prerequisites)
-- [Integration Steps](#integration-steps)
-- [Setup for Android](#setup-for-android)
-- [Setup for iOS](#setup-for-ios)
+### Integration Steps:
 
-## Prerequisites:
+Download and import [KidozAdmobAdapter.unitypackage](/Mediation/AdMob%20Adapter/Unity/KidozAdmobAdapter.unitypackage) into your Project's Asset Folder.
 
-To use the Kidoz SDK adapter for AdMob you should make sure you have:
+### iOS integration
 
-1. AdMob Unity Plugin integrated into your project. See [integration documentation](https://developers.google.com/admob/unity/start).
-2. A fully functional AdMob ad placement.
-3. Finish the onboarding process for [Kidoz's publishers](http://accounts.kidoz.net/publishers/register?utm_source=kidoz_github).
+In order to support CPI attribution on iOS, please make sure to include the Kidoz ad network ID in your app property list file (Info.plist):
 
+```java
+v79kvwwj4g.skadnetwork	
 ```
-The support of Admob mediation for Apps that opt-in to "Designed For Families program"
-should be checked with Google Admob mediation team. 
-However, Kidoz ads can be integrated directly to your apps.
+For more information, see [Configuring a Source App for SKAdNetwork](https://developer.apple.com/documentation/storekit/skadnetwork/configuring_a_source_app).
 ```
 
 
