@@ -16,3 +16,11 @@ v79kvwwj4g.skadnetwork
 ```
 For more information, see [Configuring a Source App for SKAdNetwork](https://developer.apple.com/documentation/storekit/skadnetwork/configuring_a_source_app).
 
+### Android integration
+If you are using the Minify option in the Player settings please add this to your proguard-rules file:
+```
+-keep @interface org.greenrobot.eventbus.Subscribe  
+-keepclassmembers class * {  
+  @org.greenrobot.eventbus.Subscribe <methods>;  
+}
+```
