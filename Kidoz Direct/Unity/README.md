@@ -103,7 +103,7 @@ Kidoz.onBannerClosed += onBannerClosed;
 
 If you encounter issues while building your iOS application you may tryb the following:
 
-On <ins>project level</ins> and not on target Add:
+On <b>project level</b> build settings and not on target add:
 
 1. Library Search Path:
 ```java   
