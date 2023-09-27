@@ -1,29 +1,28 @@
-# Kidoz Admob Adapters
+# Kidoz Admob iOS Adapter
+The kidoz Admob adapter was built and tested with oogle-Mobile-Ads-SDK v10.8.0<BR>
+Check out the [Admob Mediation Documentation](https://developers.google.com/admob/ios/quick-start) for app level integration.
 
+### Integration Steps:
 To add Kidoz Admob Adapter to your project with CocoaPods:
 ```
-pod 'Google-Mobile-Ads-SDK','10.8.0'
 pod 'KidozSDK', '9.0.0'
 pod 'KidozAdmobAdapter', '1.0.1'
 ```
 
-# Stay in touch 
-For any question or assistance, please contact us at SDK@kidoz.net.
-</br>
+Follow instructins on how to [Set Up Custom Events](https://developers.google.com/admob/ios/custom-events/setup#create) on AdMob Dashboard<BR>
+and set up **Kidoz Adapter**:
+* Set the following full path in the `Class Name` field: </br>
+`KidozAdmobAdapter`
+* Set the following json string in the `Parameter (optional)` field: </br>
+`{"AppID":"publisherId", "Token":"publisherToken"}` <B>*</B>
 
-# License
---------
+<B>*</B> Replace `publisherId` and `publisherToken` with the credentials received during the Kidoz Publisher Account sign up.
 
-    Copyright 2015 KIDOZ, Inc.
+### iOS SKAdNetwork Support
 
-    Licensed under the Apache License, Version 2.0 (the "License");
-    you may not use this file except in compliance with the License.
-    You may obtain a copy of the License at
+In order to support CPI attribution on iOS, please make sure to include the Kidoz ad network ID in your app property list file (Info.plist):
 
-       http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing, software
-    distributed under the License is distributed on an "AS IS" BASIS,
-    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-    See the License for the specific language governing permissions and
-    limitations under the License.
+```java
+v79kvwwj4g.skadnetwork	
+```
+For more information, see [Configuring a Source App for SKAdNetwork](https://developer.apple.com/documentation/storekit/skadnetwork/configuring_a_source_app).

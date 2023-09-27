@@ -1,43 +1,38 @@
 # Kidoz Admob Adapters
 
-The Admob currently offers support for the following platforms:
+Our Adapters offer support for the following ad types:
 
-+ [Unity](/Mediation/Admob%20Adapter/Unity)
-+ [Native Android](/Mediation/Admob%20Adapter/Android)
-+ [Native iOS](/Mediation/Admob%20Adapter/iOS)
++ Interstitial Mediation 
++ Rewarded Video Mediation 
++ Banner Mediation 
+
+On the following platforms:
+
++ [Native Android](/Mediation/AdMob%20Adapter/Android)
++ [Native iOS](/Mediation/AdMob%20Adapter/iOS)
++ [Unity](/Mediation/AdMob%20Adapter/Unity)
 
 # Prerequisites
-To use the Kidoz SDK adapter for AdMob you should make sure you have:
-1. Google Mobile Ads SDK 10.8.0 or higher integrated in your project as [explained here](https://developers.google.com/admob/ios/quick-start).
-2. A fully functional AdMob ad placement.
-3. A Kidoz Publisher account. See the onboarding process for [Kidoz's publishers](http://accounts.kidoz.net/publishers/register?utm_source=kidoz_github).
+Before publishing your first app please finish the onboarding process for Kidoz's publishers [HERE](http://accounts.kidoz.net/publishers/register?utm_source=&utm_content=&utm_campaign=&utm_medium=).
 
-***This SDK version was verified not to contain the Advertiser Identifier (IDFA) as required by Apple App Store regulation for apps of Kids category.***
+# Kidoz - Admob Settings Recommendations ##
 
-# SKAdNetwork Support
-In order to support CPI attribution on iOS, please make sure to include the Kidoz ad network ID in your app property list file (Info.plist):
+_Programmatic_ **|** _app-ads.txt_
 
-```
-v79kvwwj4g.skadnetwork	
-```
+1. We recommend setting up app-ads.txt for the apps that use Kidoz sdk in your Admob dashboard. This may prevent blocking of programmatic ads.
+Once you add an app and generate the relevant entry for it, you can paste it into your app-ads.txt file. Copy the entry while pressing on "HOW TO SET UP APP-ADS.TXT" link (as described in the screenshot below):
 
-# Stay in touch 
-For any question or assistance, please contact us at SDK@kidoz.net.
-</br>
+<p align="left">
+  <img src="https://cdn.kidoz.net/new/sdk/GITHUB_GRAPHICS/KIDOZ_SDK_Documentaions/admob_app_ads_txt2.png" />
+</p>
 
-# License
---------
+2. Additionally, it is highly recommended to add the Kidoz app-ads.txt in order to increase the fill-rate of your application, as [described here](https://kidoz.net/introappadstext)
 
-    Copyright 2015 KIDOZ, Inc.
+3. Set up $9 CPM for Kidoz, to make sure the requests are being passed to Kidoz.
 
-    Licensed under the Apache License, Version 2.0 (the "License");
-    you may not use this file except in compliance with the License.
-    You may obtain a copy of the License at
+<p align="left">
+  <img src="https://cdn.kidoz.net/new/sdk/GITHUB_GRAPHICS/KIDOZ_SDK_Documentaions/admob_adsources_waterfall.png" />
+</p>
 
-       http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing, software
-    distributed under the License is distributed on an "AS IS" BASIS,
-    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-    See the License for the specific language governing permissions and
-    limitations under the License.
+## Important note: ##
+While mapping the Kidoz Ad unit on Admob, it is highly recommended to run some JSON validator on the parameters passed to the Class name (AppID and Token). This method may minimize parsing mistakes that may rise on initial connection.
