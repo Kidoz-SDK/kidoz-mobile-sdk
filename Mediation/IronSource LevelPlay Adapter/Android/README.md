@@ -1,7 +1,7 @@
 # Android Kidoz ironSource Adapter
 
 The Kidoz ironSource Adapter SDK is built and tested with ironSource mediation v7.5.0.
-
+Check out the [ironSource Integration Documentation](https://developers.is.com/ironsource-mobile/android/android-sdk/) for app level integration.
 ### Integration Steps:
 
 Include the following inside your app build.gradle dependencies:
