@@ -1,6 +1,6 @@
 # Kidoz Admob Android Adapter
 The kidoz Admob adapter was built and tested with goolgle play-services-ad v22.1.0.<BR>
-Check out the [Max Mediation Documentation](https://dash.applovin.com/documentation/mediation/android/getting-started/integration) for app level integration.
+Check out the [Admob Mediation Documentation](https://developers.google.com/admob/android/quick-start) for app level integration.
 
 ### Integration Steps:
 
