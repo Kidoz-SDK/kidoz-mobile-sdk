@@ -9,13 +9,17 @@ Download and import [KidozAdmobAdapter.unitypackage](/Mediation/AdMob%20Adapter/
 
 ## iOS integration
 
-Follow instructins on how to [Set Up Custom Events](https://developers.google.com/admob/ios/custom-events/setup#create) on the AdMob dashboard and set up **Kidoz Adapter**:
+### Setting up custom events
+Follow instructins on how to [Set Up Custom Events](https://developers.google.com/admob/ios/custom-events/setup#create) on the AdMob dashboard and set up the Kidoz' adapter class:
 * Set the following full path in the `Class Name` field: </br>
 `KidozAdmobAdapter`
 * Set the following json string in the `Parameter (optional)` field: </br>
 `{"AppID":"publisherId", "Token":"publisherToken"}` <B>*</B>
 
-<B>*</B> Replace `publisherId` and `publisherToken` with the credentials received during the Kidoz Publisher Account sign up.<BR><BR>
+<B>*</B> Replace `publisherId` and `publisherToken` with the credentials received during the Kidoz Publisher Account sign up.
+
+### Setting up the SKAdNetwork ID
+
 In order to support CPI attribution on iOS, please make sure to include the Kidoz ad network ID in your app property list file (Info.plist):
 
 ```java
@@ -31,8 +35,18 @@ For more information, see [Configuring a Source App for SKAdNetwork](https://dev
 
 **Please make sure to set your AdMob app ID and not use Kidoz Sample AdMob app ID before you publish your apps like described in the [Admob Guide](https://developers.google.com/admob/unity/quick-start#set_your_admob_app_id).**
 
-## Setup for Android 
- 
+## Android integration
+
+### Setting up custom events
+
+### Proguard rules
+If you are using the Minify option in the Player settings please add this to proguard-user.txt file:**  
+```
+-keep @interface org.greenrobot.eventbus.Subscribe  
+-keepclassmembers class * {  
+@org.greenrobot.eventbus.Subscribe <methods>;  
+}
+```
 ### Kidoz Interstitial Adapter:
 Set the following full path in the `Class Name` field:
 ```
