@@ -105,16 +105,17 @@ If you encounter issues while building your iOS application you may tryb the fol
 
 On project level and not on target Add:
 
-1. Library Search Path: <BR>
+1. Library Search Path:
+```java   
 $(SDKROOT)/usr/lib/swift $(TOOLCHAIN_DIR)/usr/lib/swift-5.5/$(PLATFORM_NAME) $(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)
-
+```
 See https://stackoverflow.com/a/65602500/5572423
 
 
 2. Runpath Search Path:
-
+```java
 /usr/lib/swift $(inherited) @executable_path/Frameworks
-
+```
 See https://stackoverflow.com/a/57669947/5572423
 
 **Kidoz iOS Interstitial best practices**
