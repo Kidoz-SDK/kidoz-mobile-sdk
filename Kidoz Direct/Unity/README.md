@@ -103,7 +103,7 @@ Kidoz.onBannerClosed += onBannerClosed;
 
 If you encounter issues while building your iOS application you may tryb the following:
 
-On <u>project level</u> and not on target Add:
+On project level and not on target Add:
 
 1. Library Search Path:
 $(SDKROOT)/usr/lib/swift $(TOOLCHAIN_DIR)/usr/lib/swift-5.5/$(PLATFORM_NAME) $(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)
