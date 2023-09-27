@@ -1,19 +1,8 @@
 # Kidoz Android Mobile SDK
 
-## General Notes and Prerequisites
+### Integration Steps:
 
-The Kidoz SDK contains support for the following ad types:
-
-+ Kidoz Interstitial
-+ Kidoz Rewarded Video
-+ Kidoz Banner
-
-Before publishing your first app please finish the onboarding process for [Kidoz's publishers](http://accounts.kidoz.net/publishers/register?utm_source=kidoz_github).
-
-
-## Getting Started
-
-#### Include the following dependencies in your application gradle.build file
+#### Include the following inside your app build.gradle dependencies:
 ```groovy
 dependencies {
     implementation 'org.greenrobot:eventbus:3.3.1'
