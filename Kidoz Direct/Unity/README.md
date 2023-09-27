@@ -12,18 +12,6 @@
 
 <a href="url"><img src="http://d28lrrc51wcjkk.cloudfront.net/sdk/Unity_SDK_Publisher_Security_Token.png" align="center" height="250" width="400" ></a>
 
- *Note: When compiling for iOS please add the following frameworks: libsqlite3.tbd, webkit.framework*
- 
-## iOS SKAdNetwork Support
-
-In order to support CPI attribution on iOS, please make sure to include the Kidoz ad network ID in your app property list file (Info.plist):
-
-```java
-v79kvwwj4g.skadnetwork	
-```
-	
-For more information, see [Configuring ad network IDs on Unity](https://docs.unity.com/ads/ConfiguringAdNetworkIDs.html) and  [Configuring a Source App for SKAdNetwork](https://developer.apple.com/documentation/storekit/skadnetwork/configuring_a_source_app).
-
 
 ## Using the SDK
 
@@ -99,7 +87,19 @@ Kidoz.onBannerImpression += onBannerImpression;
 Kidoz.onBannerClosed += onBannerClosed;
 ```
 
-## iOS Build tips and best parctices
+## iOS integration
+
+**iOS SKAdNetwork Support**
+
+In order to support CPI attribution on iOS, please make sure to include the Kidoz ad network ID in your app property list file (Info.plist):
+
+```java
+v79kvwwj4g.skadnetwork	
+```
+	
+For more information, see [Configuring ad network IDs on Unity](https://docs.unity.com/ads/ConfiguringAdNetworkIDs.html) and  [Configuring a Source App for SKAdNetwork](https://developer.apple.com/documentation/storekit/skadnetwork/configuring_a_source_app).
+
+**Build tips**
 
 If you encounter issues while building your iOS application you may tryb the following:
 
@@ -165,3 +165,12 @@ OR
 Setting the Kidoz.SetiOSAppPauseOnBackground(true); 
 ```
 
+## Android integration
+
+If you are using the Minify option in the Player settings please add this to your proguard-rules file:
+```
+-keep @interface org.greenrobot.eventbus.Subscribe  
+-keepclassmembers class * {  
+  @org.greenrobot.eventbus.Subscribe <methods>;  
+}
+```
