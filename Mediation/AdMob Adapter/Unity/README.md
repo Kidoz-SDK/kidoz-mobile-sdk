@@ -27,18 +27,17 @@ v79kvwwj4g.skadnetwork
 ```
 For more information, see [Configuring a Source App for SKAdNetwork](https://developer.apple.com/documentation/storekit/skadnetwork/configuring_a_source_app).
 
-
-## Integration Steps:
-
-* Download and import the KidozAdMobUnity.unitypackage  Assets --> Import Package --> Custom Package --> select  the KidozAdMobUnity.unitypackage package.
-* Define Kidoz Banner , Interstitial and/or Rewarded Video Custom events as [explained here](https://support.google.com/admob/answer/3083407).</br>
-
-**Please make sure to set your AdMob app ID and not use Kidoz Sample AdMob app ID before you publish your apps like described in the [Admob Guide](https://developers.google.com/admob/unity/quick-start#set_your_admob_app_id).**
-
 ## Android integration
 
 ### Setting up custom events
+Follow instructins on how to [Set Up Custom Events](https://developers.google.com/admob/android/custom-events/setup#create) on the AdMob dashboard and set up the Kidoz' adapter class:
+* Set the following full path in the `Class Name` field: </br>
+`KidozAdmobAdapter`
+* Set the following json string in the `Parameter (optional)` field: </br>
+`{"AppID":"publisherId", "Token":"publisherToken"}` <B>*</B>
 
+<B>*</B> Replace `publisherId` and `publisherToken` with the credentials received during the Kidoz Publisher Account sign up.
+* 
 ### Proguard rules
 If you are using the Minify option in the Player settings please add this to proguard-user.txt file:**  
 ```
