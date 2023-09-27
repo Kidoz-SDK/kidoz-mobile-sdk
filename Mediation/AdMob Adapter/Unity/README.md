@@ -32,7 +32,7 @@ For more information, see [Configuring a Source App for SKAdNetwork](https://dev
 ### Setting up custom events
 Follow instructins on how to [Set Up Custom Events](https://developers.google.com/admob/android/custom-events/setup#create) on the AdMob dashboard and set up the Kidoz' adapter class:
 * Set the following full path in the `Class Name` field: </br>
-`KidozAdmobAdapter`
+`com.kidoz.mediation.admob.adapters.KidozAdMobAdapter`
 * Set the following json string in the `Parameter (optional)` field: </br>
 `{"AppID":"publisherId", "Token":"publisherToken"}` <B>*</B>
 
