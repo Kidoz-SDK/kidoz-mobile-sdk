@@ -2,7 +2,7 @@
 
 The Admob currently offers support for the following platforms:
 
-+ [Unity](/Mediation/AdMob%20AdapterUnity)
++ [Unity](/Mediation/AdMob%20Adapter/Unity)
 + [Native Android](/Mediation/AdMob%20Adapter/Android)
 + [Native iOS](/Mediation/AdMob%20Adapter/iOS)
 
