@@ -1,6 +1,6 @@
-## Kidoz iOS Mobile SDK Sample App - Objective-C
+# Kidoz iOS Mobile - Objective-C
 
-#### Initialize Kidoz SDK
+## Initialize Kidoz SDK
 Call the initialize method with the publisher ID and Token which you received during the [Kidoz onboarding](http://accounts.kidoz.net/publishers/register?utm_source=kidoz_github).
 ```Objective-C 
 [Kidoz.instance initializeWithPublisherID: <enter your publisher ID> securityToken: <enter your security Token> withDelegate: self];
