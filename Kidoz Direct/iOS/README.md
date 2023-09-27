@@ -16,7 +16,7 @@ See the following API integration documents:
 - [Swift](/Kidoz%20Direct/iOS/SampleApp/SampleAppSwift) 
 - [Objective-C](/Kidoz%20Direct/iOS/SampleApp/SampleAppObjc)
 
-Or look into our [SampleApp project](https://github.com/Kidoz-SDK/kidoz-mobile-sdk/tree/main/Direct/iOS/SampleApp) workspace.
+Or look into our [SampleApp Workspace](https://github.com/Kidoz-SDK/kidoz-mobile-sdk/tree/main/Direct/iOS/SampleApp).
 
 #### SKAdNetwork Support
 In order to support CPI attribution on iOS, please make sure to include the Kidoz ad network ID in your app property list file (Info.plist):
