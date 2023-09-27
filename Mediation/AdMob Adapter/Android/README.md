@@ -14,7 +14,7 @@ dependencies {
 }
 ```
 Follow instructins on how to [Set Up Custom Events](https://developers.google.com/admob/android/custom-events/setup) on AdMob<BR>
-**Kidoz Adapter**
+and set up **Kidoz Adapter**:
 * Set the following full path in the `Class Name` field: </br>
 `com.kidoz.mediation.admob.adapters.KidozAdMobAdapter`
 * Set the following json string in the `Parameter (optional)` field: </br>
