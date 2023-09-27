@@ -12,7 +12,7 @@ pod 'KidozAdmobAdapter', '1.0.1'
 Follow instructins on how to [Set Up Custom Events Network](https://developers.google.com/admob/ios/custom-events/setup#create) on AdMob Dashboard<BR>
 and set up **Kidoz Adapter**:
 * Set the following full path in the `Class Name` field: </br>
-`com.kidoz.mediation.admob.adapters.KidozAdMobAdapter`
+`KidozAdMobAdapter`
 * Set the following json string in the `Parameter (optional)` field: </br>
 `{"AppID":"publisherId", "Token":"publisherToken"}` <B>*</B>
 
