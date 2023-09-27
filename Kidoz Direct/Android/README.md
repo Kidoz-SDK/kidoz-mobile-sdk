@@ -1,6 +1,6 @@
 # Kidoz Android Mobile SDK
 
-### Integration Steps:
+## Getting Started:
 
 #### Include the following inside your app build.gradle dependencies:
 ```groovy
