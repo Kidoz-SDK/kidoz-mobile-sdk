@@ -1,10 +1,10 @@
 # AppLovin Max Adapters
 
-The Adapter currently offers support for the following ad types:
+Our Adapters offer support for the following ad types:
 
-+ AppLovin Interstitial Mediation 
-+ AppLovin Rewarded Video Mediation 
-+ AppLovin Banner Mediation 
++ Interstitial Mediation 
++ Rewarded Video Mediation 
++ Banner Mediation 
 
 on the following platforms:
 
