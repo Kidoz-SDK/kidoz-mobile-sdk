@@ -8,9 +8,9 @@ Our Adapters offer support for the following ad types:
 
 On the following platforms:
 
-+ [Unity](/Mediation/AdMob%20Adapter/Unity)
 + [Native Android](/Mediation/AdMob%20Adapter/Android)
 + [Native iOS](/Mediation/AdMob%20Adapter/iOS)
++ [Unity](/Mediation/AdMob%20Adapter/Unity)
 
 # Prerequisites
 Before publishing your first app please finish the onboarding process for Kidoz's publishers [HERE](http://accounts.kidoz.net/publishers/register?utm_source=&utm_content=&utm_campaign=&utm_medium=)  
