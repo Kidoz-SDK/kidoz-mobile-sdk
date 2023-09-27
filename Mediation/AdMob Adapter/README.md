@@ -32,7 +32,7 @@ Once you add an app and generate the relevant entry for it, you can paste it int
 3. Set up $9 CPM for Kidoz, to make sure the requests are being passed to Kidoz.
 
 <p align="left">
-  <img src="https://cdn.kidoz.net/new/sdk/GITHUB_GRAPHICS/Kidoz_SDK_Documentaions/admob_adsources_waterfall.png" />
+  <img src="https://cdn.kidoz.net/new/sdk/GITHUB_GRAPHICS/KIDOZ_SDK_Documentaions/admob_adsources_waterfall.png" />
 </p>
 
 ## Important note: ##
