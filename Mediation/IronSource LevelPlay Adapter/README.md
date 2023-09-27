@@ -8,9 +8,9 @@ Our Adapters offer support for the following ad types:
 
 on the following platforms:
 
-+ [Native Android](/Mediation/AppLovin%20Max%20Adapter/Android)
-+ [Native iOS](/Mediation/AppLovin%20Max%20Adapter/iOS)
-+ [Unity](/Mediation/AppLovin%20Max%20Adapter/Unity)
++ [Native Android](/Mediation/IronSource%20LevelPlay%20Adapter/Android)
++ [Native iOS](/Mediation/IronSource%20LevelPlay%20Adapter/iOS)
++ [Unity](/Mediation/IronSource%20LevelPlay%20Adapter/Unity)
 
 Prerequisites
 =================================
