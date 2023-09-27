@@ -1,26 +1,8 @@
 # Kidoz Unity Plugin
 
-Kidoz Android SDK Version: 9.0.0
-Kidoz iOS SDK Version: 9.0.0
-	
-Built with Unity 2021.3.16f1 Version
+### Getting Started:
 
-**Here you can get the Kidoz Unity plugin and a sample app for Unity. See integration instructions and additional information bellow.**
-
-***This SDK version was verified not to contain the Advertiser Identifier (IDFA) as required by Apple App Store regulation for apps of Kids category.***
-
-## General
-
-This Unity application project provides an example of the [Kidoz](http://www.kidoz.net) SDK integration.
-
-The example application contains the following creative tools:
-
-_Recommended units_:
-* Kidoz Interstitial view `Rewarded View`
-* Kidoz Interstitial view `Interstitial View`
-* Kidoz Banner `Banner` 
-	
-Before publishing your first app please finish the onboarding process for [Kidoz's publishers](http://accounts.kidoz.net/publishers/register?utm_source=kidoz_github).
+Download and import [KidozUnityPlugin.unitypackage](/Kidoz%20Direct/Unity/KidozUnityPlugin.unitypackage) into your Project's Asset Folder.
 	
 ## iOS SKAdNetwork Support
 
