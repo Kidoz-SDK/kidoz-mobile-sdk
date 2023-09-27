@@ -1,7 +1,7 @@
 # Unity ironSource Adapter
 
 The Kidoz Unity ironSource Adapter SDK is built and tested with ironSource unity plugin v7.5.0.<BR>
-Check out the [ironSource Integration Documentation](https://developers.is.com/ironsource-mobile/unity/android-sdk/) for app level integration.
+Check out the [ironSource Integration Documentation](https://developers.is.com/ironsource-mobile/unity/unity-plugin/) for app level integration.
 
 This adapter offers support for the following ad types:
 
