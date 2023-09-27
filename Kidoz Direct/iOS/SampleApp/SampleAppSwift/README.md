@@ -1,4 +1,4 @@
-# Kidoz iOS Mobile SDK Sample App - Swift
+# Kidoz iOS Mobile SDK - Swift
 
 ## Initialize Kidoz SDK
 Call the initialize method with the publisher ID and Token which you received during the [Kidoz onboarding](http://accounts.kidoz.net/publishers/register?utm_source=kidoz_github).
