@@ -9,8 +9,7 @@ pod 'KidozSDK', '9.0.0'
 pod 'KidozAdmobAdapter', '1.0.1'
 ```
 
-Follow instructins on how to [Set Up Custom Events](https://developers.google.com/admob/ios/custom-events/setup#create) on AdMob Dashboard<BR>
-and set up **Kidoz Adapter**:
+Follow instructins on how to [Set Up Custom Events](https://developers.google.com/admob/ios/custom-events/setup#create) on the AdMob dashboard and set up the Kidoz' adapter class:
 * Set the following full path in the `Class Name` field: </br>
 `KidozAdmobAdapter`
 * Set the following json string in the `Parameter (optional)` field: </br>
