@@ -99,6 +99,24 @@ Kidoz.onBannerImpression += onBannerImpression;
 Kidoz.onBannerClosed += onBannerClosed;
 ```
 
+## iOS Build tips and best parctices
+
+If you encounter issues while building your iOS application you may tryb the following:
+
+On <u>project level</u> and not on target Add:
+
+1. Library Search Path:
+$(SDKROOT)/usr/lib/swift $(TOOLCHAIN_DIR)/usr/lib/swift-5.5/$(PLATFORM_NAME) $(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)
+
+See https://stackoverflow.com/a/65602500/5572423
+
+
+2. Runpath Search Path:
+
+/usr/lib/swift $(inherited) @executable_path/Frameworks
+
+See https://stackoverflow.com/a/57669947/5572423
+
 **Kidoz iOS Interstitial best practices**
 - The preferred timing to show Interstitial Ads : Before the game ends, between game levels, after completing a game level .   
 - Some Interstitial Ads may contain video with sound. In order to maximise user experience, it is important to mute or pause game background sounds and pause the game while the Interstitial is displayed. This can be achieved by using `onInterstitialShown` and `onInterstitialClosed` callbacks:
