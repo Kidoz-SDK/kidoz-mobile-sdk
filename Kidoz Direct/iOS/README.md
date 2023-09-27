@@ -23,5 +23,5 @@ SampleApp is an iOS application project that provides an example of the KIDOZ SD
 
 In order to see Kidoz SDK in action go to the [SampleApp](https://github.com/Kidoz-SDK/kidoz-mobile-sdk/tree/main/Direct/iOS/SampleApp) folder and open `SampleApp.xcworkspace`. Inside the project you will find examples of how to use the Kidoz SDK. 
 
-- [Swift](Kidoz%20Direct/iOS/SampleApp/SampleAppSwift) 
-- [Objective-C](Kidoz%20Direct/iOS/SampleApp/SampleAppObjc)
+- [Swift](SampleApp/SampleAppSwift) 
+- [Objective-C](SampleApp/SampleAppObjc)
