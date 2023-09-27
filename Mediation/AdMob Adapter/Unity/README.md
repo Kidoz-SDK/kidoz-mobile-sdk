@@ -9,6 +9,14 @@ Download and import [KidozAdmobAdapter.unitypackage](/Mediation/AdMob%20Adapter/
 
 ### iOS integration
 
+Follow instructins on how to [Set Up Custom Events](https://developers.google.com/admob/ios/custom-events/setup#create) on AdMob Dashboard<BR>
+and set up **Kidoz Adapter**:
+* Set the following full path in the `Class Name` field: </br>
+`KidozAdmobAdapter`
+* Set the following json string in the `Parameter (optional)` field: </br>
+`{"AppID":"publisherId", "Token":"publisherToken"}` <B>*</B>
+
+<B>*</B> Replace `publisherId` and `publisherToken` with the credentials received during the Kidoz Publisher Account sign up.<BR><BR>
 In order to support CPI attribution on iOS, please make sure to include the Kidoz ad network ID in your app property list file (Info.plist):
 
 ```java
