@@ -12,7 +12,7 @@ On the following platforms:
 + [Native iOS](/Mediation/AppLovin%20Max%20Adapter/iOS)
 + [Unity](/Mediation/AppLovin%20Max%20Adapter/Unity)
 
-# Prerequisites
+## Prerequisites
 
 Before publishing your first app please finish the onboarding process for Kidoz's publishers [Kidoz's publishers](http://accounts.kidoz.net/publishers/register?utm_source=kidoz_github). <BR>
 Follow instructions on the [AppLovin Custom SDK Network Integration Guide](https://dash.applovin.com/documentation/mediation/android/mediation-setup/custom-sdk)

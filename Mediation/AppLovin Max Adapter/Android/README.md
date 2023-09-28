@@ -3,7 +3,7 @@
 The kidoz Applovin Max Adapter was built and tested with ApplovinSDK v11.10.1.<BR>
 Check out the [Max Mediation Documentation](https://dash.applovin.com/documentation/mediation/android/getting-started/integration) for app level integration.
 
-### Integration Steps:
+## Integration Steps:
 
 Include the following inside your app build.gradle dependencies:
 

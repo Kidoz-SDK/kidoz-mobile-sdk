@@ -31,13 +31,14 @@ For more information, see [Configuring a Source App for SKAdNetwork](https://dev
 
 ### Setting up custom events
 Follow instructins on how to [Set Up Custom Events](https://developers.google.com/admob/android/custom-events/setup#create) on the AdMob dashboard and set up the Kidoz' adapter class:
-* Set the following full path in the `Class Name` field: </br>
+- Set the following full path in the `Class Name` field: </br>
 `com.kidoz.mediation.admob.adapters.KidozAdMobAdapter`
-* Set the following json string in the `Parameter (optional)` field: </br>
-`{"AppID":"publisherId", "Token":"publisherToken"}` <B>*</B>
 
-<B>*</B> Replace `publisherId` and `publisherToken` with the credentials received during the Kidoz Publisher Account sign up.
-* 
+- Set the following json string in the `Parameter (optional)` field: </br>
+`{"AppID":"publisherId", "Token":"publisherToken"}`
+
+- Replace `publisherId` and `publisherToken` with the credentials received during the Kidoz Publisher Account sign up.
+
 ### Proguard rules
 If you are using the Minify option in the Player settings please add this to your proguard-rules file:
 ```

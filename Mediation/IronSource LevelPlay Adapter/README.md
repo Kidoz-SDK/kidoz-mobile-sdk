@@ -12,8 +12,7 @@ On the following platforms:
 + [Native iOS](/Mediation/IronSource%20LevelPlay%20Adapter/iOS)
 + [Unity](/Mediation/IronSource%20LevelPlay%20Adapter/Unity)
 
-Prerequisites
-=================================
+## Prerequisites
   
 Before publishing your first app please finish the onboarding process for Kidoz's publishers [Kidoz's publishers](http://accounts.kidoz.net/publishers/register?utm_source=kidoz_github)  
 and follow the instructions for [ironSource Custom Adapter setup](https://developers.is.com/ironsource-mobile/general/custom-adapter-setup/).<BR><BR>

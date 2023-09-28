@@ -3,7 +3,7 @@
 The Kidoz ironSource Adapter SDK is built and tested with ironSource mediation v7.5.0.0<BR> 
 Check out the [ironSource Integration Documentation](https://developers.is.com/ironsource-mobile/ios/ios-sdk/) for app level integration.
 
-### Integration Steps:
+## Integration Steps:
 
 To add Kidoz ironSource Adapter to your project with CocoaPods:
 ```
@@ -11,7 +11,7 @@ pod 'KidozSDK', '9.0.0'
 pod 'KidozIronSourceAdapter', '1.1.2'
 ```
 
-### iOS SKAdNetwork Support
+## iOS SKAdNetwork Support
 
 In order to support CPI attribution on iOS, please make sure to include the Kidoz ad network ID in your app property list file (Info.plist):
 
