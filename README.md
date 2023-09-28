@@ -1,6 +1,6 @@
 # Kidoz Mobile SDK
 
-***This SDK version was verified not to contain the Advertiser Identifier (IDFA) as required by Apple App Store regulation for apps of Kids category.***
+**This SDK version was verified not to contain the Advertiser Identifier (IDFA) as required by Apple App Store regulation for apps of Kids category.**
 
 Kidoz SDK as a sole monetization platform:
 - [Kidoz Direct](/Kidoz%20Direct)
