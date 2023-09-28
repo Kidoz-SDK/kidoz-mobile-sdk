@@ -12,10 +12,10 @@ On the following platforms:
 + [Native iOS](/Mediation/AdMob%20Adapter/iOS)
 + [Unity](/Mediation/AdMob%20Adapter/Unity)
 
-# Prerequisites
+## Prerequisites
 Before publishing your first app please finish the onboarding process for [Kidoz's publishers](http://accounts.kidoz.net/publishers/register?utm_source=kidoz_github).
 
-# Kidoz - Admob Settings Recommendations ##
+## Kidoz - Admob Settings Recommendations
 
 _Programmatic_ **|** _app-ads.txt_
 
@@ -34,5 +34,5 @@ Once you add an app and generate the relevant entry for it, you can paste it int
   <img src="https://cdn.kidoz.net/new/sdk/GITHUB_GRAPHICS/KIDOZ_SDK_Documentaions/admob_adsources_waterfall.png" />
 </p>
 
-## Important note: ##
+## Important note:
 While mapping the Kidoz Ad unit on Admob, it is highly recommended to run some JSON validator on the parameters passed to the Class name (AppID and Token). This method may minimize parsing mistakes that may rise on initial connection.
