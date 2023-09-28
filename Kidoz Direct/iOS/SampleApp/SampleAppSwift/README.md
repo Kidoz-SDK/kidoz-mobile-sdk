@@ -62,7 +62,7 @@ onInterstitialAdClosed {
 <BR>
 
 ## Kidoz iOS Rewarded Ad
-`Rewarded`  is a full screen widget which is designed for showing full screen advertisement.   
+**Rewarded**  is a full screen widget which is designed for showing full screen advertisement.   
 #### Add support for Rewarded ad unit
 
 Load Rewarded ad: 
