@@ -1,6 +1,6 @@
 # Kidoz Unity Plugin
 
-### Getting Started:
+## Getting Started:
 
 1. Download and import [KidozUnityPlugin.unitypackage](/Kidoz%20Direct/Unity/KidozUnityPlugin.unitypackage) into your Project's Asset Folder.
 2. In the import window select all components. A new Prefabs object named `KidozObject` will appear in the Assets folder. 
@@ -19,13 +19,13 @@ See full usage example on our [Sample app Main scene script](/Kidoz%20Direct/Uni
 1. Select your relevant script file.
 2. Add ```using KidozSDK;``` in the using section of your code.
 
-### SDK init callbacks events
+#### SDK init callbacks events
 ```java
 Kidoz.initSuccess += < onSDKInit >;
 Kidoz.initError += < onSDKInitFailed >;
 ```
 
-### Interstitial lifecycle methods callbacks:
+#### Interstitial lifecycle methods callbacks:
 
 Invoke the following method to load an interstitial ad.
 ```java
@@ -44,7 +44,7 @@ Kidoz.onInterstitialFailedToShow += < onInterstitialFailedToShow;
 Kidoz.onInterstitialImpression += < onInterstitialImpression;
 Kidoz.onInterstitialClosed += < onInterstitialClosed;
 ```
-### Rewarded lifecycle methods callbacks:
+#### Rewarded lifecycle methods callbacks:
 
 Invoke the following method to load an rewarded ad. Set the flag isAutoShow to true if you want to automatically show ad when loaded.
 ```java

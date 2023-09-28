@@ -11,8 +11,8 @@ The following mediation platforms are supported:
 - [ironSource LevelPlay](/Mediation/IronSource%20LevelPlay%20Adapter)
 
 
-# Prerequisites
+## Prerequisites
 Before publishing your first app please finish the onboarding process for [Kidoz's publishers](http://accounts.kidoz.net/publishers/register?utm_source=kidoz_github).
 
-# Stay in touch 
+## Stay in touch 
 For any question or assistance, please contact us at sdk@kidoz.net.

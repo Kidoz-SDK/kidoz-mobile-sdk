@@ -13,6 +13,6 @@ On the following platforms:
 - [Native iOS](/Kidoz%20Direct/iOS)
 - [Unity](/Kidoz%20Direct/Unity)
 
-# Prerequisites
+## Prerequisites
 
 Before publishing your first app please finish the onboarding process for [Kidoz's publishers](http://accounts.kidoz.net/publishers/register?utm_source=kidoz_github).
