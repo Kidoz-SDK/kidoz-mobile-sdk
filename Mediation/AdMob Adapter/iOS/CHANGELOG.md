@@ -1,1 +1,8 @@
+# Changelog
 
+## 1.0.1 - Sep 16, 2023
+
+* Updated to use Kidoz SDK v9.0.0
+* Updated to use Google-Mobile-Ads-SDK v10.8.0
+* Refactored static library into xcframework
+* Distribute using cocoapods
