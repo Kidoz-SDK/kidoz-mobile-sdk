@@ -1,0 +1,32 @@
+<dependencies>
+  <androidPackages>
+    <androidPackage spec="net.kidoz.sdk:kidoz-android-native:9.0.0">
+      <repositories>
+        <repository>https://repo.maven.apache.org/maven2/</repository>
+      </repositories>
+    </androidPackage>
+    <androidPackage spec="net.kidoz.sdk:kidoz-android-admob-adapter:1.9.0">
+      <repositories>
+        <repository>https://repo.maven.apache.org/maven2/</repository>
+      </repositories>
+    </androidPackage>
+    <androidPackage spec="org.greenrobot:eventbus:3.3.1">
+      <repositories>
+        <repository>https://repo.maven.apache.org/maven2/</repository>
+      </repositories>
+    </androidPackage>
+  </androidPackages>
+
+  <iosPods>
+    <iosPod name="KidozSDK" version="9.0.0">
+      <sources>
+        <source>https://github.com/CocoaPods/Specs</source>
+      </sources>
+    </iosPod>
+    <iosPod name="KidozAdmobAdapter" version="1.0.1">
+      <sources>
+        <source>https://github.com/CocoaPods/Specs</source>
+      </sources>
+    </iosPod>
+  </iosPods>
+</dependencies>
