@@ -18,12 +18,12 @@
   </androidPackages>
 
   <iosPods>
-    <iosPod name="KidozSDK" version="9.0.0">
+    <iosPod name="KidozSDK" version="9.0.1">
       <sources>
         <source>https://github.com/CocoaPods/Specs</source>
       </sources>
     </iosPod>
-    <iosPod name="KidozAdmobAdapter" version="1.0.1">
+    <iosPod name="KidozAdmobAdapter" version="1.1.0">
       <sources>
         <source>https://github.com/CocoaPods/Specs</source>
       </sources>
