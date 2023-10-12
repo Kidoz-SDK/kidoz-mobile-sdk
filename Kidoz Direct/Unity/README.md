@@ -2,6 +2,8 @@
 
 ## Getting Started:
 
+If you don't have the [External Dependency Manager](https://github.com/googlesamples/unity-jar-resolver) already integrated in your app please download and import [EDM](/Kidoz%20Direct/Unity/KidozUnityPlugin.unitypackage) into your project. 
+
 1. Download and import [KidozUnityPlugin.unitypackage](/Kidoz%20Direct/Unity/KidozUnityPlugin.unitypackage) into your Project's Asset Folder.
 2. In the import window select all components. A new Prefabs object named `KidozObject` will appear in the Assets folder. 
 3. Open your requested Scene. 
