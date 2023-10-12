@@ -6,7 +6,7 @@ Kidoz SDK is compatible with iOS 10.0 and above and is written in Objective-C an
 
 Add the following line to your Podfile:
 ```
-pod 'KidozSDK', '9.0.0'
+pod 'KidozSDK', '9.0.1'
 ```
 
 ## API Usage and Sample App
