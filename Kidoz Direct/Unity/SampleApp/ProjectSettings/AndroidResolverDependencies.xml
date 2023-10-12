@@ -1,0 +1,28 @@
+<dependencies>
+  <packages>
+    <package>net.kidoz.sdk:kidoz-android-native:9.0.0</package>
+    <package>org.greenrobot:eventbus:3.3.1</package>
+  </packages>
+  <files>
+    <file>Assets/Plugins/Android/net.kidoz.sdk.kidoz-android-native-9.0.0.aar</file>
+    <file>Assets/Plugins/Android/org.greenrobot.eventbus-3.3.1.aar</file>
+    <file>Assets/Plugins/Android/org.greenrobot.eventbus-java-3.3.1.jar</file>
+  </files>
+  <settings>
+    <setting name="androidAbis" value="armeabi-v7a" />
+    <setting name="bundleId" value="net.kidoz.unityplugin.sampleapp" />
+    <setting name="explodeAars" value="True" />
+    <setting name="gradleBuildEnabled" value="True" />
+    <setting name="gradlePropertiesTemplateEnabled" value="False" />
+    <setting name="gradleTemplateEnabled" value="False" />
+    <setting name="installAndroidPackages" value="True" />
+    <setting name="localMavenRepoDir" value="Assets/GeneratedLocalRepo" />
+    <setting name="packageDir" value="Assets/Plugins/Android" />
+    <setting name="patchAndroidManifest" value="True" />
+    <setting name="patchMainTemplateGradle" value="True" />
+    <setting name="projectExportEnabled" value="False" />
+    <setting name="useFullCustomMavenRepoPathWhenExport" value="True" />
+    <setting name="useFullCustomMavenRepoPathWhenNotExport" value="False" />
+    <setting name="useJetifier" value="True" />
+  </settings>
+</dependencies>
