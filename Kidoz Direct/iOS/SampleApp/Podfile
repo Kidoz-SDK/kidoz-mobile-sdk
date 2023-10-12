@@ -2,7 +2,7 @@ workspace 'SampleApp.xcworkspace'
 platform :ios, '10.0'
 
 def kidoz_pod
-    pod 'KidozSDK','9.0.0'
+    pod 'KidozSDK','9.0.1'
 end
 
 target 'SampleAppSwift' do

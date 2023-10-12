@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.8.1 (swiftlang-5.8.0.124.5 clang-1403.0.22.11.100)
+// swift-compiler-version: Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)
 // swift-module-flags: -target arm64-apple-ios10.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name KidozSDK
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import Foundation
@@ -53,7 +53,7 @@ import _StringProcessing
   @objc @_Concurrency.MainActor(unsafe) public static let BANNER_WIDTH: CoreFoundation.CGFloat
   @objc @_Concurrency.MainActor(unsafe) public static let BANNER_HEIGHT: CoreFoundation.CGFloat
   @_Concurrency.MainActor(unsafe) public var isAutoShow: Swift.Bool
-  @objc @_Concurrency.MainActor(unsafe) public var delegate: (any KidozSDK.KidozBannerDelegate)?
+  @objc @_Concurrency.MainActor(unsafe) public var delegate: KidozSDK.KidozBannerDelegate?
   @_Concurrency.MainActor(unsafe) @objc dynamic public init()
   @objc @_Concurrency.MainActor(unsafe) public func load()
   @objc @_Concurrency.MainActor(unsafe) public func show()
@@ -139,13 +139,13 @@ import _StringProcessing
   @objc deinit
 }
 @_hasMissingDesignatedInitializers @objc(KidozRewardedAd) public class KidozRewardedAd : ObjectiveC.NSObject {
-  @objc public static func load(delegate: any KidozSDK.KidozRewardedDelegate)
+  @objc public static func load(delegate: KidozSDK.KidozRewardedDelegate)
   @objc public func isLoaded() -> Swift.Bool
   @objc public func show(viewController: UIKit.UIViewController)
   @objc deinit
 }
 @_hasMissingDesignatedInitializers @objc(KidozInterstitialAd) public class KidozInterstitialAd : ObjectiveC.NSObject {
-  @objc public static func load(delegate: any KidozSDK.KidozInterstitialDelegate)
+  @objc public static func load(delegate: KidozSDK.KidozInterstitialDelegate)
   @objc public func isLoaded() -> Swift.Bool
   @objc public func show(viewController: UIKit.UIViewController)
   @objc deinit

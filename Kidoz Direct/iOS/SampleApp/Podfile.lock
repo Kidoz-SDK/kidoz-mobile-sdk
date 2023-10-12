@@ -1,16 +1,16 @@
 PODS:
-  - KidozSDK (9.0.0)
+  - KidozSDK (9.0.1)
 
 DEPENDENCIES:
-  - KidozSDK (from `https://github.com/Kidoz-SDK/kidoz-ios-frameworks/raw/main/KidozSDK/KidozSDK.podspec`)
+  - KidozSDK (= 9.0.1)
 
-EXTERNAL SOURCES:
-  KidozSDK:
-    :podspec: https://github.com/Kidoz-SDK/kidoz-ios-frameworks/raw/main/KidozSDK/KidozSDK.podspec
+SPEC REPOS:
+  trunk:
+    - KidozSDK
 
 SPEC CHECKSUMS:
-  KidozSDK: 4c2616a747b78d467221b5d1ded432d8d3ca3761
+  KidozSDK: 3dce94dbe17435448db769e2eb3f243309942474
 
-PODFILE CHECKSUM: ff4358d63a0b724e1afbe869cdcde8f766f7ab4a
+PODFILE CHECKSUM: 7e9e7f52351ac844cf496dd37e09ef0e102f2dbd
 
 COCOAPODS: 1.12.1

@@ -30,7 +30,7 @@
 - (NSString*)getSdkVersion;
 
 - (void)suppressSKANWarnings;
-+ (void)setMediation:(NSString*)mediation;
++ (void)setExtensionType:(NSString*)extensionType version:(NSString*)extensionVersion;
 @end
 
 

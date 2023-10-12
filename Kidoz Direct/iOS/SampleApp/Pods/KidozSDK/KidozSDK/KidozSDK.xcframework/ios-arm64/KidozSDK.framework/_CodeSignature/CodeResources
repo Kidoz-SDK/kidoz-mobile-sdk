@@ -30,7 +30,7 @@
 		</data>
 		<key>Headers/Kidoz.h</key>
 		<data>
-		CA6hpO4RUvlG+JGArrngGSNaspo=
+		jNz5207A7tHsGbUreTTOgmOftBI=
 		</data>
 		<key>Headers/KidozSDK-Bridging-Header.h</key>
 		<data>
@@ -38,7 +38,7 @@
 		</data>
 		<key>Headers/KidozSDK-Swift.h</key>
 		<data>
-		A3RuPsijgpSSbtb5/JdtK9cGFhw=
+		K10xmM5KyQQkKgYAGBOrwHdE8Yw=
 		</data>
 		<key>Headers/KidozSDK.h</key>
 		<data>
@@ -54,27 +54,27 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		q4hCYI5fHS0wIGnBuvnl0w7gsA4=
+		c78fbVfmaSnbTD+/1BQzr/wziMc=
 		</data>
 		<key>Modules/KidozSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		7hu1lD4wo7bX/Fm0CyM1cVrBChY=
+		Cq4Eoet88SNcVaZ3EgxcpwmGxLw=
 		</data>
 		<key>Modules/KidozSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		QHsSIEYcAykBXMpZIPVwDXERX+4=
+		PZ+0na6J30YPDJ5CuY5hLM8AvNI=
 		</data>
 		<key>Modules/KidozSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		otLFdBdh/gBCbfO/UvmdZkcSTIo=
+		9FMKqh25SnkwhNR6DYfG4lI7EdI=
 		</data>
 		<key>Modules/KidozSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		QHsSIEYcAykBXMpZIPVwDXERX+4=
+		PZ+0na6J30YPDJ5CuY5hLM8AvNI=
 		</data>
 		<key>Modules/KidozSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		Md78ePodlnEURAboqlRVC7Nrw/o=
+		DWV0A26VVHGkiCZS8vI/+gxHq5c=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -86,7 +86,7 @@
 		</data>
 		<key>SharedConfiguration.xcconfig</key>
 		<data>
-		eI7aGL+gFOjMqS4eDSk4ZK4x8Vs=
+		7g4pRvnlzx3oGIoc82jdCZkadqg=
 		</data>
 		<key>TestConfiguration.xcconfig</key>
 		<data>
@@ -165,11 +165,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			CA6hpO4RUvlG+JGArrngGSNaspo=
+			jNz5207A7tHsGbUreTTOgmOftBI=
 			</data>
 			<key>hash2</key>
 			<data>
-			VzXU2taKrmw3EZR9uDOkj41JXQg5D/bVbCmtnuzp2Tw=
+			eOifSnld3gcgbyLMMtC1yQCWOd4Z1JyUyCz1/mvKEP8=
 			</data>
 		</dict>
 		<key>Headers/KidozSDK-Bridging-Header.h</key>
@@ -187,11 +187,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			A3RuPsijgpSSbtb5/JdtK9cGFhw=
+			K10xmM5KyQQkKgYAGBOrwHdE8Yw=
 			</data>
 			<key>hash2</key>
 			<data>
-			5TePgaxaJ8mXvXi02X1/e0+NDZfjby6SHOVRjSLSH3g=
+			q7KyRcKLmEE2SHwW4o7PJQdhAzsNYnCh6MJwmy2mmpI=
 			</data>
 		</dict>
 		<key>Headers/KidozSDK.h</key>
@@ -231,55 +231,55 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			7hu1lD4wo7bX/Fm0CyM1cVrBChY=
+			Cq4Eoet88SNcVaZ3EgxcpwmGxLw=
 			</data>
 			<key>hash2</key>
 			<data>
-			sw+881IG4DCUKLyVWFZjkXyCuDAuqPwkPMOiF6TGnik=
+			6fuZszwhe3cnvSVtyZfkQejBxuzXMkm3iL6UVrevQBw=
 			</data>
 		</dict>
 		<key>Modules/KidozSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			QHsSIEYcAykBXMpZIPVwDXERX+4=
+			PZ+0na6J30YPDJ5CuY5hLM8AvNI=
 			</data>
 			<key>hash2</key>
 			<data>
-			5egwHNkuo51y0a/G8b6PC+P+OxCqCOAIvkj9hHnxl3g=
+			YQsmCwDxLszCO576fqEjQO2C10j/6fnjnkKELlruQwY=
 			</data>
 		</dict>
 		<key>Modules/KidozSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			otLFdBdh/gBCbfO/UvmdZkcSTIo=
+			9FMKqh25SnkwhNR6DYfG4lI7EdI=
 			</data>
 			<key>hash2</key>
 			<data>
-			ia/CoFCmb12fttz45oE8nUWERiq4kJC7lv6aFM7LBmc=
+			TIbcYi2bJcu3FEuprIatWCp5hCxDj5ljmrtjutgvrRM=
 			</data>
 		</dict>
 		<key>Modules/KidozSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			QHsSIEYcAykBXMpZIPVwDXERX+4=
+			PZ+0na6J30YPDJ5CuY5hLM8AvNI=
 			</data>
 			<key>hash2</key>
 			<data>
-			5egwHNkuo51y0a/G8b6PC+P+OxCqCOAIvkj9hHnxl3g=
+			YQsmCwDxLszCO576fqEjQO2C10j/6fnjnkKELlruQwY=
 			</data>
 		</dict>
 		<key>Modules/KidozSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Md78ePodlnEURAboqlRVC7Nrw/o=
+			DWV0A26VVHGkiCZS8vI/+gxHq5c=
 			</data>
 			<key>hash2</key>
 			<data>
-			8W5v+lKs6WqqkosSENXXwe9OARiir5aIrE5RjzMXLjw=
+			C7HDw5/BbPZhaYEWE3M/SAQBTbiRpACDSnQor6JPncE=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -308,11 +308,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			eI7aGL+gFOjMqS4eDSk4ZK4x8Vs=
+			7g4pRvnlzx3oGIoc82jdCZkadqg=
 			</data>
 			<key>hash2</key>
 			<data>
-			UF7owroVZEsfTgA9PX0a0QJaCTIIlopPo9x5VkLmJcQ=
+			S2a0HY4fPPRICijDrvkA5RfEBfaNpMSV47yGBpcFrYw=
 			</data>
 		</dict>
 		<key>TestConfiguration.xcconfig</key>

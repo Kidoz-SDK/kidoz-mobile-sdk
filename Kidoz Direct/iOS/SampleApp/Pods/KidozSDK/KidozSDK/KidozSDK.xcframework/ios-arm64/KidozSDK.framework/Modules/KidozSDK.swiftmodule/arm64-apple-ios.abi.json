@@ -4685,48 +4685,6 @@
     {
       "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdUnits\/FullScreen\/Rewarded\/RewardedAdManager.swift",
       "kind": "StringLiteral",
-      "offset": 1243,
-      "length": 40,
-      "value": "\"Instance \""
-    },
-    {
-      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdUnits\/FullScreen\/Rewarded\/RewardedAdManager.swift",
-      "kind": "StringLiteral",
-      "offset": 1266,
-      "length": 7,
-      "value": "\" already running\""
-    },
-    {
-      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdUnits\/FullScreen\/Rewarded\/RewardedAdManager.swift",
-      "kind": "StringLiteral",
-      "offset": 1462,
-      "length": 40,
-      "value": "\"Instance \""
-    },
-    {
-      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdUnits\/FullScreen\/Rewarded\/RewardedAdManager.swift",
-      "kind": "StringLiteral",
-      "offset": 1485,
-      "length": 7,
-      "value": "\" already running\""
-    },
-    {
-      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdUnits\/FullScreen\/Rewarded\/RewardedAdManager.swift",
-      "kind": "StringLiteral",
-      "offset": 2250,
-      "length": 32,
-      "value": "\"Rewarded WrapperDlegate deinit\""
-    },
-    {
-      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdUnits\/FullScreen\/Rewarded\/RewardedAdManager.swift",
-      "kind": "StringLiteral",
-      "offset": 2981,
-      "length": 9,
-      "value": "\"No fill\""
-    },
-    {
-      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdUnits\/FullScreen\/Rewarded\/RewardedAdManager.swift",
-      "kind": "StringLiteral",
       "offset": 1726,
       "length": 14,
       "value": "\"KidozSDK.WrapperDlegate\""
@@ -4796,76 +4754,6 @@
     },
     {
       "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdNetworkAttribution\/SKAdNetworkParameters.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1231,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdNetworkAttribution\/SKAdNetworkParameters.swift",
-      "kind": "StringLiteral",
-      "offset": 4589,
-      "length": 98,
-      "value": "\"MEYCIQCSfrC2zEUypeugiF7+ESsmRUHhkURa0hBXqkD6U9Rz9AIhAKGHa0vpI6weBVfiYgr6P4wNdyMce3zOe\/7W\/U9VmkUW\""
-    },
-    {
-      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdNetworkAttribution\/SKAdNetworkParameters.swift",
-      "kind": "IntegerLiteral",
-      "offset": 4771,
-      "length": 10,
-      "value": "1375330146"
-    },
-    {
-      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdNetworkAttribution\/SKAdNetworkParameters.swift",
-      "kind": "StringLiteral",
-      "offset": 4862,
-      "length": 24,
-      "value": "\"v79kvwwj4g.skadnetwork\""
-    },
-    {
-      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdNetworkAttribution\/SKAdNetworkParameters.swift",
-      "kind": "IntegerLiteral",
-      "offset": 4968,
-      "length": 2,
-      "value": "18"
-    },
-    {
-      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdNetworkAttribution\/SKAdNetworkParameters.swift",
-      "kind": "IntegerLiteral",
-      "offset": 5053,
-      "length": 13,
-      "value": "1634560326304"
-    },
-    {
-      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdNetworkAttribution\/SKAdNetworkParameters.swift",
-      "kind": "StringLiteral",
-      "offset": 5153,
-      "length": 5,
-      "value": "\"2.2\""
-    },
-    {
-      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdNetworkAttribution\/SKAdNetworkParameters.swift",
-      "kind": "IntegerLiteral",
-      "offset": 5242,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdNetworkAttribution\/SKAdNetworkParameters.swift",
-      "kind": "StringLiteral",
-      "offset": 5316,
-      "length": 38,
-      "value": "\"2c7c7e50-f5c4-4891-b4e2-858762f46304\""
-    },
-    {
-      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdNetworkAttribution\/SKAdNetworkParameters.swift",
-      "kind": "IntegerLiteral",
-      "offset": 5438,
-      "length": 1,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdNetworkAttribution\/SKAdNetworkParameters.swift",
       "kind": "StringLiteral",
       "offset": 229,
       "length": 21,
@@ -4877,69 +4765,6 @@
       "offset": 203,
       "length": 12,
       "value": "\"KidozLog::\""
-    },
-    {
-      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/Utils\/KidozLogger.swift",
-      "kind": "StringLiteral",
-      "offset": 292,
-      "length": 43,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/Utils\/KidozLogger.swift",
-      "kind": "StringLiteral",
-      "offset": 308,
-      "length": 5,
-      "value": "\"Debug::\""
-    },
-    {
-      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/Utils\/KidozLogger.swift",
-      "kind": "StringLiteral",
-      "offset": 321,
-      "length": 1,
-      "value": "\" - \""
-    },
-    {
-      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/Utils\/KidozLogger.swift",
-      "kind": "StringLiteral",
-      "offset": 334,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/Utils\/KidozLogger.swift",
-      "kind": "StringLiteral",
-      "offset": 428,
-      "length": 43,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/Utils\/KidozLogger.swift",
-      "kind": "StringLiteral",
-      "offset": 444,
-      "length": 5,
-      "value": "\"Error::\""
-    },
-    {
-      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/Utils\/KidozLogger.swift",
-      "kind": "StringLiteral",
-      "offset": 457,
-      "length": 1,
-      "value": "\" - \""
-    },
-    {
-      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/Utils\/KidozLogger.swift",
-      "kind": "StringLiteral",
-      "offset": 470,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdNetworkAttribution\/SKAdImpressionExtension.swift",
-      "kind": "StringLiteral",
-      "offset": 2033,
-      "length": 140,
-      "value": "\"SKAdImpression\n{\nversion:%@,\nnetworkId:%@,\ncampaignId:%@,\ntargetAppId:%@,\nnonce:%@,\nsourceAppId:%@,\ntimestamp:%@,\nsignature:%@\n}\""
     },
     {
       "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdUnits\/Banner\/KidozBannerView.swift",
@@ -4961,55 +4786,6 @@
       "offset": 446,
       "length": 4,
       "value": "true"
-    },
-    {
-      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdUnits\/Banner\/KidozBannerView.swift",
-      "kind": "IntegerLiteral",
-      "offset": 603,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdUnits\/Banner\/KidozBannerView.swift",
-      "kind": "IntegerLiteral",
-      "offset": 609,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdUnits\/Banner\/KidozBannerView.swift",
-      "kind": "StringLiteral",
-      "offset": 881,
-      "length": 39,
-      "value": "\"init(coder:) has not been implemented\""
-    },
-    {
-      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdUnits\/Banner\/KidozBannerView.swift",
-      "kind": "StringLiteral",
-      "offset": 1123,
-      "length": 24,
-      "value": "\"No internet connection\""
-    },
-    {
-      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdUnits\/Banner\/KidozBannerView.swift",
-      "kind": "StringLiteral",
-      "offset": 1726,
-      "length": 18,
-      "value": "\"Banner not ready\""
-    },
-    {
-      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdUnits\/Banner\/KidozBannerView.swift",
-      "kind": "StringLiteral",
-      "offset": 2020,
-      "length": 8,
-      "value": "\"deinit\""
-    },
-    {
-      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdUnits\/Banner\/KidozBannerView.swift",
-      "kind": "StringLiteral",
-      "offset": 2608,
-      "length": 9,
-      "value": "\"No fill\""
     },
     {
       "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdUnits\/Banner\/KidozBannerView.swift",
@@ -5056,27 +4832,6 @@
     {
       "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdUnits\/KidozError.swift",
       "kind": "StringLiteral",
-      "offset": 724,
-      "length": 45,
-      "value": "\"errorCode: \""
-    },
-    {
-      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdUnits\/KidozError.swift",
-      "kind": "StringLiteral",
-      "offset": 748,
-      "length": 7,
-      "value": "\" message: \""
-    },
-    {
-      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdUnits\/KidozError.swift",
-      "kind": "StringLiteral",
-      "offset": 768,
-      "length": 3,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdUnits\/KidozError.swift",
-      "kind": "StringLiteral",
       "offset": 191,
       "length": 10,
       "value": "\"KidozSDK.KidozError\""
@@ -5091,100 +4846,9 @@
     {
       "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdUnits\/FullScreen\/Interstitial\/InterstitialAdManager.swift",
       "kind": "StringLiteral",
-      "offset": 1306,
-      "length": 40,
-      "value": "\"Instance \""
-    },
-    {
-      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdUnits\/FullScreen\/Interstitial\/InterstitialAdManager.swift",
-      "kind": "StringLiteral",
-      "offset": 1329,
-      "length": 7,
-      "value": "\" already loading\""
-    },
-    {
-      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdUnits\/FullScreen\/Interstitial\/InterstitialAdManager.swift",
-      "kind": "StringLiteral",
-      "offset": 1529,
-      "length": 40,
-      "value": "\"Instance \""
-    },
-    {
-      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdUnits\/FullScreen\/Interstitial\/InterstitialAdManager.swift",
-      "kind": "StringLiteral",
-      "offset": 1552,
-      "length": 7,
-      "value": "\" already running\""
-    },
-    {
-      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdUnits\/FullScreen\/Interstitial\/InterstitialAdManager.swift",
-      "kind": "StringLiteral",
-      "offset": 2345,
-      "length": 23,
-      "value": "\"WrapperDlegate deinit\""
-    },
-    {
-      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdUnits\/FullScreen\/Interstitial\/InterstitialAdManager.swift",
-      "kind": "StringLiteral",
-      "offset": 3073,
-      "length": 9,
-      "value": "\"No fill\""
-    },
-    {
-      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdUnits\/FullScreen\/Interstitial\/InterstitialAdManager.swift",
-      "kind": "StringLiteral",
       "offset": 1797,
       "length": 14,
       "value": "\"KidozSDK.WrapperDlegate\""
-    },
-    {
-      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/Utils\/PlistUtil.swift",
-      "kind": "StringLiteral",
-      "offset": 392,
-      "length": 6,
-      "value": "\"Info\""
-    },
-    {
-      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/Utils\/PlistUtil.swift",
-      "kind": "StringLiteral",
-      "offset": 415,
-      "length": 7,
-      "value": "\"plist\""
-    },
-    {
-      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/Utils\/PlistUtil.swift",
-      "kind": "Array",
-      "offset": 635,
-      "length": 2,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/Utils\/PlistUtil.swift",
-      "kind": "BooleanLiteral",
-      "offset": 933,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/Utils\/PlistUtil.swift",
-      "kind": "StringLiteral",
-      "offset": 1045,
-      "length": 18,
-      "value": "\"SKAdNetworkItems\""
-    },
-    {
-      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/Utils\/PlistUtil.swift",
-      "kind": "StringLiteral",
-      "offset": 1291,
-      "length": 23,
-      "value": "\"SKAdNetworkIdentifier\""
-    },
-    {
-      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/Utils\/PlistUtil.swift",
-      "kind": "BooleanLiteral",
-      "offset": 1440,
-      "length": 4,
-      "value": "true"
     },
     {
       "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdUnits\/AdParameters.swift",
@@ -5199,27 +4863,6 @@
       "offset": 329,
       "length": 19,
       "value": "\"skadNetworkParams\""
-    },
-    {
-      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdUnits\/AdParameters.swift",
-      "kind": "StringLiteral",
-      "offset": 940,
-      "length": 9,
-      "value": "\"browser\""
-    },
-    {
-      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdUnits\/AdParameters.swift",
-      "kind": "StringLiteral",
-      "offset": 1092,
-      "length": 9,
-      "value": "\"webview\""
-    },
-    {
-      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdUnits\/AdParameters.swift",
-      "kind": "StringLiteral",
-      "offset": 1244,
-      "length": 10,
-      "value": "\"appstore\""
     },
     {
       "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/Utils\/TestUtils.swift",
@@ -5250,186 +4893,11 @@
       "value": "\"TEST_WATERFALL_URL_KEY\""
     },
     {
-      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/Utils\/TestUtils.swift",
-      "kind": "StringLiteral",
-      "offset": 811,
-      "length": 6,
-      "value": "\"Prod\""
-    },
-    {
-      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/Utils\/TestUtils.swift",
-      "kind": "StringLiteral",
-      "offset": 818,
-      "length": 27,
-      "value": "\"https:\/\/sdk-api.kidoz.net\""
-    },
-    {
-      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/Utils\/TestUtils.swift",
-      "kind": "StringLiteral",
-      "offset": 846,
-      "length": 24,
-      "value": "\"https:\/\/vast.kidoz.net\""
-    },
-    {
-      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/Utils\/TestUtils.swift",
-      "kind": "StringLiteral",
-      "offset": 871,
-      "length": 88,
-      "value": "\"https:\/\/prebid-adapter.kidoz.net\/api\/test-waterfall?offer_id=\""
-    },
-    {
-      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/Utils\/TestUtils.swift",
-      "kind": "StringLiteral",
-      "offset": 957,
-      "length": 1,
-      "value": "\"&\""
-    },
-    {
-      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/Utils\/TestUtils.swift",
-      "kind": "StringLiteral",
-      "offset": 1015,
-      "length": 4,
-      "value": "\"QA\""
-    },
-    {
-      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/Utils\/TestUtils.swift",
-      "kind": "StringLiteral",
-      "offset": 1020,
-      "length": 32,
-      "value": "\"https:\/\/sdk-api-test.kidoz.net\""
-    },
-    {
-      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/Utils\/TestUtils.swift",
-      "kind": "StringLiteral",
-      "offset": 1053,
-      "length": 29,
-      "value": "\"https:\/\/vast-test.kidoz.net\""
-    },
-    {
-      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/Utils\/TestUtils.swift",
-      "kind": "StringLiteral",
-      "offset": 1083,
-      "length": 93,
-      "value": "\"https:\/\/prebid-adapter-test.kidoz.net\/api\/test-waterfall?offer_id=\""
-    },
-    {
-      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/Utils\/TestUtils.swift",
-      "kind": "StringLiteral",
-      "offset": 1174,
-      "length": 1,
-      "value": "\"&\""
-    },
-    {
-      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/Utils\/TestUtils.swift",
-      "kind": "StringLiteral",
-      "offset": 1274,
-      "length": 9,
-      "value": "\"Ext. QA\""
-    },
-    {
-      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/Utils\/TestUtils.swift",
-      "kind": "StringLiteral",
-      "offset": 1284,
-      "length": 33,
-      "value": "\"https:\/\/sdk-api-utest.kidoz.net\""
-    },
-    {
-      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/Utils\/TestUtils.swift",
-      "kind": "StringLiteral",
-      "offset": 1318,
-      "length": 30,
-      "value": "\"https:\/\/vast-utest.kidoz.net\""
-    },
-    {
-      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/Utils\/TestUtils.swift",
-      "kind": "StringLiteral",
-      "offset": 1349,
-      "length": 94,
-      "value": "\"https:\/\/prebid-adapter-utest.kidoz.net\/api\/test-waterfall?offer_id=\""
-    },
-    {
-      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/Utils\/TestUtils.swift",
-      "kind": "StringLiteral",
-      "offset": 1441,
-      "length": 1,
-      "value": "\"&\""
-    },
-    {
-      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/Utils\/TestUtils.swift",
-      "kind": "StringLiteral",
-      "offset": 1517,
-      "length": 5,
-      "value": "\"Dev\""
-    },
-    {
-      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/Utils\/TestUtils.swift",
-      "kind": "StringLiteral",
-      "offset": 1523,
-      "length": 34,
-      "value": "\"https:\/\/sdk-api.devenv.kidoz.net\""
-    },
-    {
-      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/Utils\/TestUtils.swift",
-      "kind": "StringLiteral",
-      "offset": 1558,
-      "length": 27,
-      "value": "\"https:\/\/devenv.kidoz.net\/\""
-    },
-    {
-      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/Utils\/TestUtils.swift",
-      "kind": "StringLiteral",
-      "offset": 1586,
-      "length": 95,
-      "value": "\"https:\/\/prebid-adapter.devenv.kidoz.net\/api\/test-waterfall?offer_id=\""
-    },
-    {
-      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/Utils\/TestUtils.swift",
-      "kind": "StringLiteral",
-      "offset": 1679,
-      "length": 1,
-      "value": "\"&\""
-    },
-    {
-      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/Utils\/TestUtils.swift",
-      "kind": "StringLiteral",
-      "offset": 2987,
-      "length": 16,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/Utils\/TestUtils.swift",
-      "kind": "StringLiteral",
-      "offset": 3002,
-      "length": 3,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/Utils\/TestUtils.swift",
-      "kind": "StringLiteral",
-      "offset": 3420,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
       "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdUnits\/FullScreen\/Rewarded\/KidozRewardedAd.swift",
       "kind": "StringLiteral",
       "offset": 278,
       "length": 21,
       "value": "\"DEFAULT_INSTANCE_ID\""
-    },
-    {
-      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdUnits\/FullScreen\/Rewarded\/KidozRewardedAd.swift",
-      "kind": "StringLiteral",
-      "offset": 842,
-      "length": 24,
-      "value": "\"No internet connection\""
-    },
-    {
-      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdUnits\/FullScreen\/Rewarded\/KidozRewardedAd.swift",
-      "kind": "StringLiteral",
-      "offset": 1293,
-      "length": 19,
-      "value": "\"RewardedAd deinit\""
     },
     {
       "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdUnits\/FullScreen\/Rewarded\/KidozRewardedAd.swift",
@@ -5444,20 +4912,6 @@
       "offset": 277,
       "length": 21,
       "value": "\"DEFAULT_INSTANCE_ID\""
-    },
-    {
-      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdUnits\/FullScreen\/Interstitial\/KidozInterstitialAd.swift",
-      "kind": "StringLiteral",
-      "offset": 862,
-      "length": 24,
-      "value": "\"No internet connection\""
-    },
-    {
-      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdUnits\/FullScreen\/Interstitial\/KidozInterstitialAd.swift",
-      "kind": "StringLiteral",
-      "offset": 1333,
-      "length": 23,
-      "value": "\"InterstitialAd deinit\""
     },
     {
       "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdUnits\/FullScreen\/Interstitial\/KidozInterstitialAd.swift",
