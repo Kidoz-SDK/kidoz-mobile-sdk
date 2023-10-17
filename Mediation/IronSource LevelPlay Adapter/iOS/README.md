@@ -1,6 +1,7 @@
 # Kidoz ironSource iOS Adapter
 
 The Kidoz ironSource Adapter SDK is built and tested with ironSource mediation v7.3.1.0<BR> 
+
 Check out the [ironSource Integration Documentation](https://developers.is.com/ironsource-mobile/ios/ios-sdk/) for app level integration.
 
 ## Integration Steps:
