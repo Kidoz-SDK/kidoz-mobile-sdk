@@ -1,7 +1,7 @@
 # Kidoz iOS Mobile SDK - Swift
 
 ## Initialize Kidoz SDK
-Call the initialize method with the publisher ID and Token which you received during the [Kidoz onboarding](http://accounts.kidoz.net/publishers/register?utm_source=kidoz_github).
+Call the initialize method with the Publisher ID and Security Token which you received during [Kidoz's Publisher onboarding](http://accounts.kidoz.net/publishers/register?utm_source=kidoz_github).
 ```Swift
 Kidoz.instance().initialize(withPublisherID: <enter your publisher ID>, securityToken: <enter your security Token>, with: self)
 ```
@@ -19,7 +19,7 @@ func onInitError(_ errorMessage: String!)
 <BR>
 
 ## Kidoz iOS Interstitial Ad 
-**Intersitial** is a full screen widget which is designed for showing full screen advertisement.  
+**Intersitial** is a full screen widget which is designed for showing a full screen advertisement.  
 #### Add support for Interstitial ad unit
 
 Load Interstitial ad: 
@@ -46,8 +46,8 @@ func onInterstitialImpression()
 func onInterstitialAdClosed(ad: KidozSDK.KidozInterstitialAd)
 ```
 **Kidoz iOS Interstitial best practices**
-- The preferred timing to show Interstitial Ads : Before the game ends, between game levels, after completing a game level .   
-- Some Interstitial Ads may contain video with sound. In order to maximise user experience, it is important to mute or pause game background sounds and pause the game while the Interstitial is displayed. This can be achieved by using `-onInterstitialAdShown:` and `-onInterstitialAdClosed:` callbacks:
+- The preferred timing to show Interstitial Ads: Before the game ends, between game levels, after completing a game level .   
+- Some Interstitial Ads may contain video with sound. In order to maximize the user experience, it is important to mute or pause game background sounds and pause the game while the Interstitial is displayed. This can be achieved by using `-onInterstitialAdShown:` and `-onInterstitialAdClosed:` callbacks:
 ```Swift
 onInterstitialAdShown {
 // mute|pause background sounds
@@ -62,7 +62,7 @@ onInterstitialAdClosed {
 <BR>
 
 ## Kidoz iOS Rewarded Ad
-**Rewarded**  is a full screen widget which is designed for showing full screen advertisement.   
+**Rewarded**  is a full screen widget which is designed for showing a full screen advertisement.   
 #### Add support for Rewarded ad unit
 
 Load Rewarded ad: 
@@ -90,8 +90,8 @@ func onRewardedImpression()
 func onRewardedAdClosed(ad: KidozSDK.KidozRewardedAd)
 ```
 **Kidoz iOS Rewarded best practices**
-- The preferred timing to show Rewarded Ads : Based on the implementation of rewarded logics in your game .   
-- Some Rewarded Ads may contain video with sound. In order to maximise user experience, it is important to mute or pause game background sounds and pause the game flow while the Rewarded is displayed. This can be achieved by using `-onRewardedAdShownWithAd:` and `-onRewardedAdClosedWithAd:` callbacks:
+- The preferred timing to show Rewarded Ads: Based on the implementation of rewarded logic in your game.   
+- Some Rewarded Ads may contain video with sound. In order to maximize the user experience, it is important to mute or pause game background sounds and pause the game flow while the Rewarded is displayed. This can be achieved by using `-onRewardedAdShownWithAd:` and `-onRewardedAdClosedWithAd:` callbacks:
 ```Swift
 onRewardedAdShownWithAd {
 //mute/pause background sounds
