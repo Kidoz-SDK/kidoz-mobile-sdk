@@ -13,7 +13,7 @@ On the following platforms:
 + [Unity](/Mediation/AdMob%20Adapter/Unity)
 
 ## Prerequisites
-Before publishing your first app please complete the process for [Kidoz's Publisher onboarding](http://accounts.kidoz.net/publishers/register?utm_source=kidoz_github).
+Before publishing your first app please complete the process for [Kidoz's Publisher onboarding](http://accounts.kidoz.net/publishers/register?utm_source=kidoz_github) to create your account and receive your Publisher ID and Security Token credentials.
 
 ## Kidoz - Admob Settings Recommendations
 
