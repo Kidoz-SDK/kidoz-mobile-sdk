@@ -15,4 +15,4 @@ On the following platforms:
 
 ## Prerequisites
 
-Before publishing your first app please finish the onboarding process for [Kidoz's publishers](http://accounts.kidoz.net/publishers/register?utm_source=kidoz_github).
+Before publishing your first app please finish the onboarding process for [Kidoz's Publishers](http://accounts.kidoz.net/publishers/register?utm_source=kidoz_github).
