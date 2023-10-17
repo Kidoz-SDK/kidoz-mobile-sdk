@@ -21,10 +21,10 @@ Add the following permissions:
 ## SDK initialization
 The SDK should be initialized only once in an Activity lifecycle. 
 
-You may run the Sample App with Kidoz's <B>sample</B> `publisherID` and `securityToken` provided in the sample code but <B>be sure not to publish your app with them</B> . 
+You may run the Sample App with Kidoz's <B>sample</B> `publisherID` and `securityToken` provided in the sample code but <B>be sure not to publish your app with them</B>. 
 
 </br>
-Initialize the SDK inside your Main Activity's onCreate.
+Initialize the SDK inside your MainActivity's onCreate.
 
 > MainActivity.java
 
@@ -111,7 +111,7 @@ Kidoz RewardedAd is a full screen single ad unit.
 
 #### Displaying Rewarded Ads
 
-To use the Rewarded Ad you first need to load an Ad instance with an RewardedAdCallback listener :
+To use the Rewarded Ad you first need to load an Ad instance with a RewardedAdCallback listener :
 
 ```java
 RewardedAd mRewardedAd;
