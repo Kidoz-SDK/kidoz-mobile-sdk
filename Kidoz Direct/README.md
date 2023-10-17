@@ -15,4 +15,4 @@ On the following platforms:
 
 ## Prerequisites
 
-Before publishing your first app please finish the onboarding process for [Kidoz's Publishers](http://accounts.kidoz.net/publishers/register?utm_source=kidoz_github) to create your account and receive your Publisher ID and Security Token credentials.
+Before publishing your first app please complete the process for [Kidoz's Publisher onboarding](http://accounts.kidoz.net/publishers/register?utm_source=kidoz_github) to create your account and receive your Publisher ID and Security Token credentials.
