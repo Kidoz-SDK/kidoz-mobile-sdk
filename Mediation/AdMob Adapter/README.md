@@ -20,7 +20,6 @@ Before publishing your first app please complete the process for [Kidoz's Publis
 _Programmatic_ **|** _app-ads.txt_
 
 1. We recommend setting up app-ads.txt for the apps that use Kidoz sdk in your Admob dashboard. This may prevent blocking of programmatic ads.
-Once you add an app and generate the relevant entry for it, you can paste it into your app-ads.txt file.
 Follow these instructions on how to [Set up an app-ads.txt file for your app](https://support.google.com/admob/answer/9363762?hl=en).
 
 2. Additionally, it is highly recommended to add the Kidoz app-ads.txt in order to increase the fill-rate of your application, as [described here](https://kidoz.net/introappadstext).
