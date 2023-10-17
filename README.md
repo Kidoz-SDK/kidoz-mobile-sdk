@@ -12,7 +12,7 @@ The following mediation platforms are supported:
 
 
 ## Prerequisites
-Before publishing your first app please complete the onboarding process for [Kidoz's publishers](http://accounts.kidoz.net/publishers/register?utm_source=kidoz_github) to create your account and receive your Publisher ID and Security Token credentials.
+Before publishing your first app please complete the process for [Kidoz's Publisher onboarding](http://accounts.kidoz.net/publishers/register?utm_source=kidoz_github) to create your account and receive your Publisher ID and Security Token credentials.
 
 ## Stay in touch 
 For any question or assistance, please contact us at sdk@kidoz.net.
