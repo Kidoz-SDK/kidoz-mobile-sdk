@@ -29,7 +29,7 @@ Android / Fire OS Adapter Class Name: com.applovin.mediation.adapters.KidozMedia
   
 Once the Kidoz Network is properly configured you will now be able to enable and configure the Kidoz Ad Data in your App's Ad Unit waterfall.<BR>
 
-You will need to define your Ad Unit CPM as displayed in your Kidoz dashboard. Contact Kidoz publisher representative for more information. <BR>
+You will need to define your Ad Unit CPM as displayed in your Kidoz dashboard. Contact a Kidoz publisher representative for more information at sdk@kidoz.net.  <BR>
 
 Replace KIDOZ_PUBLISHER_ID and KIDOZ_SECURITY_TOKEN with the publisher id and token you received from Kidoz when you created your publisher account.
 ```java
