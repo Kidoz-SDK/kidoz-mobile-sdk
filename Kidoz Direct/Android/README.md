@@ -10,14 +10,6 @@ dependencies {
 }
 ``` 
 
-#### AndroidMainifest.xml Definitions 
-
-Add the following permissions:
-
-```xml
- <uses-permission android:name="android.permission.INTERNET" />
-``` 
-
 ## SDK initialization
 The SDK should be initialized only once in an Activity lifecycle. 
 
