@@ -1,6 +1,14 @@
 # Kidoz Mobile SDK
 
+Welcome to the Kidoz Mobile SDK GitHub - thank you for visiting.
+
+Kidoz provides a unique monetization solution to enable app publishers to safely monetize their apps with relevant ads.
+
+Uniting brands, content publishers and families, Kidoz is the leading COPPA & GDPR compliant contextual mobile advertising network that safely reaches over 350 million kids, teens, and families every month.
+
 **These SDKs were verified not to contain the Advertiser Identifier (IDFA) as required by Apple App Store regulation for apps of Kids category.**
+
+To get started, please select the option below that best suits your application:
 
 Kidoz SDK as a sole monetization platform:
 - [Kidoz Direct](/Kidoz%20Direct)
