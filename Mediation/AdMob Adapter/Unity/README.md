@@ -38,12 +38,4 @@ Follow instructions on how to [Set Up Custom Events](https://developers.google.c
 `{"AppID":"publisherId", "Token":"publisherToken"}`
 
 - Replace `publisherId` and `publisherToken` with the credentials received during [Kidoz's Publisher onboarding](http://accounts.kidoz.net/publishers/register?utm_source=kidoz_github) process.
- 
-#### Proguard rules
-If you are using the Minify option in the Player settings please add this to your proguard-rules file:
-```
--keep @interface org.greenrobot.eventbus.Subscribe  
--keepclassmembers class * {  
-  @org.greenrobot.eventbus.Subscribe <methods>;  
-}
-```
+
