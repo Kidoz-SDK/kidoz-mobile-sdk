@@ -166,13 +166,3 @@ OR
 
 Setting the Kidoz.SetiOSAppPauseOnBackground(true); 
 ```
-
-## Android integration
-
-If you are using the Minify option in the Player settings please add this to your proguard-rules file:
-```
--keep @interface org.greenrobot.eventbus.Subscribe  
--keepclassmembers class * {  
-  @org.greenrobot.eventbus.Subscribe <methods>;  
-}
-```
