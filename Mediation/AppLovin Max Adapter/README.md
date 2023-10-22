@@ -14,8 +14,9 @@ On the following platforms:
 
 ## Prerequisites
 
-Before publishing your first app please finish the onboarding process for Kidoz's publishers [Kidoz's publishers](http://accounts.kidoz.net/publishers/register?utm_source=kidoz_github). <BR>
-Follow instructions on the [AppLovin Custom SDK Network Integration Guide](https://dash.applovin.com/documentation/mediation/android/mediation-setup/custom-sdk)
+Before publishing your first app please complete the process for [Kidoz's Publisher onboarding](http://accounts.kidoz.net/publishers/register?utm_source=kidoz_github). <BR>
+
+Follow instructions on the [AppLovin Custom SDK Network Integration Guide](https://dash.applovin.com/documentation/mediation/android/mediation-setup/custom-sdk).
 
 In the Manage Network form you should enter the following data:
 ```
@@ -27,8 +28,10 @@ Android / Fire OS Adapter Class Name: com.applovin.mediation.adapters.KidozMedia
   
   
 Once the Kidoz Network is properly configured you will now be able to enable and configure the Kidoz Ad Data in your App's Ad Unit waterfall.<BR>
-You will need to define yout Ad Unit CPM as dispayed in your Kidoz dashboard. Contact Kidoz publisher representative for more information. <BR>
-Replace KIDOZ_PUBLISHER_ID and KIDOZ_SECURITY_TOKEN with the publisher id and token you recived from Kidoz when you've created your publisher account.
+
+You will need to define your Ad Unit CPM as displayed in your Kidoz dashboard. Contact a Kidoz publisher representative for more information at sdk@kidoz.net.  <BR>
+
+Replace KIDOZ_PUBLISHER_ID and KIDOZ_SECURITY_TOKEN with the publisher id and token you received from Kidoz when you created your publisher account.
 ```java
   {"publisher_id":"KIDOZ_PUBLISHER_ID","token":"KIDOZ_SECURITY_TOKEN"}
 ```

@@ -1,5 +1,5 @@
 # Kidoz Admob iOS Adapter
-The kidoz Admob adapter was built and tested with Google-Mobile-Ads-SDK v10.8.0<BR>
+The Kidoz Admob adapter was built and tested with Google-Mobile-Ads-SDK v10.8.0<BR>
 Check out the [Admob Mediation Documentation](https://developers.google.com/admob/ios/quick-start) for app level integration.
 
 ## Integration Steps:
@@ -9,7 +9,7 @@ pod 'KidozSDK', '9.0.1'
 pod 'KidozAdmobAdapter', '1.1.0'
 ```
 
-Follow instructins on how to [Set Up Custom Events](https://developers.google.com/admob/ios/custom-events/setup#create) on the AdMob dashboard and set up the Kidoz's adapter class:
+Follow instructions on how to [Set Up Custom Events](https://developers.google.com/admob/ios/custom-events/setup#create) on the AdMob dashboard and set up Kidoz's adapter class:
 
 - Set the following full path in the `Class Name` field: </br>
 `KidozAdmobAdapter`
@@ -17,7 +17,7 @@ Follow instructins on how to [Set Up Custom Events](https://developers.google.co
 - Set the following json string in the `Parameter (optional)` field: </br>
 `{"AppID":"publisherId", "Token":"publisherToken"}`
 
-- Replace `publisherId` and `publisherToken` with the credentials received during the Kidoz Publisher Account sign up.
+- Replace `publisherId` and `publisherToken` with the credentials received during [Kidoz's Publisher onboarding](http://accounts.kidoz.net/publishers/register?utm_source=kidoz_github).
 
 ## iOS SKAdNetwork Support
 

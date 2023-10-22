@@ -1,22 +1,22 @@
 # Kidoz AdMob Adapter Unity Package
 
-The kidoz Admob Adapter was built and tested with Google Mobile Ads Unity Plugin v8.5.1<BR>
+The Kidoz Admob Adapter was built and tested with Google Mobile Ads Unity Plugin v8.5.1<BR>
 Check out the [AdMob Unity Plugin Documentation](https://developers.google.com/admob/unity/start) for app level integration.
 
 ## Integration Steps:
 
-Download and import [KidozAdmobAdapter.unitypackage](/Mediation/AdMob%20Adapter/Unity/KidozAdmobAdapter.unitypackage) into your Project's Asset Folder.
+Download and import [KidozAdmobAdapter.unitypackage](/Mediation/AdMob%20Adapter/Unity/KidozAdmobAdapter.unitypackage) into your project's Asset Folder.
 
 ## iOS integration
 
 #### Setting up custom events
-Follow instructins on how to [Set Up Custom Events](https://developers.google.com/admob/ios/custom-events/setup#create) on the AdMob dashboard and set up the Kidoz' adapter class:
+Follow instructions on how to [Set Up Custom Events](https://developers.google.com/admob/ios/custom-events/setup#create) on the AdMob dashboard and set up Kidoz's adapter class:
 * Set the following full path in the `Class Name` field: </br>
 `KidozAdmobAdapter`
 * Set the following json string in the `Parameter (optional)` field: </br>
 `{"AppID":"publisherId", "Token":"publisherToken"}` <B>*</B>
 
-<B>*</B> Replace `publisherId` and `publisherToken` with the credentials received during the Kidoz Publisher Account sign up.
+<B>*</B> Replace `publisherId` and `publisherToken` with the credentials received during [Kidoz's Publisher onboarding](http://accounts.kidoz.net/publishers/register?utm_source=kidoz_github) process.
 
 #### Setting up the SKAdNetwork ID
 
@@ -30,15 +30,15 @@ For more information, see [Configuring a Source App for SKAdNetwork](https://dev
 ## Android integration
 
 #### Setting up custom events
-Follow instructins on how to [Set Up Custom Events](https://developers.google.com/admob/android/custom-events/setup#create) on the AdMob dashboard and set up the Kidoz' adapter class:
+Follow instructions on how to [Set Up Custom Events](https://developers.google.com/admob/android/custom-events/setup#create) on the AdMob dashboard and set up Kidoz's adapter class:
 - Set the following full path in the `Class Name` field: </br>
 `com.kidoz.mediation.admob.adapters.KidozAdMobAdapter`
 
 - Set the following json string in the `Parameter (optional)` field: </br>
 `{"AppID":"publisherId", "Token":"publisherToken"}`
 
-- Replace `publisherId` and `publisherToken` with the credentials received during the Kidoz Publisher Account sign up.
-
+- Replace `publisherId` and `publisherToken` with the credentials received during [Kidoz's Publisher onboarding](http://accounts.kidoz.net/publishers/register?utm_source=kidoz_github) process.
+ 
 #### Proguard rules
 If you are using the Minify option in the Player settings please add this to your proguard-rules file:
 ```

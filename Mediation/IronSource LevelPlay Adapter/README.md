@@ -14,7 +14,7 @@ On the following platforms:
 
 ## Prerequisites
   
-Before publishing your first app please finish the onboarding process for Kidoz's publishers [Kidoz's publishers](http://accounts.kidoz.net/publishers/register?utm_source=kidoz_github)  
+Before publishing your first app please complete the process for [Kidoz's Publisher onboarding](http://accounts.kidoz.net/publishers/register?utm_source=kidoz_github)  
 and follow the instructions for [ironSource Custom Adapter setup](https://developers.is.com/ironsource-mobile/general/custom-adapter-setup/).<BR><BR>
 Kidoz Network ID on ironSource is `2b618dcd` and you will need to setup the network level parameters with the `Publisher Id` and `Token` you got from Kidoz:  
   

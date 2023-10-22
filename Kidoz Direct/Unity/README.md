@@ -4,11 +4,11 @@
 
 If you don't have the [External Dependency Manager](https://github.com/googlesamples/unity-jar-resolver) already integrated in your app, please download and import [external-dependency-manager-1.2.177.unitypackage](/Kidoz%20Direct/Unity/external-dependency-manager-1.2.177.unitypackage) into your project. 
 
-1. Download and import [KidozUnityPlugin.unitypackage](/Kidoz%20Direct/Unity/KidozUnityPlugin.unitypackage) into your Project's Asset Folder.
+1. Download and import [KidozUnityPlugin.unitypackage](/Kidoz%20Direct/Unity/KidozUnityPlugin.unitypackage) into your project's Asset Folder.
 2. In the import window select all components. A new Prefabs object named `KidozObject` will appear in the Assets folder. 
 3. Open your requested Scene. 
 4. Drag the `KidozObject` into the selected scene.
-5. Select the `KidozObject` and enter your `Publisher ID` and `Security Token`. To receive these credentials please finish the onboarding process for [Kidoz's publishers](http://accounts.kidoz.net/publishers/register?utm_source=kidoz_github) if you haven't done so already.
+5. Select the `KidozObject` and enter your `Publisher ID` and `Security Token`. To receive these credentials please complete the process for [Kidoz's Publisher onboarding](http://accounts.kidoz.net/publishers/register?utm_source=kidoz_github) if you haven't done so already.
 
 6. If you're having issues with the 'KidozObject' you can open the SampleScene by double clicking it instead.
 
@@ -48,7 +48,7 @@ Kidoz.onInterstitialClosed += < onInterstitialClosed;
 ```
 #### Rewarded lifecycle methods callbacks:
 
-Invoke the following method to load an rewarded ad. Set the flag isAutoShow to true if you want to automatically show ad when loaded.
+Invoke the following method to load a rewarded ad. Set the flag isAutoShow to true if you want to automatically show ad when loaded.
 ```java
  Kidoz.loadRewardedAd(false); // Set the flag isAutoShow to true if you want to automatically show ad when loaded.
   ```
@@ -75,7 +75,7 @@ Invoke the following method to load and show a banner ad.
 // Set the requested banner position: BOTTOM_CENTER,TOP_CENTER,TOP_LEFT,TOP_RIGHT,BOTTOM_LEFT,BOTTOM_RIGHT. 
  Kidoz.loadBanner(true, Kidoz.BANNER_POSITION.BOTTOM_CENTER); 
   ```
-In case you choose to set the isAutoShow to false - invoke the Following method to show the banner after onBannerLoaded callback is triggered.
+In case you choose to set the isAutoShow to false, invoke the Following method to show the banner after onBannerLoaded callback is triggered.
 ```java
 Kidoz.showBanner();
 ```
@@ -103,7 +103,7 @@ For more information, see [Configuring ad network IDs on Unity](https://docs.uni
 
 **Build tips**
 
-If you encounter issues while building your iOS application you may tryb the following:
+If you encounter issues while building your iOS application you may try the following:
 
 On <b>project level</b> build settings and not on target add:
 
@@ -121,8 +121,8 @@ See https://stackoverflow.com/a/65602500/5572423
 See https://stackoverflow.com/a/57669947/5572423
 
 **Kidoz iOS Interstitial best practices**
-- The preferred timing to show Interstitial Ads : Before the game ends, between game levels, after completing a game level .   
-- Some Interstitial Ads may contain video with sound. In order to maximise user experience, it is important to mute or pause game background sounds and pause the game while the Interstitial is displayed. This can be achieved by using `onInterstitialShown` and `onInterstitialClosed` callbacks:
+- The preferred timing to show Interstitial Ads: Before the game ends, between game levels, after completing a game level.   
+- Some Interstitial Ads may contain video with sound. In order to maximize the user experience, it is important to mute or pause game background sounds and pause the game while the Interstitial is displayed. This can be achieved by using `onInterstitialShown` and `onInterstitialClosed` callbacks:
 ```
 Kidoz.onInterstitialShown += < onInterstitialShown >;	
 Kidoz.onInterstitialClosed += < onInterstitialClosed >;
@@ -144,8 +144,8 @@ Setting the Kidoz.SetiOSAppPauseOnBackground(true);
 ```
 
 **Kidoz iOS Rewarded best practices**
-- The preferred timing to show Rewarded Ads : Based on the implementation of rewarded logics in your game .   
-- Some Rewarded Ads may contain video with sound. In order to maximise user experience, it is important to mute or pause game background sounds and pause the game flow while the Rewarded is displayed. This can be achieved by using `onRewardedShown` and `onRewardedClosed` callbacks:
+- The preferred timing to show Rewarded Ads: Based on the implementation of rewarded logic in your game .   
+- Some Rewarded Ads may contain video with sound. In order to maximize the user experience, it is important to mute or pause game background sounds and pause the game flow while the Rewarded is displayed. This can be achieved by using `onRewardedShown` and `onRewardedClosed` callbacks:
 ```
 Kidoz.onRewardedShown += onRewardedShown;  
 Kidoz.rewardedClose += onRewardedClosed;

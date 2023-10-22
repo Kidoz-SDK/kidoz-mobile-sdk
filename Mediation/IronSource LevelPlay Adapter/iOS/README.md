@@ -1,6 +1,7 @@
 # Kidoz ironSource iOS Adapter
 
-The Kidoz ironSource Adapter SDK is built and tested with ironSource mediation v7.3.1.0<BR> 
+The Kidoz ironSource Adapter SDK is built and tested with ironSource mediation v7.5.0.0<BR> 
+
 Check out the [ironSource Integration Documentation](https://developers.is.com/ironsource-mobile/ios/ios-sdk/) for app level integration.
 
 ## Integration Steps:
@@ -8,7 +9,7 @@ Check out the [ironSource Integration Documentation](https://developers.is.com/i
 To add Kidoz ironSource Adapter to your project with CocoaPods:
 ```
 pod 'KidozSDK', '9.0.1'
-pod 'KidozIronSourceAdapter', '1.1.4'
+pod 'KidozIronSourceAdapter', '1.2.0'
 ```
 
 ## iOS SKAdNetwork Support
