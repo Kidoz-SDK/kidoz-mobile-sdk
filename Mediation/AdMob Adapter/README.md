@@ -19,7 +19,7 @@ Please set up [app-ads.txt](https://kidoz.net/app-ads.txt) for the apps that use
 Follow these instructions on how to [Set up an app-ads.txt file for your app](https://kidoz.net/introappadstext).
 
 
-## Kidoz - Admob CPM Setup
+## Admob CPM Setup
 You will need to define your Ad Unit CPM as displayed in your Kidoz dashboard. Contact a Kidoz publisher representative for more information at sdk@kidoz.net.
 
 ## Important note:
