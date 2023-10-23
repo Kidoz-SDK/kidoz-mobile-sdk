@@ -9,6 +9,5 @@
 
 * Updated to use Kidoz SDK v9.0.1
 * Compatible with LevelPlay mediation v7.3.1.0
-* Added banner support
 * Refactored static library into xcframework
 * Distribute using cocoapods
