@@ -23,7 +23,7 @@
         <source>https://github.com/CocoaPods/Specs</source>
       </sources>
     </iosPod>
-    <iosPod name="KidozIronsourceAdapter" version="1.2.0">
+    <iosPod name="KidozIronSourceAdapter" version="1.2.0">
       <sources>
         <source>https://github.com/CocoaPods/Specs</source>
       </sources>
