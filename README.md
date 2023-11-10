@@ -10,10 +10,10 @@ Uniting brands, content publishers and families, Kidoz is the leading COPPA & GD
 
 To get started, please select the option below that best suits your application:
 
-Kidoz SDK as a sole monetization platform:
+Integrate Kidoz SDK library directly into your iOS, Android or Unity game:
 - [Kidoz Direct](/Kidoz%20Direct)
   
-The following mediation platforms are supported:
+Integrate Kidoz SDK via mediation:
 - [AdMob](/Mediation/AdMob%20Adapter)
 - [AppLovin Max](/Mediation/AppLovin%20Max%20Adapter)
 - [ironSource LevelPlay](/Mediation/IronSource%20LevelPlay%20Adapter)
