@@ -22,7 +22,7 @@ Kidoz Network ID on ironSource is `2b618dcd` and you will need to setup the netw
 
   On Unity Level Play --> SDK Network --> Kidoz App Settings configuration page set Zone field to one for every ad type you use:<BR>
 
-  
+  <img width="598" alt="Kidoz Wideget Type Settings" src="https://github.com/Kidoz-SDK/kidoz-mobile-sdk/assets/86282008/a6d8b409-587e-425c-b45a-37e4446bfa46">
 
 ## App-ads.txt
 Please set up [app-ads.txt](https://kidoz.net/app-ads.txt) for all the apps that use Kidoz sdk. This will increase your fill rate and earnings and will prevent ad serving being blocked.
