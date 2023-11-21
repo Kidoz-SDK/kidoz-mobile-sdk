@@ -21,7 +21,7 @@ Kidoz Network ID on ironSource is `2b618dcd` and you will need to setup the netw
   <img width="598" alt="ironSourceNetwork" src="https://user-images.githubusercontent.com/86282008/149078934-107106f0-a526-45bc-9c93-8ca53d5bf3cc.png">
 
 ## Ad Network Instance configuration
-  On Unity Level Play --> SDK Network --> Kidoz App Settings page set <B>Zone</B> field to 1 for every ad type you use:<BR>
+  On Unity Level Play --> SDK Network --> Kidoz App Settings page <B>Zone</B> field should be set to 1:<BR>
 
   <img width="598" alt="Kidoz Wideget Type Settings" src="https://github.com/Kidoz-SDK/kidoz-mobile-sdk/assets/86282008/a6d8b409-587e-425c-b45a-37e4446bfa46">
 
