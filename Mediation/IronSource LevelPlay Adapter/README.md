@@ -19,7 +19,11 @@ and follow the instructions for [ironSource Custom Adapter setup](https://develo
 Kidoz Network ID on ironSource is `2b618dcd` and you will need to setup the network level parameters with the `Publisher Id` and `Token` you got from Kidoz:  
   
   <img width="598" alt="ironSourceNetwork" src="https://user-images.githubusercontent.com/86282008/149078934-107106f0-a526-45bc-9c93-8ca53d5bf3cc.png">
+
+  On Unity Level Play --> SDK Network --> Kidoz App Settings configuration page set Zone field to one for every ad type you use:<BR>
+
   
+
 ## App-ads.txt
 Please set up [app-ads.txt](https://kidoz.net/app-ads.txt) for all the apps that use Kidoz sdk. This will increase your fill rate and earnings and will prevent ad serving being blocked.
 Follow these instructions on how to [Set up an app-ads.txt file for your app](https://kidoz.net/introappadstext).
