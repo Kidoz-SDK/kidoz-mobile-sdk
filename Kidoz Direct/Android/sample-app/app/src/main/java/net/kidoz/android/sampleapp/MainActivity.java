@@ -23,7 +23,7 @@ import com.kidoz.sdk.api.interfaces.SDKEventListener;
 
 public class MainActivity extends Activity {
 
-    private static final String PUBLISHER_ID = "14428"; // Publishers'
+    private static final String PUBLISHER_ID = "14428";
     private static final String TOKEN = "6yAsKUngaG5yC4X5HsRoatKTso40NMoZ";
 
     private InterstitialAd mInterstitialAd;
