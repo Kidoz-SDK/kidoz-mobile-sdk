@@ -6,7 +6,7 @@
 ```groovy
 dependencies {
     implementation 'org.greenrobot:eventbus:3.3.1'
-    implementation 'net.kidoz.sdk:kidoz-android-native:9.0.0'
+    implementation 'net.kidoz.sdk:kidoz-android-native:9.0.1'
 }
 ``` 
 
