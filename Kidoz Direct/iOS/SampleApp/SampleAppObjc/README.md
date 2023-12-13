@@ -38,12 +38,12 @@ if (interstitialAd != NULL && [interstitialAd isLoaded] ) {
 
 Report the `KidozInterstitialDelegate` protocol's callbacks: 
 ```Objective-C  
--(void) onInterstitialAdLoaded:(KidozInterstitialAd*) ad;
--(void) onInterstitialAdFailedToLoad:(KidozError*) error;
--(void) onInterstitialAdFailedToShow:(KidozError*) error;
--(void) onInterstitialAdShown:(KidozInterstitialAd*) ad;
+-(void) onInterstitialAdLoadedWithAd:(KidozInterstitialAd *)ad;
+-(void) onInterstitialAdFailedToLoadWithError:(KidozError *)error;
+-(void) onInterstitialAdShownWithAd:(KidozInterstitialAd*) ad;
+-(void) onInterstitialAdFailedToShowWithError:(KidozError*) error;
 -(void) onInterstitialImpression;
--(void) onInterstitialAdClosed:(KidozInterstitialAd*) ad;
+-(void) onInterstitialAdClosedWithAd:(KidozInterstitialAd*) ad;
 ```
 **Kidoz iOS Interstitial best practices**
 - The preferred timing to show Interstitial Ads: Before the game ends, between game levels, after completing a game level.   
@@ -81,13 +81,13 @@ if (rewardedAd != NULL && [rewardedAd isLoaded] ) {
 
 Report the `KidozRewardedDelegate` protocol's callbacks: 
 ```Objective-C   
--(void) onRewardedAdLoaded:(KidozRewardedAd*) ad;
--(void) onRewardedAdFailedToLoad:(KidozError*) error;
--(void) onRewardedAdFailedToShow:(KidozError*) error;
--(void) onRewardedAdShown:(KidozRewardedAd*) ad;
+-(void) onRewardedAdLoadedWithAd:(KidozRewardedAd*) ad;
+-(void) onRewardedAdFailedToLoadWithError:(KidozError*) error;
+-(void) onRewardedAdShownWithAd:(KidozRewardedAd*) ad;
+-(void) onRewardedAdFailedToShowWithError:(KidozError*) error;
 -(void) onRewardedImpression;
--(void) onRewardReceived:(KidozRewardedAd*) ad;
--(void) onRewardedAdClosed:(KidozRewardedAd*) ad;
+-(void) onRewardReceivedWithAd:(KidozRewardedAd*) ad;
+-(void) onRewardedAdClosedWithAd:(KidozRewardedAd*) ad;
 ```
 **Kidoz iOS Rewarded best practices**
 - The preferred timing to show Rewarded Ads: Based on the implementation of rewarded logic in your game .   
@@ -128,9 +128,9 @@ Close Banner:
 Report the `KidozBannerDelegate` protocol's callbacks: 
 ```Objective-C 
 -(void) onBannerAdLoaded;
--(void) onBannerAdFailedToLoad:(KidozError*) error;
+-(void) onBannerAdFailedToLoadWithError:(KidozError*) error;
 -(void) onBannerAdShown;
--(void) onBannerAdFailedToShow:(KidozError*) error;
+-(void) onBannerAdFailedToShowWithError:(KidozError*) error;
 -(void) onBannerAdImpression;
 -(void) onBannerAdClosed;
 ```
