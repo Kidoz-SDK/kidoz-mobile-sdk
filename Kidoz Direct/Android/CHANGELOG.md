@@ -1,5 +1,9 @@
 # Changelog
 
+## 9.0.2 - Jan 4, 2024
+
+* Stability improvement
+
 ## 9.0.1 - Dec 12, 2023
 
 * Improved memory management
