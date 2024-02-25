@@ -24,23 +24,18 @@ Initialize the SDK inside your MainActivity's onCreate.
 @Override 
 protected void onCreate(Bundle savedInstanceState)
 {
-    super.onCreate(savedInstanceState);
-    KidozSDK.setSDKListener(new SDKEventListener()
-        {
-            @Override
-            public void onInitSuccess()
-            {
+    ....
+    Kidoz.initialize(MainActivity.this, PUBLISHER_ID, TOKEN, new SDKInitializationListener() {
+        @Override
+        public void onInitSuccess() {
             //SDK Init | Success().
-            }
+        }
 
-            @Override
-            public void onInitError(String error)
-            {
+        @Override
+        public void onInitError(String error) {
             //SDK Init | Error
-            }
-        });
-        
-    KidozSDK.initialize(this, <publisherID>, <securityToken>);
+        }
+    });    
     //the rest of your main activity onCreate
     ...
 }
