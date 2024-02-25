@@ -11,7 +11,9 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.kidoz.sdk.api.Kidoz;
 import com.kidoz.sdk.api.KidozSDK;
+import com.kidoz.sdk.api.SDKInitializationListener;
 import com.kidoz.sdk.api.ads.banner.BannerAdCallback;
 import com.kidoz.sdk.api.ads.banner.KidozBannerView;
 import com.kidoz.sdk.api.ads.fullscreen.interstitial.InterstitialAd;
@@ -120,7 +122,7 @@ public class MainActivity extends Activity {
 
     // SDK init
     protected void initSDK(){
-        KidozSDK.setSDKListener(new SDKEventListener() {
+        Kidoz.initialize(MainActivity.this, PUBLISHER_ID, TOKEN, new SDKInitializationListener() {
             @Override
             public void onInitSuccess() {
                 onSDKInitSuccess();
@@ -132,7 +134,6 @@ public class MainActivity extends Activity {
                 onSDKInitFailure(error);
             }
         });
-        KidozSDK.initialize(MainActivity.this,PUBLISHER_ID,TOKEN);
     }
 
     protected void onSDKInitSuccess(){
