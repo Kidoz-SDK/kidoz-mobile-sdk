@@ -231,7 +231,6 @@ using UInt = size_t;
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
 @import CoreFoundation;
-@import Foundation;
 @import ObjectiveC;
 @import UIKit;
 #endif
@@ -256,15 +255,15 @@ using UInt = size_t;
 #endif
 
 #if defined(__OBJC__)
-@class SKAdNetworkParameters;
-@class NSData;
+@class UIImage;
 
-SWIFT_CLASS_NAMED("AdParameters")
-@interface AdParameters : NSObject
-@property (nonatomic) enum RedirectType redirectType;
-@property (nonatomic, strong) SKAdNetworkParameters * _Nullable skadNetworkParameters;
+SWIFT_CLASS("_TtC8KidozSDK13AssetsManager")
+@interface AssetsManager : NSObject
++ (UIImage * _Nonnull)getAnswerImageButtonFile SWIFT_WARN_UNUSED_RESULT;
++ (UIImage * _Nonnull)getCrossBlueImageButtonFile SWIFT_WARN_UNUSED_RESULT;
++ (UIImage * _Nonnull)getWebViewCloseButtonFile SWIFT_WARN_UNUSED_RESULT;
++ (UIImage * _Nonnull)getDividerImageFile SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-- (nonnull instancetype)initWithData:(NSData * _Nonnull)data OBJC_DESIGNATED_INITIALIZER;
 @end
 
 @class KidozError;
@@ -280,10 +279,9 @@ SWIFT_PROTOCOL("_TtP8KidozSDK19KidozBannerDelegate_")
 @end
 
 @class NSCoder;
-@class NSString;
 
 SWIFT_CLASS_NAMED("KidozBannerView")
-@interface KidozBannerView : UIView <KDZBannerDelegate>
+@interface KidozBannerView : UIView
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) CGFloat BANNER_WIDTH;)
 + (CGFloat)BANNER_WIDTH SWIFT_WARN_UNUSED_RESULT;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) CGFloat BANNER_HEIGHT;)
@@ -295,19 +293,10 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) CGFloat BANNER_HEIGH
 - (void)show;
 - (void)setBannerPosition:(BANNER_POSITION)bannerPosition;
 - (void)close;
-- (void)bannerDidInitialize;
-- (void)bannerDidClose;
-- (void)bannerDidOpen;
-- (void)bannerIsReady;
-- (void)bannerReturnedWithNoOffers;
-- (void)bannerLoadFailed:(int32_t)errorCode andMessage:(NSString * _Null_unspecified)errorMessage;
-- (void)bannerShowFailed:(int32_t)errorCode andMessage:(NSString * _Null_unspecified)errorMessage;
-- (void)bannerDidReciveError:(NSString * _Null_unspecified)errorMessage;
-- (void)bannerImpression;
-- (void)bannerLeftApplication;
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 @end
 
+@class NSString;
 
 SWIFT_CLASS_NAMED("KidozError")
 @interface KidozError : NSObject
@@ -372,28 +361,31 @@ SWIFT_PROTOCOL("_TtP8KidozSDK21KidozRewardedDelegate_")
 @end
 
 
-SWIFT_CLASS_NAMED("PlistUtil")
-@interface PlistUtil : NSObject
-+ (BOOL)checkSkAdNetworkExistWithNetworkId:(NSString * _Nonnull)networkId SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS("_TtC8KidozSDK16KidozSessionData")
+@interface KidozSessionData : NSObject
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL isSKAdNetworkIdentifierSet;)
++ (BOOL)isSKAdNetworkIdentifierSet SWIFT_WARN_UNUSED_RESULT;
++ (void)setIsSKAdNetworkIdentifierSet:(BOOL)value;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nullable supportedSKADNetworkIds;)
++ (NSString * _Nullable)supportedSKADNetworkIds SWIFT_WARN_UNUSED_RESULT;
++ (void)setSupportedSKADNetworkIds:(NSString * _Nullable)value;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nonnull extensionType;)
++ (NSString * _Nonnull)extensionType SWIFT_WARN_UNUSED_RESULT;
++ (void)setExtensionType:(NSString * _Nonnull)value;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nonnull extensionVersion;)
++ (NSString * _Nonnull)extensionVersion SWIFT_WARN_UNUSED_RESULT;
++ (void)setExtensionVersion:(NSString * _Nonnull)value;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
-@class SKAdImpression;
-
-SWIFT_CLASS("_TtC8KidozSDK21SKAdNetworkParameters")
-@interface SKAdNetworkParameters : NSObject
-- (nonnull instancetype)initWithResponseData:(NSDictionary<NSString *, id> * _Nonnull)responseData OBJC_DESIGNATED_INITIALIZER;
-- (BOOL)isViewThroughAd SWIFT_WARN_UNUSED_RESULT;
-- (BOOL)isStoreRenderedAd SWIFT_WARN_UNUSED_RESULT;
-- (SKAdImpression * _Nullable)getSKAdImpression SWIFT_WARN_UNUSED_RESULT SWIFT_AVAILABILITY(ios,introduced=14.5);
-- (NSDictionary * _Nullable)getProductParameters SWIFT_WARN_UNUSED_RESULT;
-+ (NSDictionary<NSString *, id> * _Nullable)mockProductParametersData SWIFT_WARN_UNUSED_RESULT;
-- (void)printSKAdImpression SWIFT_AVAILABILITY(ios,introduced=14.5);
-+ (SKAdNetworkParameters * _Nonnull)mockSKAdNetworkParameters SWIFT_WARN_UNUSED_RESULT;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+SWIFT_CLASS_NAMED("PlistUtil")
+@interface PlistUtil : NSObject
++ (BOOL)checkKidozSKADNetworkIdExistWithNetworkId:(NSString * _Nonnull)networkId SWIFT_WARN_UNUSED_RESULT;
++ (NSString * _Nonnull)getSKADNetworkIds SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
+
 
 
 SWIFT_CLASS_NAMED("TestUtils")
@@ -646,7 +638,6 @@ using UInt = size_t;
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
 @import CoreFoundation;
-@import Foundation;
 @import ObjectiveC;
 @import UIKit;
 #endif
@@ -671,15 +662,15 @@ using UInt = size_t;
 #endif
 
 #if defined(__OBJC__)
-@class SKAdNetworkParameters;
-@class NSData;
+@class UIImage;
 
-SWIFT_CLASS_NAMED("AdParameters")
-@interface AdParameters : NSObject
-@property (nonatomic) enum RedirectType redirectType;
-@property (nonatomic, strong) SKAdNetworkParameters * _Nullable skadNetworkParameters;
+SWIFT_CLASS("_TtC8KidozSDK13AssetsManager")
+@interface AssetsManager : NSObject
++ (UIImage * _Nonnull)getAnswerImageButtonFile SWIFT_WARN_UNUSED_RESULT;
++ (UIImage * _Nonnull)getCrossBlueImageButtonFile SWIFT_WARN_UNUSED_RESULT;
++ (UIImage * _Nonnull)getWebViewCloseButtonFile SWIFT_WARN_UNUSED_RESULT;
++ (UIImage * _Nonnull)getDividerImageFile SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-- (nonnull instancetype)initWithData:(NSData * _Nonnull)data OBJC_DESIGNATED_INITIALIZER;
 @end
 
 @class KidozError;
@@ -695,10 +686,9 @@ SWIFT_PROTOCOL("_TtP8KidozSDK19KidozBannerDelegate_")
 @end
 
 @class NSCoder;
-@class NSString;
 
 SWIFT_CLASS_NAMED("KidozBannerView")
-@interface KidozBannerView : UIView <KDZBannerDelegate>
+@interface KidozBannerView : UIView
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) CGFloat BANNER_WIDTH;)
 + (CGFloat)BANNER_WIDTH SWIFT_WARN_UNUSED_RESULT;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) CGFloat BANNER_HEIGHT;)
@@ -710,19 +700,10 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) CGFloat BANNER_HEIGH
 - (void)show;
 - (void)setBannerPosition:(BANNER_POSITION)bannerPosition;
 - (void)close;
-- (void)bannerDidInitialize;
-- (void)bannerDidClose;
-- (void)bannerDidOpen;
-- (void)bannerIsReady;
-- (void)bannerReturnedWithNoOffers;
-- (void)bannerLoadFailed:(int32_t)errorCode andMessage:(NSString * _Null_unspecified)errorMessage;
-- (void)bannerShowFailed:(int32_t)errorCode andMessage:(NSString * _Null_unspecified)errorMessage;
-- (void)bannerDidReciveError:(NSString * _Null_unspecified)errorMessage;
-- (void)bannerImpression;
-- (void)bannerLeftApplication;
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 @end
 
+@class NSString;
 
 SWIFT_CLASS_NAMED("KidozError")
 @interface KidozError : NSObject
@@ -787,28 +768,31 @@ SWIFT_PROTOCOL("_TtP8KidozSDK21KidozRewardedDelegate_")
 @end
 
 
-SWIFT_CLASS_NAMED("PlistUtil")
-@interface PlistUtil : NSObject
-+ (BOOL)checkSkAdNetworkExistWithNetworkId:(NSString * _Nonnull)networkId SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS("_TtC8KidozSDK16KidozSessionData")
+@interface KidozSessionData : NSObject
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL isSKAdNetworkIdentifierSet;)
++ (BOOL)isSKAdNetworkIdentifierSet SWIFT_WARN_UNUSED_RESULT;
++ (void)setIsSKAdNetworkIdentifierSet:(BOOL)value;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nullable supportedSKADNetworkIds;)
++ (NSString * _Nullable)supportedSKADNetworkIds SWIFT_WARN_UNUSED_RESULT;
++ (void)setSupportedSKADNetworkIds:(NSString * _Nullable)value;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nonnull extensionType;)
++ (NSString * _Nonnull)extensionType SWIFT_WARN_UNUSED_RESULT;
++ (void)setExtensionType:(NSString * _Nonnull)value;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nonnull extensionVersion;)
++ (NSString * _Nonnull)extensionVersion SWIFT_WARN_UNUSED_RESULT;
++ (void)setExtensionVersion:(NSString * _Nonnull)value;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
-@class SKAdImpression;
-
-SWIFT_CLASS("_TtC8KidozSDK21SKAdNetworkParameters")
-@interface SKAdNetworkParameters : NSObject
-- (nonnull instancetype)initWithResponseData:(NSDictionary<NSString *, id> * _Nonnull)responseData OBJC_DESIGNATED_INITIALIZER;
-- (BOOL)isViewThroughAd SWIFT_WARN_UNUSED_RESULT;
-- (BOOL)isStoreRenderedAd SWIFT_WARN_UNUSED_RESULT;
-- (SKAdImpression * _Nullable)getSKAdImpression SWIFT_WARN_UNUSED_RESULT SWIFT_AVAILABILITY(ios,introduced=14.5);
-- (NSDictionary * _Nullable)getProductParameters SWIFT_WARN_UNUSED_RESULT;
-+ (NSDictionary<NSString *, id> * _Nullable)mockProductParametersData SWIFT_WARN_UNUSED_RESULT;
-- (void)printSKAdImpression SWIFT_AVAILABILITY(ios,introduced=14.5);
-+ (SKAdNetworkParameters * _Nonnull)mockSKAdNetworkParameters SWIFT_WARN_UNUSED_RESULT;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+SWIFT_CLASS_NAMED("PlistUtil")
+@interface PlistUtil : NSObject
++ (BOOL)checkKidozSKADNetworkIdExistWithNetworkId:(NSString * _Nonnull)networkId SWIFT_WARN_UNUSED_RESULT;
++ (NSString * _Nonnull)getSKADNetworkIds SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
+
 
 
 SWIFT_CLASS_NAMED("TestUtils")

@@ -15,6 +15,16 @@
         ]
       },
       {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "KidozSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
         "kind": "TypeDecl",
         "name": "KidozInterstitialDelegate",
         "printedName": "KidozInterstitialDelegate",
@@ -202,8 +212,560 @@
         "sugared_genericSig": "<Self : AnyObject>",
         "declAttributes": [
           "AccessControl",
-          "ObjC",
+          "ObjC"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "KidozSDK",
+        "declAttributes": [
           "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "KidozSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "KidozSessionData",
+        "printedName": "KidozSessionData",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "isSKAdNetworkIdentifierSet",
+            "printedName": "isSKAdNetworkIdentifierSet",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@KidozSDK@objc(cs)KidozSessionData(cpy)isSKAdNetworkIdentifierSet",
+            "mangledName": "$s8KidozSDK0A11SessionDataC26isSKAdNetworkIdentifierSetSbvpZ",
+            "moduleName": "KidozSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@KidozSDK@objc(cs)KidozSessionData(cm)isSKAdNetworkIdentifierSet",
+                "mangledName": "$s8KidozSDK0A11SessionDataC26isSKAdNetworkIdentifierSetSbvgZ",
+                "moduleName": "KidozSDK",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@KidozSDK@objc(cs)KidozSessionData(cm)setIsSKAdNetworkIdentifierSet:",
+                "mangledName": "$s8KidozSDK0A11SessionDataC26isSKAdNetworkIdentifierSetSbvsZ",
+                "moduleName": "KidozSDK",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8KidozSDK0A11SessionDataC26isSKAdNetworkIdentifierSetSbvMZ",
+                "mangledName": "$s8KidozSDK0A11SessionDataC26isSKAdNetworkIdentifierSetSbvMZ",
+                "moduleName": "KidozSDK",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "supportedSKADNetworkIds",
+            "printedName": "supportedSKADNetworkIds",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@KidozSDK@objc(cs)KidozSessionData(cpy)supportedSKADNetworkIds",
+            "mangledName": "$s8KidozSDK0A11SessionDataC23supportedSKADNetworkIdsSSSgvpZ",
+            "moduleName": "KidozSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@KidozSDK@objc(cs)KidozSessionData(cm)supportedSKADNetworkIds",
+                "mangledName": "$s8KidozSDK0A11SessionDataC23supportedSKADNetworkIdsSSSgvgZ",
+                "moduleName": "KidozSDK",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@KidozSDK@objc(cs)KidozSessionData(cm)setSupportedSKADNetworkIds:",
+                "mangledName": "$s8KidozSDK0A11SessionDataC23supportedSKADNetworkIdsSSSgvsZ",
+                "moduleName": "KidozSDK",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8KidozSDK0A11SessionDataC23supportedSKADNetworkIdsSSSgvMZ",
+                "mangledName": "$s8KidozSDK0A11SessionDataC23supportedSKADNetworkIdsSSSgvMZ",
+                "moduleName": "KidozSDK",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "extensionType",
+            "printedName": "extensionType",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@KidozSDK@objc(cs)KidozSessionData(cpy)extensionType",
+            "mangledName": "$s8KidozSDK0A11SessionDataC13extensionTypeSSvpZ",
+            "moduleName": "KidozSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@KidozSDK@objc(cs)KidozSessionData(cm)extensionType",
+                "mangledName": "$s8KidozSDK0A11SessionDataC13extensionTypeSSvgZ",
+                "moduleName": "KidozSDK",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@KidozSDK@objc(cs)KidozSessionData(cm)setExtensionType:",
+                "mangledName": "$s8KidozSDK0A11SessionDataC13extensionTypeSSvsZ",
+                "moduleName": "KidozSDK",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8KidozSDK0A11SessionDataC13extensionTypeSSvMZ",
+                "mangledName": "$s8KidozSDK0A11SessionDataC13extensionTypeSSvMZ",
+                "moduleName": "KidozSDK",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "extensionVersion",
+            "printedName": "extensionVersion",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@KidozSDK@objc(cs)KidozSessionData(cpy)extensionVersion",
+            "mangledName": "$s8KidozSDK0A11SessionDataC16extensionVersionSSvpZ",
+            "moduleName": "KidozSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@KidozSDK@objc(cs)KidozSessionData(cm)extensionVersion",
+                "mangledName": "$s8KidozSDK0A11SessionDataC16extensionVersionSSvgZ",
+                "moduleName": "KidozSDK",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@KidozSDK@objc(cs)KidozSessionData(cm)setExtensionVersion:",
+                "mangledName": "$s8KidozSDK0A11SessionDataC16extensionVersionSSvsZ",
+                "moduleName": "KidozSDK",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8KidozSDK0A11SessionDataC16extensionVersionSSvMZ",
+                "mangledName": "$s8KidozSDK0A11SessionDataC16extensionVersionSSvMZ",
+                "moduleName": "KidozSDK",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "KidozSessionData",
+                "printedName": "KidozSDK.KidozSessionData",
+                "usr": "c:@M@KidozSDK@objc(cs)KidozSessionData"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@KidozSDK@objc(cs)KidozSessionData(im)init",
+            "mangledName": "$s8KidozSDK0A11SessionDataCACycfc",
+            "moduleName": "KidozSDK",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@KidozSDK@objc(cs)KidozSessionData",
+        "mangledName": "$s8KidozSDK0A11SessionDataC",
+        "moduleName": "KidozSDK",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
         ]
       },
       {
@@ -456,342 +1018,6 @@
       },
       {
         "kind": "TypeDecl",
-        "name": "SKAdNetworkParameters",
-        "printedName": "SKAdNetworkParameters",
-        "children": [
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init(responseData:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "SKAdNetworkParameters",
-                "printedName": "KidozSDK.SKAdNetworkParameters",
-                "usr": "c:@M@KidozSDK@objc(cs)SKAdNetworkParameters"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Dictionary",
-                "printedName": "[Swift.String : AnyObject]",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "ProtocolComposition",
-                    "printedName": "AnyObject"
-                  }
-                ],
-                "usr": "s:SD"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "c:@M@KidozSDK@objc(cs)SKAdNetworkParameters(im)initWithResponseData:",
-            "mangledName": "$s8KidozSDK21SKAdNetworkParametersC12responseDataACSDySSyXlG_tcfc",
-            "moduleName": "KidozSDK",
-            "objc_name": "initWithResponseData:",
-            "declAttributes": [
-              "AccessControl",
-              "ObjC"
-            ],
-            "init_kind": "Designated"
-          },
-          {
-            "kind": "Function",
-            "name": "isViewThroughAd",
-            "printedName": "isViewThroughAd()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "usr": "s:Sb"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@M@KidozSDK@objc(cs)SKAdNetworkParameters(im)isViewThroughAd",
-            "mangledName": "$s8KidozSDK21SKAdNetworkParametersC15isViewThroughAdSbyF",
-            "moduleName": "KidozSDK",
-            "declAttributes": [
-              "AccessControl",
-              "ObjC"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "isStoreRenderedAd",
-            "printedName": "isStoreRenderedAd()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "usr": "s:Sb"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@M@KidozSDK@objc(cs)SKAdNetworkParameters(im)isStoreRenderedAd",
-            "mangledName": "$s8KidozSDK21SKAdNetworkParametersC17isStoreRenderedAdSbyF",
-            "moduleName": "KidozSDK",
-            "declAttributes": [
-              "AccessControl",
-              "ObjC"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "getSKAdImpression",
-            "printedName": "getSKAdImpression()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "StoreKit.SKAdImpression?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "SKAdImpression",
-                    "printedName": "StoreKit.SKAdImpression",
-                    "usr": "c:objc(cs)SKAdImpression"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@M@KidozSDK@objc(cs)SKAdNetworkParameters(im)getSKAdImpression",
-            "mangledName": "$s8KidozSDK21SKAdNetworkParametersC03getC10ImpressionSo0cG0CSgyF",
-            "moduleName": "KidozSDK",
-            "intro_iOS": "14.5",
-            "declAttributes": [
-              "AccessControl",
-              "ObjC",
-              "Available"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "getProductParameters",
-            "printedName": "getProductParameters()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Foundation.NSDictionary?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "NSDictionary",
-                    "printedName": "Foundation.NSDictionary",
-                    "usr": "c:objc(cs)NSDictionary"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@M@KidozSDK@objc(cs)SKAdNetworkParameters(im)getProductParameters",
-            "mangledName": "$s8KidozSDK21SKAdNetworkParametersC010getProductE0So12NSDictionaryCSgyF",
-            "moduleName": "KidozSDK",
-            "declAttributes": [
-              "AccessControl",
-              "ObjC"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "mockProductParametersData",
-            "printedName": "mockProductParametersData()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "[Swift.String : AnyObject]?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Dictionary",
-                    "printedName": "[Swift.String : AnyObject]",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "ProtocolComposition",
-                        "printedName": "AnyObject"
-                      }
-                    ],
-                    "usr": "s:SD"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@M@KidozSDK@objc(cs)SKAdNetworkParameters(cm)mockProductParametersData",
-            "mangledName": "$s8KidozSDK21SKAdNetworkParametersC011mockProductE4DataSDySSyXlGSgyFZ",
-            "moduleName": "KidozSDK",
-            "static": true,
-            "declAttributes": [
-              "Final",
-              "AccessControl",
-              "ObjC"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "printSKAdImpression",
-            "printedName": "printSKAdImpression()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@M@KidozSDK@objc(cs)SKAdNetworkParameters(im)printSKAdImpression",
-            "mangledName": "$s8KidozSDK21SKAdNetworkParametersC05printC10ImpressionyyF",
-            "moduleName": "KidozSDK",
-            "intro_iOS": "14.5",
-            "declAttributes": [
-              "AccessControl",
-              "ObjC",
-              "Available"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "mockSKAdNetworkParameters",
-            "printedName": "mockSKAdNetworkParameters()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "SKAdNetworkParameters",
-                "printedName": "KidozSDK.SKAdNetworkParameters",
-                "usr": "c:@M@KidozSDK@objc(cs)SKAdNetworkParameters"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@M@KidozSDK@objc(cs)SKAdNetworkParameters(cm)mockSKAdNetworkParameters",
-            "mangledName": "$s8KidozSDK21SKAdNetworkParametersC04mockcdE0ACyFZ",
-            "moduleName": "KidozSDK",
-            "static": true,
-            "declAttributes": [
-              "Final",
-              "AccessControl",
-              "ObjC"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "SKAdNetworkParameters",
-                "printedName": "KidozSDK.SKAdNetworkParameters",
-                "usr": "c:@M@KidozSDK@objc(cs)SKAdNetworkParameters"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "c:@M@KidozSDK@objc(cs)SKAdNetworkParameters(im)init",
-            "mangledName": "$s8KidozSDK21SKAdNetworkParametersCACycfc",
-            "moduleName": "KidozSDK",
-            "overriding": true,
-            "implicit": true,
-            "objc_name": "init",
-            "declAttributes": [
-              "Dynamic",
-              "ObjC",
-              "Override"
-            ],
-            "init_kind": "Designated"
-          }
-        ],
-        "declKind": "Class",
-        "usr": "c:@M@KidozSDK@objc(cs)SKAdNetworkParameters",
-        "mangledName": "$s8KidozSDK21SKAdNetworkParametersC",
-        "moduleName": "KidozSDK",
-        "declAttributes": [
-          "AccessControl",
-          "ObjC"
-        ],
-        "superclassUsr": "c:objc(cs)NSObject",
-        "superclassNames": [
-          "ObjectiveC.NSObject"
-        ],
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Hashable",
-            "printedName": "Hashable",
-            "usr": "s:SH",
-            "mangledName": "$sSH"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CVarArg",
-            "printedName": "CVarArg",
-            "usr": "s:s7CVarArgP",
-            "mangledName": "$ss7CVarArgP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "_KeyValueCodingAndObservingPublishing",
-            "printedName": "_KeyValueCodingAndObservingPublishing",
-            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
-            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "_KeyValueCodingAndObserving",
-            "printedName": "_KeyValueCodingAndObserving",
-            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
-            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomStringConvertible",
-            "printedName": "CustomStringConvertible",
-            "usr": "s:s23CustomStringConvertibleP",
-            "mangledName": "$ss23CustomStringConvertibleP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomDebugStringConvertible",
-            "printedName": "CustomDebugStringConvertible",
-            "usr": "s:s28CustomDebugStringConvertibleP",
-            "mangledName": "$ss28CustomDebugStringConvertibleP"
-          }
-        ]
-      },
-      {
-        "kind": "TypeDecl",
         "name": "StringUtils",
         "printedName": "StringUtils",
         "children": [
@@ -852,6 +1078,138 @@
               "AccessControl"
             ],
             "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "convertHashableDictionatyToJSONString",
+            "printedName": "convertHashableDictionatyToJSONString(dictionary:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.AnyHashable : Any]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AnyHashable",
+                    "printedName": "Swift.AnyHashable",
+                    "usr": "s:s11AnyHashableV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8KidozSDK11StringUtilsC37convertHashableDictionatyToJSONString10dictionarySSSgSDys03AnyF0VypG_tFZ",
+            "mangledName": "$s8KidozSDK11StringUtilsC37convertHashableDictionatyToJSONString10dictionarySSSgSDys03AnyF0VypG_tFZ",
+            "moduleName": "KidozSDK",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "urlToParams",
+            "printedName": "urlToParams(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Foundation.URLQueryItem]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Foundation.URLQueryItem]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "URLQueryItem",
+                        "printedName": "Foundation.URLQueryItem",
+                        "usr": "s:10Foundation12URLQueryItemV"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URL",
+                "printedName": "Foundation.URL",
+                "usr": "s:10Foundation3URLV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8KidozSDK11StringUtilsC11urlToParamsySay10Foundation12URLQueryItemVGSgAE3URLVFZ",
+            "mangledName": "$s8KidozSDK11StringUtilsC11urlToParamsySay10Foundation12URLQueryItemVGSgAE3URLVFZ",
+            "moduleName": "KidozSDK",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "stringIsEmpty",
+            "printedName": "stringIsEmpty(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8KidozSDK11StringUtilsC13stringIsEmptyySbSSSgFZ",
+            "mangledName": "$s8KidozSDK11StringUtilsC13stringIsEmptyySbSSSgFZ",
+            "moduleName": "KidozSDK",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Class",
@@ -863,6 +1221,33 @@
           "RawDocComment"
         ],
         "hasMissingDesignatedInitializers": true
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "KidozSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "StoreKit",
+        "printedName": "StoreKit",
+        "declKind": "Import",
+        "moduleName": "KidozSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "KidozSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
       },
       {
         "kind": "TypeDecl",
@@ -1194,8 +1579,8 @@
             "moduleName": "KidozSDK",
             "declAttributes": [
               "HasInitialValue",
-              "Custom",
               "HasStorage",
+              "Custom",
               "AccessControl",
               "ObjC"
             ],
@@ -1407,290 +1792,6 @@
             "funcSelfKind": "NonMutating"
           },
           {
-            "kind": "Function",
-            "name": "bannerDidInitialize",
-            "printedName": "bannerDidInitialize()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@M@KidozSDK@objc(cs)KidozBannerView(im)bannerDidInitialize",
-            "mangledName": "$s8KidozSDK0A10BannerViewC19bannerDidInitializeyyF",
-            "moduleName": "KidozSDK",
-            "objc_name": "bannerDidInitialize",
-            "declAttributes": [
-              "ObjC",
-              "Custom",
-              "AccessControl"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "bannerDidClose",
-            "printedName": "bannerDidClose()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@M@KidozSDK@objc(cs)KidozBannerView(im)bannerDidClose",
-            "mangledName": "$s8KidozSDK0A10BannerViewC14bannerDidCloseyyF",
-            "moduleName": "KidozSDK",
-            "objc_name": "bannerDidClose",
-            "declAttributes": [
-              "ObjC",
-              "Custom",
-              "AccessControl"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "bannerDidOpen",
-            "printedName": "bannerDidOpen()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@M@KidozSDK@objc(cs)KidozBannerView(im)bannerDidOpen",
-            "mangledName": "$s8KidozSDK0A10BannerViewC13bannerDidOpenyyF",
-            "moduleName": "KidozSDK",
-            "objc_name": "bannerDidOpen",
-            "declAttributes": [
-              "ObjC",
-              "Custom",
-              "AccessControl"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "bannerIsReady",
-            "printedName": "bannerIsReady()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@M@KidozSDK@objc(cs)KidozBannerView(im)bannerIsReady",
-            "mangledName": "$s8KidozSDK0A10BannerViewC13bannerIsReadyyyF",
-            "moduleName": "KidozSDK",
-            "objc_name": "bannerIsReady",
-            "declAttributes": [
-              "ObjC",
-              "Custom",
-              "AccessControl"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "bannerReturnedWithNoOffers",
-            "printedName": "bannerReturnedWithNoOffers()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@M@KidozSDK@objc(cs)KidozBannerView(im)bannerReturnedWithNoOffers",
-            "mangledName": "$s8KidozSDK0A10BannerViewC26bannerReturnedWithNoOffersyyF",
-            "moduleName": "KidozSDK",
-            "objc_name": "bannerReturnedWithNoOffers",
-            "declAttributes": [
-              "ObjC",
-              "Custom",
-              "AccessControl"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "bannerLoadFailed",
-            "printedName": "bannerLoadFailed(_:andMessage:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Int32",
-                "printedName": "Swift.Int32",
-                "usr": "s:s5Int32V"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "ImplicitlyUnwrappedOptional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@M@KidozSDK@objc(cs)KidozBannerView(im)bannerLoadFailed:andMessage:",
-            "mangledName": "$s8KidozSDK0A10BannerViewC16bannerLoadFailed_10andMessageys5Int32V_SSSgtF",
-            "moduleName": "KidozSDK",
-            "objc_name": "bannerLoadFailed:andMessage:",
-            "declAttributes": [
-              "ObjC",
-              "Custom",
-              "AccessControl"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "bannerShowFailed",
-            "printedName": "bannerShowFailed(_:andMessage:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Int32",
-                "printedName": "Swift.Int32",
-                "usr": "s:s5Int32V"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "ImplicitlyUnwrappedOptional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@M@KidozSDK@objc(cs)KidozBannerView(im)bannerShowFailed:andMessage:",
-            "mangledName": "$s8KidozSDK0A10BannerViewC16bannerShowFailed_10andMessageys5Int32V_SSSgtF",
-            "moduleName": "KidozSDK",
-            "objc_name": "bannerShowFailed:andMessage:",
-            "declAttributes": [
-              "ObjC",
-              "Custom",
-              "AccessControl"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "bannerDidReciveError",
-            "printedName": "bannerDidReciveError(_:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "ImplicitlyUnwrappedOptional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@M@KidozSDK@objc(cs)KidozBannerView(im)bannerDidReciveError:",
-            "mangledName": "$s8KidozSDK0A10BannerViewC20bannerDidReciveErroryySSSgF",
-            "moduleName": "KidozSDK",
-            "objc_name": "bannerDidReciveError:",
-            "declAttributes": [
-              "ObjC",
-              "Custom",
-              "AccessControl"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "bannerImpression",
-            "printedName": "bannerImpression()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@M@KidozSDK@objc(cs)KidozBannerView(im)bannerImpression",
-            "mangledName": "$s8KidozSDK0A10BannerViewC16bannerImpressionyyF",
-            "moduleName": "KidozSDK",
-            "objc_name": "bannerImpression",
-            "declAttributes": [
-              "ObjC",
-              "Custom",
-              "AccessControl"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "bannerLeftApplication",
-            "printedName": "bannerLeftApplication()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@M@KidozSDK@objc(cs)KidozBannerView(im)bannerLeftApplication",
-            "mangledName": "$s8KidozSDK0A10BannerViewC21bannerLeftApplicationyyF",
-            "moduleName": "KidozSDK",
-            "objc_name": "bannerLeftApplication",
-            "declAttributes": [
-              "ObjC",
-              "Custom",
-              "AccessControl"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
             "kind": "Constructor",
             "name": "init",
             "printedName": "init(frame:)",
@@ -1793,12 +1894,246 @@
           },
           {
             "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "__DefaultCustomPlaygroundQuickLookable",
             "printedName": "__DefaultCustomPlaygroundQuickLookable",
             "usr": "s:s38__DefaultCustomPlaygroundQuickLookableP",
             "mangledName": "$ss38__DefaultCustomPlaygroundQuickLookableP"
           }
         ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "KidozSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "KidozSDK"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "AssetsManager",
+        "printedName": "AssetsManager",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "getAnswerImageButtonFile",
+            "printedName": "getAnswerImageButtonFile()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UIImage",
+                "printedName": "UIKit.UIImage",
+                "usr": "c:objc(cs)UIImage"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@KidozSDK@objc(cs)AssetsManager(cm)getAnswerImageButtonFile",
+            "mangledName": "$s8KidozSDK13AssetsManagerC24getAnswerImageButtonFileSo7UIImageCyFZ",
+            "moduleName": "KidozSDK",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getCrossBlueImageButtonFile",
+            "printedName": "getCrossBlueImageButtonFile()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UIImage",
+                "printedName": "UIKit.UIImage",
+                "usr": "c:objc(cs)UIImage"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@KidozSDK@objc(cs)AssetsManager(cm)getCrossBlueImageButtonFile",
+            "mangledName": "$s8KidozSDK13AssetsManagerC27getCrossBlueImageButtonFileSo7UIImageCyFZ",
+            "moduleName": "KidozSDK",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getWebViewCloseButtonFile",
+            "printedName": "getWebViewCloseButtonFile()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UIImage",
+                "printedName": "UIKit.UIImage",
+                "usr": "c:objc(cs)UIImage"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@KidozSDK@objc(cs)AssetsManager(cm)getWebViewCloseButtonFile",
+            "mangledName": "$s8KidozSDK13AssetsManagerC25getWebViewCloseButtonFileSo7UIImageCyFZ",
+            "moduleName": "KidozSDK",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getDividerImageFile",
+            "printedName": "getDividerImageFile()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UIImage",
+                "printedName": "UIKit.UIImage",
+                "usr": "c:objc(cs)UIImage"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@KidozSDK@objc(cs)AssetsManager(cm)getDividerImageFile",
+            "mangledName": "$s8KidozSDK13AssetsManagerC19getDividerImageFileSo7UIImageCyFZ",
+            "moduleName": "KidozSDK",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AssetsManager",
+                "printedName": "KidozSDK.AssetsManager",
+                "usr": "c:@M@KidozSDK@objc(cs)AssetsManager"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@KidozSDK@objc(cs)AssetsManager(im)init",
+            "mangledName": "$s8KidozSDK13AssetsManagerCACycfc",
+            "moduleName": "KidozSDK",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@KidozSDK@objc(cs)AssetsManager",
+        "mangledName": "$s8KidozSDK13AssetsManagerC",
+        "moduleName": "KidozSDK",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "KidozSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "StoreKit",
+        "printedName": "StoreKit",
+        "declKind": "Import",
+        "moduleName": "KidozSDK"
       },
       {
         "kind": "Import",
@@ -2704,58 +3039,38 @@
         ]
       },
       {
+        "kind": "Import",
+        "name": "AVFAudio",
+        "printedName": "AVFAudio",
+        "declKind": "Import",
+        "moduleName": "KidozSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "StoreKit",
+        "printedName": "StoreKit",
+        "declKind": "Import",
+        "moduleName": "KidozSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "KidozSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
         "kind": "TypeDecl",
         "name": "PlistUtil",
         "printedName": "PlistUtil",
         "children": [
           {
             "kind": "Function",
-            "name": "getPListAsDictionary",
-            "printedName": "getPListAsDictionary()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "[Swift.String : Any]?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Dictionary",
-                    "printedName": "[Swift.String : Any]",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "ProtocolComposition",
-                        "printedName": "Any"
-                      }
-                    ],
-                    "usr": "s:SD"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:8KidozSDK9PlistUtilC20getPListAsDictionarySDySSypGSgyFZ",
-            "mangledName": "$s8KidozSDK9PlistUtilC20getPListAsDictionarySDySSypGSgyFZ",
-            "moduleName": "KidozSDK",
-            "static": true,
-            "declAttributes": [
-              "Final",
-              "AccessControl"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "checkSkAdNetworkExist",
-            "printedName": "checkSkAdNetworkExist(networkId:)",
+            "name": "checkKidozSKADNetworkIdExist",
+            "printedName": "checkKidozSKADNetworkIdExist(networkId:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -2771,11 +3086,35 @@
               }
             ],
             "declKind": "Func",
-            "usr": "c:@M@KidozSDK@objc(cs)PlistUtil(cm)checkSkAdNetworkExistWithNetworkId:",
-            "mangledName": "$s8KidozSDK9PlistUtilC21checkSkAdNetworkExist9networkIdSbSS_tFZ",
+            "usr": "c:@M@KidozSDK@objc(cs)PlistUtil(cm)checkKidozSKADNetworkIdExistWithNetworkId:",
+            "mangledName": "$s8KidozSDK9PlistUtilC05checkA18SKADNetworkIdExist07networkG0SbSS_tFZ",
             "moduleName": "KidozSDK",
             "static": true,
-            "objc_name": "checkSkAdNetworkExistWithNetworkId:",
+            "objc_name": "checkKidozSKADNetworkIdExistWithNetworkId:",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getSKADNetworkIds",
+            "printedName": "getSKADNetworkIds()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@KidozSDK@objc(cs)PlistUtil(cm)getSKADNetworkIds",
+            "mangledName": "$s8KidozSDK9PlistUtilC17getSKADNetworkIdsSSyFZ",
+            "moduleName": "KidozSDK",
+            "static": true,
             "declAttributes": [
               "Final",
               "AccessControl",
@@ -2887,341 +3226,13 @@
         ]
       },
       {
-        "kind": "TypeDecl",
-        "name": "AdParameters",
-        "printedName": "AdParameters",
-        "children": [
-          {
-            "kind": "Var",
-            "name": "redirectType",
-            "printedName": "redirectType",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "RedirectType",
-                "printedName": "KidozSDK.RedirectType",
-                "usr": "c:@E@RedirectType"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "c:@M@KidozSDK@objc(cs)AdParameters(py)redirectType",
-            "mangledName": "$s8KidozSDK12AdParametersC12redirectTypeSo08RedirectF0Vvp",
-            "moduleName": "KidozSDK",
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
-              "AccessControl",
-              "ObjC"
-            ],
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "RedirectType",
-                    "printedName": "KidozSDK.RedirectType",
-                    "usr": "c:@E@RedirectType"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "c:@M@KidozSDK@objc(cs)AdParameters(im)redirectType",
-                "mangledName": "$s8KidozSDK12AdParametersC12redirectTypeSo08RedirectF0Vvg",
-                "moduleName": "KidozSDK",
-                "implicit": true,
-                "declAttributes": [
-                  "ObjC"
-                ],
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "RedirectType",
-                    "printedName": "KidozSDK.RedirectType",
-                    "usr": "c:@E@RedirectType"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "c:@M@KidozSDK@objc(cs)AdParameters(im)setRedirectType:",
-                "mangledName": "$s8KidozSDK12AdParametersC12redirectTypeSo08RedirectF0Vvs",
-                "moduleName": "KidozSDK",
-                "implicit": true,
-                "declAttributes": [
-                  "ObjC"
-                ],
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:8KidozSDK12AdParametersC12redirectTypeSo08RedirectF0VvM",
-                "mangledName": "$s8KidozSDK12AdParametersC12redirectTypeSo08RedirectF0VvM",
-                "moduleName": "KidozSDK",
-                "implicit": true,
-                "accessorKind": "_modify"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "skadNetworkParameters",
-            "printedName": "skadNetworkParameters",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "KidozSDK.SKAdNetworkParameters?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "SKAdNetworkParameters",
-                    "printedName": "KidozSDK.SKAdNetworkParameters",
-                    "usr": "c:@M@KidozSDK@objc(cs)SKAdNetworkParameters"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "c:@M@KidozSDK@objc(cs)AdParameters(py)skadNetworkParameters",
-            "mangledName": "$s8KidozSDK12AdParametersC011skadNetworkD0AA04SKAdfD0CSgvp",
-            "moduleName": "KidozSDK",
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
-              "AccessControl",
-              "ObjC"
-            ],
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "KidozSDK.SKAdNetworkParameters?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "SKAdNetworkParameters",
-                        "printedName": "KidozSDK.SKAdNetworkParameters",
-                        "usr": "c:@M@KidozSDK@objc(cs)SKAdNetworkParameters"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "c:@M@KidozSDK@objc(cs)AdParameters(im)skadNetworkParameters",
-                "mangledName": "$s8KidozSDK12AdParametersC011skadNetworkD0AA04SKAdfD0CSgvg",
-                "moduleName": "KidozSDK",
-                "implicit": true,
-                "declAttributes": [
-                  "ObjC"
-                ],
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "KidozSDK.SKAdNetworkParameters?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "SKAdNetworkParameters",
-                        "printedName": "KidozSDK.SKAdNetworkParameters",
-                        "usr": "c:@M@KidozSDK@objc(cs)SKAdNetworkParameters"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "c:@M@KidozSDK@objc(cs)AdParameters(im)setSkadNetworkParameters:",
-                "mangledName": "$s8KidozSDK12AdParametersC011skadNetworkD0AA04SKAdfD0CSgvs",
-                "moduleName": "KidozSDK",
-                "implicit": true,
-                "declAttributes": [
-                  "ObjC"
-                ],
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:8KidozSDK12AdParametersC011skadNetworkD0AA04SKAdfD0CSgvM",
-                "mangledName": "$s8KidozSDK12AdParametersC011skadNetworkD0AA04SKAdfD0CSgvM",
-                "moduleName": "KidozSDK",
-                "implicit": true,
-                "accessorKind": "_modify"
-              }
-            ]
-          },
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "AdParameters",
-                "printedName": "KidozSDK.AdParameters",
-                "usr": "c:@M@KidozSDK@objc(cs)AdParameters"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "c:@M@KidozSDK@objc(cs)AdParameters(im)init",
-            "mangledName": "$s8KidozSDK12AdParametersCACycfc",
-            "moduleName": "KidozSDK",
-            "overriding": true,
-            "objc_name": "init",
-            "declAttributes": [
-              "Dynamic",
-              "ObjC",
-              "Override",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "init_kind": "Designated"
-          },
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init(data:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "AdParameters",
-                "printedName": "KidozSDK.AdParameters",
-                "usr": "c:@M@KidozSDK@objc(cs)AdParameters"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "NSData",
-                "printedName": "Foundation.NSData",
-                "usr": "c:objc(cs)NSData"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "c:@M@KidozSDK@objc(cs)AdParameters(im)initWithData:",
-            "mangledName": "$s8KidozSDK12AdParametersC4dataACSo6NSDataC_tcfc",
-            "moduleName": "KidozSDK",
-            "objc_name": "initWithData:",
-            "declAttributes": [
-              "AccessControl",
-              "ObjC"
-            ],
-            "init_kind": "Designated"
-          }
-        ],
-        "declKind": "Class",
-        "usr": "c:@M@KidozSDK@objc(cs)AdParameters",
-        "mangledName": "$s8KidozSDK12AdParametersC",
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
         "moduleName": "KidozSDK",
-        "objc_name": "AdParameters",
         "declAttributes": [
-          "AccessControl",
-          "ObjC"
-        ],
-        "superclassUsr": "c:objc(cs)NSObject",
-        "inheritsConvenienceInitializers": true,
-        "superclassNames": [
-          "ObjectiveC.NSObject"
-        ],
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Hashable",
-            "printedName": "Hashable",
-            "usr": "s:SH",
-            "mangledName": "$sSH"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CVarArg",
-            "printedName": "CVarArg",
-            "usr": "s:s7CVarArgP",
-            "mangledName": "$ss7CVarArgP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "_KeyValueCodingAndObservingPublishing",
-            "printedName": "_KeyValueCodingAndObservingPublishing",
-            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
-            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "_KeyValueCodingAndObserving",
-            "printedName": "_KeyValueCodingAndObserving",
-            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
-            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomStringConvertible",
-            "printedName": "CustomStringConvertible",
-            "usr": "s:s23CustomStringConvertibleP",
-            "mangledName": "$ss23CustomStringConvertibleP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomDebugStringConvertible",
-            "printedName": "CustomDebugStringConvertible",
-            "usr": "s:s28CustomDebugStringConvertibleP",
-            "mangledName": "$ss28CustomDebugStringConvertibleP"
-          }
+          "RawDocComment"
         ]
       },
       {
@@ -3406,6 +3417,47 @@
           "AccessControl",
           "ObjC"
         ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "KidozSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "StoreKit",
+        "printedName": "StoreKit",
+        "declKind": "Import",
+        "moduleName": "KidozSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "KidozSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "StoreKit.SKStoreProductViewController",
+        "printedName": "StoreKit.SKStoreProductViewController",
+        "declKind": "Import",
+        "moduleName": "KidozSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "WebKit",
+        "printedName": "WebKit",
+        "declKind": "Import",
+        "moduleName": "KidozSDK"
       },
       {
         "kind": "Import",
@@ -4300,6 +4352,50 @@
       },
       {
         "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "KidozSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "KidozSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "WebKit",
+        "printedName": "WebKit",
+        "declKind": "Import",
+        "moduleName": "KidozSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "JavaScriptCore",
+        "printedName": "JavaScriptCore",
+        "declKind": "Import",
+        "moduleName": "KidozSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "KidozSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
         "declKind": "Import",
@@ -4670,92 +4766,123 @@
             "mangledName": "$ss28CustomDebugStringConvertibleP"
           }
         ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "KidozSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
       }
     ],
     "json_format_version": 8
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdUnits\/FullScreen\/Rewarded\/RewardedAdManager.swift",
+      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdUnits\/FullScreen\/Rewarded\/RewardedAdLoader.swift",
       "kind": "StringLiteral",
-      "offset": 355,
+      "offset": 332,
       "length": 13,
       "value": "\"adInstances\""
     },
     {
-      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdUnits\/FullScreen\/Rewarded\/RewardedAdManager.swift",
+      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdUnits\/FullScreen\/Rewarded\/RewardedAdLoader.swift",
       "kind": "StringLiteral",
-      "offset": 1726,
-      "length": 14,
-      "value": "\"KidozSDK.WrapperDlegate\""
+      "offset": 1272,
+      "length": 15,
+      "value": "\"KidozSDK.WrapperDelegate\""
+    },
+    {
+      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/Utils\/KidozSessionData.swift",
+      "kind": "BooleanLiteral",
+      "offset": 217,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/Utils\/KidozSessionData.swift",
+      "kind": "StringLiteral",
+      "offset": 336,
+      "length": 6,
+      "value": "\"none\""
+    },
+    {
+      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/Utils\/KidozSessionData.swift",
+      "kind": "StringLiteral",
+      "offset": 398,
+      "length": 6,
+      "value": "\"none\""
     },
     {
       "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdNetworkAttribution\/SKAdNetworkParameters.swift",
       "kind": "StringLiteral",
-      "offset": 311,
+      "offset": 301,
       "length": 13,
       "value": "\"adNetworkId\""
     },
     {
       "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdNetworkAttribution\/SKAdNetworkParameters.swift",
       "kind": "StringLiteral",
-      "offset": 369,
+      "offset": 359,
       "length": 13,
       "value": "\"sourceAppId\""
     },
     {
       "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdNetworkAttribution\/SKAdNetworkParameters.swift",
       "kind": "StringLiteral",
-      "offset": 433,
+      "offset": 423,
       "length": 18,
       "value": "\"adNetworkVersion\""
     },
     {
       "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdNetworkAttribution\/SKAdNetworkParameters.swift",
       "kind": "StringLiteral",
-      "offset": 496,
+      "offset": 486,
       "length": 13,
       "value": "\"targetAppId\""
     },
     {
       "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdNetworkAttribution\/SKAdNetworkParameters.swift",
       "kind": "StringLiteral",
-      "offset": 550,
+      "offset": 540,
       "length": 11,
       "value": "\"signature\""
     },
     {
       "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdNetworkAttribution\/SKAdNetworkParameters.swift",
       "kind": "StringLiteral",
-      "offset": 604,
+      "offset": 602,
+      "length": 20,
+      "value": "\"skOverlaySignature\""
+    },
+    {
+      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdNetworkAttribution\/SKAdNetworkParameters.swift",
+      "kind": "StringLiteral",
+      "offset": 724,
       "length": 12,
       "value": "\"campaignId\""
     },
     {
       "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdNetworkAttribution\/SKAdNetworkParameters.swift",
       "kind": "StringLiteral",
-      "offset": 657,
+      "offset": 777,
       "length": 11,
       "value": "\"timestamp\""
     },
     {
       "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdNetworkAttribution\/SKAdNetworkParameters.swift",
       "kind": "StringLiteral",
-      "offset": 705,
+      "offset": 825,
       "length": 7,
       "value": "\"nonce\""
     },
     {
       "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdNetworkAttribution\/SKAdNetworkParameters.swift",
       "kind": "StringLiteral",
-      "offset": 757,
-      "length": 14,
-      "value": "\"fidelityType\""
-    },
-    {
-      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdNetworkAttribution\/SKAdNetworkParameters.swift",
-      "kind": "StringLiteral",
-      "offset": 229,
+      "offset": 222,
       "length": 21,
       "value": "\"KidozSDK.SKAdNetworkParameters\""
     },
@@ -4769,21 +4896,21 @@
     {
       "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdUnits\/Banner\/KidozBannerView.swift",
       "kind": "IntegerLiteral",
-      "offset": 353,
+      "offset": 334,
       "length": 3,
       "value": "320"
     },
     {
       "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdUnits\/Banner\/KidozBannerView.swift",
       "kind": "IntegerLiteral",
-      "offset": 410,
+      "offset": 391,
       "length": 2,
       "value": "50"
     },
     {
       "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdUnits\/Banner\/KidozBannerView.swift",
       "kind": "BooleanLiteral",
-      "offset": 446,
+      "offset": 427,
       "length": 4,
       "value": "true"
     },
@@ -4793,6 +4920,55 @@
       "offset": 191,
       "length": 15,
       "value": "\"KidozSDK.KidozBannerView\""
+    },
+    {
+      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/Utils\/AssetsManager.swift",
+      "kind": "StringLiteral",
+      "offset": 1125,
+      "length": 16934,
+      "value": "\"iVBORw0KGgoAAAANSUhEUgAAALcAAAC0CAYAAADW+r0xAAAAAXNSR0IArs4c6QAAAVlpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IlhNUCBDb3JlIDUuNC4wIj4KICAgPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICAgICAgPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIKICAgICAgICAgICAgeG1sbnM6dGlmZj0iaHR0cDovL25zLmFkb2JlLmNvbS90aWZmLzEuMC8iPgogICAgICAgICA8dGlmZjpPcmllbnRhdGlvbj4xPC90aWZmOk9yaWVudGF0aW9uPgogICAgICA8L3JkZjpEZXNjcmlwdGlvbj4KICAgPC9yZGY6UkRGPgo8L3g6eG1wbWV0YT4KTMInWQAAL\/BJREFUeAHtnXvMZWd13sfjCzYee2yPbWzDHygERQ0G5IRAKTahJQXUmEuoKlraENpApFyUkBS1RaA0qLQglTZJ2xCpQAhFiZJIoVxc1YSE0hiaNNwSbDdqIQl\/gAGbsT322NhjsLt+x9\/zzfOtWe++n+8yM6\/0zro9a72X\/Zw9++x9zvnO2He6TdqBRx555HGR+ETrTwj9UPTLol+6oR8ISbsg+lkr7dF\/vhXi3g37aMjD0b8R\/Y4N\/Ssh\/yr6l+hnnHHG10OebiN34IyR+FMOHiSGmN8T\/eroT9vo6CJuqGtvvABuif75jY7+2SC9XiBhnm55B06TO+1IkPnx4Xpu9GdHf070p0c\/M\/pua9+OCUH2T0T\/o+h\/GGTnjH+6bezAKU\/uIPM5sRfXRn\/RRn\/qxt7sRXFzTPrGjf6JIPuxvbiIpeZ8SpI7CP2Y2MAXRH9F9JdE59LjZGtcsnwo+m9H\/70g+oMn2wL71nPKkDsIzVr\/ZvQfiQ6hL4p+qrQjsdAPRn9v9P8RRH\/kVFj4SU\/uIPWVcSBfFf210Z90KhzUnjX+RcTfFf29QfKv9mD3dPikJXeQ+plxZF4f\/WXRz97TR2k9k38oyn4g+tuD5H+yniF2tupJRe4g9P7YzuujQ+rrdnZr99ToN8Vs3x79hiD6w3tq5h2TPSnIvXE9\/UOxzl+IvpfvdnQcqm0Jcf\/8X0b\/r0HyPX9dvufJHcTmTP3m6DxoOd2W2YHPRZmfD4LfsEy5namyZ8kdpL4mtuzfR3\/ezmzdKTHqx2OVPxckh+x7rnGNuqdakPrK6O+OSX86+vP21OT33mTZ30+z3+z7Xpv+njlzx+byQvzJ6P86+sn40GW3c4eHQm+M\/it75U3nniB3EPspsanvjM7nPU63nd0BPsfy2iD4rTs7jf7RdzW5g9R8TPRN0d8Qnc+A7Mr27W9\/ex\/9W9\/61r6HH354X8x7JdFp2JJBipUuuX\/\/\/n10bORZZ52178wzz1z1FXB3\/sNnVt4a\/S0xbz6+uyvbriV3EOI7Y8d+IzoPY3ZFg6zHjh1bkRgiP\/TQQytSi7xMUqSdMuFcB5KfffbZK8JD+nPOOWf1AphSe005PPz5h7HmL66p\/qyyu5LccZD\/cazqP0Q\/MGt1M5M5Gz\/44IMrQkNkCK02h8SqMVQ66SE5hIfoj3nMY3bDGf5orONnYj9+beh6tgu3q8gdB\/H8WPh\/jv7K7dqAPA5n5gceeGBFapF5CpHH5Dh583xatnIgOyQ\/99xzV4Rv4bfB\/5sxxo\/Fuu\/bhrEGDbFryB0Hi8uQ90ff9ieMIjSk5mxN6yNnX3xVZKF\/RORWOcW5jIHkO0h0Pk\/+d2NvvtCa63b6dwW54+DwlPF90bftY6hcP99\/\/\/2rPoTQY8k8Bi9yDj3wXXjFIPpjH\/vYVeeN6ja2u2OsV8X6P7yNY5ZD7Ti542D8bMzs7dG35Qhw7Xz06NHVZYeIUBGx8vkO9sUdO1fXPFt1qrh8zJPLlgMHDqyu1Vs1FvZzm+j1MfYvLlx3VLkdI3dsPt9L\/KXoPzVqxhPBXHLcd999qzeHlKjIWfk0XFdMGJdj8CKi53fpXfgqJh9vQs8\/\/\/zVZUtX\/QVjvxK1eLP56LXegoWHlNoRcsdmPzYmx9efuBxZa+Nux7333ru6bcdAmXTZ1mRafsWrWh5bShcxu+q1MNkvm7stF1xwweqM3lV3oRgfvnpF7Of9C9UbXGbbyR0bfDBmx4KvHTzLCUDeJN5zzz2bpKaEE9Z1la98Q2LCbJcUSavxqpj7XIfkF1544XbcZflEzPX62N8j1ZzX5dtWcsfGHoqF8O3sZ6xrQbw5hNTf\/OY3N8nspHVdc6h8xFp+5fXJIflOtr56VbyVX\/ndJx153nnnrUjOm9A1ts9E7RfGnhxe4xhbSm8buWMTr4iRPxr96i0zWNDgjSKXIGpOLteJZ7vKka8lWzVa+Cl+kXBIbgub\/W67zqUKbzzX2Pg8yg\/Evn1tjWNslt4WcscGXhojfiz6Wu5hcwfk7rvv3nyC6KRznVVnu+XDn1uVmzFuD8E7uTy3pQ\/FV7jsc1s6D4Uuuuiidd5Z4V7434q9+UZrjUv5107u2DSusX8\/+louRThTc8ZWE6Eks182MmM8tkQ815tii3St3CnxnCNbkrE4g3MmX1P7dNTlDL7Wa\/C1kjs2i7siH4m++JtHHo3fddddqzeMImmWHBj50NUq39yY8rPsGsvJlPNadlfO2JjjpbvkDefFF1+8+uBWaz4z\/J+M3BfE\/qztLsrayB2bxLsTHqfzAziLNp4sHjly\/EUvAklqsD5bOGTGKtbyD40LN0WKaK3cVrzlp06OtWz3Hzx4cPWkszWPGX5+EevlscdruQ++TnK\/Iyb+4zMWXqZCah7GiHRI6Uros4VDZmzL1+Un1tWqMZw8Xbk51sqr\/JVP9XKssuVD8vAHkq+h\/Wrsz0+soe6+tZA7NuOfx2TftuSE+SzInXfeuXrCKLIgpWsst11XXDLHst3CyS\/ZylN8jhS5WjVa8ezPttfzmOtgsOVD8oTzkksuWcdnyt8Q+7goX5j\/4uSOTfjBqPvB6IvdNOX6+vDhw6tP7IlMSOmrhYTtzWNd\/gpX+VSjKybMuqSIVtWvYtmXbdXJfrfRZSO5F37o0KGlr8P5LMpLY29v0JyWkFsZMbNiLJ6PrfJOeLH\/v3h8zhmbjYVYIpckU27pxNQcgy\/bLV+Xn9hONREuj1\/5sy\/bquH+SsdHZ+84g\/OBrAUbb6K+L2ov9nHZxcgdi+bOyP+OfvVSC+YpI3dEaGyoutfHp+Z6yzcEQ26FU80sx2Bzbst2crUw8lfYIb4+TI5jqzM2d1J4urlguyVqPSv2c5E7KEt+zPRdMbHFiM0dkS5iQygnlevabPdlPJjsk+15quXScX1YzxujjxnDsRpDPtnI7MPOzX0V3n0cH47Tgg3+wKNF2omrm1A2Xs2vjrT3TEgtU7gbwhNHbaSkwNhqrrd8GdNnq47LnOMx9L54xnfZ+YyZsX1x8Bkz1s41PB\/dO080uZuyYPvR2M\/Z38k8zpKJM4tFcp39uegHJpbYkqYzNmTxLpCTyPUh8YzPtmpIdsW7YspfSjqxcs2uGNgc77JzLOd7HN07lyh882ehxiPna2KPvzin3ixyx+LOisH5OOOz5kxCuX3X2E4o15XvPteJu+26ciVbsZZfecghGMdXuhOoiuNrYVr+nJNxbruu8d2XdWz5Fr4G5\/3bdbGnD2keY+Xca+43xoCLEJvPX3NXhCaSSLov67K7sK0YuWpgHIdfvuzPMeFUa45ULZe5Xismf8ZjE1PLuK5Ylet1PM7x4+7WQg1ewa\/J7fiKR5aIV+t3R8pno8++H8R97Ntvv301A220f6lVPgCuZ3tMbDVYUS\/XFK7L75h16zpL5nEqf+Ujz\/2uT43lX9a6\/PLLl7oPzi9bfU8c10k\/3TaJ3LEhnPFviv432JA5jS8XQGw2SISWpK4T1vWuWBfO5zoElzGe36WPycsE66rrsSov+7Kt\/Ox3u6WT24qJ4DqOEHyhLz\/w24TXxn7yoGdUm0run4pF\/sdRIzXAd9xxx+Yn+yDEksRuESz7s81UK1+1hKG4KrfP50Tqwla47Mu26rl\/iE5eCwexidH5ROFll12mYWbJ2OOfjj6ab6PJHRN\/XPT\/F7O9cNaMI5kPQfFZbAgNSdZN7EzEbLOeypfXOQTTlcPBH9uG5FSY7Ms283DfEL0rRwRHcnuQ24QLtHtiz78r+qhv8Ix+QxmTfktMdjaxueXnxPYNcPK4DsbtIbrqOjbXkZ0xyvV4C4O\/q7dqVTmOle44+bIUxv34vGWbmPuG6F05inGi4nnFQg95Lgze\/Stqj2lbV96TGa\/qa6J\/OmCjXxRe2t9A6mwt2dpc8luxll9jdsU9Jrzk1Jjyl5J+Ns01x8Qc67pqum+ITl6F46xNk1zoDebDcTz47Ak3MQa1USSNhfxyVB2VU83CPwhFXMR2bCaW20N0aoFrYRX3MaXnvOz3mopJKneKVI0svVYrlv3YeZ5uq6bn5bhiLX81Bj4dT\/Igv27xqt5EuT9q8SNOg9tgokbhl0TV6wZXbgD1WyLaXG0EcG2ipEq4PUT3Wq0aXscx2Y+tLpyk\/C4VmyK9jvRcR36kN\/ndh579VZ7neHyIrjFconNcNTZf4Oa4L9Cu2+DhoFJbd6iREgV51fxZhGd9MIoHNdwd0aK1AQw7ZCOHYLpq5Ri2mtfGl+0WTv6WbNUBH3vaSiv9LXz2Z1vFst9t18G7PVUnj0sTJJ27J3zhYWa7Jfb06dF7bw0OPXP\/vZjQLGKzoNan\/JwArvsmuL+lg2\/F8HtMtbM\/2y2c\/JLKy1LxSmas7AqLrxXP\/myrXvZjq7mOz+2WrtwWnjx1MDr+njdBh4fwsbcdX10DGq+4\/fHq+3yE+aNLkxs\/wcB\/TZytdcbWpmWpQSq\/fGBcz7bHXFftjK\/slq\/LT2zpxlmvapU\/+7KtOu5v6WBbMfklc135kXTO4HR+LoKfcJvZbgkO9Z69e8\/c8QTxxTGRWcTmKSTkhmQiWktq0YrLRrrP9a5YxgnrfnS3K4z7MpbYOpvml8eV38fOvmwL67VaOtiuWI67rTyX6Nz+hQ8z29UbvOws00vueIW8rrPCgCAPa3j1sjh10rTwXML90iWrvFbM\/Roj+yp7iE\/1uiR1+npXfhVTPY+1fBnjNjp5ai29hevC55qaHxIe+M9yCDtWDuFlJ7ljIs+M\/ryxAzueT4npRyl9kY7xjerzZ6zbLV01c7zLJoe4Y1SnksK6rHDZ53jpGVPZFTb7KjvXAqPW0ol7rMLLV2E1D0n4MPfTg\/ASfvq4We8kd1wj\/dOcMNbWq1QL0yZlqbqVv\/KBl79Lz3UztrJbPtWSZHx1+ZaQqunra9WtMNnntuuq6b6WDlYxyZav8pOjTly8QJ\/a+vjZJHe8KvhV1h+aOjB5\/DUDbv9pUdoUyVy78le+rrwK7z7XqVPZ2efjEVN3f9aFGSJzrtue737Xhcm+lg0+N\/e5nnGyK0zlAy8\/Uh1ecAaf2V6+wdOyTJPc8ap4dWScXWYNdPLq1GIkPRVf1Sp\/9mWbOn2+HO+zfW5gM76K9+E8R7pyJOXPckjcc8B7c9t1YYb4hmBa9cj1vsCDnbM2eKoht8iS3PFqYFdeswU50uBVyZMpXwwlqs1xv8elS2oKbkuXFMZrVrrj0d3ONfpirbjXGaNrPq26ilc1c6yylVfVl08SrOtuu1+6pMaQlB+pDj8WOHu\/doOvGmpT8h3IE1p8sInfT37SCYERjnzrL6dqsdkvuxV3v+vKk\/RYSwfrMeVKVrHKJ3yWQ7BxYHLaFttrZCyx7FNyjrnd0pUrOQTnGOW5bMXx0+EJfzdzRvsO+Br5f5BrlGfuGPSHM3CMzfWUvxvOD21yLRZJk\/R45cvYjHG7pecaeUzPEzb7PMcx4PqwyhVWUv5KVpjKp1xi3txu6eC7YqrnmOyrYqpLDD6owRP4MqdFzZKvx0fZqB5nAr4T+dI5g\/lZu1po5fPxFJdULNv4s8\/tll7ljRlDWNVhHB\/L42N11eqqV8Uqn+bnc3BcS6\/yKp\/yJX0c16s4PnX4MrO9bIO3W8qcQO548vOCQEz++gRPn7iO0sTnnLW3zNSMarMsvFK7MK1Y9mNnH8Xlr2J5HnPsrnEU8\/qt+bT85HbFVHsIJmNbOfjpzgv4MvOp5cHIf5HmIHkCuSPwCgWnSL59oVYtsPIJj1RcUjHZko7NGNmSXTmq4xj5lC8JJuMUcyncGOn5la5aOZbnMwSXc1Qz+92WLplzsl9xySruPueNckbKEz5MtYXccWrn1t\/1I4tugTNJJq2+JZgMLU4yhTfNKp59bg\/RVdyxY33CI6mj7v6hunKr+XiNKj7F5zktnXE9pnlUPsU8ZwgODH0Bcr8kX5psIXe867w2AAejr96Fj5U8tOErZJqwS1+0b4Tr4LtwintO1h3T0pXj8ZYPTIUDr1grrppjZV9dxb1uNYc+n8dd97qutzDyS3qO64ojc4c38Gcs5wx\/QdT4fh9vC7kj8EIPjtX5MqgW0JcrnGQLX8WzL9vUqnytMYTPOdlWPv5WTJilZNdYeQ5d2NZ8cg1w2ZftCpPrK0cyx7MNboEvE\/8dr5vJvSXowCG6yM1EdbtnzOIYo4Uf4h+C0Tpa2L54X57yl5atcVt+jV\/FKx9497uuWhlT+Vt5jvU6\/sZyAXL\/bR9nk9xxer8qApP\/CCr\/pcSj0NUGaYGSvpis+2Sy7vmKVb5c0zGut2pkTLZVv\/Kr5nZIxq\/mkH19ttajOTvedcUzXv4WVnFJx1U6Pjr8gUcz2ncHj5+g\/E1yx62U58o5Rer2n3J9EfJlKYxkjstuxVt+5VUy5\/TZ1MiYqu52+qr5ZF+fPWS+uYZyWv4c78OBdwz63MfxweNrNY9NcofjOXJOkU5uTVhyaL0+fCvu\/pZezcGxxLPd8lW1tts3ZK4Vxufp8ZbewrtfuteQr0sK73IuuWO8TR5vfrYk\/kuY\/KOWvNOl83fDmagmq4W57brilRROMmNafuGquPtcJyfbLZ\/q7wbJnLlb4C373HZdOZVPMWQrLr+k51S641zXGPjo8IgPVMGlKS32Y5PcqzN3OA5EoadPKUaOn7WH1mAhNMm+vBbO\/a7nemNjXfhceyftap6VT3McGmvhWn7VlxROUv4+CX7m2ftpG3x+9Nej4tXyvTHo5L8byYdfmFTufQvx+NhN8Nys99WaG8\/j7bQ9dz19+WPWN7YW+Nz9Q3djxt7Anhl8fga6ztyT75JQxD\/VpcVlCW5o68tV3OtVPsU95jrxPls1drvsW4fHXc\/rqmKVjzz5JXOtLls5WZLjfOqq0YrFmfsaYnpDOZncfOCF6yRNsjUgfmGy7MrxvIxTHfdXPo+7PgbreXtFH7O+Clv5WHvLn\/dFuCwzzm2w8AlezWhPI3d11R5Mn0xu7ktq8hR0HXtIm5LjdbvyPea650vviwu3WyXzj2PZnJ7HXc8JXbGMrewp+eSoocOrGX8dbfXraDpzrwwVHyN5Z0tjQj7BMTUc21ejL+61uvRcJ9tdubs5lteR7alz76vTFx8yLjVUR7wakldg\/hq+\/fFB8ctDXlAABrn8+kgTkxxUoAFSDckMq\/yVL+edtts7UO1f5aOC\/JLtqv0R1ZAkw3nVX+EExPnxy1ZX7I8\/Tv8dJ4RGOHiF+aRIlS3Z8o0Ypgn1MTLIY6534XJsL9pD1zoUt8QeaCxJakqX1DjYM8\/c\/JrsE\/lp4ieq6BTJxT8tT7CvlvCSffgpY7RqjhmzVWMv+Zda75g6wkoO3S\/hxauheRkHr7nmfmIODLWZgL+BYWKa3NAajpuT63VO6zuzA3OOX+YOvJpJ8CeeFUX4NOCkpkuSOYuqBu6rV8Wzz23X83hdsYzdSzbr8hOPz91jroPJdsvXquf+qTpzoMOvGX\/L8iouSy6bOomZr6zeYVng0m0dNZee4zrqrWPd66jpa5\/Dr+D15ftjgoe84Bh95o32MUOV2HVvbjnoKeTc6f2dwy94zTX3ZHLz4fK93Hb64K177\/b6+mby6xLIfcnUTfZXljYyy6m1c57qZn+fPTWvr+5ej0\/dl6l5rf1SvSzBO79a+R3+Qzx+X33bvQPUDA19ZVUTbxZdIKDxcqmWP+NOVpv1V28yW\/6l90HjSPbVh9zVfPvyiMcYB3lDydl7UhtK7lycxS3Zlq635Nz2Yq2l93NqvanEZs8j9wyIfd5OHYCpi96p+Z4ed9wO7PDxPQ9yT\/6rl3NeWeO26Th6hzfs+EROMW0n9n0mv86ZfEnCsWVw9VPsWJ9e7hp3QJyaSe59PKFcbJqa1E68yhdbxOlCO7ID4k4efA4\/OXNP\/uVvJ\/GcSeQFddnbNU7XHE7F2Hbt+4LjHOMJ5aw\/KcVk8oSy3SLDUFwr\/7R\/d+\/A0OObcdh0P3mOXSm85lbgtj9mzIsZO\/GMX7pern+q2Uvv59L1hhyPGPMRrrmPBPjiIQkZox+7xM8C6FXDz6tQssIs6WuN0\/IvOfZursX6q9byV9g5Po0jmWvh9xj8cjvje+wjXHPf2QNqhvk4oiakSejBjuxm8sjA1HpT80ZOb8\/Bp+7L1LzWBqme8wYffcbHXRnuMOQ+3Bq4z6+zsSbTh99tcW3sbpvXUvPZi+sTl5BzrrljD+\/kmnvWmZsDsVObuFPjLkW+3V5np\/ZX4845c0eNw9wtuX3qJp999tmbxGZCuU+tqzwtUvYSch01l5jXumusY91L1KRG7uwFvqk\/hkk+vOYN5W0YU1p1zT2lTs5hYV3\/JVXx7HPb9bFjZfxesVlzq3nMdfDZbvm8dpXj8TE6tdQh94zat3FZ8qUxgzvWX1makKTjhuozFjJ0iNO4Ne7A1OMnzkhqis4v+YbKqPWl\/XH2\/dLQhAo39eytjZCsamffGGzOdXupOl5zN+tLrXdMHWElh+wPWPU519uMBa\/3xy2YvxoycAvDdTe3cTQp4SqbGP4lW1c9j7mex++KZexesLvW4zHX87q6Yhk7xFY9SXLQKxs+was5LWp8af+BAwe+Hte3R6cWil\/22ZykSI6k+cTH1leuZM6v\/JUv55222ztQ7V\/lo4L8ku2q7YhynTf46PBqRrsveP211a+8RvGbo9CzpxTrumPS9aawNRYL68rri7fqZn+uk+2M3ys26\/CWbY+N0fvq9MVbY5HnHRy2TpqtvC5\/5P85cX2eG3JPaueee+7qskSvPiY2tk3J8TG68j3muudL74sLt1tl3\/w97npeT1csYyt7Sj45dHhEj9+wrEoP9f0fgLPJzYW\/btlogllqRvhpWSreksLneOWvfDlP9hiscvaSHLO+Clv5WH\/Ln\/dGuCxVA3\/V4dOcN5TxmZQ\/ZYzZ5KYIrzKduV0S08LQhzblSOa8yl\/5lOcx14n32aqx22XfOjzuel5XFat85MkvmWt12cpxvuBb4KzNvD7H2Ktr7vjrUZ+Jywv+TsOkP\/oEufnTxpqcJo7sun72xY\/Bel6l99WaG6\/G3Ekf6+lqc+NdtXOsbyzHC4sUydHhk2KOH6h\/O\/5g1GfArs7cl19++dEg4Z8NTD4Bxp93YHI+QSbnPSdp8pI5nu0Wzv2uD80HV+VVvlxzN9jVPCuf5jo01sK1\/KovKZyk\/Eh8VReHZvy5EOp+\/rLLLruXcXRZgv6\/+GdK4xop3+\/Ok1dd\/EOacJI5p+UXroq7z3Vyst3yqf5ukEPm7BjXNf\/KpxiyFZdf0nMq3XHoVYfc8GjOk8kYe5PHTu5PVpMa6jvvvPNWE2aC+qUgLUgL6aslfAvXiru\/pVc1HUs82y1fVWu7fUPmWmF8nh5v6S28+6V7DfmyBCOcdPii\/\/Xh0ZwWbyY\/ofxNcse705vknCL90kT\/vWjyrXq+yBYGv3AZ0\/JnnNs5p88mN2O83k7o1Xyyr88eMu9cQzktf4534YjRxRXJOZckjB88PpHcUfQrMcDNGnSs5H63vhbUys2Ll92S1Mmt8oFxf0tXLY\/n3MqWL+ep3nZJxq\/mkH19ttajeTvedcUzXv4WVnFJx6G3OvyBR634AP+fB4+\/rHE3z9wbjv+uwBTpZ2\/9V8Mr0ifVqguGJplxQ\/xDMKrbwvbF+\/KUv7Rsjdvya\/wqXvnAu9911cqYyt\/KUy5xus7UzpO5Z+0Y46M+py3kjkFv9OBYPZ7nb05aC9BikN5kS3rM9Sqefdkmv\/J53ayDzznZVk6FVWxp2TVWnl8XtjWvXANc9mW7wuT6ypFUHFtdJz4RHf7MaVH3v3n+FnJfdNFFXK\/wbfhJjf9SeKeryUrmxbSKg6NJZlzL7zjHtHThPd7ygalw4BVrxVVzrOyrq7jXrebQ5\/O4617X9RZGfknPkU5MZJYufiDhDfyZ0e49ePDg\/\/T8LeSOe938OeAbHDBW97O3T54FafEt2RpLeI9nn9tDdNVy7Fif8EjqqLt\/qK7caj5eo4pP8XlOS2dcj2kelU8xzxHOJbpI7vyYe9aOcT8c\/H3Q57GF3ARiwN9hAlP7BRc8+seI\/VqKRdC0sJXR+AcMTVIw2ZJdGOVIduWojmPkU74kmIxTzKVwY6TnV7pq5ViezxBczlHN7HdbumTOyX7FJUVobHTxA0mDN9SY2uHtqpD9cwK549LkIxGffGnCB178jSUL0WI0ccbXZmRpc2uqymkCrH6FaeVnP3b2UU\/+KlaNN9XXNY5iXrs1n5af3K6Yag\/BZKxyXKKL1OIFEr7M+aBUjH0keHvC+8UTyM2pPfoHNNkpMq59VpuWF8Li6Cyoq\/mGOE7+Lp9jWjr5Huuq14VVjFqtel57iK5aXfWqWOXT\/Hxcx7X0Kq\/yKV\/Sx3Gd4w2G7qSGH\/jgy5wGX\/MlCfVOIDfOGPB9yKmND77ok4ItgmuxjIHucmVs\/KOY+zI2Y9xu6bmG1yfH84TNPs9xTJWfsbKFlZS\/khWm8imXmDe3Wzr4rpjqOSb7FEN6z8TGFldUY4qMMUq+luSOV9LHYpC\/nDKQcuK\/idXCWIATXIvF39XAVc39rmesx1o6OR7rqqEYeHX5WlK4LtnKld9z5ZMk1mo55nZLz7WG4ByT87E5zmDo6M4HfPBkZvvLDb6eUKYkd5ziH4lJvFOTmiL5jABfFfIFQXL9V+Q1mRW2S9cVWwHiH7elSwrj+ZXueHS3c42+WCvudcbomk+rruJVzRyrbOVV9eWTBOu62+6X7hJdXcfeT3TwQ59JEm6sDH69C75qTS5LcgOIP0386wj0qY1XpV6pvih8LAJJQ\/eW7amYnJfr9tl5ThlfxcF04TxHunIk5c9ySNxz8jzcdl05Q3xjMH6c0ekiOfoCZ+2g6bfeo\/ln2SR3fMb7a7GQ9+eEMTbvgnXt7QtjgWySOjVd9zHw9zXHuK4897lOvLKzT3WEJ96FyTjhW9LrZ91zcky2MLKR+Ly57bow7nNd8SwrDD75pSNFaD\/BwYu5j9uj9vvhaZ6b7Ca5AUTyLwo4VV5yySUnvGK1WC0cqSZdEr90yYx1TNb7sEPwqpEl81HPsTm2aub1VjUrTPa57brqua+lg1VMssunE5iOtZ\/c0OHF3Bbz6ORnJ7kPHTr0x1Hg4yxmaucVev7556\/yfaEskE5dSXRv2SaWfW63dNXM8S5bYzlGdSoJLvcKl305Z+x4Xk+15KtsxSR9vJYO1mNVrjDgdDx1jJE69sThA7xAn9E\/Dj81l0p2kpuEuFj\/pSpxjC8msVqEL9IXq82gphar+tjyZ19lC59zKmyFyeML43VVq0+qVpfsq5HjquX+li9j3EYnT62lt3AZLxup46ljLCn\/EmftIbzsJXdc9H84FnirNmGK5OlT9eZSi6amFo7OBmmzsNXc5zpxt1u618kYt1Wv5ct+1V2XZDx1H2OIr8JofaoFRs31LpzjlYPkONJ0bLFd54HNzK+RUf7WDV6iN1svueMVwmzf0qwwMAC59T1LFhvvcjcXjc3GSFIS2zdNw8gnjPzZ7sIpxzE53zEZJyx+deGXkKopmWt2+R0Lrmrub+nktWLyI13X8UOq6zhDco7\/xRdP+vNLeRlv2eBl9m+xe8kNOibEh1Ju2ZI5wYhvJa82Q69mSTYCnY2SzOW1ifhbeleMHM9T\/ezPdgsnv6TyslS8khkru8Lia8WzP9uql\/3Yaq7jc7ule66OWz6mfmw5\/gu0Wzb42FtqELl5lcQk38gi53Ru2vPfkjaAV3XWtUk+jlbR2mT3g3Vbdaoa8uUc2V5HWNWrYsK4dHzWHdfSPSdjFHM\/vqq5P+d5jFy3u3TVQXLc6H6mdv3CCy\/c\/P0\/zxurw8MhZ23WcQb\/DG2HDx\/+w8BeNxTfwn3lK1\/Z99BDD60+Ccb1F53rcukx+ZWN9K56+NRaOnGPDbGrmvJV+R6TnseUf4jkQPe1FmaoP+O6bI9lHVudszM6ZBahXedy5PGPf3zf0obEb4qbE88dAgQz6MytYvHKfF3oj75jkHOCjBvvqyy90tkIdDZJGyWpDUSqDdHBKrfKU1wxlzlPMfl9fMUkHTNWV40svU4rlv3YeZ5uq6bn5bhi2a9cpI6Tjl0+ptTQ8Va9iTJKP\/yzY3JHkTuumT4bxX9tzAAVllfypZdeutoYkdpf8b5hvpF5k1W75W\/FM95t5SDxq7s\/x1r5OWeorTElc578rXEVV15lKybptbp01UL6ccrHT8eV28Ac7wXae4J\/q59JG1rr+P\/vAzNuv\/32K+IS4v8G\/MKBKU3YN77xjX333nvv6hKEr\/WzCVye6BIFyX\/zkujqKuqXAS29wuJzfAsjv8sqz+OV7jlOngpb+YbkVJjsyzZjua9LJ6ZeERsfl5siNt+u4SS2QLsnan9X16P2aoxRZ24KMEAs8E1a5BzJq5o3mWwKG8LGoNN1JqA+to8DVg2\/Wkv3eMa4DQ47+5QvKUwfTnjkOnNUuxpPvgqjeTmm0tlv5SN1PPw4oTuxOa48rPG8GfqbxhKbdYw+c5MUk9wfby75pvyzsec0NuW2225bbVg+a3edwRmTs72anxldJ57tKqeFa+WqRkuOyeOgT2lVXvZlW+Nkv9uu60SCj94itk5GxDluV1111UpqvBnyj+IkeG3s5\/Ez2sBix9kxMAEYA0V\/bajHRqSVUDbiiiuuWBGQjaH7Rkn3jdXma+MpLJ\/0bFeDO6bKc1\/GVvXcB35o97w+3Ws6Vv7sc1s6WLWc5zHtrzBDiM2LmuPJcV2gHYNn8G1KrUnkZqB4Nd0ai37rlEFzDtfavKNmE0Xw6hKFzSaO1EHQAaCmDoLqC1PFHOO4IdiMV611Sa2rGlcxH7vyVevyejlH+4rf9z2ffPw4geU4LvQGkuP5VnjmaxujT7os0QAx+NlxecIPaD5Lvjnyvvvu2xdvWFdncV75\/iYTXffD0emcJdQZF58afm9uu+4Y9Fas5ff8IRjHVzoE6WstTMtPPY+5nmNOanB0fCI4\/5NK92tscBCbT\/wt1D4VxH5O7Cm\/pTOpHWfDhHQGjoX+o0id\/Kf+fFg2hke02jwkG6hLE0mdvYnrAFAHWw2\/N7c9xzHoijk++3NMNTx3qq5aLnOtVsz90pXrtnQkcTXtn3Kw6frfVPuPdGKD4bgtSOyjUfOVc4jNmrae3rTKkTLOtv8kJvLukWlNOLcHuU2oMzRStwnRqzM4\/pjDqia6N\/nl67OFc5lzPIbeF8\/4LtsJV+H64uRkTJ8NQZWHDh5J16WIdBFbcW736ceYVkVm\/hNjvyb+F5jNp0XIzVruuOOO3wzxD2auazP96NGj1FyRRpcoTmrXIbPIDclENCe5fJsDhJJ92Xas60NxnjNXz+Rs1cu4bJPnPggqH366SCsyc6audLCcsRf4KbTVHDb++a2ouQiPzvKqc\/R4Nb8mCPfUOPBXz6mjXDYMEnENzplDG4\/UO3E2HJIrlglOnBp0MDR0teyTnXHCSzquD6ucsTKP0ZVfYft8xKvOnqk7qf3sTZzcha+xqXlL1H5N11rHxI4f6TFZDWwQ8clBnk9FeN5PCFn9+Etr+772tUe\/A6ozOCT2Mzd+j2WSU04kV2kneZdPucLsFgm5qlb53YcuWzpShEbqGlu6SC6bcbndN\/dPfKT5H4l5fF+8YL6Q\/JPNRcnNLOJS4voQH4q+WG2u8b761a+uNh3iqo8huMhMrjf5+3yKV3jF1i1FymqcKpZ9kJOG3zt+9S5ig+EkArF5Arlg45X6srgcgTeLtcUI6DOKM\/i\/CHuRe+Cqy6Z\/\/etf3xd\/Y3CT3BBVZ22duWXrBQAZc6fmEJKD6yNzX5waU1smZ67Timd\/i9TgWqR2kgvDl3of97jHbV4W5vnMsN8QZ+y3zcgvU9dCbkaKM\/g7YvN+vBx1opODceedd+675557VqQTubMU0UVwZCa4SCm\/T0kx96G3\/BmX7SovEzDntOxWXvZjyyfdpQgr6WRGxy9JHl824LMi1Vpacx3ij3q\/GmfsnxiCHYtZG7ljQ86MM\/j7Y\/IvGTupPjx3UrhVSGOzReJ81h5CctWgDj23yueYvrhjx+qQqqtVcXzq5EqXFJklRWCR2W1yaNzqW\/iOyKpu1P9QnLFfHnv46I90r7zL\/XPi0VyuNh+IemxcF\/9elHzOgmVXpbgO507KsWPHthA8n8Wd+BBRNro6BaUjZa8U+0cxc\/WqXTkiT28RA1Q58iHVSZGOFJnRncDSJR3HdTV3RJZ6nG7LQP1kvFF9QXzA6v7kX8xcK7mZZVxGHIxF\/H6oz1hs1huFOFB33333quMScV1WZ2+Pk+fEFhnlUxyZm7DZv6TNGqsmPzLr7hNZK5kJLQzj8WsF9DWt8TNx0nt+XOZM\/iMH1Z5k39rJzYBxBr80FvOxUJ+aJ7CEzdlbZ3GIywFxAqNXJHecDiJSnbllv+Yrv+xKDsGImFW+fI5x4sovn9siKj7pkhWpheNszYMZ3jyuqd0c4z\/\/yiuvvGNN9TfLbgu5GS3Id0Vs4EdDXeQhz+YKTPGzOMRqET0TXzjPoSy2uobB9pj8korLHiNFTs\/BJ78kcfnlQ0Je+UXkLuk51ORMza8TzFkDdTrarVH7B+JSp\/njlR25o0PbRm5m9uUvf\/lQXL99JNTvHT3TgQmclbijwptODhJd5M2kVkx+2TmPofFV0n0rwMY\/quG+ShcZcwy\/mvRKZkKDcUJnW3hJ4rxZ5E4I\/7utsX0m3ie98AlPeMLhNY6xpfS2kpuRuQaPRd4Q6rVbZrKwwf3w+Dju6r64iIasiC6\/xzxHcfl8qvhokoplW\/5KirSKyZZ0Pz4nJrb7RGz5si08kkuP+FjpOi9BNPVPxEnt+nVfY2swyW0nNwNzFyWI9DtBgB\/URNYleXx\/1113rUjOGCIw5JNeSfnA9XXqglmqQTyaE7FLrwisF4Ak+eg0SM3Pmi38+HxVO\/8T4\/JXfV8RTzXvy7F128sdkZEzjUVzH\/yXI+0nR6ZOgt9\/\/\/37jhw5sg+yZ7I6kYfoIrLX0aRyTP6WFGmJo6vJL5\/bmbCKtfyKQ2auqef+6LvmOEC+I66vfzr2ZC33sfvG3zFya2LxSP3nQv+30bd+6EOAhSWXK5Ccb\/3QnKB9eia+pqY81XO\/9JYUeYlLFxmV00da4StJDb5EAKnXeAdEU5Xkv4h\/Fo\/q\/50cOyF3nNwsOj719+IQ\/yX67D9tRb0hjTeevOnkUT6fehNBkTS3Kz1jZEsqB7urOSHBYUsqlm35XWYMHyrjkTlvFtf8RnE1X\/vn7tBfFZch\/PT1jrZdQW52IC5RnhxnqN8N9anbvSMPPPDA6kzO2RzSVwRnTiKspOZZ2R6TnqWIjD\/rlS0yC59tSMxZmn7uuefm4bbDviX+d3t5XIos9rHVOZPeNeRmEXEGPz\/Eu6L\/feydaFyT07lG5xE\/LZM9+1agBk6xLplJKqwI7tJ1cDwa5xqavkOE1nR\/K4j92iD2It+nVdE5cleRWwsJkv9o6Py5kgPy7YTkcgWic2anY6s54bOvZcvvUmSVz23pkmC43IDEdN4gYu9wg8yvi8uQ2d95XHodu5LcLDIuU74zLlN+I9RnLr3oqfW4ZOENKY\/71XV2zzVF\/uyvbCevxzkr8zhcnTeE23z97NOp9E\/F2fqVcbb+YhXcad+uJTcbEwf97DiL82Pjbwhz0a9+LLnxnNHVeQHQucOBhLgiLz7uuNAgPx2y4qNzFva+5BwXrnUs1vS2OFvz5zsevXZbeIAlyu1qcmuBQXA+j\/LO6H9dvtNyx3bgj2PkHwti37xjMxg48J4gN2uJM8X+uCfOA59\/E31Hr8WZzynYuLZ+Y9y7\/k9xtn70Uecu34Q9Q27tY3x97cq4BHhL2K+Ovi0PfjT2KSoh8q\/H5dKb4qOwX91Le7DnyK3Njb+rc01cp\/Lnkb9fvtNy8R24Kd4n\/Ez8PZvPLV55GwruWXJrb+J6\/MVxyfLmsK+R77SctwNx2fGnUeHnd8NTxjkr2fPkZvFB7jPid034oukvhLm2L0Mw1knebon1vTlI\/buxl8c\/xbVHF31SkFt7v\/Gm8\/qQrw\/fdfKflr07cFOQ+e3xZvGGkHvizWLvigJwUpHbFxxnch7+QPKXRV\/kz2l5\/ZNA5\/70B6K\/Pb7P+CcnwXpOWMJJS26tNO6uXBUPU34kzuY80n+S\/Kew\/Is4O787Hh69N+5+3HYy78NJT24dvCD3GfFI\/\/nx7v+Hw\/fS6Iv9WKfG2MWSn1D4YNxdel88Kv+Dk+F6eshenzLk9s34whe+8Jj4FN2L4iC\/IvzXR7\/A4yeJfm+s44Z4Uf92fMLxxic\/+ckPniTrGryMU5Lcvju33nrrOfEl2Wvj0gWyvyhi2\/55cp\/PTP3mIPONcclxI39K8SlPecrsvzY3cz47mv7\/AX7ZQMI\/zC\/jAAAAAElFTkSuQmCC\""
+    },
+    {
+      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/Utils\/AssetsManager.swift",
+      "kind": "StringLiteral",
+      "offset": 18115,
+      "length": 806,
+      "value": "\"iVBORw0KGgoAAAAEQ2dCSVAAIAIr1bN\/AAAADUlIRFIAAAAfAAAAHwgGAAAAH64WOQAAACBjSFJNAAB6JQAAgIMAAPn\/AACA6QAAdTAAAOpgAAA6mAAAF2+SX8VGAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB0UlEQVS11l1LwlAYwPFz4bzvwjJhmA1LKrqXQHKRiQhFrq5a+1YF0kWEEKjFys7pFQJhnvMdSnr5ECrIXBdiiLV2dvZ0YFcb\/P6w84YkKRSulPUmI3mbNVTnoW68J+LTSQQ4lEQ09XRpfNJG1mEkb58dHzxLUiiMKmW9aZlpZ\/yhROspiWgKAl5MxlYo2e1NGqdHB0+IkYI9+QIqwA22zLTDcLGPaEMd\/PbSMtMOxaWuaMBf8BDfGqC7mtF2+0A0wAu2zLRzWzVeUFyOKBRrHagAHpiS\/U4sOiV\/z0ZGtG7QgCFc8oTjckT5sRyCBAjDQQN4Yc\/9w28AGOwngBGtm9tY3QGF\/QRYV2sOOOwr4D\/gIAEgsEgAKDwam+rqttc\/bl2tOdnMcgEUTiqzS16zenwVQB3HvmDQABEYJIAHbnnMAaEAHpjivU42s1zg2Qm5A3jh0XLi3Yo9A4awxg37PQtcA0Rhf6eh1vkREBQWDlAS0RQPPD83swC1FVOsDW80jxeHH1Cwn4DbqvGKaGMdFOYNoDhnI4pzNjTME8BIwUbnJ7r1H7BXQKWsN5EkhcLnJ7rFcLFPr9XBXc1ou15vBUdcjij3deON3eQGDOftSllvSlIo\/AWqVKsYAAAAAElFTkSuQmCC\""
+    },
+    {
+      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/Utils\/AssetsManager.swift",
+      "kind": "StringLiteral",
+      "offset": 18982,
+      "length": 10354,
+      "value": "\"iVBORw0KGgoAAAANSUhEUgAAANAAAADQCAYAAAB2pO90AAAAAXNSR0IArs4c6QAAAIRlWElmTU0AKgAAAAgABQESAAMAAAABAAEAAAEaAAUAAAABAAAASgEbAAUAAAABAAAAUgEoAAMAAAABAAIAAIdpAAQAAAABAAAAWgAAAAAAAABIAAAAAQAAAEgAAAABAAOgAQADAAAAAQABAACgAgAEAAAAAQAAANCgAwAEAAAAAQAAANAAAAAAybBaNgAAAAlwSFlzAAALEwAACxMBAJqcGAAAAVlpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IlhNUCBDb3JlIDYuMC4wIj4KICAgPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICAgICAgPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIKICAgICAgICAgICAgeG1sbnM6dGlmZj0iaHR0cDovL25zLmFkb2JlLmNvbS90aWZmLzEuMC8iPgogICAgICAgICA8dGlmZjpPcmllbnRhdGlvbj4xPC90aWZmOk9yaWVudGF0aW9uPgogICAgICA8L3JkZjpEZXNjcmlwdGlvbj4KICAgPC9yZGY6UkRGPgo8L3g6eG1wbWV0YT4KGV7hBwAAHANJREFUeAHtXQvQFtV55iIqKhe5GYzoj6YqWhAFr9hiaDIpGklrY4yNWsRb1IjGOlU0KDHjBY0WL9VJYtpOR+Oo6ThNm0YdlbuaSQUFIViD3BTUgCiIqIDt8\/zzH1g+dr\/v7J737J7dfd+Zh91\/L+953+e877dnz2Xp3EklDwY6o5CBwGCgDRgE9Af6RtAP+7sBvQHK7sDe7XudOm3C9rOO\/fXYbgXWNeCP+HsVsBxYBqwB\/g9Q8cgAK1ZFjoGuUPUlYFgHhmI7BDgI2APIUz5FYSuAxcDCDryK7VJgG6AiwIAmkBuJfIqcCIzqwDHYdgdClo9h3DzgBWBux3YttioZGNAESkfaPrh8DDAW+DJwGFAFWQInpgNPAc8BbDKqKAMiDLBJdg3wLMBmEd8rqoxPOnylz4cAKspAagb4kn8lMAf4HKhywrTybRH8nwLwh0RFGUhkoCfOXAK8BNQ9aeKSipy8CFwM9ABUlIF2Bkbg358AG4G4wNFju\/KyGVw9DnwFUKkhAxxjOQ94BdAEceNgfgeX5FSl4gywmcZ3m5WAJo4sB++A0ylAH0ClYgxwvOZOQJtpskkT9yO0ATxPBfoCKiVngC+71wIfAHGVrcf88cIfq9uBfQGVkjGwF+ydDGji+EsQ2x8fzt27AQh9hgZMVCEDpwPLANsK1uvy4eot1Ak7bnT2C0gIUUbAqNmAJkTYHPwWdcT5gyqBMMCetQcBHfwMO3GiP2ycDX4\/UPoB2bI\/TsehEh4AvgiELgyg1cAyYHnHdg226wCu5eGWPVgfAhTOu+PMaQrXBZlxll7Y548Ge7nYu8h1RAOBNmBwx3Z\/bMtQt1y\/dCnwa6CUUgaS44gdgIP3Ad+KOxnAMfZA\/Q5YACzs2HJOGUfw8xC+sB8JHAUMBYYBI4FQf\/EfhW0cn+MPiYpnBk6Ffg7aRZsERe\/zyfIIcDkwHODCutCENtG27wG0lU+\/onmLlk97vgaoeGKAv6p86oTwrrMFdswErgMYlGV8ktPmo4FJwCyAPkUDuoh91u09wJ6AiiADbIa8BhRRqaZMfoeAa4IuAvoCVRO+S10CcEEdfTV+F7Fl05dNUBUBBs6Gjo+AIiqSZb4KXAHwvasush8cnQgwkIvine+RZwEqGRnohvumAUVUIBP2IeB4oO5yAgj4OVDUj9hdKHu3uldCWv\/5C8h3jLyT522UyfeafQGVnRkgJ3xfYodJ3vUyA2XWqQUAd7PLENy6DMizktjFzGkmZqwFuyoJDJCj8cBiIM86WoryDgdUmjAwCuc4FpBXxbyJsi4GQux2hllBSxdYdybwOpBXfb2Psk4BVGIY4BPgUyCPyuCCuvMBbVuDBEchhxcAq4A86o5fDfoOoBJhgAOQHAPwXQGbUAbXqPD7biqyDHAJybUAe8981yNj5WpABQxMBnwTTv2\/AAYBKn4ZOAjq+cGRPOr0Br+uhK\/9hzkQzZ61b4RPReUs5JSrFYDvRJpaOeYsHfI9xrMNdnBaiDbXLCvEw2WcvMrpV6wLn4nEWKqV3AZvfRLKX77RtWI0bGdPhHlLAZ91fnfYFMhZN9kzkWx\/95EzVzUJMcB1TA8DPpOo8u9E7DnxRSCnmpwLqITNwHiYx95QX3HAdUWVFI7z+OqqfgO6OWNbpRwMcAmIryYdY6xy40R\/Dqc4AObjV+fX0Ktz10BCyaQn7H0S8BET\/O8wx5SMj0RzObeNUzB8EHUH9HJKiUo5GWDd\/RjwERvroLf0c+c4q3qZB4K2QCcXf6lUg4HL4IaPRXxsJvYvK0VczzMTkP512QCdY8tKitqdyMBpOONjGtB06C3lnEcOYkonz3ro5JiCSjUZGAm31gLSccNmYqnkbFgrTcK70MneG5VqM3A03HsPkI6fUD+BtkttsjtZevkv57OxM0KlHgwcATdXA5JJxOYh9QYt\/BzRq4Ck4\/w1Ct7xoGulnMYdCrPfASRj6TXo6x4yHZw4KOnwB9A3ImSH1TavDBwF7dJDIMHOmTsVzkrONGBvm34Vx2t8lkL5SbBS8pWAMRrcF1D5xRTJxy3HebSrGiSotDPwdfwrOU60BvqCGh96DAZJNt24xFtFGYgywI+\/SMbYI1HlRe5zAEzSsalFOqNlB83AXcKxNq5ob3vCAMmvsfwn9OnctqJrNdzyGRucPCz1g82Flz2KdPdBQWe4JKF3kc5o2aVggDPv\/wBIJRFnzBQix6HUbYCEI+xl4QCsijJgwwBnpHwMSMQeY\/gYm0Ilr+kMZXMBCQeo41xJ41RXLRiYAC+l4m8WdDGmcxOu+JMy\/oncrNaCqsbAo4JxmNtcOU6F4MuXRAKxA4JtWhVlIAsDfGeWisWV0LVXFiPS3jMZN0gkD9ueXOqtogy4MHAKbmYsScTk9S6G2NzLjJeamzTNpkC9RhmwYOCfcI1EAnG9mdcW0S1ChvKxW2j\/O8pXqQ4DjCU2wSSS6Ie+aOkHxZzgKWHk6b6MVL21ZYCTmSVik+uGvMyTu1PIQP4vCSrKgA8G2KMrkUS3SxvHdiEz09U4Dn4dKG2c6lMGOhgYhO0mwDVO2dLi+76YTIImV6N4\/41iFqkiZSCegR\/hsESs\/kO8+vRHu+EWiQmj1LF3+uL1jgAY2KNEdcexHImxobegZ3cJ7v8OSiQy+nwJYzzr4PfDxgBXAlOA7wMnA\/wRqZtwOfVPgeiPJ+cs\/hfwTaALEKpcCMMkYvZcCQdfETDmdehgcIYqtI1J8y4QRzy7SC8FOgNVF\/5Y3A+0Gpx8CdeE+j5LHyRmbM+HHic5AXfHBVTaY3\/rZIXfm3tB\/TOWfnItSi7TPfy6nKidvj0N2NYvf3AOTtRW7InzUvjRzN9jXdx4SMCIRdAR6uO+K2xjUjQjsPHcLFy\/D1A1YfI8BzT62+rv13CPyLuCMKGs2yUZ\/Gn092dZ7WKQSAyc8pcgVLkKhjUSZvP3bNxXpZkUWZPHcDUx0AqekLF+jV\/ccvgmU11\/V6Dwt6EjxF8nmNX+Tpb0zhMlMGl\/BnRUoVeRyfMskOSnzfGFuD9EYe\/hasDGh2bXsFMitfAlsZlSm3PXpS41vxvGCPg3EzrK3JxzffJEY2D\/\/KouVUnXC9Tz3FQl4uI24HMgSlDa\/Y9wv9eZrdDvIlmbb408zIERmR7xLsYL3CuZPOTkJAGbfKjoA6WMxcZ6S\/M3c+HAOOOSXu7PwsWuXbZcLbg+rtBAjklN1RgFf\/4bKFMSMXl+BfApLCUMshCFy284R85FmAtnplHwMi5Ok6Fx1x6XpsACrpV6Ahnfy\/Ikkn7yGP85Dy1U4dPR2Jl1+1tb5w4RKGyBbWEFXscZBlnJTLrvBejkt\/JCFV\/Jw0+ShS7sbk+qN9vjzI2Wcg2usFWYdN0VLUsp\/gKOVq8U8LWRg1CTiMnj2tvW6Kv5mzETunBalrE365Y6WkqWwbSoQVtRwoCWpYRxAafnRG2X2n8RejnDIRTx9eQhX3z6lKE7\/wuwk7HpUsecpdFUSMQngEshzzQtIayTfDlMOxPBlhsOA4SQRD6ThwPtw8Kq0qbWTMdZ2\/qLu24z7iefifINnIm7Mc2xTINOiRb5P+GzacPOGHajFiU+fWPX8OiiHMtYrkSL49RmZbt+63oLlPdrVkCg53wG2jz4XEQS+fSpjMnD0OOrhWsz7j4qSpL\/xYk0T5vGa2cmKS7BcZ8BxyTqmyMHPn0pa\/IY+jmroDFu0\/zNydGxwieH6+yDkKfuxDrdcNBn4M1HWXkkkU8fyp48rO7JQJqEabyWORLbopB4\/zmKFpZcfAag7yTyaXsVkoehORJoTIq0f58WF+N3OCpeg\/tdp\/\/E2VXEMZ+ByCTi015afNpcleQh55y+9g6QNmmi199KRY3i2jZ8uFFhyf\/2GZCvgBvJJPJpa5WSx4TkY9iJJkTa\/VlGkdly9d4mR6WXGWUV2voMTKkk8mljFZOH4TkRSJs00evJC59k2+Vw7EUvyLJfhfef7YREdnwG6GKUwxHyrOLTtqomD7keAWSJ8eg9X4pW2rccFX6I+\/kUq6r4DNSsSeTTpionD2OUscpZFNGESLt\/BhUZuRk7aRVEr3\/eKKrw1mfA\/h68DUzBnU9bqp48huYZ2InGcNr9m4wibv\/DUdndUWUV3vcZuLZJ5NOGuiQPQ\/QeIG3SRK\/\/ZTTO+eHD6Mm0+xOiyiq+7zOAWyWRz7LrlDwMUc7ZTBvn0eu3z0jg2M1mR2V8KauT+AzkJSBy\/xgyfZZZt+QhvccD0YRIu\/8x7m8f9\/yio6JtuL87UDfxGdCNSeSzrDomD2OVS3dcp67tR0WjgLTZF71+FZXUVHwGNpvVfBL5LKOuyWPClbNnorGcdp9PsU7nOCqZTSU1Fp8Bztnx5DdtxdpcX\/fkYchy+b0NV0nXfJujqQdQk4Msd7i3CreyLTwO4FJ4afkTKDxZWin0cdYJJ0SWefmJBC3LHJUcyATq76jE1QjH4oO43WcSSTuoybOD0eU7djPt9WMC9ct0646bVu\/YrfVeGZJIk2fnEHWN3fYEcl3ktXZnm2r9V8hJpMmza2i6xm5fiSfQul3tqvWREJNIkyc+JF1jt\/0JtG+8buuj71tfWZ8LQ0oiTZ7kuHNNoPal3RzHSeqmszk+KNm+2p\/x2cVtUzfaVd08BA9yjP0VVP+uo5L+VKKSyEBRSaTJk1gl209wJoHND1HSNRyI7fSBo5JeVKLSlIG8k0iTp2l1bD\/J15ek5LA53v76wva6zcVJ19RxHtz2Gkixk1cSafLYVwrrJCmubY7z\/dL5S41d7e2t\/ZWssOmATeVkuYY\/hqNrz7I9AYzdLDybe7ayG1ulOgxshCtvVcedcniiTbh86imvJtxKuLPTBy\/yca+UpYg04bQTwX\/d55U8pmnBoQlNotb1KtKJoN3YrYl2uSLv5DFJxC7WIS6G1+Be525svgN95kjUno73V\/l2Js+vgL8owEl+b45fSzqigLLLUqRr7H7GBOI7kIu0T2dwUVDRe4tMHkOpJpFhIn7rGrsfM4Fc57K5zuaOd63cR0NIHsMgmyn6JDJs7Lztt\/Ofqf9axwRyndLtakRqqwO\/IaTkMVSZJDrSHNBtOwOusbuWCeQ6I1WfQDuiMcTkMdYxibjsXJPIMOL+H56JPIHSfJJ2h+nV2ws5eQzb5kn0p+ZAzbeusdv+BHJtwg2ueSXQ\/TIkj6mmAdjhk0iTqFMn19htfwJx0M1F2lxursC9PpOHkxXneeDIJNFQD7rLpNI1gVbSWdcPK9Z57hWT51nADF5Kbs2sap9lvAfb65xErv\/V4\/Hgr\/3rly4Vvw06WMl1E5+BbZLHcOqzrLom0T4gV+TTvp2haDPgkkTHmpquydZnQDcmj6HUZ5lMomGmoJpsT4CfLjHPCQjMnXbR\/97EMNF66zOQk5LHWOWzbA6ojzAF1WB7EXx0SaBFUY6edFQ2Laqswvs+A7hV8hhafdrAJBppCqr49j7455JAT0T5udlRGaeKVF18Bq5t8hiOfdqyHoXUoUk+A366JNBNpjK4PdNR2UbcvxsVVVR8Bmza5DEU+7Sp6knEWGXMuiTQX5mK4PYwR2U05GgqqqD4DNSsyWNo9mkbk+g4U1DFtmymuiQP7z0kyklX\/LHJUenlUYUV2fcZoK7JYyj2aWNVk+hKx1hn3XEe6U4yG3+5ZOUvdtJW\/j98BqZU8hiWfdrKJf\/tA4amsAps2QHgEusz4jiY6qiUS4i394vHFVCiYz4DUjp5DK0+ba5SEvHJ4foZg1sM6dHtOPzhkpW8d3hUYUn3fQair+QxVPu0nUnEwceyC3sYXeP81DgS+uGg69SGSXGKS3TMZwD6Th5Ds08fqpBEN4IolwRijiQuBV\/iqHyWqcUSbn0GXl7JY2j36cuHKOREU1AJt67\/sfDCZj4\/gJMu2bkF9\/NJVjbxGXB5J4\/hvoo+Gd+ybrmgcCvgEuP3Nitc4j3okmYFBHiuyoHm27dTAqzPZiZxqMUleXjv2GYF7I2TnzgWwtWOZRGOSD8NuJIad\/8G6OVaq6KFScQ6ibPR9Rh9HFG0gynKn+nIA1ctkM+m4rpAjOuDBjYtIZyTd8AU1yCKuz+U5DFM+0wiDl+waRS6MCZdm29P2Tj597goLijSHJtoU1DB1xyM8vlV1jR+2VwbWvIYmplErj+OSf7\/1BQS8PZq2JZkv+3xq2z8Y2C5dmcvsCmo4Gt+hPJtibO9rqgOA1sqfSURf4j4ofaQZRGMs63HuOuYE222Dv6PY2E0IPTpH67dmY0kh\/rkaaxzX825bzYWFNDfrt\/9YF2\/FOcPpzXEyWNxB1Me44q\/kOUAQeM4NZ69M3MFdfpSxaXIpwPSnT1suYQqFwoYlion2lCgazOOzZmQH+vLYV\/jUyTL36E32+BmrEg\/iW6MLaX4g31hgutKA+bCoLSuvIgbsgRU9J5JaQvN8fpZAv6VpdmWRKtkEk1IKqTg4z8QqOc5WXzggGg0GbLs87tbrv8HSxbbbe5xJbbsyWM4kupYCLEJtwecZDd7ltiN3nOBISvNlt\/NYpBEFWXZH5+m0Byv5bhA1kd7WZttSfS6Poky\/UInGSN43PXLO4x3vt\/2yGrTQ7gxS9JE71kMHVzxGqLcAKOittrsV+XJ01gfWZNoKxSFuMyBs0xez1C\/jTHgNMbFruhGhVn+Pgd6QhQuAHwEsPWpqslj6oZJxNF2Wz54XaiD5uNT+pHkM9cPOcl83J2k3Pb4G9DBX4QQhUnEzo5Wzbnf4ZohITogbBPr6TbgU6BZ\/b6P82cDIUo3GLUUaGa\/zbl5Es6dJ2AIjc30IibhgKWOgbjuOuB5gOSvBhYB\/wqcBjDR6iRtcJZd0zOB5QAThp1CTwOc0tILCFUuhmE2CdLqGpGWE7N5pYBBb0EHZ3urKAM+GWDn19tAq+RodZ7xuruUodcKGESDb5YySPUoAwkMsPnZKjlszl+ToD\/T4Z64i+vhbQpudg2nkbQBKsqADwY4FrUZaBaDNufYWSTeRJ0qYBiNfxxQUQZ8MPAklNokSKtrbvVhHOcU8YMSrQq3OT\/Oh4Gqs9YMsKPHJvZaXcOWVh9fTEqtoVkBAzOP7vpyTvWWlgG+YqwCWiWHzfmbfLLAdiG7M20MaXXNvT4NVd21YuBBoZhcDz29fTOXZfpLXDJtg6GjfRur+ivPwBh4yFiKi7G0xzgO6F26o4RlQFrj4q7nY9dbe9M7E1pA0QxwvRlfB+JiK+2xN6Ent5UDZwkZTSd\/CagoA1kY4CrRtImSdP0ZWQzIek9n3Dhb0PjxWQ3R+2rLwEXwPCkZ0h6fXgSLI1CoVNuTEzmHF+GElllKBhh7EgOmTDQuxziqKBbuR8Fpsz3p+uXQ1a8oR7Tc0jDAd2a+ryTFUdrjdxfpOcdyJCaaGqefgb6uRTqkZQfNQBdY9xvAxIvrlh0QnHxaqIxF6a6ORO+\/s1BvtPCQGfhH4Vjj572CkEdhRTQJXPe\/F4RXakRIDFwiHGMPh+RcfxizRtBBvthxbpOKMkAGOHeSMeH6w2zu53qh4N63\/xJGfS7oJL+GciKgUm8G+FneVsvtTWLYbBmjXw2V0mkwzMYJ22s4M5Zdlir1ZIDdy1JzL03M\/ThkKveAca8CxliJ7R+h78iQnVbbvDBwGLTyGwwSMWR0LIS+3KbrZGWFwc7mlzFaYssPfByR1SC9r3QMMIZY5xKxY3RsgL7Dy8LEX8NQyfchksBH+XFlIUDtzMzAMbjzPcAEvsSWsXhmZosKuvEuYRJIJN+JTirIHy3WPwMnowjWsUTSRHXc7t90+RL4gb4ZQNQRif2PoPPrgEq1GGBXNetWIkaiOp6DztLObhkA45d6IIVjApcDKtVg4Aq4ITnOYxLoD9Ab3HhP2irji9s6wDgluWUzkfOjVMrJAJ8M0tNzTHythe5Dy0nLrlb\/GQ59AhjnJLecXMgZuirlYqAvzE37IXvbuPkUur9cLjpaW\/sdXCLdM2cIZTNxeGsT9IpAGODg+DLA1J\/kljH27UD8FDfjKk+ksQL41dPzxS1WhdIMcCWp1GK4uMTj+1Sl5QfwLs5xqWP\/Dv1sHqiExUBvmPMoIFXPcXomheWyP2tu80wkF\/lVrg3srzq8ax6DEvi\/HcQFvdSxW717EVgB0zwTug367wd6BuZ3nczpBWcfBFgXUokSp4exVEuZAq\/jCJE8xjlVZ9SS3WKd5mA3WwKSdRmnq5SzDCSrRupLp3HkRo89AaPbJA1XXbEMHIyjTwJR7n3tXx9rQQ0PXgaffT\/mWYkcH7gH6AGoyDKwN9RNAXz2sJlEZFc1e3RVIgxwnMjXYKsh3mz5Qnsh0C1Svu5mY4AcXgy8DRh+fW4ZI5Ud54FvTsKZ1tJT2ZtV5nKUx8rfDVBJx0AXXM4lAm8AzTiWPLcOZY0GVJowwLlznFkgSXwrXUtQ3gSAK2pVmjNAjvj0fh1oxavkeU4MPRRQsWCAX\/mZDkhWgI2uNSiTL6Y6tw4kNAgHp9nh8w5gw6XkNc+hzNLPqoYPuQqbVfwAhK\/5c80qmOtS\/hnQxXudOo0CD\/8CSH4Zpxn30XOse\/7fvKVdzwPbCxe2szcCUWLz3F+EstnjMxCoi+wPR68GFgN5ch0tawPK\/htARYCBIdAh\/bWfaGXZ7LObfTpwKcAmZtVkPzjE4YQZQB5DCs04nw8b+C6sIsjAntDFxVdFNOkaK5urJ+cAnBg7EmCPVNmENh8LTAZeAOhTo595\/826vQvQzhyQ4Eu+BsV82c+7cpuV9y7seQyYCIwAQuwWp01M9iuBx4E8hwuacWfOrYZNXwVKJZ1LZe0OY9mE4oyCs3ccCmqPnRAvAwuAhQCbn3yX2gTkIfugEH5bbRgwtGPL5OFsgRDlERjF90wuwy6VlDWBDMmnYecB4EBzIPAtn5zLgOUd4K8uBwcZOARfnD8E2JTZAjARKUwIjviz2dUL4Azzfh3oiy1f+tuAwR3bsnR4rIC93wWeAlQKYqAHyr0XKPrF1zRFdNu6ec33Lb7P8odBJRAGjoYdMwEN4LA5mI46Gh5IzKgZMQycjmNvAppIYXGwEnVyHtAZUAmcge6wj1Ny3gc0kYrlgO941wEchlApGQN8P7oWWA9oIuXLwUZwfjvQG1ApOQPsqWJlspdLE8kvB+xFvAXoA6hUjAE+kTiQyPa4JpIsB+yinwLsC6hUnAGOqZwLzAc0kdw4mAcOzwHIqUoNGRgBn38CaPPOPpHI1b8BXwFUlIF2Bti8uwiYC3AmgD6ZduaAnMwBLgB0ABQkqCQzcABO8V2JAVP3ZOIcvinAIYCKMpCaAc4v+z7wNJDHJ5uKfvLRR\/rKyZ1tgEoTBnRUuAk5Maf2wrFTgLHAGGAIUHYOmbBcefo88BtgJsD\/6ULFgoGyV76Fi14v4VgHv5tAnAwcA4S6ZACmtQuXVLwM8F2P4GI6DjSrZGBAEygDaU1u6YJzBwNmHc5Q7PMpNRjg9KI8hU2xN4HfA68BC4EFAI\/xvU5FgAFNIAESLVV8Ade1AUwmdlIMALimh7MkDLphn2t9+BUa7pveLq4L4vogLtlgFzL313VgbceWK0xXAcuBZcC7gIpnBv4feBbDhly7BOwAAAAASUVORK5CYII=\""
+    },
+    {
+      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/Utils\/AssetsManager.swift",
+      "kind": "StringLiteral",
+      "offset": 29384,
+      "length": 630,
+      "value": "\"iVBORw0KGgoAAAANSUhEUgAAA+EAAAABCAYAAACxFa\/5AAAAAXNSR0IArs4c6QAAAVlpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IlhNUCBDb3JlIDUuNC4wIj4KICAgPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICAgICAgPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIKICAgICAgICAgICAgeG1sbnM6dGlmZj0iaHR0cDovL25zLmFkb2JlLmNvbS90aWZmLzEuMC8iPgogICAgICAgICA8dGlmZjpPcmllbnRhdGlvbj4xPC90aWZmOk9yaWVudGF0aW9uPgogICAgICA8L3JkZjpEZXNjcmlwdGlvbj4KICAgPC9yZGY6UkRGPgo8L3g6eG1wbWV0YT4KTMInWQAAACxJREFUSA3t0DEBAAAIAyBtbvMthR9EYJPcYMCAAQMGDBgwYMCAAQMGDLwPFD0rA3++w7d+AAAAAElFTkSuQmCC\""
+    },
+    {
+      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdUnits\/Banner\/BannerManager.swift",
+      "kind": "IntegerLiteral",
+      "offset": 625,
+      "length": 2,
+      "value": "15"
+    },
+    {
+      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdUnits\/Banner\/BannerManager.swift",
+      "kind": "IntegerLiteral",
+      "offset": 674,
+      "length": 2,
+      "value": "30"
+    },
+    {
+      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdUnits\/Banner\/BannerManager.swift",
+      "kind": "StringLiteral",
+      "offset": 124,
+      "length": 13,
+      "value": "\"KidozSDK.BannerManager\""
     },
     {
       "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdUnits\/KidozError.swift",
@@ -4837,65 +5013,282 @@
       "value": "\"KidozSDK.KidozError\""
     },
     {
-      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdUnits\/FullScreen\/Interstitial\/InterstitialAdManager.swift",
+      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdUnits\/FullScreen\/Interstitial\/InterstitialAdLoader.swift",
       "kind": "StringLiteral",
-      "offset": 372,
+      "offset": 348,
       "length": 13,
       "value": "\"adInstances\""
     },
     {
-      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdUnits\/FullScreen\/Interstitial\/InterstitialAdManager.swift",
+      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdUnits\/FullScreen\/Interstitial\/InterstitialAdLoader.swift",
       "kind": "StringLiteral",
-      "offset": 1797,
-      "length": 14,
-      "value": "\"KidozSDK.WrapperDlegate\""
+      "offset": 1318,
+      "length": 15,
+      "value": "\"KidozSDK.WrapperDelegate\""
+    },
+    {
+      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdUnits\/FullScreen\/FullscreenAdManager.swift",
+      "kind": "BooleanLiteral",
+      "offset": 348,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdUnits\/FullScreen\/FullscreenAdManager.swift",
+      "kind": "StringLiteral",
+      "offset": 146,
+      "length": 19,
+      "value": "\"KidozSDK.FullscreenAdManager\""
+    },
+    {
+      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/Utils\/PlistUtil.swift",
+      "kind": "StringLiteral",
+      "offset": 257,
+      "length": 18,
+      "value": "\"SKAdNetworkItems\""
+    },
+    {
+      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/Utils\/PlistUtil.swift",
+      "kind": "StringLiteral",
+      "offset": 323,
+      "length": 23,
+      "value": "\"SKAdNetworkIdentifier\""
     },
     {
       "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdUnits\/AdParameters.swift",
       "kind": "StringLiteral",
-      "offset": 268,
+      "offset": 232,
       "length": 14,
       "value": "\"redirectType\""
     },
     {
       "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdUnits\/AdParameters.swift",
       "kind": "StringLiteral",
-      "offset": 329,
+      "offset": 293,
       "length": 19,
       "value": "\"skadNetworkParams\""
     },
     {
+      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdUnits\/AdParameters.swift",
+      "kind": "StringLiteral",
+      "offset": 359,
+      "length": 15,
+      "value": "\"skOverlayMode\""
+    },
+    {
+      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdUnits\/AdParameters.swift",
+      "kind": "StringLiteral",
+      "offset": 422,
+      "length": 16,
+      "value": "\"skOverlayDelay\""
+    },
+    {
+      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdUnits\/AdParameters.swift",
+      "kind": "FloatLiteral",
+      "offset": 626,
+      "length": 3,
+      "value": "1.0"
+    },
+    {
+      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdUnits\/AdManager.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1110,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdUnits\/AdManager.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1153,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdUnits\/AdManager.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4806,
+      "length": 2,
+      "value": "10"
+    },
+    {
+      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdUnits\/AdManager.swift",
+      "kind": "StringLiteral",
+      "offset": 120,
+      "length": 9,
+      "value": "\"KidozSDK.AdManager\""
+    },
+    {
+      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdUnits\/WebViewWrappers\/ClickThroughViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2010,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdUnits\/WebViewWrappers\/ClickThroughViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2319,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdUnits\/WebViewWrappers\/ClickThroughViewController.swift",
+      "kind": "FloatLiteral",
+      "offset": 2825,
+      "length": 3,
+      "value": "0.7"
+    },
+    {
+      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdUnits\/WebViewWrappers\/ClickThroughViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2867,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdUnits\/WebViewWrappers\/ClickThroughViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3055,
+      "length": 1,
+      "value": "5"
+    },
+    {
+      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdUnits\/WebViewWrappers\/ClickThroughViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 3084,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdUnits\/WebViewWrappers\/ClickThroughViewController.swift",
+      "kind": "FloatLiteral",
+      "offset": 3150,
+      "length": 3,
+      "value": "0.6"
+    },
+    {
+      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdUnits\/WebViewWrappers\/ClickThroughViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3265,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdUnits\/WebViewWrappers\/ClickThroughViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3271,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdUnits\/WebViewWrappers\/ClickThroughViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 3353,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdUnits\/WebViewWrappers\/ClickThroughViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 3382,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdUnits\/WebViewWrappers\/ClickThroughViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 171,
+      "length": 26,
+      "value": "\"KidozSDK.ClickThroughViewController\""
+    },
+    {
       "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/Utils\/TestUtils.swift",
       "kind": "StringLiteral",
-      "offset": 262,
+      "offset": 259,
       "length": 24,
       "value": "\"{offer_id_placeholder}\""
     },
     {
       "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/Utils\/TestUtils.swift",
       "kind": "StringLiteral",
-      "offset": 320,
+      "offset": 317,
       "length": 9,
       "value": "\"API_KEY\""
     },
     {
       "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/Utils\/TestUtils.swift",
       "kind": "StringLiteral",
-      "offset": 373,
+      "offset": 370,
       "length": 19,
       "value": "\"WATERFALL_URL_KEY\""
     },
     {
       "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/Utils\/TestUtils.swift",
       "kind": "StringLiteral",
-      "offset": 441,
+      "offset": 438,
       "length": 24,
       "value": "\"TEST_WATERFALL_URL_KEY\""
     },
     {
+      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdUnits\/WebViewWrappers\/WebViewWrapper.swift",
+      "kind": "StringLiteral",
+      "offset": 841,
+      "length": 13,
+      "value": "\"orientation\""
+    },
+    {
+      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdUnits\/WebViewWrappers\/WebViewWrapper.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1209,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdUnits\/WebViewWrappers\/WebViewWrapper.swift",
+      "kind": "StringLiteral",
+      "offset": 1250,
+      "length": 17,
+      "value": "\"kidozCommand:\/\/\""
+    },
+    {
+      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdUnits\/WebViewWrappers\/WebViewWrapper.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1295,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdUnits\/WebViewWrappers\/WebViewWrapper.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1338,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdUnits\/WebViewWrappers\/WebViewWrapper.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1382,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdUnits\/WebViewWrappers\/WebViewWrapper.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1426,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdUnits\/WebViewWrappers\/WebViewWrapper.swift",
+      "kind": "StringLiteral",
+      "offset": 684,
+      "length": 14,
+      "value": "\"KidozSDK.WebViewWrapper\""
+    },
+    {
       "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdUnits\/FullScreen\/Rewarded\/KidozRewardedAd.swift",
       "kind": "StringLiteral",
-      "offset": 278,
+      "offset": 275,
       "length": 21,
       "value": "\"DEFAULT_INSTANCE_ID\""
     },
@@ -4909,7 +5302,7 @@
     {
       "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdUnits\/FullScreen\/Interstitial\/KidozInterstitialAd.swift",
       "kind": "StringLiteral",
-      "offset": 277,
+      "offset": 274,
       "length": 21,
       "value": "\"DEFAULT_INSTANCE_ID\""
     },
@@ -4919,6 +5312,69 @@
       "offset": 204,
       "length": 19,
       "value": "\"KidozSDK.KidozInterstitialAd\""
+    },
+    {
+      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdUnits\/SKOverlay\/SKOverlayMode.swift",
+      "kind": "IntegerLiteral",
+      "offset": 148,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdUnits\/SKOverlay\/SKOverlayMode.swift",
+      "kind": "IntegerLiteral",
+      "offset": 168,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdUnits\/SKOverlay\/SKOverlayMode.swift",
+      "kind": "IntegerLiteral",
+      "offset": 189,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdUnits\/SKOverlay\/SKOverlayMode.swift",
+      "kind": "IntegerLiteral",
+      "offset": 148,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdUnits\/SKOverlay\/SKOverlayMode.swift",
+      "kind": "IntegerLiteral",
+      "offset": 168,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdUnits\/SKOverlay\/SKOverlayMode.swift",
+      "kind": "IntegerLiteral",
+      "offset": 189,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdUnits\/SKOverlay\/SKOverlayMode.swift",
+      "kind": "IntegerLiteral",
+      "offset": 148,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdUnits\/SKOverlay\/SKOverlayMode.swift",
+      "kind": "IntegerLiteral",
+      "offset": 168,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/maria\/Desktop\/Development\/iOS\/kidoz-ios-sdk\/KidozSDK\/KidozSDK\/AdUnits\/SKOverlay\/SKOverlayMode.swift",
+      "kind": "IntegerLiteral",
+      "offset": 189,
+      "length": 1,
+      "value": "2"
     }
   ]
 }

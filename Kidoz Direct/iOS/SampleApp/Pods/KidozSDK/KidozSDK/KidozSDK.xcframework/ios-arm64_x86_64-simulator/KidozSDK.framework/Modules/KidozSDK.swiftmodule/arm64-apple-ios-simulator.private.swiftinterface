@@ -1,13 +1,16 @@
 // swift-interface-format-version: 1.0
 // swift-compiler-version: Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)
-// swift-module-flags: -target arm64-apple-ios10.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name KidozSDK
+// swift-module-flags: -target arm64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name KidozSDK
 // swift-module-flags-ignorable: -enable-bare-slash-regex
+import AVFAudio
 import Foundation
+import JavaScriptCore
 @_exported import KidozSDK
 import StoreKit.SKStoreProductViewController
 import StoreKit
 import Swift
 import UIKit
+import WebKit
 import _Concurrency
 import _StringProcessing
 @objc public protocol KidozInterstitialDelegate {
@@ -18,6 +21,14 @@ import _StringProcessing
   @objc func onInterstitialImpression()
   @objc func onInterstitialAdClosed(ad: KidozSDK.KidozInterstitialAd)
 }
+@_inheritsConvenienceInitializers @objc public class KidozSessionData : ObjectiveC.NSObject {
+  @objc public static var isSKAdNetworkIdentifierSet: Swift.Bool
+  @objc public static var supportedSKADNetworkIds: Swift.String?
+  @objc public static var extensionType: Swift.String
+  @objc public static var extensionVersion: Swift.String
+  @objc override dynamic public init()
+  @objc deinit
+}
 @objc public protocol KidozRewardedDelegate {
   @objc func onRewardedAdLoaded(ad: KidozSDK.KidozRewardedAd)
   @objc func onRewardedAdFailedToLoad(error: KidozSDK.KidozError)
@@ -27,21 +38,11 @@ import _StringProcessing
   @objc func onRewardedImpression()
   @objc func onRewardedAdClosed(ad: KidozSDK.KidozRewardedAd)
 }
-@objc public class SKAdNetworkParameters : ObjectiveC.NSObject {
-  @objc public init(responseData: [Swift.String : Swift.AnyObject])
-  @objc public func isViewThroughAd() -> Swift.Bool
-  @objc public func isStoreRenderedAd() -> Swift.Bool
-  @available(iOS 14.5, *)
-  @objc public func getSKAdImpression() -> StoreKit.SKAdImpression?
-  @objc public func getProductParameters() -> Foundation.NSDictionary?
-  @objc public static func mockProductParametersData() -> [Swift.String : Swift.AnyObject]?
-  @available(iOS 14.5, *)
-  @objc public func printSKAdImpression()
-  @objc public static func mockSKAdNetworkParameters() -> KidozSDK.SKAdNetworkParameters
-  @objc deinit
-}
 @_hasMissingDesignatedInitializers public class StringUtils {
   public static func convertJSONStringToDictionary(json: Swift.String?) -> [Swift.String : Swift.AnyObject]?
+  public static func convertHashableDictionatyToJSONString(dictionary: [Swift.AnyHashable : Any]) -> Swift.String?
+  public static func urlToParams(_ url: Foundation.URL) -> [Foundation.URLQueryItem]?
+  public static func stringIsEmpty(_ string: Swift.String?) -> Swift.Bool
   @objc deinit
 }
 @_hasMissingDesignatedInitializers public class KidozLogger {
@@ -49,7 +50,7 @@ import _StringProcessing
   public static func e(_ tag: Swift.String, _ message: Swift.String)
   @objc deinit
 }
-@_hasMissingDesignatedInitializers @objc(KidozBannerView) @_Concurrency.MainActor(unsafe) public class KidozBannerView : UIKit.UIView, KidozSDK.KDZBannerDelegate {
+@_hasMissingDesignatedInitializers @objc(KidozBannerView) @_Concurrency.MainActor(unsafe) public class KidozBannerView : UIKit.UIView {
   @objc @_Concurrency.MainActor(unsafe) public static let BANNER_WIDTH: CoreFoundation.CGFloat
   @objc @_Concurrency.MainActor(unsafe) public static let BANNER_HEIGHT: CoreFoundation.CGFloat
   @_Concurrency.MainActor(unsafe) public var isAutoShow: Swift.Bool
@@ -60,16 +61,14 @@ import _StringProcessing
   @objc @_Concurrency.MainActor(unsafe) public func setBannerPosition(_ bannerPosition: KidozSDK.BANNER_POSITION)
   @objc @_Concurrency.MainActor(unsafe) public func close()
   @objc deinit
-  @_Concurrency.MainActor(unsafe) @objc public func bannerDidInitialize()
-  @_Concurrency.MainActor(unsafe) @objc public func bannerDidClose()
-  @_Concurrency.MainActor(unsafe) @objc public func bannerDidOpen()
-  @_Concurrency.MainActor(unsafe) @objc public func bannerIsReady()
-  @_Concurrency.MainActor(unsafe) @objc public func bannerReturnedWithNoOffers()
-  @_Concurrency.MainActor(unsafe) @objc public func bannerLoadFailed(_ errorCode: Swift.Int32, andMessage errorMessage: Swift.String!)
-  @_Concurrency.MainActor(unsafe) @objc public func bannerShowFailed(_ errorCode: Swift.Int32, andMessage errorMessage: Swift.String!)
-  @_Concurrency.MainActor(unsafe) @objc public func bannerDidReciveError(_ errorMessage: Swift.String!)
-  @_Concurrency.MainActor(unsafe) @objc public func bannerImpression()
-  @_Concurrency.MainActor(unsafe) @objc public func bannerLeftApplication()
+}
+@_inheritsConvenienceInitializers @objc public class AssetsManager : ObjectiveC.NSObject {
+  @objc public static func getAnswerImageButtonFile() -> UIKit.UIImage
+  @objc public static func getCrossBlueImageButtonFile() -> UIKit.UIImage
+  @objc public static func getWebViewCloseButtonFile() -> UIKit.UIImage
+  @objc public static func getDividerImageFile() -> UIKit.UIImage
+  @objc override dynamic public init()
+  @objc deinit
 }
 @objc(KidozError) public class KidozError : ObjectiveC.NSObject {
   @objc public var errorCode: Swift.Int
@@ -86,16 +85,9 @@ import _StringProcessing
   @objc deinit
 }
 @_inheritsConvenienceInitializers @objc(PlistUtil) public class PlistUtil : ObjectiveC.NSObject {
-  public static func getPListAsDictionary() -> [Swift.String : Any]?
-  @objc public static func checkSkAdNetworkExist(networkId: Swift.String) -> Swift.Bool
+  @objc public static func checkKidozSKADNetworkIdExist(networkId: Swift.String) -> Swift.Bool
+  @objc public static func getSKADNetworkIds() -> Swift.String
   @objc override dynamic public init()
-  @objc deinit
-}
-@_inheritsConvenienceInitializers @objc(AdParameters) public class AdParameters : ObjectiveC.NSObject {
-  @objc public var redirectType: KidozSDK.RedirectType
-  @objc public var skadNetworkParameters: KidozSDK.SKAdNetworkParameters?
-  @objc override dynamic public init()
-  @objc public init(data: Foundation.NSData)
   @objc deinit
 }
 @objc public protocol KidozBannerDelegate {
