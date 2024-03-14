@@ -2,8 +2,9 @@
 
 ## 9.1.0 - Mar 14, 2024
 
-* Added SKOverlay feature for Interstitial and Rewarded ads
-* Added PrivacyInfo.xcprivacy and Signature
+* Changed the min supported iOS version to iOS 11
+* Added SKOverlay for performance improvement
+* Added Privacy Manifest and Signature
 
 ## 9.0.1 - Oct 4, 2023
 
