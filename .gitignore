@@ -1,13 +1,17 @@
-**.DS_Store
+*.DS_Store
 
 # Xcode
 xcuserdata/
-**.xcframework
-project.xcworkspace/
+*.xcframework
+.build/
+
+# CocoaPods
+Podfile.lock
+Pods/
+*.xcworkspace
 
 DerivedData/
 
 ## Obj-C/Swift specific
 *.hmap
 
-.build/
