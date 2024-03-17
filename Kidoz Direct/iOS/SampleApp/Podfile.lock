@@ -1,0 +1,16 @@
+PODS:
+  - KidozSDK (9.1.0)
+
+DEPENDENCIES:
+  - KidozSDK (= 9.1.0)
+
+SPEC REPOS:
+  trunk:
+    - KidozSDK
+
+SPEC CHECKSUMS:
+  KidozSDK: 3e79bdfd0227fa8ff2cde5ca31e69948b66975f1
+
+PODFILE CHECKSUM: 27f6f5254143efd7da23ce4fc72650fe93742cfe
+
+COCOAPODS: 1.15.2
