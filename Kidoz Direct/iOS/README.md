@@ -17,7 +17,7 @@ See the following API integration documents:
 - [Swift](/Kidoz%20Direct/iOS/SampleApp/SampleAppSwift) 
 - [Objective-C](/Kidoz%20Direct/iOS/SampleApp/SampleAppObjc)
 
-Or look into our [SampleApp Workspace](/Kidoz%20Direct/iOS/SampleApp). Make sure to run 'pod update'.
+Or look into our [SampleApp Workspace](/Kidoz%20Direct/iOS/SampleApp). Make sure to run 'pod install'.
 
 ## SKAdNetwork Support
 
