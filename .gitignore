@@ -1,2 +1,13 @@
 **.DS_Store
+
+# Xcode
 xcuserdata/
+**.xcframework
+project.xcworkspace/
+
+DerivedData/
+
+## Obj-C/Swift specific
+*.hmap
+
+.build/
