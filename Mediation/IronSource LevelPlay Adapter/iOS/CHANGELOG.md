@@ -6,7 +6,7 @@
 * Compatible with LevelPlay mediation v7.6.0.0 and above
 * Added Privacy Manifest and Signature
 * Updated min supported XCode version to 14.3.1
-* Changed the min supported iOS version to iOS 11
+* Changed the min supported OS version to iOS 11
 
 ## 1.2.0 - Oct 19, 2023
 
