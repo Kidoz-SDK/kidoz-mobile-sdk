@@ -1,15 +1,15 @@
 # Kidoz ironSource iOS Adapter
 
-The Kidoz ironSource Adapter SDK is built and tested with ironSource mediation v7.5.0.0.<BR> 
-The minimum supported Xcode version is 14.1.<BR><BR>
+The Kidoz ironSource Adapter SDK is built and tested with ironSource mediation v7.6.0.0.<BR> 
+The minimum supported Xcode version is 14.3.1.<BR><BR>
 Check out the [ironSource Integration Documentation](https://developers.is.com/ironsource-mobile/ios/ios-sdk/) for app level integration.
 
 ## Integration Steps:
 
 To add Kidoz ironSource Adapter to your project with CocoaPods:
 ```
-pod 'KidozSDK', '9.0.1'
-pod 'KidozIronSourceAdapter', '1.2.0'
+pod 'KidozSDK', '9.1.0'
+pod 'KidozIronSourceAdapter', '1.3.0'
 ```
 
 ## iOS SKAdNetwork Support

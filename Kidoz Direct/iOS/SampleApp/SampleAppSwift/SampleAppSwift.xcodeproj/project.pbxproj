@@ -17,7 +17,6 @@
 		4CE524A42A6FBCCC0098022F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CE524A22A6FBCCC0098022F /* LaunchScreen.storyboard */; };
 		4CE524C42A6FC5D00098022F /* MainViewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE524C32A6FC5D00098022F /* MainViewHandler.swift */; };
 		4CE524C62A6FC6470098022F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE524C52A6FC6470098022F /* MainViewController.swift */; };
-		4CE524C92A6FC7540098022F /* TestApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4CE524C72A6FC7540098022F /* TestApp.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -45,7 +44,6 @@
 		4CE524A52A6FBCCC0098022F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4CE524C32A6FC5D00098022F /* MainViewHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewHandler.swift; sourceTree = "<group>"; };
 		4CE524C52A6FC6470098022F /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		4CE524C82A6FC7540098022F /* TestApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TestApp.xcdatamodel; sourceTree = "<group>"; };
 		B228844F671A4560CC7F1C13 /* Pods-SampleAppSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleAppSwift.debug.xcconfig"; path = "Target Support Files/Pods-SampleAppSwift/Pods-SampleAppSwift.debug.xcconfig"; sourceTree = "<group>"; };
 		EFC892C26D10D7A3E4FB4005 /* Pods-SampleAppSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleAppSwift.release.xcconfig"; path = "Target Support Files/Pods-SampleAppSwift/Pods-SampleAppSwift.release.xcconfig"; sourceTree = "<group>"; };
 		F45484FB0356F9229762C955 /* Pods_SampleAppSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SampleAppSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -90,7 +88,6 @@
 				4CE524C52A6FC6470098022F /* MainViewController.swift */,
 				4CE524C32A6FC5D00098022F /* MainViewHandler.swift */,
 				4CE524A02A6FBCCC0098022F /* Assets.xcassets */,
-				4CE524C72A6FC7540098022F /* TestApp.xcdatamodeld */,
 				4C4114B52A77ABF0004FFE76 /* Main.storyboard */,
 				4CE524A22A6FBCCC0098022F /* LaunchScreen.storyboard */,
 				4CE524A52A6FBCCC0098022F /* Info.plist */,
@@ -129,6 +126,7 @@
 				4CE524912A6FBCCB0098022F /* Frameworks */,
 				4CE524922A6FBCCB0098022F /* Resources */,
 				4C4114B22A77A764004FFE76 /* Embed Frameworks */,
+				F6FA7AEB0D2206CEFCCF6D99 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -208,6 +206,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		F6FA7AEB0D2206CEFCCF6D99 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SampleAppSwift/Pods-SampleAppSwift-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SampleAppSwift/Pods-SampleAppSwift-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SampleAppSwift/Pods-SampleAppSwift-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -216,7 +231,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CE524982A6FBCCB0098022F /* AppDelegate.swift in Sources */,
-				4CE524C92A6FC7540098022F /* TestApp.xcdatamodeld in Sources */,
 				4CE524C42A6FC5D00098022F /* MainViewHandler.swift in Sources */,
 				4CE5249A2A6FBCCB0098022F /* SceneDelegate.swift in Sources */,
 				4CE524C62A6FC6470098022F /* MainViewController.swift in Sources */,
@@ -451,19 +465,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		4CE524C72A6FC7540098022F /* TestApp.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				4CE524C82A6FC7540098022F /* TestApp.xcdatamodel */,
-			);
-			currentVersion = 4CE524C82A6FC7540098022F /* TestApp.xcdatamodel */;
-			path = TestApp.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 4CE5248C2A6FBCCB0098022F /* Project object */;
 }

@@ -1,8 +1,14 @@
 # Changelog
 
+## 9.1.0 - Mar 14, 2024
+
+* Added SKOverlay support for improved ad yield
+* Added Privacy Manifest and Signature
+* Changed the min supported OS version to iOS 11
+
 ## 9.0.1 - Oct 4, 2023
 
-* Rebuilt to support Xcode 14.2 
+* Updated min supported XCode version to 14.1
 
 ## 9.0.0 - Sep 16, 2023
 

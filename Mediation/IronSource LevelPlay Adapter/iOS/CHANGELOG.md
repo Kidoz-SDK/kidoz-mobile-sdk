@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.3.0 - Mar 14, 2024
+
+* Updated to use Kidoz SDK v9.1.0
+* Compatible with LevelPlay mediation v7.6.0.0 and above
+* Added Privacy Manifest and Signature
+* Updated min supported XCode version to 14.3.1
+* Changed the min supported OS version to iOS 11
+
 ## 1.2.0 - Oct 19, 2023
 
 * Compatible with LevelPlay mediation v7.5.0.0 and above
