@@ -1,10 +1,10 @@
 <dependencies>
   <packages>
-    <package>net.kidoz.sdk:kidoz-android-native:9.1.0</package>
+    <package>net.kidoz.sdk:kidoz-android-native:9.1.1</package>
     <package>org.greenrobot:eventbus:3.3.1</package>
   </packages>
   <files>
-    <file>Assets/Plugins/Android/net.kidoz.sdk.kidoz-android-native-9.1.0.aar</file>
+    <file>Assets/Plugins/Android/net.kidoz.sdk.kidoz-android-native-9.1.1.aar</file>
     <file>Assets/Plugins/Android/org.greenrobot.eventbus-3.3.1.aar</file>
     <file>Assets/Plugins/Android/org.greenrobot.eventbus-java-3.3.1.jar</file>
   </files>
