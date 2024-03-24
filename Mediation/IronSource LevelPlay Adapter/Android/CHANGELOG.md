@@ -2,6 +2,10 @@
 
 ## 1.2.0 - Oct 1, 2023
 
+* Updated to use Kidoz Core SDK v9.1.1
+  
+## 1.2.0 - Oct 1, 2023
+
 * Updated to use ironSource mediation v7.5.0
 
 
