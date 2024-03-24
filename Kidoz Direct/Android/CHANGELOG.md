@@ -1,5 +1,9 @@
 # Changelog
 
+## 9.1.1 - Mar 24, 2024
+
+* Handle WebView closing when onRenderProcessGone is called
+
 ## 9.1.0 - Feb 23, 2024
 
 * Support multithreaded SDK initialization.

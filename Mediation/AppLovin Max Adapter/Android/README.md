@@ -11,7 +11,7 @@ Include the following inside your app build.gradle dependencies:
 ```java
 dependencies {
     implementation 'org.greenrobot:eventbus:3.3.1'
-    implementation 'net.kidoz.sdk:kidoz-android-native:9.1.0'
+    implementation 'net.kidoz.sdk:kidoz-android-native:9.1.1'
     implementation 'net.kidoz.sdk:kidoz-android-applovin-adapter:1.1.0'
 }
 ```
