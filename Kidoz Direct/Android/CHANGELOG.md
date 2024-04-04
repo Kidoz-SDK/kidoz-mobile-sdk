@@ -1,5 +1,9 @@
 # Changelog
 
+## 9.1.1 - Apr 4, 2024
+
+* Update OM SDK to v1.4.12
+  
 ## 9.1.1 - Mar 24, 2024
 
 * Handle WebView closing when onRenderProcessGone is called
