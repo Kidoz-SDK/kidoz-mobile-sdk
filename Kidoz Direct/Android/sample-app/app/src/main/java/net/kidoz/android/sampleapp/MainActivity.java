@@ -61,13 +61,13 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setTitle(getString(R.string.app_name) + " v" + KidozSDK.getSDKVersion());
+        setTitle(getString(R.string.app_name) + " v" + Kidoz.getSDKVersion());
         setContentView(R.layout.activity_main);
 
         feedbackContainer = findViewById(R.id.feedbackContainer);
         feedbackTV = findViewById(R.id.feedbackTextView);
 
-        log("App version SDK v" + KidozSDK.getSDKVersion());
+        log("App version SDK v" + Kidoz.getSDKVersion());
 
         bannerContainer = findViewById(R.id.bannerContainer);
         // Banner Ad
