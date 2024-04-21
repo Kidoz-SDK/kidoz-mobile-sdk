@@ -1,5 +1,9 @@
 # Changelog
 
+## 9.1.1 - Apr 18, 2024
+
+* Fixed banner positioning on Unity plugin
+
 ## 9.1.0 - Mar 14, 2024
 
 * Added SKOverlay support for improved ad yield
