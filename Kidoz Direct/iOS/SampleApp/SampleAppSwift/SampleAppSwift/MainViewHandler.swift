@@ -173,6 +173,10 @@ public class MainViewHandler: NSObject, MainViewControllerHandler, KidozInitDele
         if let view = baseMainViewController.view {
             bannerView = KidozBannerView()
             bannerView.delegate = self
+
+            // MARK: set autoShow to false if you don't want your banner to show immediately after load
+            bannerView.setAutoShow(to: true)
+
             bannerView.translatesAutoresizingMaskIntoConstraints = false
             view.addSubview(bannerView)
             view.addConstraints(
