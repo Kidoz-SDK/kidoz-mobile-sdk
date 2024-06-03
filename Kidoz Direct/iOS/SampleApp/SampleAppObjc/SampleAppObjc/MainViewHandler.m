@@ -178,10 +178,6 @@
     if ([baseMainViewController view] != NULL) {
         bannerView = [[KidozBannerView alloc] init];
         bannerView.delegate = self;
-
-        // MARK: set autoShow to false if you don't want your banner to show immediately after load
-        [bannerView setAutoShowTo: YES];
-
         [bannerView setTranslatesAutoresizingMaskIntoConstraints: NO];
         [[baseMainViewController view]addSubview: bannerView];
         
