@@ -1,5 +1,9 @@
 # Changelog
 
+## 9.1.2 - Jun 2, 2024
+
+* Fixed banner autoShow feature
+
 ## 9.1.1 - Apr 18, 2024
 
 * Fixed banner positioning on Unity plugin
