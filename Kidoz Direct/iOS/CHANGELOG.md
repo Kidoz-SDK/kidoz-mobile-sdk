@@ -1,5 +1,9 @@
 # Changelog
 
+## 9.1.3 - Jun 19, 2024
+
+* Improved WebView preload flow
+
 ## 9.1.2 - Jun 2, 2024
 
 * Fixed banner autoShow feature
