@@ -2,7 +2,7 @@
 
 ## 9.1.3 - Jun 19, 2024
 
-* Improved WebView preload flow
+* Improved stability
 
 ## 9.1.2 - Jun 2, 2024
 
