@@ -23,7 +23,7 @@
         <source>https://github.com/CocoaPods/Specs</source>
       </sources>
     </iosPod>
-    <iosPod name="KidozAdmobAdapter" version="1.1.0">
+    <iosPod name="KidozAdmobAdapter" version="1.1.1">
       <sources>
         <source>https://github.com/CocoaPods/Specs</source>
       </sources>
