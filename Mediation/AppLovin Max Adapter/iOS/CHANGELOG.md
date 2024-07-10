@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.1.0 - Oct 9, 2023
+
+* Stability improvement
+
 ## 1.0.1 - Sep 16, 2023
 
 * Updated to use Kidoz SDK v9.0.0
