@@ -1,5 +1,9 @@
 # Changelog
 
+## 9.1.4 - Jul 16, 2024
+
+* Fixed banner load issue
+
 ## 9.1.3 - Jun 19, 2024
 
 * Improved stability
