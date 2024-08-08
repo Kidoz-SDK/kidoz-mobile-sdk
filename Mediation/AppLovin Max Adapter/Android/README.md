@@ -1,6 +1,6 @@
 # Kidoz Applovin Android Adapter
 
-The Kidoz Applovin Max Adapter was built and tested with ApplovinSDK v11.10.1<BR>
+The Kidoz Applovin Max Adapter was built and tested with ApplovinSDK v12.6.0<BR>
 
 Check out the [Max Mediation Documentation](https://dash.applovin.com/documentation/mediation/android/getting-started/integration) for app level integration.
 
