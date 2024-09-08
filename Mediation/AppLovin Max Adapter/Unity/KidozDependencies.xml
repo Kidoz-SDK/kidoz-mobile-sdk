@@ -18,7 +18,7 @@
   </androidPackages>
 
   <iosPods>
-    <iosPod name="KidozSDK" version="9.1.4">
+    <iosPod name="KidozSDK" version="9.1.5">
       <sources>
         <source>https://github.com/CocoaPods/Specs</source>
       </sources>
