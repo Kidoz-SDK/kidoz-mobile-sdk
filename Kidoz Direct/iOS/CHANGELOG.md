@@ -2,7 +2,7 @@
 
 ## 9.1.5 - Sep 8, 2024
 
-* Update privacy manifest
+* Fix privacy manifest 
 
 ## 9.1.4 - Jul 16, 2024
 
