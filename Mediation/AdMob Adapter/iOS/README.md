@@ -7,7 +7,7 @@ Check out the [Admob Mediation Documentation](https://developers.google.com/admo
 To add Kidoz Admob Adapter to your project with CocoaPods:
 ```
 pod 'KidozSDK', '9.1.5'
-pod 'KidozAdmobAdapter', '1.1.1'
+pod 'KidozAdmobAdapter', '1.1.2'
 ```
 
 Follow instructions on how to [Set Up Custom Events](https://developers.google.com/admob/ios/custom-events/setup#create) on the AdMob dashboard and set up Kidoz's adapter class:

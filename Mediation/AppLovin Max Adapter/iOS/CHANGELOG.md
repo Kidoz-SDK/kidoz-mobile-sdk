@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.1.1 - Sep 11, 2024
+
+* Fixed privacy manifest
+
 ## 1.1.0 - Oct 5, 2023
 
 * Stability improvement
