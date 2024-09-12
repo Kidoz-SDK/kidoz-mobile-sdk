@@ -3,7 +3,7 @@
 ## 1.1.2 - Sep 11, 2024
 
 * Added privacy manifest
-* Updated to use Kidoz SDK v9.1.4
+* Updated to use Kidoz SDK v9.1.5
 
 ## 1.1.1 - Jun 25, 2024
 
