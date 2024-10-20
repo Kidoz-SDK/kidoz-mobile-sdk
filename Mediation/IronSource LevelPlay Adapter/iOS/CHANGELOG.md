@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.3.1 - Sep 11, 2024
+
+* Fixed privacy manifest
+
 ## 1.3.0 - Mar 14, 2024
 
 * Updated to use Kidoz SDK v9.1.0
