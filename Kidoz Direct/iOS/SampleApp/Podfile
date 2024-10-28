@@ -1,8 +1,9 @@
 workspace 'SampleApp.xcworkspace'
-platform :ios, '11.0'
+platform :ios, '12.0'
 
 def kidoz_pod
-    pod 'KidozSDK','9.1.5'
+    #pod 'KidozSDK','9.1.5'
+    pod ‘KidozSDK’, :podspec => 'https://github.com/Kidoz-SDK/kidoz-ios-frameworks/raw/refs/heads/beta/KidozSDK/10.0.0/KidozSDK.podspec'
 end
 
 target 'SampleAppSwift' do

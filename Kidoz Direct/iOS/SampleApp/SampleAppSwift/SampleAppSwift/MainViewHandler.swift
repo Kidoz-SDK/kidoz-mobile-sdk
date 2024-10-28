@@ -25,11 +25,11 @@ public class MainViewHandler: NSObject, MainViewControllerHandler, KidozInitDele
     }
     
     public func getSDKVersion() -> String {
-        return Kidoz.instance().getSdkVersion()
+        return Kidoz.getSdkVersion()
     }
     
     public func initSDK() {
-        Kidoz.instance().initialize(withPublisherID: "14428", securityToken: "6yAsKUngaG5yC4X5HsRoatKTso40NMoZ", with: self)
+        Kidoz.instance.initialize(publisherID: "14428", securityToken: "6yAsKUngaG5yC4X5HsRoatKTso40NMoZ", delegate: self)
     }
     
     public func onInitSuccess() {
@@ -37,59 +37,59 @@ public class MainViewHandler: NSObject, MainViewControllerHandler, KidozInitDele
         baseMainViewController.onSDKInitSuccess()
     }
     
-    public func onInitError(_ errorMessage: String!) {
+    public func onInitError(_ errorMessage: String) {
         baseMainViewController.onSDKInitFailure(error: errorMessage)
     }
     
     // MARK: - Banner
     public func loadBanner() {
-        if Kidoz.instance().isSDKInitialized() {
+        if Kidoz.instance.isSDKInitialized() {
             bannerView.load()
         } else {
             baseMainViewController.logOut(message: "SDK not initialized")
         }
     }
-    
+
     public func closeBanner() {
         bannerView.close()
         bannerView.removeFromSuperview()
         bannerView = nil
         initBannerWithView()
     }
-    
-    public func onBannerAdLoaded() {
+
+    public func onBannerAdLoaded(kidozBannerView: KidozSDK.KidozBannerView) {
         baseMainViewController.onBannerLoaded()
     }
-    
-    public func onBannerAdFailedToLoad(error: KidozSDK.KidozError) {
+
+    public func onBannerAdFailedToLoad(kidozBannerView: KidozSDK.KidozBannerView, error: KidozSDK.KidozError) {
         baseMainViewController.onBannerLoadFailed(error: error.description)
     }
-    
-    public func onBannerAdShown() {
+
+    public func onBannerAdShown(kidozBannerView: KidozSDK.KidozBannerView) {
         baseMainViewController.onBannerOpened()
     }
-    
-    public func onBannerAdFailedToShow(error: KidozSDK.KidozError) {
+
+    public func onBannerAdFailedToShow(kidozBannerView: KidozSDK.KidozBannerView, error: KidozSDK.KidozError) {
         baseMainViewController.onBannerShowFailed(error: error.description)
     }
-    
-    public func onBannerAdImpression() {
+
+    public func onBannerAdImpression(kidozBannerView: KidozSDK.KidozBannerView) {
         baseMainViewController.onBannerImpression()
     }
-    
-    public func onBannerAdClosed() {
+
+    public func onBannerAdClosed(kidozBannerView: KidozSDK.KidozBannerView) {
         baseMainViewController.onBannerClosed()
     }
-    
+
     // MARK: - Interstitial ad
     public func loadInterstitial() {
-        if Kidoz.instance().isSDKInitialized() {
+        if Kidoz.instance.isSDKInitialized() {
             KidozInterstitialAd.load(delegate: self)
         } else {
             baseMainViewController.logOut(message: "SDK not initialized")
         }
     }
-    
+
     public func showInterstitial() {
         if interstitialAd != nil && interstitialAd!.isLoaded() {
             interstitialAd!.show(viewController: baseMainViewController)
@@ -97,41 +97,41 @@ public class MainViewHandler: NSObject, MainViewControllerHandler, KidozInitDele
             baseMainViewController.logOut(message: "Interstitial not ready")
         }
     }
-    
-    public func onInterstitialAdLoaded(ad: KidozSDK.KidozInterstitialAd) {
+
+    public func onInterstitialAdLoaded(kidozInterstitialAd ad: KidozSDK.KidozInterstitialAd) {
         self.interstitialAd = ad
         baseMainViewController.onInterstitialLoaded()
     }
-    
-    public func onInterstitialAdFailedToLoad(error: KidozSDK.KidozError) {
+
+    public func onInterstitialAdFailedToLoad(kidozError error: KidozSDK.KidozError) {
         baseMainViewController.onInterstitialLoadFailed(error: error.description)
     }
-    
-    public func onInterstitialAdFailedToShow(error: KidozSDK.KidozError) {
-        baseMainViewController.onInterstitialShowFailed(error: error.description)
+
+    public func onInterstitialAdFailedToShow(kidozInterstitialAd: KidozSDK.KidozInterstitialAd, kidozError: KidozSDK.KidozError) {
+        baseMainViewController.onInterstitialShowFailed(error: kidozError.description)
     }
-    
-    public func onInterstitialAdShown(ad: KidozSDK.KidozInterstitialAd) {
+
+    public func onInterstitialAdShown(kidozInterstitialAd ad: KidozSDK.KidozInterstitialAd) {
         baseMainViewController.onInterstitialOpened()
     }
-    
-    public func onInterstitialImpression() {
+
+    public func onInterstitialImpression(kidozInterstitialAd: KidozSDK.KidozInterstitialAd) {
         baseMainViewController.onInterstitialImpression()
     }
-    
-    public func onInterstitialAdClosed(ad: KidozSDK.KidozInterstitialAd) {
+
+    public func onInterstitialAdClosed(kidozInterstitialAd ad: KidozSDK.KidozInterstitialAd) {
         baseMainViewController.onInterstitialClosed()
     }
-    
+
     // MARK: - Rewarded ad
     public func loadRewarded() {
-        if Kidoz.instance().isSDKInitialized() {
+        if Kidoz.instance.isSDKInitialized() {
             KidozRewardedAd.load(delegate: self)
         } else {
             baseMainViewController.logOut(message: "SDK not initialized")
         }
     }
-    
+
     public func showRewarded() {
         if rewardedAd != nil && rewardedAd!.isLoaded() {
             rewardedAd!.show(viewController: baseMainViewController)
@@ -139,36 +139,36 @@ public class MainViewHandler: NSObject, MainViewControllerHandler, KidozInitDele
             baseMainViewController.logOut(message: "Rewarded not ready")
         }
     }
-    
-    public func onRewardedAdLoaded(ad: KidozSDK.KidozRewardedAd) {
+
+    public func onRewardedAdLoaded(kidozRewardedAd ad: KidozSDK.KidozRewardedAd) {
         rewardedAd = ad
         baseMainViewController.onRewardedLoaded()
     }
-    
-    public func onRewardedAdFailedToLoad(error: KidozSDK.KidozError) {
+
+    public func onRewardedAdFailedToLoad(kidozError error: KidozSDK.KidozError) {
         baseMainViewController.onRewardedLoadFailed(error: error.description)
     }
-    
-    public func onRewardedAdShown(ad: KidozSDK.KidozRewardedAd) {
+
+    public func onRewardedAdShown(kidozRewardedAd ad: KidozSDK.KidozRewardedAd) {
         baseMainViewController.onRewardedOpened()
     }
-    
-    public func onRewardedAdFailedToShow(error: KidozSDK.KidozError) {
-        baseMainViewController.onRewardedShowFailed(error: error.description)
+
+    public func onRewardedAdFailedToShow(kidozRewardedAd: KidozSDK.KidozRewardedAd, kidozError: KidozSDK.KidozError) {
+        baseMainViewController.onRewardedShowFailed(error: kidozError.description)
     }
-    
-    public func onRewardedImpression() {
+
+    public func onRewardedImpression(kidozRewardedAd: KidozSDK.KidozRewardedAd) {
         baseMainViewController.onRewardedImpression()
     }
-    
-    public func onRewardReceived(ad: KidozSDK.KidozRewardedAd) {
+
+    public func onRewardReceived(kidozRewardedAd ad: KidozSDK.KidozRewardedAd) {
         baseMainViewController.onRewardAchieved()
     }
-    
-    public func onRewardedAdClosed(ad: KidozSDK.KidozRewardedAd) {
+
+    public func onRewardedAdClosed(kidozRewardedAd ad: KidozSDK.KidozRewardedAd) {
         baseMainViewController.onRewardedClosed()
     }
-    
+
     func initBannerWithView() {
         if let view = baseMainViewController.view {
             bannerView = KidozBannerView()
@@ -199,7 +199,7 @@ public class MainViewHandler: NSObject, MainViewControllerHandler, KidozInitDele
                     toItem: nil,
                     attribute: .notAnAttribute,
                     multiplier: 0,
-                    constant: KidozBannerView.BANNER_HEIGHT),
+                    constant: 50),
                  NSLayoutConstraint(
                     item: bannerView!,
                     attribute: .width,
@@ -207,8 +207,8 @@ public class MainViewHandler: NSObject, MainViewControllerHandler, KidozInitDele
                     toItem: nil,
                     attribute: .notAnAttribute,
                     multiplier: 0,
-                    constant: KidozBannerView.BANNER_WIDTH)])
-            
+                    constant: 320)])
+
         }
     }
 }
