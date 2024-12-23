@@ -8,8 +8,8 @@ Check out the [ironSource Integration Documentation](https://developers.is.com/i
 
 To add Kidoz ironSource Adapter to your project with CocoaPods:
 ```
-pod 'KidozSDK', '9.1.5'
-pod 'KidozIronSourceAdapter', '1.3.1'
+pod 'KidozSDK', '10.0.0'
+pod 'KidozIronSourceAdapter', '2.0.0'
 ```
 
 ## iOS SKAdNetwork Support
