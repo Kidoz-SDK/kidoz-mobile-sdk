@@ -91,8 +91,8 @@ public class MainViewHandler: NSObject, MainViewControllerHandler, KidozInitDele
     }
 
     public func showInterstitial() {
-        if interstitialAd != nil && interstitialAd!.isLoaded() {
-            interstitialAd!.show(viewController: baseMainViewController)
+        if let intestitial = interstitialAd, intestitial.isLoaded() {
+            intestitial.show(viewController: baseMainViewController)
         } else {
             baseMainViewController.logOut(message: "Interstitial not ready")
         }
@@ -133,8 +133,8 @@ public class MainViewHandler: NSObject, MainViewControllerHandler, KidozInitDele
     }
 
     public func showRewarded() {
-        if rewardedAd != nil && rewardedAd!.isLoaded() {
-            rewardedAd!.show(viewController: baseMainViewController)
+        if let rewarded = rewardedAd, rewarded.isLoaded() {
+            rewarded.show(viewController: baseMainViewController)
         } else {
             baseMainViewController.logOut(message: "Rewarded not ready")
         }
