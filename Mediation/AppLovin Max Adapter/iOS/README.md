@@ -13,7 +13,7 @@ pod 'KidozApplovinAdapter', '2.0.0'
 ```
 ## iOS SKAdNetwork Support
 
-In order to support CPI attribution on iOS, please make sure to include the Kidoz ad network ID in your app property list file (Info.plist):
+Please make sure to include the Kidoz ad network ID in your app property list file (Info.plist):
 
 ```java
 v79kvwwj4g.skadnetwork	

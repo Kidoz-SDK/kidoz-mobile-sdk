@@ -21,7 +21,7 @@ Or look into our [SampleApp Workspace](/Kidoz%20Direct/iOS/SampleApp).
 
 ## SKAdNetwork Support
 
-In order to support CPI attribution on iOS, please make sure to include the Kidoz ad network ID in your app property list file (Info.plist):
+Please make sure to include the Kidoz ad network ID in your app property list file (Info.plist):
 
 ```Swift
 v79kvwwj4g.skadnetwork	
