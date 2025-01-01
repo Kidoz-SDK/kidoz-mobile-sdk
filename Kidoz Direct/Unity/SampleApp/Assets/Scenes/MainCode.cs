@@ -121,7 +121,7 @@ public class MainCode : MonoBehaviour, IScreenLogger
     public void loadInterstitial()
     {
         AddEvent("----- Load Interstitial --");
-        Kidoz.loadInterstitialAd(false);
+        Kidoz.loadInterstitialAd();
     }
 
     public void showInterstitial()
@@ -165,7 +165,7 @@ public class MainCode : MonoBehaviour, IScreenLogger
     public void loadRewarded()
     {
         AddEvent("----- Load Rewarded --");
-        Kidoz.loadRewardedAd(false);
+        Kidoz.loadRewardedAd();
     }
 
     public void showRewarded()

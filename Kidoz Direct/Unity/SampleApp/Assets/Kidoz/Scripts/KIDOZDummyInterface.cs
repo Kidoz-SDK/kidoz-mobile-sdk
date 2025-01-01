@@ -40,24 +40,14 @@ namespace KIDOZDummyInterface
 			DebugLog ( "loadBanner, autoShow=" + autoShow + ", position=" + position );
 		}
 
-		public void generateInterstitial ()
+		public void loadInterstitialAd ()
 		{
-			DebugLog ( "generateInterstitial" );
+			DebugLog ( "loadInterstitialAd" );
 		}
 
-		public void loadInterstitialAd (bool autoShow)
+		public void loadRewardedAd ()
 		{
-			DebugLog ( "loadInterstitialAd, autoShow=" + autoShow );
-		}
-
-		public void generateRewarded ()
-		{
-			DebugLog ( "generateRewarded" );
-		}
-
-		public void loadRewardedAd (bool autoShow)
-		{
-			DebugLog ( "loadRewardedAd, autoShow=" + autoShow );
+			DebugLog ( "loadRewardedAd" );
 		}
 
 		public void logMessage (string message)
@@ -91,10 +81,5 @@ namespace KIDOZDummyInterface
 			Debug.Log ( "KIDOZ Dummy: " + msg );
 		}
 
-		public void setupCallbacks ()
-		{
-			DebugLog ("setupCallbacks");
-
-		}
 	}
 }

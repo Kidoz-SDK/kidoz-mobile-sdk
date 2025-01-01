@@ -28,7 +28,7 @@ namespace KIDOZAndroidInterface {
 			string kidoz_name = KidozSDK.Kidoz.Instance.gameObject.name;
 
 			//init Kidoz
-			using (var kidozBridgeClass = new AndroidJavaClass ("com.kidoz.sdk.api.platforms.KidozUnityBridge")) {
+			using (var kidozBridgeClass = new AndroidJavaClass ("net.kidoz.platforms.KidozUnityBridge")) {
 
 				kidozBridgeObject = kidozBridgeClass.CallStatic<AndroidJavaObject> ("getInstance", activityContext);
 
@@ -45,18 +45,18 @@ namespace KIDOZAndroidInterface {
 
 			return kidozBridgeObject.Call<bool>("isInitialised");
 		}
-			
+
+		public string getSdkVersion(){
+			return "TBD";
+		}
+
+
 		
 		//***********************************//
 		//***** INTERSTITIAL & REWARDED *****//
 		//***********************************//
 
-		public void loadInterstitialAd(bool autoShow)
-		{
-			kidozBridgeObject.Call("loadInterstitialAd",autoShow);
-		}
-
-		public void generateInterstitial()
+		public void loadInterstitialAd()
 		{
 			kidozBridgeObject.Call("loadInterstitialAd",false);
 		}
@@ -71,12 +71,7 @@ namespace KIDOZAndroidInterface {
 			return kidozBridgeObject.Call<bool>("getIsInterstitialLoaded");
 		}
 
-		public void loadRewardedAd(bool autoShow)
-		{
-			kidozBridgeObject.Call("loadRewardedAd",autoShow);
-		}
-		
-		public void generateRewarded()
+		public void loadRewardedAd()
 		{
 			kidozBridgeObject.Call("loadRewardedAd",false);
 		}
@@ -106,8 +101,6 @@ namespace KIDOZAndroidInterface {
 			kidozBridgeObject.Call("setBannerPosition", position);
 		}
 
-
-
 		public void showBanner()
 		{
 			kidozBridgeObject.Call ("showBannerAd");
@@ -117,9 +110,6 @@ namespace KIDOZAndroidInterface {
 		{
 			kidozBridgeObject.Call ("hideBannerAd");
 		}
-
-
-
 
 		public void logMessage(string message)
 		{
