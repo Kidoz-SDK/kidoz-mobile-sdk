@@ -31,6 +31,10 @@ public class MainCode : MonoBehaviour, IScreenLogger
 
     protected void initSDK()
     {
+        const string publisher_id = "14428";
+		const string token = "6yAsKUngaG5yC4X5HsRoatKTso40NMoZ";
+
+        Kidoz.init(publisher_id, token);
         Kidoz.SetiOSAppPauseOnBackground(true);
 
         //Delegates
