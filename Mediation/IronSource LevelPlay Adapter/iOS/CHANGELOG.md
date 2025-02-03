@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.3.2 - Feb 3, 2025
+
+* Fixed crash on unity banner load 
+
 ## 1.3.1 - Sep 11, 2024
 
 * Fixed privacy manifest
