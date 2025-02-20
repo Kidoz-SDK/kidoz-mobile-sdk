@@ -1,6 +1,6 @@
 # Kidoz Admob iOS Adapter
-The Kidoz Admob adapter was built and tested with Google-Mobile-Ads-SDK v10.8.0.<BR>
-The minimum supported Xcode version is 14.1.<BR><BR>
+The Kidoz Admob adapter was built and tested with Google-Mobile-Ads-SDK v12.0.0.<BR>
+The minimum supported Xcode version is 16.0.<BR><BR>
 Check out the [Admob Mediation Documentation](https://developers.google.com/admob/ios/quick-start) for app level integration.
 
 ## Integration Steps:
