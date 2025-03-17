@@ -9,9 +9,9 @@ Include the following inside your app build.gradle dependencies:
 
 ```java
 dependencies {
-    implementation 'org.greenrobot:eventbus:3.3.1'
-    implementation 'net.kidoz.sdk:kidoz-android-native:9.1.2'
-    implementation "net.kidoz.sdk:kidoz-android-admob-adapter:1.9.0"
+    implementation 'com.kpadplayer.sdk:kpadplayer-android-native:10.0.1'
+    implementation 'net.kidoz.sdk:kidoz-android-native:10.0.1'
+    implementation "net.kidoz.sdk:kidoz-android-admob-adapter:2.0.1"
 }
 ```
 Follow instructions on how to [Set Up Custom Events](https://developers.google.com/admob/android/custom-events/setup#create) on the AdMob dashboard and set up Kidoz's adapter class:
