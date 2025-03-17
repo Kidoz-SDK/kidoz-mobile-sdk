@@ -1,8 +1,13 @@
 # Changelog
 
-## 1.3.1 - Sep 11, 2024
+## 2.0.1 - Mar 19, 2025
 
-* Fixed privacy manifest
+* Updated to use Kidoz Core SDK v10.0.1
+
+## 2.0.0 - Mar 17, 2025
+
+* Updated to use Kidoz Core SDK v10.0.0
+* Updated to use ironSource mediation v8.4.0
 
 ## 1.3.0 - Oct 1, 2023
 
