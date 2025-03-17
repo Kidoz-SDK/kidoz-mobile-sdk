@@ -5,8 +5,8 @@
 #### Include the following inside your app build.gradle dependencies:
 ```groovy
 dependencies {
-    implementation 'org.greenrobot:eventbus:3.3.1'
-    implementation 'net.kidoz.sdk:kidoz-android-native:9.1.2'
+    implementation("net.kidoz.sdk:kidoz-android-native:10.0.1")
+    implementation("com.kpadplayer.sdk:kpadplayer-android-native:10.0.1")    
 }
 ``` 
 
@@ -25,64 +25,57 @@ Initialize the SDK inside your MainActivity's onCreate.
 protected void onCreate(Bundle savedInstanceState)
 {
     ....
-    Kidoz.initialize(MainActivity.this, PUBLISHER_ID, TOKEN, new SDKInitializationListener() {
-        @Override
-        public void onInitSuccess() {
+    Kidoz.initialize(this, PUBLISHER_ID, TOKEN, object : KidozInitializationListener {
+
+        override fun onInitSuccess() {
             //SDK Init | Success().
         }
 
-        @Override
-        public void onInitError(String error) {
+        override fun onInitError(error: KidozError) {
             //SDK Init | Error
         }
-    });    
-    //the rest of your main activity onCreate
+
+    })
     ...
 }
 ```
 
 ## Kidoz Interstitial
-The Kidoz InterstitialAd is a full screen single ad unit.
+The KidozInterstitialAd is a full screen single ad unit.
 
 #### Displaying Interstitial Ads
 
-To use the Interstitial Ad you first need to load an Ad instance with an InterstitialAdCallback listener :
+To use the Interstitial Ad you first need to load an Ad instance with an KidozInterstitialAdCallback listener :
 
 ```java
-InterstitialAd mInterstitialAd;
+val mInterstitialAd : KidozInterstitialAd? = null
 
-InterstitialAd.load(<Activity>, new InterstitialAdCallback() {
-    @Override
-    public void onAdLoaded(InterstitialAd ad) {
-        mInterstitialAd = ad;
-        // onInterstitialLoaded();
+KidozInterstitialAd.load(this, object : KidozInterstitialAdCallback {
+    override fun onAdLoaded(ad: KidozInterstitialAd) {
+        kidozInterstitialAd = ad
     }
 
-    @Override
-    public void onAdFailedToLoad(KidozError error) {
-        // onInterstitialLoadFailed(...);
+    override fun onAdFailedToLoad(error: KidozError) {
+
     }
 
-    @Override
-    public void onAdShown(InterstitialAd ad) {
-        // onInterstitialShown();
+    override fun onAdShown(ad: KidozInterstitialAd) {
+
     }
 
-    @Override
-    public void onAdFailedToShow(KidozError error) {
-       //  onInterstitialShowFailed(...);
+    override fun onAdFailedToShow(ad: KidozInterstitialAd, error: KidozError) {
+        pradoInterstitialAd = null
     }
 
-    @Override
-    public void onAdImpression() {
-        // onInterstitialImpression();
+    override fun onAdImpression(ad: KidozInterstitialAd) {
+
     }
 
-    @Override
-    public void onAdClosed(InterstitialAd ad) {
-        // onInterstitialClosed();
+    override fun onAdClosed(ad: KidozInterstitialAd) {
+        kidozInterstitialAd = null
     }
-});
+
+})  
 ```
 
 
@@ -94,53 +87,45 @@ mInterstitialAd.show();
 ```
 
 ## Kidoz Rewarded
-Kidoz RewardedAd is a full screen single ad unit.
+KidozRewardedAd is a full screen single ad unit.
 
 #### Displaying Rewarded Ads
 
-To use the Rewarded Ad you first need to load an Ad instance with a RewardedAdCallback listener :
+To use the Rewarded Ad you first need to load an Ad instance with a KidozRewardedAdCallback listener :
 
 ```java
-RewardedAd mRewardedAd;
+var kidozRewardedAd: KidozRewardedAd? = null
 
-RewardedAd.load(MainActivity.this, new RewardedAdCallback() {
-    @Override
-    public void onAdLoaded(RewardedAd ad) {
-        mRewardedAd = ad;
-        // onRewardedLoaded();
+KidozRewardedAd.load(this, object : KidozRewardedAdCallback {
+    override fun onAdLoaded(ad: KidozRewardedAd) {
+        kidozRewardedAd = ad
     }
 
-    @Override
-    public void onAdFailedToLoad(KidozError error) {
-        // onRewardedLoadFailed(...);
+    override fun onAdFailedToLoad(error: KidozError) {
+
     }
 
-    @Override
-    public void onAdShown(RewardedAd ad) {
-        // onRewardedShown();
+    override fun onAdShown(ad: KidozRewardedAd) {
+
     }
 
-    @Override
-    public void onAdFailedToShow(KidozError error) {
-        // onRewardedShowFailed(...);
+    override fun onAdFailedToShow(ad: KidozRewardedAd, error: KidozError) {
+        kidozRewardedAd = null
     }
 
-    @Override
-    public void onAdImpression() {
-        // onRewardedImpression();
+    override fun onAdImpression(ad: KidozRewardedAd) {
+
     }
 
-    @Override
-    public void onAdClosed(RewardedAd ad) {
-        // onRewardedClosed();
+    override fun onRewardReceived(ad: KidozRewardedAd) {
+
     }
 
-    @Override
-    public void onRewardReceived() {
-        // onRewardAchieved();
+    override fun onAdClosed(ad: KidozRewardedAd) {
+        pradoRewardedAd = null
     }
 
-});
+})
 ```
 
 
@@ -159,48 +144,47 @@ KidozBannerView is a view that shows banner ads.
 
 * Create a KidozBannerView instance:
 ```java
-KidozBannerView kidozBannerView = new KidozBannerView(<Activity>); 
+val kidozBannerView = KidozBannerView(<Activity>); 
 ```
 
 * Set banner position:
 ```java
-kidozBannerView.setBannerPosition(BANNER_POSITION.TOP_CENTER / BOTTOM_CENTER); 
+kidozBannerView.setBannerPosition(KidozBannerView.Position.BOTTOM_CENTER)
+```
+
+* Disable banner auto show on load:
+```java
+kidozBannerView.setAutoShow(false)
 ```
 
 * Set banner listener:
 ```java 
-kidozBannerView.setKidozBannerListener(new BannerAdCallback() {
+kidozBannerView.setBannerCallback(object : KidozBannerAdCallback {
+    override fun onAdLoaded() {
+       
+    }
 
-            @Override
-            public void onAdLoaded() {
-                // onBannerLoaded();
-            }
+    override fun onAdFailedToLoad(error: KidozError) {
+      
+      
+    }
 
-            @Override
-            public void onAdFailedToLoad(KidozError error) {
-                // onBannerLoadFailed(...);
-            }
+    override fun onAdShown() {
+        
+    }
 
-            @Override
-            public void onAdShown() {
-               // onBannerShown();
-            }
+    override fun onAdFailedToShow(error: KidozError) {
+        
+    }
 
-            @Override
-            public void onAdFailedToShow(KidozError error) {
-               // onBannerShowFailed(...);
-            }
+    override fun onAdImpression() {
+        
+    }
 
-            @Override
-            public void onAdImpression() {
-                // onBannerImpression();
-            }
-
-            @Override
-            public void onAdClosed() {
-                // onBannerClosed();
-            }
-        });
+    override fun onAdClosed() {
+        
+    }
+})
 ```
 
 * Call banner load before showing:
@@ -208,7 +192,7 @@ kidozBannerView.setKidozBannerListener(new BannerAdCallback() {
 kidozBannerView.load(); 
 ```
 
-* Call banner show (banner needs to be ready before showing):
+* Call banner show if setAutoShow was set to false (banner needs to be loaded before showing):
 
 ```java
 kidozBannerView.show(); 
@@ -216,13 +200,13 @@ kidozBannerView.show();
 
 * To hide banner:
 ```java
-kidozBannerView.hide(); 
+kidozBannerView.close(); 
 ```
 
 ### Showing KidozBannerView in View Hierarchy
 * Add KidozBannerView to your layout (in xml):
 ```xml
-            <com.kidoz.sdk.api.ads.banner.KidozBannerView
+            <net.kidoz.ads.banners.KidozBannerView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/<YOUR_ID_NAME>"/>
