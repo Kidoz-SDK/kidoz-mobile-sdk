@@ -205,7 +205,7 @@ kidozBannerView.close();
 ### Showing KidozBannerView in View Hierarchy
 * Add KidozBannerView to your layout (in xml):
 ```xml
-            <net.kidoz.ads.banners.KidozBannerView
+            <net.kidoz.ads.banner.KidozBannerView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/<YOUR_ID_NAME>"/>
