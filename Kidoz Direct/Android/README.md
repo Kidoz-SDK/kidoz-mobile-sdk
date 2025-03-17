@@ -213,7 +213,7 @@ kidozBannerView.close();
 
 * Find KidozBannerView instance in your layout by id:
 ```java
-final KidozBannerView kidozBannerView = (KidozBannerView) findViewById(<your banner id>); 
+val kidozBannerView = findViewById(<YOUR_ID_NAME>); 
 ```
 
 
