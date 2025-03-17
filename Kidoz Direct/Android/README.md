@@ -193,7 +193,6 @@ kidozBannerView.load();
 ```
 
 * Call banner show if setAutoShow was set to false (banner needs to be loaded before showing):
-
 ```java
 kidozBannerView.show(); 
 ```
