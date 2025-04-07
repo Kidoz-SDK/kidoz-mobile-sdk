@@ -1,5 +1,9 @@
 # Changelog
 
+## 9.2.0 - Apr 7, 2025
+
+* Build with iOS 16.2
+  
 ## 9.1.5 - Sep 8, 2024
 
 * Fix privacy manifest 
