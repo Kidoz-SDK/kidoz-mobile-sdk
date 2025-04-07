@@ -1,6 +1,10 @@
 # Changelog
 
-## 1.3.2 - Feb 3, 2025
+## 1.4.0 - Apr 7, 2025
+
+* Build with iOS 16.2
+
+* ## 1.3.2 - Feb 3, 2025
 
 * Fixed crash on unity banner load 
 
