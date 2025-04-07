@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.2.0 - Apr 7, 2025
+
+* Build with iOS 16.2
+ 
 ## 1.1.2 - Sep 11, 2024
 
 * Added privacy manifest
