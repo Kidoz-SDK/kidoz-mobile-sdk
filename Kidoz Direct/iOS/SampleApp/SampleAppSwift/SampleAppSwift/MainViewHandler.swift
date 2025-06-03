@@ -1,214 +1,216 @@
 //
 //  MainViewHandler.swift
-//  SampleApp
+//  KidozIronSourceTestApp
 //
-//  Created by Maria on 25/07/2023.
+//  Created by Yarden Rosenberg on 19/12/2022.
 //
 
-import Foundation
-import KidozSDK
 import CommonSampleApp
+import IronSource
 
-public class MainViewHandler: NSObject, MainViewControllerHandler, KidozInitDelegate, KidozInterstitialDelegate, KidozRewardedDelegate, KidozBannerDelegate {
+public class MainViewHandler : NSObject, MainViewControllerHandler,ISInitializationDelegate{
+
     
+    
+    let kAPPKEY = "1103e2a55"
     var baseMainViewController: BaseMainViewController!
-    var bannerView: KidozBannerView!
-    var interstitialAd: KidozSDK.KidozInterstitialAd?
-    var rewardedAd: KidozSDK.KidozRewardedAd?
-    
-    public func setViewController(baseMainViewController: BaseMainViewController) {
+    var bannerView: ISBannerView?
+
+    public func setViewController(baseMainViewController: CommonSampleApp.BaseMainViewController) {
         self.baseMainViewController = baseMainViewController
     }
     
     public func getAppLabel() -> String {
-        return "Kidoz Sample App"
+        return "IronSource Test App"
     }
     
     public func getSDKVersion() -> String {
-        return Kidoz.instance().getSdkVersion()
+        return "9.2.0"
     }
     
     public func initSDK() {
-        Kidoz.instance().initialize(withPublisherID: "14428", securityToken: "6yAsKUngaG5yC4X5HsRoatKTso40NMoZ", with: self)
+        baseMainViewController.logOut(message: "Initilalizing IronSource::" + IronSource.sdkVersion())
+        
+        IronSource.setLevelPlayRewardedVideoManualDelegate(ISRewardedDelegate(baseMainViewController))
+        IronSource.setLevelPlayInterstitialDelegate(ISInterstitialDelegate(baseMainViewController))
+        IronSource.setLevelPlayBannerDelegate(ISBannerDelegate(baseMainViewController, mainViewHandler_: self))
+        
+//        let requestBuilder = LPMInitRequestBuilder(appKey: kAPPKEY)
+//                    .withLegacyAdFormats([IS_REWARDED_VIDEO])
+////                    .withUserId("UserId")
+//        let initRequest = requestBuilder.build()
+//        LevelPlay.initWith(initRequest)
+//        { [self] config, error in
+//            if let error = error {
+//                self.baseMainViewController.onSDKInitFailure(error: error.localizedDescription)
+//            } else {
+//                initializationDidComplete()
+//            }
+//        }
+//        initializationDidComplete()
+        IronSource.initWithAppKey(kAPPKEY,delegate: self)
     }
     
-    public func onInitSuccess() {
-        initBannerWithView()
-        baseMainViewController.onSDKInitSuccess()
-    }
-    
-    public func onInitError(_ errorMessage: String!) {
-        baseMainViewController.onSDKInitFailure(error: errorMessage)
-    }
-    
-    // MARK: - Banner
-    public func loadBanner() {
-        if Kidoz.instance().isSDKInitialized() {
-            bannerView.load()
-        } else {
-            baseMainViewController.logOut(message: "SDK not initialized")
+    public func initializationDidComplete() {
+        DispatchQueue.main.async {
+            self.baseMainViewController.onSDKInitSuccess()
         }
+    }
+    
+    public func loadBanner() {
+        print("Load Banner pressed")
+        let BNSize: ISBannerSize = ISBannerSize(description: "BANNER",width:320 ,height:50)
+        IronSource.loadBanner(with: self.baseMainViewController, size: BNSize)
     }
     
     public func closeBanner() {
-        bannerView.close()
-        bannerView.removeFromSuperview()
-        bannerView = nil
-        initBannerWithView()
-    }
-    
-    public func onBannerAdLoaded() {
-        baseMainViewController.onBannerLoaded()
-    }
-    
-    public func onBannerAdFailedToLoad(error: KidozSDK.KidozError) {
-        baseMainViewController.onBannerLoadFailed(error: error.description)
-    }
-    
-    public func onBannerAdShown() {
-        baseMainViewController.onBannerOpened()
-    }
-    
-    public func onBannerAdFailedToShow(error: KidozSDK.KidozError) {
-        baseMainViewController.onBannerShowFailed(error: error.description)
-    }
-    
-    public func onBannerAdImpression() {
-        baseMainViewController.onBannerImpression()
-    }
-    
-    public func onBannerAdClosed() {
-        baseMainViewController.onBannerClosed()
-    }
-    
-    // MARK: - Interstitial ad
-    public func loadInterstitial() {
-        if Kidoz.instance().isSDKInitialized() {
-            KidozInterstitialAd.load(delegate: self)
-        } else {
-            baseMainViewController.logOut(message: "SDK not initialized")
+        if bannerView != nil {
+            IronSource.destroyBanner(bannerView!)
         }
+    }
+    
+    public func loadInterstitial() {
+        IronSource.loadInterstitial()
     }
     
     public func showInterstitial() {
-        if interstitialAd != nil && interstitialAd!.isLoaded() {
-            interstitialAd!.show(viewController: baseMainViewController)
-        } else {
-            baseMainViewController.logOut(message: "Interstitial not ready")
-        }
+        IronSource.showInterstitial(with: baseMainViewController)
     }
+
+    // ********************
     
-    public func onInterstitialAdLoaded(ad: KidozSDK.KidozInterstitialAd) {
-        self.interstitialAd = ad
-        baseMainViewController.onInterstitialLoaded()
-    }
-    
-    public func onInterstitialAdFailedToLoad(error: KidozSDK.KidozError) {
-        baseMainViewController.onInterstitialLoadFailed(error: error.description)
-    }
-    
-    public func onInterstitialAdFailedToShow(error: KidozSDK.KidozError) {
-        baseMainViewController.onInterstitialShowFailed(error: error.description)
-    }
-    
-    public func onInterstitialAdShown(ad: KidozSDK.KidozInterstitialAd) {
-        baseMainViewController.onInterstitialOpened()
-    }
-    
-    public func onInterstitialImpression() {
-        baseMainViewController.onInterstitialImpression()
-    }
-    
-    public func onInterstitialAdClosed(ad: KidozSDK.KidozInterstitialAd) {
-        baseMainViewController.onInterstitialClosed()
-    }
-    
-    // MARK: - Rewarded ad
     public func loadRewarded() {
-        if Kidoz.instance().isSDKInitialized() {
-            KidozRewardedAd.load(delegate: self)
-        } else {
-            baseMainViewController.logOut(message: "SDK not initialized")
-        }
+        IronSource.loadRewardedVideo()
     }
     
     public func showRewarded() {
-        if rewardedAd != nil && rewardedAd!.isLoaded() {
-            rewardedAd!.show(viewController: baseMainViewController)
-        } else {
-            baseMainViewController.logOut(message: "Rewarded not ready")
+        IronSource.showRewardedVideo(with:baseMainViewController)
+    }
+    
+    
+    
+    public func onTestCampaignIdsChange() {
+        
+    }
+    
+    class ISInterstitialDelegate: NSObject, LevelPlayInterstitialDelegate {
+    
+        var mainViewController: BaseMainViewController!
+        
+        init(_ mainViewController_: BaseMainViewController!){
+            mainViewController = mainViewController_
         }
-    }
-    
-    public func onRewardedAdLoaded(ad: KidozSDK.KidozRewardedAd) {
-        rewardedAd = ad
-        baseMainViewController.onRewardedLoaded()
-    }
-    
-    public func onRewardedAdFailedToLoad(error: KidozSDK.KidozError) {
-        baseMainViewController.onRewardedLoadFailed(error: error.description)
-    }
-    
-    public func onRewardedAdShown(ad: KidozSDK.KidozRewardedAd) {
-        baseMainViewController.onRewardedOpened()
-    }
-    
-    public func onRewardedAdFailedToShow(error: KidozSDK.KidozError) {
-        baseMainViewController.onRewardedShowFailed(error: error.description)
-    }
-    
-    public func onRewardedImpression() {
-        baseMainViewController.onRewardedImpression()
-    }
-    
-    public func onRewardReceived(ad: KidozSDK.KidozRewardedAd) {
-        baseMainViewController.onRewardAchieved()
-    }
-    
-    public func onRewardedAdClosed(ad: KidozSDK.KidozRewardedAd) {
-        baseMainViewController.onRewardedClosed()
-    }
-    
-    func initBannerWithView() {
-        if let view = baseMainViewController.view {
-            bannerView = KidozBannerView()
-            bannerView.delegate = self
-            bannerView.translatesAutoresizingMaskIntoConstraints = false
-            view.addSubview(bannerView)
-            view.addConstraints(
-                [NSLayoutConstraint(
-                    item: bannerView!,
-                    attribute: .bottom,
-                    relatedBy: .equal,
-                    toItem: baseMainViewController.bottomLayoutGuide,
-                    attribute: .top,
-                    multiplier: 1,
-                    constant: 0),
-                 NSLayoutConstraint(
-                    item: bannerView!,
-                    attribute: .centerX,
-                    relatedBy: .equal,
-                    toItem: view,
-                    attribute: .centerX,
-                    multiplier: 1,
-                    constant: 0),
-                 NSLayoutConstraint(
-                    item: bannerView!,
-                    attribute: .height,
-                    relatedBy: .equal,
-                    toItem: nil,
-                    attribute: .notAnAttribute,
-                    multiplier: 0,
-                    constant: KidozBannerView.BANNER_HEIGHT),
-                 NSLayoutConstraint(
-                    item: bannerView!,
-                    attribute: .width,
-                    relatedBy: .equal,
-                    toItem: nil,
-                    attribute: .notAnAttribute,
-                    multiplier: 0,
-                    constant: KidozBannerView.BANNER_WIDTH)])
+        
+        func didLoad(with adInfo: ISAdInfo!) {
+            mainViewController.onInterstitialLoaded()
+        }
+        
+        func didFailToLoadWithError(_ error: Error!) {
+            mainViewController.onInterstitialLoadFailed(error: error.debugDescription)
+        }
+        
+        func didOpen(with adInfo: ISAdInfo!) {
+            mainViewController.onInterstitialOpened()
+        }
+        
+        func didShow(with adInfo: ISAdInfo!) {
+            mainViewController.onInterstitialOpened()
+        }
+        
+        func didFailToShowWithError(_ error: Error!, andAdInfo adInfo: ISAdInfo!) {
+            mainViewController.onInterstitialShowFailed(error: error.debugDescription)
+        }
+        
+        func didClick(with adInfo: ISAdInfo!) {
             
         }
+        
+        func didClose(with adInfo: ISAdInfo!) {
+            mainViewController.onInterstitialClosed()
+        }
     }
+    
+    class ISRewardedDelegate: NSObject, LevelPlayRewardedVideoManualDelegate {
+        
+        var mainViewController: BaseMainViewController!
+        
+        init(_ mainViewController_: BaseMainViewController!){
+            mainViewController = mainViewController_
+        }
+        
+        func didLoad(with adInfo: ISAdInfo!) {
+            mainViewController.onRewardedLoaded()
+        }
+        
+        func didFailToLoadWithError(_ error: Error!) {
+            mainViewController.onRewardedLoadFailed(error: error.debugDescription)
+        }
+        
+        func didReceiveReward(forPlacement placementInfo: ISPlacementInfo!, with adInfo: ISAdInfo!) {
+            mainViewController.onRewardAchieved()
+        }
+        
+        func didFailToShowWithError(_ error: Error!, andAdInfo adInfo: ISAdInfo!) {
+            mainViewController.onRewardedShowFailed(error: error.debugDescription)
+        }
+        
+        func didOpen(with adInfo: ISAdInfo!) {
+            mainViewController.onRewardedOpened()
+        }
+        
+        func didClick(_ placementInfo: ISPlacementInfo!, with adInfo: ISAdInfo!) {
+            
+        }
+        
+        func didClose(with adInfo: ISAdInfo!) {
+            mainViewController.onRewardedClosed()
+        }
+    }
+    
+    class ISBannerDelegate: NSObject, LevelPlayBannerDelegate {
+        var mainViewHandler: MainViewHandler
+        var mainViewController: BaseMainViewController!
+        
+        init(_ mainViewController_: BaseMainViewController!, mainViewHandler_: MainViewHandler){
+            mainViewController = mainViewController_
+            mainViewHandler = mainViewHandler_
+        }
+        
+        func didLoad(_ bannerView: ISBannerView!, with adInfo: ISAdInfo!) {
+            mainViewHandler.bannerView = bannerView
+            
+            if let view = mainViewController.view {
+                if #available(iOS 11.0, *) {
+                    bannerView.frame = CGRect(x: view.frame.size.width/2 - bannerView.frame.size.width/2, y: view.frame.size.height - bannerView.frame.size.height, width: bannerView.frame.size.width, height: bannerView.frame.size.height - view.safeAreaInsets.bottom * 2.5)
+                } else {
+                    bannerView.frame = CGRect(x: view.frame.size.width/2 - bannerView.frame.size.width/2, y: view.frame.size.height - bannerView.frame.size.height, width: bannerView.frame.size.width, height: bannerView.frame.size.height  * 2.5)
+                }
+                view.addSubview(mainViewHandler.bannerView!)
+            }
+
+            mainViewController.onBannerLoaded()
+        }
+        
+        func didFailToLoadWithError(_ error: Error!) {
+            mainViewController.onBannerLoadFailed(error: error.debugDescription)
+        }
+        
+        func didClick(with adInfo: ISAdInfo!) {
+            mainViewController.onBannerOpened()
+        }
+        
+        func didLeaveApplication(with adInfo: ISAdInfo!) {
+            mainViewController.onBannerClosed()
+        }
+        
+        func didPresentScreen(with adInfo: ISAdInfo!) {
+            
+        }
+        
+        func didDismissScreen(with adInfo: ISAdInfo!) {
+            mainViewController.onBannerClosed()
+        }
+
+    }
+    
 }
