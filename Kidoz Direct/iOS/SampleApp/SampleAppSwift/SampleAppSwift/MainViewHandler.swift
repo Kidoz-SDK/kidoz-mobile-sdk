@@ -21,7 +21,7 @@ public class MainViewHandler : NSObject, MainViewControllerHandler,ISInitializat
     }
     
     public func getAppLabel() -> String {
-        return "IronSource Test App"
+        return "LevelPlay Test App"
     }
     
     public func getSDKVersion() -> String {
@@ -29,7 +29,7 @@ public class MainViewHandler : NSObject, MainViewControllerHandler,ISInitializat
     }
     
     public func initSDK() {
-        baseMainViewController.logOut(message: "Initilalizing IronSource::" + IronSource.sdkVersion())
+        baseMainViewController.logOut(message: "Initilalizing LevelPlay v" + IronSource.sdkVersion())
         
         IronSource.setLevelPlayRewardedVideoManualDelegate(ISRewardedDelegate(baseMainViewController))
         IronSource.setLevelPlayInterstitialDelegate(ISInterstitialDelegate(baseMainViewController))
