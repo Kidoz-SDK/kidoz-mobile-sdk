@@ -236,5 +236,5 @@ kidozBannerView.show();
 
 * To hide banner:
 ```java
-kidozBannerView.hide(); 
+kidozBannerView.cloas(); 
 ```
