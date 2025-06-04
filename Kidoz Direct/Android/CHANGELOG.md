@@ -1,5 +1,10 @@
 # Changelog
 
+## 10.0.2 - May 29, 2025
+
+* Fix transitive dependencies 
+* Stability improvement.
+
 ## 10.0.1 - Mar 19, 2025
 
 * Fix OMID session lifecycle
