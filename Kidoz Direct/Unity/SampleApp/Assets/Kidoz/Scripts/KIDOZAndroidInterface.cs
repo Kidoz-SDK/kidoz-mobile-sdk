@@ -47,7 +47,11 @@ namespace KIDOZAndroidInterface {
 		}
 
 		public string getSdkVersion(){
-			return "TBD";
+			if (kidozBridgeObject == null) {
+				return "----";
+			}
+
+			return kidozBridgeObject.Call<string>("getSDKVersion");
 		}
 
 
@@ -58,7 +62,7 @@ namespace KIDOZAndroidInterface {
 
 		public void loadInterstitialAd()
 		{
-			kidozBridgeObject.Call("loadInterstitialAd",false);
+			kidozBridgeObject.Call("loadInterstitialAd");
 		}
 
 		public void showInterstitial()
@@ -73,7 +77,7 @@ namespace KIDOZAndroidInterface {
 
 		public void loadRewardedAd()
 		{
-			kidozBridgeObject.Call("loadRewardedAd",false);
+			kidozBridgeObject.Call("loadRewardedAd");
 		}
 		
 		public void showRewarded()

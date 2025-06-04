@@ -29,7 +29,7 @@ namespace KidozSDK
 			START, CENTER, END
 		};
 		
-		public enum BANNER_POSITION
+	public enum BANNER_POSITION
 		{
 			TOP_CENTER = 0,
 			BOTTOM_CENTER = 1,
