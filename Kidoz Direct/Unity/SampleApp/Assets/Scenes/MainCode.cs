@@ -31,6 +31,10 @@ public class MainCode : MonoBehaviour, IScreenLogger
 
     protected void initSDK()
     {
+        const string publisher_id = "14428";
+		const string token = "6yAsKUngaG5yC4X5HsRoatKTso40NMoZ";
+
+        Kidoz.init(publisher_id, token);
         Kidoz.SetiOSAppPauseOnBackground(true);
 
         //Delegates
@@ -121,7 +125,7 @@ public class MainCode : MonoBehaviour, IScreenLogger
     public void loadInterstitial()
     {
         AddEvent("----- Load Interstitial --");
-        Kidoz.loadInterstitialAd(false);
+        Kidoz.loadInterstitialAd();
     }
 
     public void showInterstitial()
@@ -165,7 +169,7 @@ public class MainCode : MonoBehaviour, IScreenLogger
     public void loadRewarded()
     {
         AddEvent("----- Load Rewarded --");
-        Kidoz.loadRewardedAd(false);
+        Kidoz.loadRewardedAd();
     }
 
     public void showRewarded()

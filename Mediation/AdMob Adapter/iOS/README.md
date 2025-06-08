@@ -1,13 +1,13 @@
 # Kidoz Admob iOS Adapter
-The Kidoz Admob adapter was built and tested with Google-Mobile-Ads-SDK v12.0.0.<BR>
-The minimum supported Xcode version is 16.0.<BR><BR>
+The Kidoz Admob adapter was built and tested with Google-Mobile-Ads-SDK v10.8.0.<BR>
+The minimum supported Xcode version is 14.1.<BR><BR>
 Check out the [Admob Mediation Documentation](https://developers.google.com/admob/ios/quick-start) for app level integration.
 
 ## Integration Steps:
 To add Kidoz Admob Adapter to your project with CocoaPods:
 ```
-pod 'KidozSDK', '9.2.0'
-pod 'KidozAdmobAdapter', '1.2.0'
+pod 'KidozSDK', '10.0.0'
+pod 'KidozAdmobAdapter', '2.0.0'
 ```
 
 Follow instructions on how to [Set Up Custom Events](https://developers.google.com/admob/ios/custom-events/setup#create) on the AdMob dashboard and set up Kidoz's adapter class:
@@ -22,7 +22,7 @@ Follow instructions on how to [Set Up Custom Events](https://developers.google.c
 
 ## iOS SKAdNetwork Support
 
-In order to support CPI attribution on iOS, please make sure to include the Kidoz ad network ID in your app property list file (Info.plist):
+Please make sure to include the Kidoz ad network ID in your app property list file (Info.plist):
 
 ```java
 v79kvwwj4g.skadnetwork	

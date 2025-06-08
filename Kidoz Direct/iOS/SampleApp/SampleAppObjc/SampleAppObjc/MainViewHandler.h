@@ -12,43 +12,44 @@
 
 @interface MainViewHandler : NSObject <KidozInitDelegate, KidozInterstitialDelegate, KidozRewardedDelegate, KidozBannerDelegate>
 
+- (void)setViewController:(BaseMainViewController*) baseMainViewController;
+- (NSString*)getAppLabel;
+- (NSString*)getSDKVersion;
+
 // MARK: - Kidoz SDK
--(void) setViewController:(BaseMainViewController*) baseMainViewController;
--(NSString*) getAppLabel;
--(NSString*) getSDKVersion;
--(void) initSDK;
--(void) onInitSuccess;
--(void) onInitError:(NSString*) errorMessage;
+- (void)initSDK;
+- (void)onInitSuccess;
+- (void)onInitError:(NSString * _Nonnull)error;
 
 // MARK: - Banner
--(void) loadBanner;
--(void) closeBanner;
--(void) onBannerAdLoaded;
--(void) onBannerAdFailedToLoad:(KidozError*) error;
--(void) onBannerAdShown;
--(void) onBannerAdFailedToShow:(KidozError*) error;
--(void) onBannerAdImpression;
--(void) onBannerAdClosed;
+- (void)loadBanner;
+- (void)closeBanner;
+- (void)onBannerAdLoadedWithKidozBannerView:(KidozBannerView * _Nonnull)kidozBannerView;
+- (void)onBannerAdFailedToLoadWithKidozBannerView:(KidozBannerView * _Nonnull)kidozBannerView error:(KidozError * _Nonnull)error;
+- (void)onBannerAdShownWithKidozBannerView:(KidozBannerView * _Nonnull)kidozBannerView;
+- (void)onBannerAdFailedToShowWithKidozBannerView:(KidozBannerView * _Nonnull)kidozBannerView error:(KidozError * _Nonnull)error;
+- (void)onBannerAdImpressionWithKidozBannerView:(KidozBannerView * _Nonnull)kidozBannerView;
+- (void)onBannerAdClosedWithKidozBannerView:(KidozBannerView * _Nonnull)kidozBannerView;
 
 // MARK: - Interstitial ad
--(void) loadInterstitial;
--(void) showInterstitial;
--(void) onInterstitialAdLoaded:(KidozInterstitialAd*) ad;
--(void) onInterstitialAdFailedToLoad:(KidozError*) error;
--(void) onInterstitialAdFailedToShow:(KidozError*) error;
--(void) onInterstitialAdShown:(KidozInterstitialAd*) ad;
--(void) onInterstitialImpression;
--(void) onInterstitialAdClosed:(KidozInterstitialAd*) ad;
+- (void)loadInterstitial;
+- (void)showInterstitial;
+- (void)onInterstitialAdLoadedWithKidozInterstitialAd:(KidozInterstitialAd * _Nonnull)kidozInterstitialAd;
+- (void)onInterstitialAdFailedToLoadWithKidozError:(KidozError * _Nonnull)kidozError;
+- (void)onInterstitialAdShownWithKidozInterstitialAd:(KidozInterstitialAd * _Nonnull)kidozInterstitialAd;
+- (void)onInterstitialAdFailedToShowWithKidozInterstitialAd:(KidozInterstitialAd * _Nonnull)kidozInterstitialAd kidozError:(KidozError * _Nonnull)kidozError;
+- (void)onInterstitialImpressionWithKidozInterstitialAd:(KidozInterstitialAd * _Nonnull)kidozInterstitialAd;
+- (void)onInterstitialAdClosedWithKidozInterstitialAd:(KidozInterstitialAd * _Nonnull)kidozInterstitialAd;
 
 // MARK: - Rewarded ad
--(void) loadRewarded;
--(void) showRewarded;
--(void) onRewardedAdLoaded:(KidozRewardedAd*) ad;
--(void) onRewardedAdFailedToLoad:(KidozError*) error;
--(void) onRewardedAdFailedToShow:(KidozError*) error;
--(void) onRewardedAdShown:(KidozRewardedAd*) ad;
--(void) onRewardedImpression;
--(void) onRewardReceived:(KidozRewardedAd*) ad;
--(void) onRewardedAdClosed:(KidozRewardedAd*) ad;
+- (void)loadRewarded;
+- (void)showRewarded;
+- (void)onRewardedAdLoadedWithKidozRewardedAd:(KidozRewardedAd * _Nonnull)kidozRewardedAd;
+- (void)onRewardedAdFailedToLoadWithKidozError:(KidozError * _Nonnull)kidozError;
+- (void)onRewardedAdShownWithKidozRewardedAd:(KidozRewardedAd * _Nonnull)kidozRewardedAd;
+- (void)onRewardedAdFailedToShowWithKidozRewardedAd:(KidozRewardedAd * _Nonnull)kidozRewardedAd kidozError:(KidozError * _Nonnull)kidozError;
+- (void)onRewardReceivedWithKidozRewardedAd:(KidozRewardedAd * _Nonnull)kidozRewardedAd;
+- (void)onRewardedImpressionWithKidozRewardedAd:(KidozRewardedAd * _Nonnull)kidozRewardedAd;
+- (void)onRewardedAdClosedWithKidozRewardedAd:(KidozRewardedAd * _Nonnull)kidozRewardedAd;
 
 @end

@@ -2,12 +2,12 @@ workspace 'SampleApp.xcworkspace'
 platform :ios, '16.0'
 
 def kidoz_pod
-    pod 'KidozSDK','9.2.0'
+    pod 'KidozSDK','10.0.2'
 end
 
 def kidoz_mediation_adapter
     kidoz_pod
-    pod 'KidozIronSourceAdapter', '1.4.0'
+    pod 'KidozIronSourceAdapter', :podspec => 'https://raw.githubusercontent.com/Kidoz-SDK/kidoz-ios-frameworks/refs/heads/main/mediation/ironSource/2.0.1/KidozIronSourceAdapter.podspec'
 end
 
 def ironSource_pods

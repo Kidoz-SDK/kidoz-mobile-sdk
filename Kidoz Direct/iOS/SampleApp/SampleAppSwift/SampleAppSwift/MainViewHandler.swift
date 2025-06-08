@@ -8,13 +8,24 @@
 import CommonSampleApp
 import IronSource
 
-public class MainViewHandler : NSObject, MainViewControllerHandler,ISInitializationDelegate{
+public class MainViewHandler : NSObject, MainViewControllerHandler{
 
     
     
-    let kAPPKEY = "1103e2a55"
+    var kAPPKEY = "1103e2a55"
+    
+    var INT_AD_UNIT_ID: String = "yt2844lu9ja9j4m6"
+    
+    var REW_AD_UNIT_ID: String = "mnrlvjyt9wae2md8"
+    
+    var BANNER_AD_UNIT_ID: String = "tbwxrv188d3no9z1"
+
+    
     var baseMainViewController: BaseMainViewController!
-    var bannerView: ISBannerView?
+    var bannerView: LPMBannerAdView?
+    var bannerDelegate: ISBannerDelegate!
+    var interstitialAd: LPMInterstitialAd?
+    var rewardedAd: LPMRewardedAd?
 
     public func setViewController(baseMainViewController: CommonSampleApp.BaseMainViewController) {
         self.baseMainViewController = baseMainViewController
@@ -25,75 +36,111 @@ public class MainViewHandler : NSObject, MainViewControllerHandler,ISInitializat
     }
     
     public func getSDKVersion() -> String {
-        return "9.2.0"
+        return "10.0.2"
     }
     
     public func initSDK() {
-        baseMainViewController.logOut(message: "Initilalizing LevelPlay v" + IronSource.sdkVersion())
-        
-        IronSource.setLevelPlayRewardedVideoManualDelegate(ISRewardedDelegate(baseMainViewController))
-        IronSource.setLevelPlayInterstitialDelegate(ISInterstitialDelegate(baseMainViewController))
-        IronSource.setLevelPlayBannerDelegate(ISBannerDelegate(baseMainViewController, mainViewHandler_: self))
-        
-//        let requestBuilder = LPMInitRequestBuilder(appKey: kAPPKEY)
-//                    .withLegacyAdFormats([IS_REWARDED_VIDEO])
-////                    .withUserId("UserId")
-//        let initRequest = requestBuilder.build()
-//        LevelPlay.initWith(initRequest)
-//        { [self] config, error in
-//            if let error = error {
-//                self.baseMainViewController.onSDKInitFailure(error: error.localizedDescription)
-//            } else {
-//                initializationDidComplete()
-//            }
-//        }
-//        initializationDidComplete()
-        IronSource.initWithAppKey(kAPPKEY,delegate: self)
+        baseMainViewController.logOut(message: "Initilalizing LevelPlay SDK::" + LevelPlay.sdkVersion())
+        let requestBuilder = LPMInitRequestBuilder(appKey: kAPPKEY)
+        let initRequest = requestBuilder.build()
+        LevelPlay.initWith(initRequest)
+        { [self] config, error in
+            if let error = error {
+                self.baseMainViewController.onSDKInitFailure(error: error.localizedDescription)
+            } else {
+                initializationDidComplete()
+            }
+        }
+
     }
     
     public func initializationDidComplete() {
-        DispatchQueue.main.async {
-            self.baseMainViewController.onSDKInitSuccess()
+        DispatchQueue.main.async { [self] in
+            baseMainViewController.onSDKInitSuccess()
+            interstitialAd = LPMInterstitialAd(adUnitId: INT_AD_UNIT_ID)
+            interstitialAd?.setDelegate(ISInterstitialDelegate(self.baseMainViewController))
+            rewardedAd = LPMRewardedAd(adUnitId: REW_AD_UNIT_ID)
+            rewardedAd?.setDelegate(ISRewardedDelegate(self.baseMainViewController))
+            createBanner()
+
         }
     }
     
+    func createBanner(){
+        // Create ad configuration - optional
+        let adConfig = LPMBannerAdViewConfigBuilder()
+            .set(adSize: LPMAdSize.banner())
+            .build()
+        // Create the banner view and set the ad unit id
+        self.bannerView = LPMBannerAdView(adUnitId: BANNER_AD_UNIT_ID , config: adConfig)
+        bannerDelegate = ISBannerDelegate(baseMainViewController, mainViewHandler_: self)
+        bannerView?.setDelegate(bannerDelegate)
+    }
+    
     public func loadBanner() {
-        print("Load Banner pressed")
-        let BNSize: ISBannerSize = ISBannerSize(description: "BANNER",width:320 ,height:50)
-        IronSource.loadBanner(with: self.baseMainViewController, size: BNSize)
+        if bannerView != nil {
+            bannerView?.loadAd(with: baseMainViewController)
+        }
     }
     
     public func closeBanner() {
         if bannerView != nil {
-            IronSource.destroyBanner(bannerView!)
+            bannerView?.destroy()
+            baseMainViewController.onBannerClosed()
         }
+        createBanner()
     }
     
     public func loadInterstitial() {
-        IronSource.loadInterstitial()
+        interstitialAd?.loadAd()
     }
     
     public func showInterstitial() {
-        IronSource.showInterstitial(with: baseMainViewController)
+        if ((self.interstitialAd?.isAdReady()) != nil) {
+            printInfo(on: baseMainViewController)
+            self.interstitialAd?.showAd(viewController: baseMainViewController, placementName: nil as String?)
+        }
     }
 
     // ********************
     
     public func loadRewarded() {
-        IronSource.loadRewardedVideo()
+        rewardedAd?.loadAd()
     }
     
     public func showRewarded() {
-        IronSource.showRewardedVideo(with:baseMainViewController)
+        if(rewardedAd?.isAdReady() != nil){
+            rewardedAd?.showAd(viewController: baseMainViewController, placementName: nil as String?)
+        }
     }
     
-    
+    func printInfo(on viewController: UIViewController) {
+        print("*********************************** MainViewHandler ***********************************")
+        print("*********************************** MainViewHandler ***********************************")
+        print("*********************************** MainViewHandler ***********************************")
+        print("Class: \(type(of: viewController))")
+        print("Instance identity: \(ObjectIdentifier(viewController))")
+        print("Memory address: \(Unmanaged.passUnretained(viewController).toOpaque())")
+        print("View frame: \(viewController.view.frame)")
+        print("View bounds: \(viewController.view.bounds)")
+        print("View tag: \(viewController.view.tag)")
+        print("Accessibility identifier: \(viewController.view.accessibilityIdentifier ?? "nil")")
+        print("Child VCs: \(viewController.children.map { type(of: $0) })")
+
+        if let nav = viewController.navigationController {
+            print("In Navigation Stack: Yes")
+            print("Is root VC: \(nav.viewControllers.first === viewController)")
+            print("Total VCs in stack: \(nav.viewControllers.count)")
+        } else {
+            print("In Navigation Stack: No")
+        }
+    }
     
     public func onTestCampaignIdsChange() {
         
     }
     
-    class ISInterstitialDelegate: NSObject, LevelPlayInterstitialDelegate {
+    class ISInterstitialDelegate: NSObject, LPMInterstitialAdDelegate {
     
         var mainViewController: BaseMainViewController!
         
@@ -101,36 +148,35 @@ public class MainViewHandler : NSObject, MainViewControllerHandler,ISInitializat
             mainViewController = mainViewController_
         }
         
-        func didLoad(with adInfo: ISAdInfo!) {
+        func didLoadAd(with adInfo: LPMAdInfo) {
             mainViewController.onInterstitialLoaded()
         }
         
-        func didFailToLoadWithError(_ error: Error!) {
-            mainViewController.onInterstitialLoadFailed(error: error.debugDescription)
+        func didFailToLoadAd(withAdUnitId adUnitId: String, error: any Error) {
+            mainViewController.onInterstitialLoadFailed(error: error.localizedDescription)
         }
         
-        func didOpen(with adInfo: ISAdInfo!) {
+        func didDisplayAd(with adInfo: LPMAdInfo) {
             mainViewController.onInterstitialOpened()
         }
         
-        func didShow(with adInfo: ISAdInfo!) {
-            mainViewController.onInterstitialOpened()
+        func didFailToDisplayAd(with adInfo: LPMAdInfo, error: Error) {
+            mainViewController.onInterstitialShowFailed(error: error.localizedDescription)
         }
         
-        func didFailToShowWithError(_ error: Error!, andAdInfo adInfo: ISAdInfo!) {
-            mainViewController.onInterstitialShowFailed(error: error.debugDescription)
-        }
-        
-        func didClick(with adInfo: ISAdInfo!) {
+        func didClickAd(with adInfo: LPMAdInfo) {
             
         }
         
-        func didClose(with adInfo: ISAdInfo!) {
+        func didChangeAdInfo(_ adInfo: LPMAdInfo) {}
+
+        func didCloseAd(with adInfo: LPMAdInfo) {
             mainViewController.onInterstitialClosed()
         }
     }
     
-    class ISRewardedDelegate: NSObject, LevelPlayRewardedVideoManualDelegate {
+    class ISRewardedDelegate: NSObject, LPMRewardedAdDelegate {
+        
         
         var mainViewController: BaseMainViewController!
         
@@ -138,36 +184,34 @@ public class MainViewHandler : NSObject, MainViewControllerHandler,ISInitializat
             mainViewController = mainViewController_
         }
         
-        func didLoad(with adInfo: ISAdInfo!) {
+        func didLoadAd(with adInfo: LPMAdInfo) {
             mainViewController.onRewardedLoaded()
         }
         
-        func didFailToLoadWithError(_ error: Error!) {
-            mainViewController.onRewardedLoadFailed(error: error.debugDescription)
+        func didFailToLoadAd(withAdUnitId adUnitId: String, error: any Error) {
+            mainViewController.onRewardedLoadFailed(error: error.localizedDescription)
         }
         
-        func didReceiveReward(forPlacement placementInfo: ISPlacementInfo!, with adInfo: ISAdInfo!) {
-            mainViewController.onRewardAchieved()
-        }
-        
-        func didFailToShowWithError(_ error: Error!, andAdInfo adInfo: ISAdInfo!) {
-            mainViewController.onRewardedShowFailed(error: error.debugDescription)
-        }
-        
-        func didOpen(with adInfo: ISAdInfo!) {
+        func didDisplayAd(with adInfo: LPMAdInfo) {
             mainViewController.onRewardedOpened()
         }
         
-        func didClick(_ placementInfo: ISPlacementInfo!, with adInfo: ISAdInfo!) {
-            
+        func didFailToDisplayAd(with adInfo: LPMAdInfo, error: Error) {
+            mainViewController.onInterstitialShowFailed(error: error.localizedDescription)
         }
         
-        func didClose(with adInfo: ISAdInfo!) {
+        func didRewardAd(with adInfo: LPMAdInfo, reward: LPMReward) {
+            mainViewController.onRewardAchieved()
+        }
+        
+        func didCloseAd(with adInfo: LPMAdInfo) {
             mainViewController.onRewardedClosed()
         }
     }
     
-    class ISBannerDelegate: NSObject, LevelPlayBannerDelegate {
+    class ISBannerDelegate: NSObject, LPMBannerAdViewDelegate {
+
+        
         var mainViewHandler: MainViewHandler
         var mainViewController: BaseMainViewController!
         
@@ -176,41 +220,55 @@ public class MainViewHandler : NSObject, MainViewControllerHandler,ISInitializat
             mainViewHandler = mainViewHandler_
         }
         
-        func didLoad(_ bannerView: ISBannerView!, with adInfo: ISAdInfo!) {
-            mainViewHandler.bannerView = bannerView
-            
-            if let view = mainViewController.view {
-                if #available(iOS 11.0, *) {
-                    bannerView.frame = CGRect(x: view.frame.size.width/2 - bannerView.frame.size.width/2, y: view.frame.size.height - bannerView.frame.size.height, width: bannerView.frame.size.width, height: bannerView.frame.size.height - view.safeAreaInsets.bottom * 2.5)
-                } else {
-                    bannerView.frame = CGRect(x: view.frame.size.width/2 - bannerView.frame.size.width/2, y: view.frame.size.height - bannerView.frame.size.height, width: bannerView.frame.size.width, height: bannerView.frame.size.height  * 2.5)
-                }
-                view.addSubview(mainViewHandler.bannerView!)
+        func didLoadAd(with adInfo: LPMAdInfo) {
+
+            if let view = mainViewController.view,let bannerView = mainViewHandler.bannerView {
+                bannerView.translatesAutoresizingMaskIntoConstraints = false
+                view.addSubview(bannerView)
+                NSLayoutConstraint.activate([
+                    bannerView.heightAnchor.constraint(equalToConstant: 50),
+                    bannerView.widthAnchor.constraint(equalToConstant: 320),
+                    bannerView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+                    bannerView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
+                ])
             }
 
             mainViewController.onBannerLoaded()
         }
         
-        func didFailToLoadWithError(_ error: Error!) {
-            mainViewController.onBannerLoadFailed(error: error.debugDescription)
+        func didFailToLoadAd(withAdUnitId adUnitId: String, error: any Error) {
+            mainViewController.onBannerLoadFailed(error: error.localizedDescription)
         }
         
-        func didClick(with adInfo: ISAdInfo!) {
+        func didDisplayAd(with adInfo: LPMAdInfo) {
+            print("Banner didDisplayAd")
             mainViewController.onBannerOpened()
         }
         
-        func didLeaveApplication(with adInfo: ISAdInfo!) {
-            mainViewController.onBannerClosed()
+        func didFailToDisplayAd(with adInfo: LPMAdInfo, error: Error) {
+            mainViewController.onBannerShowFailed(error: error.localizedDescription)
         }
         
-        func didPresentScreen(with adInfo: ISAdInfo!) {
-            
-        }
-        
-        func didDismissScreen(with adInfo: ISAdInfo!) {
-            mainViewController.onBannerClosed()
-        }
+    }
+    
+    private static func topViewController(with rootViewController: UIViewController) -> UIViewController {
 
+        if let tabBarController = rootViewController as? UITabBarController {
+            return topViewController(with: tabBarController.selectedViewController!)
+        } else if let navContObj = rootViewController as? UINavigationController {
+            return topViewController(with: navContObj.visibleViewController!)
+        } else if let presentedViewController = rootViewController.presentedViewController, !presentedViewController.isBeingDismissed {
+            return topViewController(with: presentedViewController)
+        } else {
+            for view in rootViewController.view.subviews {
+                if let subViewController = view.next as? UIViewController,
+                   let presentedViewController = subViewController.presentedViewController,
+                   !presentedViewController.isBeingDismissed {
+                    return topViewController(with: presentedViewController)
+                }
+            }
+            return rootViewController
+        }
     }
     
 }

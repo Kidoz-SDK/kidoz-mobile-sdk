@@ -43,9 +43,12 @@ namespace KIDOZiOSInterface {
 		
 		[DllImport("__Internal")]
 		private static extern void KidozLogMessage(string message);
-		
+
 		[DllImport("__Internal")]
-		private static extern void KidozLoadInterstitialAd(bool autoShow);
+		private static extern IntPtr KidozGetSDKVersion();
+			
+		[DllImport("__Internal")]
+		private static extern void KidozLoadInterstitialAd();
 		
 		[DllImport("__Internal")]
 		private static extern void KidozShowInterstitial();
@@ -54,7 +57,7 @@ namespace KIDOZiOSInterface {
 		private static extern bool KidozGetIsInterstitialLoaded();
 		
 		[DllImport("__Internal")]
-		private static extern void KidozLoadRewardedAd(bool autoShow);
+		private static extern void KidozLoadRewardedAd();
 		
 		[DllImport("__Internal")]
 		private static extern void KidozShowRewarded();
@@ -83,12 +86,10 @@ namespace KIDOZiOSInterface {
 				
 			case KidozSDKEvents.SDK_INIT_SUCCESS:
 				KidozSDK.Kidoz.Instance.initSuccessCallback("");
-				break;
-				
+				break;				
 			case KidozSDKEvents.SDK_INIT_ERROR:
 				KidozSDK.Kidoz.Instance.initErrorCallback(message);
 				break;
-
 						
 			case KidozSDKEvents.KIDOZ_INTERSTITIAL_LOADED:
 				KidozSDK.Kidoz.Instance.interstitialLoadedCallBack("");
@@ -150,13 +151,9 @@ namespace KIDOZiOSInterface {
 			case KidozSDKEvents.KIDOZ_BANNER_CLOSED:
 				KidozSDK.Kidoz.Instance.bannerClosedCallBack("");
 				break;				
-
-
-				
 			}
 			
 		}
-		
 		
 		public KIDOZiOSInterface()
 		{
@@ -166,6 +163,13 @@ namespace KIDOZiOSInterface {
 		public bool isInitialised()
 		{
 			return KidozIsInitialised();
+		}
+
+		public string getSdkVersion()
+		{
+			IntPtr versionPtr = KidozGetSDKVersion();
+    		string version = Marshal.PtrToStringAnsi(versionPtr);
+			return version;
 		}
 		
 		public void init(string developerID, string securityToken,string pluginVersion)
@@ -178,16 +182,10 @@ namespace KIDOZiOSInterface {
 		//***********************************//
 		
 		
-		public void generateInterstitial()
+		public void loadInterstitialAd()
 		{
-			KidozLoadInterstitialAd(false);
+			KidozLoadInterstitialAd();
 		}
-		
-		public void loadInterstitialAd(bool autoShow)
-		{
-			KidozLoadInterstitialAd(autoShow);
-		}
-		
 		
 		public void showInterstitial()
 		{
@@ -199,16 +197,10 @@ namespace KIDOZiOSInterface {
 			return  KidozGetIsInterstitialLoaded();
 		}
 		
-		public void generateRewarded()
+		public void loadRewardedAd()
 		{
-			KidozLoadRewardedAd (false);
+			KidozLoadRewardedAd();
 		}
-		
-		public void loadRewardedAd(bool autoShow)
-		{
-			KidozLoadRewardedAd(autoShow);
-		}
-		
 		
 		public void showRewarded()
 		{
@@ -232,7 +224,6 @@ namespace KIDOZiOSInterface {
 		public void loadBanner(bool autoShow, int position)
 		{	
 			KidozLoadBannerAd(autoShow,position);
-			
 		}
 		
 		public void showBanner()
@@ -252,11 +243,6 @@ namespace KIDOZiOSInterface {
 			KidozLogMessage (message);
 		}
 
-		
-	    public void setupCallbacks ()
-		{
-		}
-		
 	}
 	
 #endif
