@@ -1,8 +1,8 @@
 # Changelog
 
-## 2.0.1 - Mar 19, 2025
+## 2.1.0 - Mar 19, 2025
 
-* Updated to use Kidoz Core SDK v10.0.1
+* Fix lifecycle issues on full screen ads
 
 ## 2.0.0 - Mar 17, 2025
 
