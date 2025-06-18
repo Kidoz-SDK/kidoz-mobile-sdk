@@ -3,9 +3,13 @@
 
 * Fix Full Screen Ads callbacks on multiple load reques
 
-## 10.0.0 - Mar 17, 2025
+## 10.0.1 - Feb 19, 2025
 
-* Breaking changes - Publisher API changes 
+* Fix crash caused by UIApplicationInvalidInterfaceOrientation on fullscreen ads
+ 
+## 10.0.0 - Jan 6, 2025
+
+* Initial release
   
 ## 9.1.5 - Sep 8, 2024
 
