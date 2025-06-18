@@ -2,6 +2,10 @@
 ## 10.0.3 - Jun 18, 2025
 
 * Fix Full Screen Ads callbacks on multiple load reques
+
+## 10.0.0 - Mar 17, 2025
+
+* Breaking changes - Publisher API changes 
   
 ## 9.1.5 - Sep 8, 2024
 
