@@ -1,5 +1,8 @@
 # Changelog
+## 10.0.3 - Jun 18, 2025
 
+* Fix Full Screen Ads callbacks on multiple load reques
+  
 ## 9.1.5 - Sep 8, 2024
 
 * Fix privacy manifest 
