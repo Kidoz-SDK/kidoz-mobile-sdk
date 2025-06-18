@@ -1,6 +1,6 @@
 # Changelog
 
-## 2.1.0 - Mar 19, 2025
+## 2.1.0 - Jun 18, 2025
 
 * Fix lifecycle issues on full screen ads
 
