@@ -9,8 +9,6 @@ Include the following inside your app build.gradle dependencies:
 
 ```java
 dependencies {
-    implementation("com.kpadplayer.sdk:kpadplayer-android-native:10.0.1")
-    implementation("net.kidoz.sdk:kidoz-android-native:10.0.1")
-    implementation("net.kidoz.sdk:kidoz-android-ironsource-adapter:2.0.1")
+    implementation("net.kidoz.sdk:kidoz-android-ironsource-adapter:2.1.0")
 }
 ``` 
