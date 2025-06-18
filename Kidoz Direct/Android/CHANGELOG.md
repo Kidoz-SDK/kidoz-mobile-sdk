@@ -1,5 +1,9 @@
 # Changelog
 
+## 10.0.3 - Jun 18, 2025
+
+* Fix Full Screen Ads callbacks on multiple load request 
+
 ## 10.0.2 - May 29, 2025
 
 * Fix transitive dependencies 
