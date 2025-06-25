@@ -1,8 +1,21 @@
 # Changelog
 
-## 9.1.2 - Apr 4, 2024
+## 10.0.3 - Jun 18, 2025
 
-* Update OM SDK to v1.4.12
+* Fix Full Screen Ads callbacks on multiple load request 
+
+## 10.0.2 - May 29, 2025
+
+* Fix transitive dependencies 
+* Stability improvement.
+
+## 10.0.1 - Mar 19, 2025
+
+* Fix OMID session lifecycle
+
+## 10.0.0 - Mar 17, 2025
+
+* Breaking changes - Publisher API changes 
   
 ## 9.1.1 - Mar 24, 2024
 

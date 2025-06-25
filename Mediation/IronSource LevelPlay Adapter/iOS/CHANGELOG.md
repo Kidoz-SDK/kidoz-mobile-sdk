@@ -1,16 +1,16 @@
 # Changelog
 
+## 2.1.0 - Jun 18, 2025
+
+* Fix lifecycle issues on full screen ads
+
+## 2.0.0 - Jan 6, 2025
+
+* Update  Kidox SDK to v10.0.0
+  
 ## 1.4.0 - Apr 7, 2025
 
 * Build with iOS 16.2
-
-* ## 1.3.2 - Feb 3, 2025
-
-* Fixed crash on unity banner load 
-
-## 1.3.1 - Sep 11, 2024
-
-* Fixed privacy manifest
 
 ## 1.3.0 - Mar 14, 2024
 

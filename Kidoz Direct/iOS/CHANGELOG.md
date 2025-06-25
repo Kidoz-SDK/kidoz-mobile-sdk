@@ -1,9 +1,20 @@
 # Changelog
+## 10.0.3 - Jun 18, 2025
 
-## 9.2.0 - Apr 7, 2025
+* Fix Full Screen Ads callbacks on multiple load reques
+
+## 10.0.1 - Feb 19, 2025
+
+* Fix crash caused by UIApplicationInvalidInterfaceOrientation on fullscreen ads
+ 
+## 10.0.0 - Jan 6, 2025
+
+* Breaking changes - Ad Lifecycle callback
+ 
+ ## 9.2.0 - Apr 7, 2025
 
 * Build with iOS 16.2
-  
+ 
 ## 9.1.5 - Sep 8, 2024
 
 * Fix privacy manifest 

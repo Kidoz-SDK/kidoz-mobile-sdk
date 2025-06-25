@@ -1,19 +1,19 @@
 # Kidoz Applovin Adapters
 
 The Kidoz Applovin Max Adapter was built and tested with AppLovinSDK v12.6.0.<BR>
-The minimum supported Xcode version is 16.<BR><BR>
+The minimum supported Xcode version is 14.1.<BR><BR>
 Check out the [Max Mediation Documentation](https://dash.applovin.com/documentation/mediation/ios/getting-started/integration) for app level integration.
 
 ## Integration Steps:
 
 To add the adapter to your project with CocoaPods:
 ```
-pod 'KidozSDK', '9.2.0'
-pod 'KidozApplovinAdapter', '1.2.0'
+pod 'KidozSDK', '10.0.0'
+pod 'KidozApplovinAdapter', '2.0.0'
 ```
 ## iOS SKAdNetwork Support
 
-In order to support CPI attribution on iOS, please make sure to include the Kidoz ad network ID in your app property list file (Info.plist):
+Please make sure to include the Kidoz ad network ID in your app property list file (Info.plist):
 
 ```java
 v79kvwwj4g.skadnetwork	

@@ -30,11 +30,11 @@
 }
 
 - (NSString * _Nonnull)getSDKVersion {
-    return [Kidoz.instance getSdkVersion];
+    return [Kidoz getSdkVersion];
 }
 
 - (void)initSDK {
-    [Kidoz.instance initializeWithPublisherID: @"14428" securityToken: @"6yAsKUngaG5yC4X5HsRoatKTso40NMoZ" withDelegate: self];
+    [Kidoz.instance initializeWithPublisherID: @"14428" securityToken: @"6yAsKUngaG5yC4X5HsRoatKTso40NMoZ" delegate: self];
 }
 
 -(void) onInitSuccess {
@@ -62,27 +62,27 @@
     [self initBannerWithView];
 }
 
-- (void)onBannerAdLoaded {
+- (void)onBannerAdLoadedWithKidozBannerView:(KidozBannerView * _Nonnull)kidozBannerView {
     [baseMainViewController onBannerLoaded];
 }
 
-- (void)onBannerAdFailedToLoadWithError:(KidozError *)error {
+- (void)onBannerAdFailedToLoadWithKidozBannerView:(KidozBannerView * _Nonnull)kidozBannerView error:(KidozError * _Nonnull)error {
     [baseMainViewController onBannerLoadFailedWithError: error.description];
 }
 
-- (void)onBannerAdShown {
+- (void)onBannerAdShownWithKidozBannerView:(KidozBannerView * _Nonnull)kidozBannerView {
     [baseMainViewController onBannerOpened];
 }
 
-- (void)onBannerAdFailedToShowWithError:(KidozError *)error {
+- (void)onBannerAdFailedToShowWithKidozBannerView:(KidozBannerView * _Nonnull)kidozBannerView error:(KidozError * _Nonnull)error {
     [baseMainViewController onBannerShowFailedWithError: error.description];
 }
 
-- (void)onBannerAdImpression {
+- (void)onBannerAdImpressionWithKidozBannerView:(KidozBannerView * _Nonnull)kidozBannerView {
     [baseMainViewController onBannerImpression];
 }
 
-- (void)onBannerAdClosed {
+- (void)onBannerAdClosedWithKidozBannerView:(KidozBannerView * _Nonnull)kidozBannerView {
     [baseMainViewController onBannerClosed];
 }
 
@@ -103,8 +103,8 @@
     }
 }
 
-- (void)onInterstitialAdLoadedWithAd:(KidozInterstitialAd *)ad {
-    self.interstitialAd = ad;
+- (void)onInterstitialAdLoadedWithKidozInterstitialAd:(KidozInterstitialAd * _Nonnull)kidozInterstitialAd {
+    self.interstitialAd = kidozInterstitialAd;
     [baseMainViewController onInterstitialLoaded];
 }
 
@@ -112,19 +112,19 @@
     [baseMainViewController onInterstitialLoadFailedWithError: error.description];
 }
 
-- (void)onInterstitialAdFailedToShowWithError:(KidozError *)error {
-    [baseMainViewController onInterstitialShowFailedWithError: error.description];
+- (void)onInterstitialAdFailedToShowWithKidozInterstitialAd:(KidozInterstitialAd * _Nonnull)kidozInterstitialAd kidozError:(KidozError * _Nonnull)kidozError {
+    [baseMainViewController onInterstitialShowFailedWithError: kidozError.description];
 }
 
-- (void)onInterstitialAdShownWithAd:(KidozInterstitialAd *)ad {
+- (void)onInterstitialAdShownWithKidozInterstitialAd:(KidozInterstitialAd * _Nonnull)kidozInterstitialAd {
     [baseMainViewController onInterstitialOpened];
 }
 
-- (void)onInterstitialImpression {
+- (void)onInterstitialImpressionWithKidozInterstitialAd:(KidozInterstitialAd * _Nonnull)kidozInterstitialAd {
     [baseMainViewController onInterstitialImpression];
 }
 
-- (void)onInterstitialAdClosedWithAd:(KidozInterstitialAd *)ad {
+- (void)onInterstitialAdClosedWithKidozInterstitialAd:(KidozInterstitialAd * _Nonnull)kidozInterstitialAd {
     [baseMainViewController onInterstitialClosed];
 }
 
@@ -145,32 +145,32 @@
     }
 }
 
-- (void)onRewardedAdLoadedWithAd:(KidozRewardedAd *)ad {
-    rewardedAd = ad;
+- (void)onRewardedAdLoadedWithKidozRewardedAd:(KidozRewardedAd * _Nonnull)kidozRewardedAd {
+    rewardedAd = kidozRewardedAd;
     [baseMainViewController onRewardedLoaded];
 }
 
-- (void)onRewardedAdFailedToLoadWithError:(KidozError *)error {
-    [baseMainViewController onRewardedLoadFailedWithError: error.description];
+- (void)onRewardedAdFailedToLoadWithKidozError:(KidozError * _Nonnull)kidozError {
+    [baseMainViewController onRewardedLoadFailedWithError: kidozError.description];
 }
 
-- (void)onRewardedAdShownWithAd:(KidozRewardedAd *)ad {
+- (void)onRewardedAdShownWithKidozRewardedAd:(KidozRewardedAd * _Nonnull)kidozRewardedAd {
     [baseMainViewController onRewardedOpened];
 }
 
-- (void)onRewardedAdFailedToShowWithError:(KidozError *)error {
-    [baseMainViewController onRewardedShowFailedWithError: error.description];
+- (void)onRewardedAdFailedToShowWithKidozRewardedAd:(KidozRewardedAd * _Nonnull)kidozRewardedAd kidozError:(KidozError * _Nonnull)kidozError {
+    [baseMainViewController onRewardedShowFailedWithError: kidozError.description];
 }
 
-- (void)onRewardedImpression {
+- (void)onRewardedImpressionWithKidozRewardedAd:(KidozRewardedAd * _Nonnull)kidozRewardedAd {
     [baseMainViewController onRewardedImpression];
 }
 
-- (void)onRewardReceivedWithAd:(KidozRewardedAd *)ad {
+- (void)onRewardReceivedWithKidozRewardedAd:(KidozRewardedAd * _Nonnull)kidozRewardedAd {
     [baseMainViewController onRewardAchieved];
 }
 
-- (void)onRewardedAdClosedWithAd:(KidozRewardedAd *)ad {
+- (void)onRewardedAdClosedWithKidozRewardedAd:(KidozRewardedAd * _Nonnull)kidozRewardedAd {
     [baseMainViewController onRewardedClosed];
 }
 
@@ -180,7 +180,7 @@
         bannerView.delegate = self;
         [bannerView setTranslatesAutoresizingMaskIntoConstraints: NO];
         [[baseMainViewController view]addSubview: bannerView];
-        
+
         NSLayoutConstraint *bottom = [
             NSLayoutConstraint constraintWithItem:bannerView
             attribute:NSLayoutAttributeBottom
@@ -190,7 +190,7 @@
             multiplier:1
             constant:0
         ];
-        
+
         NSLayoutConstraint *centerX = [
             NSLayoutConstraint constraintWithItem:bannerView
             attribute:NSLayoutAttributeCenterX
@@ -200,7 +200,7 @@
             multiplier:1
             constant:0
         ];
-        
+
         NSLayoutConstraint *height = [
             NSLayoutConstraint constraintWithItem:bannerView
             attribute:NSLayoutAttributeHeight
@@ -208,9 +208,9 @@
             toItem:NULL
             attribute:NSLayoutAttributeNotAnAttribute
             multiplier:0
-            constant: KidozBannerView.BANNER_HEIGHT
+            constant: 50
         ];
-        
+
         NSLayoutConstraint *width = [
             NSLayoutConstraint constraintWithItem:bannerView
             attribute:NSLayoutAttributeWidth
@@ -218,11 +218,12 @@
             toItem:NULL
             attribute:NSLayoutAttributeNotAnAttribute
             multiplier:0
-            constant: KidozBannerView.BANNER_WIDTH
+            constant: 320
         ];
-        
+
         [[baseMainViewController view] addConstraints:@[bottom, centerX, height, width]];
     }
 }
 
 @end
+

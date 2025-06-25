@@ -1,13 +1,13 @@
 # Kidoz iOS Mobile SDK
 
 Kidoz SDK is compatible with iOS 11.0 and above and is written in Objective-C and Swift.<BR>
-Minimum supported Xcode version is 16.
+Minimum supported Xcode version is 14.1.
 
 ## Getting Started
 
 Add the following line to your Podfile:
 ```
-pod 'KidozSDK', '9.2.0'
+pod 'KidozSDK', '10.0.3'
 ```
 
 ## API Usage and Sample App
@@ -21,7 +21,7 @@ Or look into our [SampleApp Workspace](/Kidoz%20Direct/iOS/SampleApp).
 
 ## SKAdNetwork Support
 
-In order to support CPI attribution on iOS, please make sure to include the Kidoz ad network ID in your app property list file (Info.plist):
+Please make sure to include the Kidoz ad network ID in your app property list file (Info.plist):
 
 ```Swift
 v79kvwwj4g.skadnetwork	

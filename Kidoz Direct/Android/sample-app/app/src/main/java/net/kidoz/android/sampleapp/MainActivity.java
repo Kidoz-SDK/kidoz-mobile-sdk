@@ -11,25 +11,23 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.kidoz.sdk.api.Kidoz;
-import com.kidoz.sdk.api.KidozSDK;
-import com.kidoz.sdk.api.SDKInitializationListener;
-import com.kidoz.sdk.api.ads.banner.BannerAdCallback;
-import com.kidoz.sdk.api.ads.banner.KidozBannerView;
-import com.kidoz.sdk.api.ads.fullscreen.interstitial.InterstitialAd;
-import com.kidoz.sdk.api.ads.fullscreen.interstitial.InterstitialAdCallback;
-import com.kidoz.sdk.api.ads.fullscreen.rewarded.RewardedAd;
-import com.kidoz.sdk.api.ads.fullscreen.rewarded.RewardedAdCallback;
-import com.kidoz.sdk.api.general.KidozError;
-import com.kidoz.sdk.api.interfaces.SDKEventListener;
+import net.kidoz.ads.banner.KidozBannerAdCallback;
+import net.kidoz.ads.banner.KidozBannerView;
+import net.kidoz.ads.fullscreen.interstial.KidozInterstitialAd;
+import net.kidoz.ads.fullscreen.interstial.KidozInterstitialAdCallback;
+import net.kidoz.ads.fullscreen.rewarded.KidozRewardedAd;
+import net.kidoz.ads.fullscreen.rewarded.KidozRewardedAdCallback;
+import net.kidoz.sdk.Kidoz;
+import net.kidoz.sdk.KidozError;
+import net.kidoz.sdk.KidozInitializationListener;
 
 public class MainActivity extends Activity {
 
     private static final String PUBLISHER_ID = "14428";
     private static final String TOKEN = "6yAsKUngaG5yC4X5HsRoatKTso40NMoZ";
 
-    private InterstitialAd mInterstitialAd;
-    private RewardedAd mRewardedAd;
+    private KidozInterstitialAd mInterstitialAd;
+    private KidozRewardedAd mRewardedAd;
     private KidozBannerView mKidozBannerView;
 
     protected Button loadBannerButton;
@@ -122,7 +120,7 @@ public class MainActivity extends Activity {
 
     // SDK init
     protected void initSDK(){
-        Kidoz.initialize(MainActivity.this, PUBLISHER_ID, TOKEN, new SDKInitializationListener() {
+        Kidoz.initialize(MainActivity.this, PUBLISHER_ID, TOKEN, new KidozInitializationListener() {
             @Override
             public void onInitSuccess() {
                 onSDKInitSuccess();
@@ -130,8 +128,8 @@ public class MainActivity extends Activity {
             }
 
             @Override
-            public void onInitError(String error) {
-                onSDKInitFailure(error);
+            public void onInitError(KidozError error) {
+                onSDKInitFailure(error.getMessage());
             }
         });
     }
@@ -155,9 +153,9 @@ public class MainActivity extends Activity {
     // Kidoz Interstitial
 
     protected void loadInterstitial(){
-        InterstitialAd.load(MainActivity.this, new InterstitialAdCallback() {
+        KidozInterstitialAd.load(MainActivity.this, new KidozInterstitialAdCallback() {
             @Override
-            public void onAdLoaded(InterstitialAd ad) {
+            public void onAdLoaded(KidozInterstitialAd ad) {
                 mInterstitialAd = ad;
                 onInterstitialLoaded();
             }
@@ -168,22 +166,22 @@ public class MainActivity extends Activity {
             }
 
             @Override
-            public void onAdShown(InterstitialAd ad) {
+            public void onAdShown(KidozInterstitialAd ad) {
                 onInterstitialShown();
             }
 
             @Override
-            public void onAdFailedToShow(KidozError error) {
+            public void onAdFailedToShow(KidozInterstitialAd ad,KidozError error) {
                 onInterstitialShowFailed(error.toString());
             }
 
             @Override
-            public void onAdImpression() {
+            public void onAdImpression(KidozInterstitialAd ad) {
                 onInterstitialImpression();
             }
 
             @Override
-            public void onAdClosed(InterstitialAd ad) {
+            public void onAdClosed(KidozInterstitialAd ad) {
                 onInterstitialClosed();
             }
         });
@@ -233,9 +231,9 @@ public class MainActivity extends Activity {
     // Kidoz Rewarded
 
     protected void loadRewarded(){
-        RewardedAd.load(MainActivity.this, new RewardedAdCallback() {
+        KidozRewardedAd.load(MainActivity.this, new KidozRewardedAdCallback() {
             @Override
-            public void onAdLoaded(RewardedAd ad) {
+            public void onAdLoaded(KidozRewardedAd ad) {
                 mRewardedAd = ad;
                 onRewardedLoaded();
             }
@@ -246,27 +244,27 @@ public class MainActivity extends Activity {
             }
 
             @Override
-            public void onAdShown(RewardedAd ad) {
+            public void onAdShown(KidozRewardedAd ad) {
                 onRewardedShown();
             }
 
             @Override
-            public void onAdFailedToShow(KidozError error) {
+            public void onAdFailedToShow(KidozRewardedAd ad,KidozError error) {
                 onRewardedShowFailed(error.toString());
             }
 
             @Override
-            public void onAdImpression() {
+            public void onAdImpression(KidozRewardedAd ad) {
                 onRewardedImpression();
             }
 
             @Override
-            public void onAdClosed(RewardedAd ad) {
+            public void onAdClosed(KidozRewardedAd ad) {
                 onRewardedClosed();
             }
 
             @Override
-            public void onRewardReceived() {
+            public void onRewardReceived(KidozRewardedAd ad) {
                 onRewardAchieved();
             }
 
@@ -328,7 +326,7 @@ public class MainActivity extends Activity {
         mKidozBannerView.load();
     }
     protected void hideBanner(){
-        mKidozBannerView.hide();
+        mKidozBannerView.close();
     }
 
     // Banner SDK callbacks handler
@@ -372,7 +370,7 @@ public class MainActivity extends Activity {
         mKidozBannerView = new KidozBannerView(MainActivity.this);
         mKidozBannerView.setBannerPosition(KidozBannerView.Position.BOTTOM_CENTER);
 
-        mKidozBannerView.setKidozBannerListener(new BannerAdCallback() {
+        mKidozBannerView.setBannerCallback(new KidozBannerAdCallback() {
 
             @Override
             public void onAdLoaded() {

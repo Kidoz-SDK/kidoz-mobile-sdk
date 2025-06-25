@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.0.0 - Jan 6, 2025
+
+* Breaking changes: Refactored and improved ad lifecycle apis and callbacks
+* Update Kidoz Android SDK to v10.0.0
+
 ## 1.0.0 - Oct 12, 2023
 
 * Breaking changes: Refactored and improved ad lifecycle apis and callbacks
