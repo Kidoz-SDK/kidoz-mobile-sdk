@@ -1,4 +1,4 @@
-# Android Kidoz ironSource Adapter
+# Android Kidoz LevelPlay Adapter
 
 Check out the [ironSource Integration Documentation](https://developers.is.com/ironsource-mobile/android/android-sdk/) for app level integration.
 ## Integration Steps:
