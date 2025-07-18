@@ -1,5 +1,9 @@
 # Changelog
 
+## 10.0.4 - Jun 22, 2025
+
+* Stability improvement.
+  
 ## 10.0.3 - Jun 18, 2025
 
 * Fix Full Screen Ads callbacks on multiple load request 
