@@ -1,5 +1,10 @@
 # Changelog
 
+## 10.1.0 - Sep 14, 2025
+
+* Open RTB Support
+* Fix Android target API 35 build issues on unity
+
 ## 10.0.5 - Aug 12, 2025
 
 * Stability improvement.
