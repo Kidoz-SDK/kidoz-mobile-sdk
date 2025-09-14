@@ -7,7 +7,7 @@ Minimum supported Xcode version is 14.1.
 
 Add the following line to your Podfile:
 ```
-pod 'KidozSDK', '10.0.3'
+pod 'KidozSDK', '10.1.0'
 ```
 
 ## API Usage and Sample App
