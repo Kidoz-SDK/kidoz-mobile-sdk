@@ -1,4 +1,9 @@
 # Changelog
+
+## 10.1.0 - Sep 14, 2025
+
+* Open RTB Support
+  
 ## 10.0.3 - Jun 18, 2025
 
 * Fix Full Screen Ads callbacks on multiple load reques
