@@ -180,7 +180,15 @@ The flow inside your app is:
 3. **Load a Winning Bid Into the SDK**
    Once you have a winning bid response string, create a `KidozBid` instance and call the relevant `load(bid:delegate:)` method to load the ad.
 
-### 1. Get Bid Signal
+### 1. Initialize the SDK
+
+   Make sure the Kidoz SDK is initialized before you request bid signals or load ads:
+   ```swift
+   Kidoz.instance.initialize(publisherID: <enter your publisher ID>,
+                             securityToken: <enter your security Token>,
+                             delegate: <KidozInitDelegate>)
+```
+### 2. Get Bid Signal
 
 ```Swift
 // Interstitial
@@ -193,13 +201,13 @@ let rewardedSignal = KidozRewardedAd.getSignal()
 let bannerSignal = KidozBannerView.getSignal()
 ```
 
-### 2. Create a `KidozBid` From the Winning Bid Response
+### 3. Create a `KidozBid` From the Winning Bid Response
 
 ```Swift
 let kidozBid = KidozBid(bidResponse: String)
 ```
 
-### 3. Load the Ad With the Bid
+### 4. Load the Ad With the Bid
 
 ```Swift
 // Interstitial
