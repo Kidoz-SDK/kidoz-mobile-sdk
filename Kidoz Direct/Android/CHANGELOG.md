@@ -1,5 +1,13 @@
 # Changelog
 
+## 10.1.2 - Sep 29, 2025
+
+* Stability Fix
+ 
+## 10.1.1 - Sep 17, 2025
+
+* Open RTB S2S Support
+
 ## 10.1.0 - Sep 14, 2025
 
 * Open RTB Support
