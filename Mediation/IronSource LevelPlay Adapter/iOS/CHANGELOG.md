@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.2.0 - Nov 11, 2025
+
+* Support LevelPlay SDK v9.+
+  
 ## 2.1.0 - Jun 18, 2025
 
 * Fix lifecycle issues on full screen ads
