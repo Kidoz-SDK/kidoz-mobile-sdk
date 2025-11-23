@@ -1,4 +1,9 @@
 # Changelog
+
+## 10.1.3 - Nov 23, 2025
+
+* Fix bid flow
+  
 ## 10.1.2 - Nov 11, 2025
 
 * Version Cleanup
