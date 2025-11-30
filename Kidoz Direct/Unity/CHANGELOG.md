@@ -1,6 +1,10 @@
 # Changelog
 
-## 2.0.0 - Jan 6, 2025
+## 10.0.1 - Jan 6, 2025
+
+* Keep plugin GameObject across scenes
+  
+## 10.0.0 - Jan 6, 2025
 
 * Breaking changes: Refactored and improved ad lifecycle apis and callbacks
 * Update Kidoz Android SDK to v10.0.0
