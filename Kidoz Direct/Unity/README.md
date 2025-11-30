@@ -4,15 +4,8 @@
 
 If you don't have the [External Dependency Manager](https://github.com/googlesamples/unity-jar-resolver) already integrated in your project, please download and import [external-dependency-manager-1.2.177.unitypackage](/Kidoz%20Direct/Unity/external-dependency-manager-1.2.177.unitypackage) into your project. 
 
-1. Download and import [KidozUnityPlugin.unitypackage](/Kidoz%20Direct/Unity/KidozUnityPlugin.unitypackage) into your project's Asset Folder.
-2. In the import window select all components. A new Prefabs object named `KidozObject` will appear in the Assets folder. 
-3. Open your requested Scene. 
-4. Drag the `KidozObject` into the selected scene.
-5. Select the `KidozObject` and enter your `Publisher ID` and `Security Token`. To receive these credentials please complete the process for [Kidoz's Publisher onboarding](http://accounts.kidoz.net/publishers/register?utm_source=kidoz_github) if you haven't done so already.
+Download and import [KidozUnityPlugin.unitypackage](/Kidoz%20Direct/Unity/KidozUnityPlugin.unitypackage) into your project's Asset Folder.
 
-6. If you're having issues with the 'KidozObject' you can open the SampleScene by double clicking it instead.
-
-<a href="url"><img src="http://d28lrrc51wcjkk.cloudfront.net/sdk/Unity_SDK_Publisher_Security_Token.png" align="center" height="250" width="400" ></a>
 
 
 ## Using the SDK
