@@ -1,6 +1,6 @@
 # Changelog
 
-## 10.0.1 - Jan 6, 2025
+## 10.0.1 - Nov 30, 2025
 
 * Keep plugin GameObject across scenes
   
