@@ -131,7 +131,7 @@ jobs:
         uses: peter-evans/create-pull-request@v5
         with:
           branch: "$BRANCH_NAME"
-          base: main
+          base: update_docs_action
           title: "Update $TARGET_PATH README & changelog for ${{ github.event.inputs.version }}"
           body: |
             Automated update via GitHub Action.
