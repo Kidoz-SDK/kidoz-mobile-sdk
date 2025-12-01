@@ -32,12 +32,16 @@ jobs:
                   MEDIATION_KEY="$(echo "${{ github.event.inputs.mediation }}" | tr -d '[:space:]' | tr -d '\r')"
 
                   VALID_OS=false
-                  echo "$os" | tr ',' '\n' | while IFS=: read -r key label; do
+                  IFS=',' read -ra OS_ENTRIES <<< "$os"
+                  for entry in "${OS_ENTRIES[@]}"; do
+                    key="${entry%%:*}"
                     key="$(echo "$key" | tr -d '[:space:]' | tr -d '\r')"
                     if [ "$key" = "$OS_KEY" ]; then
                       VALID_OS=true
+                      break
                     fi
                   done
+
                   if [ "$VALID_OS" != true ]; then
                     echo "Error: Invalid OS key '$OS_KEY'. Valid keys are: $(echo "$os" | tr ',' '\n' | awk -F: '{print $1}')"
                     exit 1
@@ -46,12 +50,16 @@ jobs:
 
                   if [ -n "$MEDIATION_KEY" ]; then
                     VALID_MED=false
-                    echo "$mediation" | tr ',' '\n' | while IFS=: read -r key label; do
+                    IFS=',' read -ra MED_ENTRIES <<< "$mediation"
+                    for entry in "${MED_ENTRIES[@]}"; do
+                      key="${entry%%:*}"
                       key="$(echo "$key" | tr -d '[:space:]' | tr -d '\r')"
                       if [ "$key" = "$MEDIATION_KEY" ]; then
                         VALID_MED=true
+                        break
                       fi
                     done
+
                     if [ "$VALID_MED" != true ]; then
                       echo "Error: Invalid mediation key '$MEDIATION_KEY'. Valid keys are: $(echo "$mediation" | tr ',' '\n' | awk -F: '{print $1}')"
                       exit 1
