@@ -143,7 +143,7 @@ jobs:
               with:
                   token: ${{ secrets.GITHUB_TOKEN }}
                   branch: "${{ env.BRANCH_NAME }}"
-                  base: main
+                  base: update_docs_action
                   title: "Update ${{ env.TARGET_PATH }} README & changelog for ${{ github.event.inputs.version }}"
                   body: |
                       Automated update via GitHub Action.
