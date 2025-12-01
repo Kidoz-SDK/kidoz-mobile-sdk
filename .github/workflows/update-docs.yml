@@ -120,6 +120,7 @@ jobs:
                     echo "Changelog updated."
                   else
                     echo "No changelog entry provided; skipping."
+                  fi
 
             - name: Create branch
               run: |
