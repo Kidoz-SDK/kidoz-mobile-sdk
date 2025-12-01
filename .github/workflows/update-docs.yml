@@ -141,3 +141,17 @@ jobs:
                   git commit -m "Update $TARGET_PATH README & changelog for $VERSION"
                   git push origin "$BRANCH_NAME"
                   echo "Branch $BRANCH_NAME pushed."
+
+            - name: Create Pull Request
+              uses: peter-evans/create-pull-request@v5
+              with:
+                  token: ${{ secrets.GITHUB_TOKEN }}
+                  branch: "${{ env.BRANCH_NAME }}"
+                  base: update_docs_action
+                  title: "Update ${{ env.TARGET_PATH }} README & changelog for ${{ github.event.inputs.version }}"
+                  body: |
+                      Automated update via GitHub Action.
+                      - Updated: ${{ env.TARGET_PATH }}
+                      - Version: ${{ github.event.inputs.version }}
+                      - Changelog: ${{ github.event.inputs.changelog_entry }}
+                  commit-message: ""
