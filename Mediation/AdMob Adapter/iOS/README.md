@@ -6,7 +6,6 @@ Check out the [Admob Mediation Documentation](https://developers.google.com/admo
 ## Integration Steps:
 To add Kidoz Admob Adapter to your project with CocoaPods:
 ```
-pod 'KidozSDK', '10.0.0'
 pod 'KidozAdmobAdapter', '2.0.0'
 ```
 
