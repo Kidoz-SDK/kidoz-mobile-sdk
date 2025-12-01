@@ -28,24 +28,44 @@ jobs:
         steps:
             - name: Validate inputs
               run: |
-                  OS_KEY="${{ github.event.inputs.os }}"
-                  MEDIATION_KEY="${{ github.event.inputs.mediation }}"
+                IFS=',' read -ra OS_ENTRIES <<< "$os"
+                OS_VALID=false
+                for entry in "${OS_ENTRIES[@]}"; do
+                KEY="${entry%%:*}"    # everything before colon
+                VALUE="${entry#*:}"   # everything after colon
+                if [[ "$KEY" == "$OS_KEY" ]]; then
+                    OS_VALID=true
+                    break
+                fi
+                done
 
-                  if ! echo "$os" | tr ',' '\n' | awk -F: -v k="$OS_KEY" '$1==k {exit 0} END {exit 1}'; then
-                    echo "Error: Invalid OS key '$OS_KEY'. Valid keys are: $(echo "$os" | tr ',' '\n' | awk -F: '{print $1}')"
-                    exit 1
-                  fi
-                  echo "OS key '$OS_KEY' is valid."
+                if [[ "$OS_VALID" != true ]]; then
+                echo "Error: Invalid OS key '$OS_KEY'. Valid keys are: ${OS_ENTRIES[@]%%:*}"
+                exit 1
+                fi
+                echo "OS key '$OS_KEY' is valid."
 
-                  if [ -n "$MEDIATION_KEY" ]; then
-                    if ! echo "$mediation" | tr ',' '\n' | awk -F: -v k="$MEDIATION_KEY" '$1==k {exit 0} END {exit 1}'; then
-                      echo "Error: Invalid mediation key '$MEDIATION_KEY'. Valid keys are: $(echo "$mediation" | tr ',' '\n' | awk -F: '{print $1}')"
-                      exit 1
+                # Mediation (optional)
+                if [ -n "$MEDIATION_KEY" ]; then
+                IFS=',' read -ra MED_ENTRIES <<< "$mediation"
+                MED_VALID=false
+                for entry in "${MED_ENTRIES[@]}"; do
+                    KEY="${entry%%:*}"
+                    VALUE="${entry#*:}"
+                    if [[ "$KEY" == "$MEDIATION_KEY" ]]; then
+                    MED_VALID=true
+                    break
                     fi
-                    echo "Mediation key '$MEDIATION_KEY' is valid."
-                  else
-                    echo "No mediation key provided; skipping validation."
-                  fi
+                done
+
+                if [[ "$MED_VALID" != true ]]; then
+                    echo "Error: Invalid mediation key '$MEDIATION_KEY'. Valid keys are: ${MED_ENTRIES[@]%%:*}"
+                    exit 1
+                fi
+                echo "Mediation key '$MEDIATION_KEY' is valid."
+                else
+                echo "No mediation key provided; skipping validation."
+                fi
 
             - name: Checkout repo
               uses: actions/checkout@v3
