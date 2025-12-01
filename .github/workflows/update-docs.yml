@@ -1,0 +1,153 @@
+name: Update Module README and Changelog
+
+on:
+    workflow_dispatch:
+        inputs:
+            os:
+                description: "Platform (android/ios)"
+                required: true
+            version:
+                description: "Version to set in README"
+                required: true
+            changelog_entry:
+                description: "Optional changelog entry"
+                required: false
+            mediation:
+                description: "Optional Adapter (admob, applovin, levelplay)"
+                required: false
+
+jobs:
+    update-docs:
+        runs-on: ubuntu-latest
+        env:
+            MEDIATION_FOLDER: "Mediation"
+            os: "android:Android,ios:iOS"
+            mediation: "admob:AdMob Adapter,applovin:AppLovin Max Adapter,levelplay:IronSource LevelPlay Adapter"
+
+        steps:
+            - name: Validate inputs
+              run: |
+                  OS_KEY="$(echo "${{ github.event.inputs.os }}" | tr -d '[:space:]' | tr -d '\r')"
+                  MEDIATION_KEY="$(echo "${{ github.event.inputs.mediation }}" | tr -d '[:space:]' | tr -d '\r')"
+
+                  VALID_OS=false
+                  IFS=',' read -ra OS_ENTRIES <<< "$os"
+                  for entry in "${OS_ENTRIES[@]}"; do
+                    key="${entry%%:*}"
+                    key="$(echo "$key" | tr -d '[:space:]' | tr -d '\r')"
+                    if [ "$key" = "$OS_KEY" ]; then
+                      VALID_OS=true
+                      break
+                    fi
+                  done
+
+                  if [ "$VALID_OS" != true ]; then
+                    echo "Error: Invalid OS key '$OS_KEY'. Valid keys are: $(echo "$os" | tr ',' '\n' | awk -F: '{print $1}')"
+                    exit 1
+                  fi
+                  echo "OS key '$OS_KEY' is valid."
+
+                  if [ -n "$MEDIATION_KEY" ]; then
+                    VALID_MED=false
+                    IFS=',' read -ra MED_ENTRIES <<< "$mediation"
+                    for entry in "${MED_ENTRIES[@]}"; do
+                      key="${entry%%:*}"
+                      key="$(echo "$key" | tr -d '[:space:]' | tr -d '\r')"
+                      if [ "$key" = "$MEDIATION_KEY" ]; then
+                        VALID_MED=true
+                        break
+                      fi
+                    done
+
+                    if [ "$VALID_MED" != true ]; then
+                      echo "Error: Invalid mediation key '$MEDIATION_KEY'. Valid keys are: $(echo "$mediation" | tr ',' '\n' | awk -F: '{print $1}')"
+                      exit 1
+                    fi
+                    echo "Mediation key '$MEDIATION_KEY' is valid."
+                  else
+                    echo "No mediation key provided; skipping validation."
+                  fi
+
+            - name: Checkout repo
+              uses: actions/checkout@v3
+
+            - name: Set up Git
+              run: |
+                  git config user.name "GitHub Action"
+                  git config user.email "action@github.com"
+
+            - name: Generate README from template
+              run: |
+                  VERSION="${{ github.event.inputs.version }}"
+                  OS_KEY="$(echo "${{ github.event.inputs.os }}" | tr -d '[:space:]' | tr -d '\r')"
+                  MEDIATION_KEY="$(echo "${{ github.event.inputs.mediation }}" | tr -d '[:space:]' | tr -d '\r')"
+
+                  OS_VALUE=$(echo "$os" | tr ',' '\n' | awk -F: -v k="$OS_KEY" '$1==k {print $2}')
+                  echo "Operating System=$OS_VALUE"
+
+                  if [ -n "$MEDIATION_KEY" ]; then
+                    MEDIATION_VALUE=$(echo "$mediation" | tr ',' '\n' | awk -F: -v k="$MEDIATION_KEY" '$1==k {print $2}')
+                    TARGET_PATH="Mediation/$MEDIATION_VALUE/$OS_VALUE"
+                  else
+                    TARGET_PATH="Direct/$OS_VALUE"
+                  fi
+
+                  echo "TARGET_PATH=$TARGET_PATH" >> $GITHUB_ENV
+                  OUTPUT_FILE="$TARGET_PATH/README.md"
+                  TEMPLATE_FILE=".github/templates/$TARGET_PATH/README.template.md"
+
+                  if [ ! -f "$TEMPLATE_FILE" ]; then
+                    echo "Template $TEMPLATE_FILE not found!"
+                    exit 1
+                  fi
+
+                  cp "$TEMPLATE_FILE" "$OUTPUT_FILE"
+                  sed -i "s/{{VERSION}}/$VERSION/g" "$OUTPUT_FILE"
+                  echo "Generated $OUTPUT_FILE from template."
+
+            - name: Append changelog entry
+              run: |
+                  VERSION="${{ github.event.inputs.version }}"
+                  CHANGELOG_FILE="$TARGET_PATH/CHANGELOG.md"
+                  CHANGELOG_ENTRY="${{ github.event.inputs.changelog_entry }}"
+                  DATE=$(date +"%b %d, %Y")
+
+                  if [ -n "$CHANGELOG_ENTRY" ]; then
+                    echo -e "## $VERSION - $DATE\n- $CHANGELOG_ENTRY\n" > /tmp/changelog.tmp
+                    cat "$CHANGELOG_FILE" >> /tmp/changelog.tmp
+                    mv /tmp/changelog.tmp "$CHANGELOG_FILE"
+                    echo "Changelog updated."
+                  else
+                    echo "No changelog entry provided; skipping."
+                  fi
+
+            - name: Create branch
+              run: |
+                  VERSION="${{ github.event.inputs.version }}"
+                  OS="$(echo "${{ github.event.inputs.os }}" | tr -d '[:space:]' | tr -d '\r')"
+                  MEDIATION="$(echo "${{ github.event.inputs.mediation }}" | tr -d '[:space:]' | tr -d '\r')"
+
+                  if [ -n "$MEDIATION" ]; then
+                    BRANCH_NAME="update_docs_${MEDIATION}_${OS}_v${VERSION}"
+                  else
+                    BRANCH_NAME="update_docs_${OS}_v${VERSION}"
+                  fi
+
+                  echo "BRANCH_NAME=$BRANCH_NAME" >> $GITHUB_ENV
+
+                  git checkout -b "$BRANCH_NAME"
+                  git push origin "$BRANCH_NAME"
+
+            - name: Create Pull Request
+              uses: peter-evans/create-pull-request@v5
+              with:
+                  token: ${{ secrets.GITHUB_TOKEN }}
+                  branch: "${{ env.BRANCH_NAME }}"
+                  base: main
+                  title: "Update ${{ env.TARGET_PATH }} README & changelog for ${{ github.event.inputs.version }}"
+                  body: |
+                      Automated update via GitHub Action.
+                      - Updated: ${{ env.TARGET_PATH }}
+                      - Version: ${{ github.event.inputs.version }}
+                      - Changelog: ${{ github.event.inputs.changelog_entry }}
+                  commit-message: "Update ${{ env.TARGET_PATH }} README & changelog for ${{ github.event.inputs.version }}"

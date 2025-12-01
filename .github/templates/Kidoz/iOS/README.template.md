@@ -7,17 +7,17 @@ Minimum supported Xcode version is 14.1.
 
 Add the following line to your Podfile:
 ```
-pod 'KidozSDK', '10.1.3'
+pod 'KidozSDK', {{VERSION}}
 ```
 
 ## API Usage and Sample App
 
 See the following API integration documents:
 
-- [Swift](/Kidoz%20Direct/iOS/SampleApp/SampleAppSwift) 
-- [Objective-C](/Kidoz%20Direct/iOS/SampleApp/SampleAppObjc)
+- [Swift](/Direct/iOS/SampleApp/SampleAppSwift) 
+- [Objective-C](/Direct/iOS/SampleApp/SampleAppObjc)
 
-Or look into our [SampleApp Workspace](/Kidoz%20Direct/iOS/SampleApp).
+Or look into our [SampleApp Workspace](/Direct/iOS/SampleApp).
 
 ## SKAdNetwork Support
 

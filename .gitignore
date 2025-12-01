@@ -15,5 +15,5 @@ DerivedData/
 ## Obj-C/Swift specific
 *.hmap
 
-Kidoz Direct/Unity/SampleApp/Build
-Kidoz Direct/Unity/SampleApp/Build_BurstDebugInformation_DoNotShip
+Direct/Unity/SampleApp/Build
+Direct/Unity/SampleApp/Build_BurstDebugInformation_DoNotShip

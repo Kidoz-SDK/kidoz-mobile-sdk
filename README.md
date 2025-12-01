@@ -11,7 +11,7 @@ Uniting brands, content publishers and families, Kidoz is the leading COPPA & GD
 To get started, please select the option below that best suits your application:
 
 Integrate Kidoz SDK library directly into your iOS, Android or Unity game:
-- [Kidoz Direct](/Kidoz%20Direct)
+- [Direct](/Direct)
   
 Integrate Kidoz SDK via mediation:
 - [AdMob](/Mediation/AdMob%20Adapter)
