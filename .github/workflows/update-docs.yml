@@ -22,37 +22,29 @@ jobs:
         env:
             MEDIATION_FOLDER: "Mediation"
             CORE_FOLDER: "Kidoz Direct"
-            mediation: |
-                admob: AdMob Adapter
-                applovin: AppLovin Max Adapter
-                levelplay: IronSource LevelPlay Adapter
-            os: |
-                android: Android
-                ios: iOS
+            os: "android:Android,ios:iOS"
+            mediation: "admob:AdMob Adapter,applovin:AppLovin Max Adapter,levelplay:IronSource LevelPlay Adapter"
 
         steps:
             - name: Validate inputs
               run: |
-                  # Get inputs
                   OS_KEY="${{ github.event.inputs.os }}"
                   MEDIATION_KEY="${{ github.event.inputs.mediation }}"
 
-                  # Check OS
-                  if ! echo "$os" | awk -F': ' -v k="$OS_KEY" '$1==k {exit 0} END {exit 1}'; then
-                  echo "Error: Invalid OS key '$OS_KEY'. Valid keys are: $(echo "$os" | awk -F': ' '{print $1}')"
-                  exit 1
+                  if ! echo "$os" | tr ',' '\n' | awk -F: -v k="$OS_KEY" '$1==k {exit 0} END {exit 1}'; then
+                    echo "Error: Invalid OS key '$OS_KEY'. Valid keys are: $(echo "$os" | tr ',' '\n' | awk -F: '{print $1}')"
+                    exit 1
                   fi
                   echo "OS key '$OS_KEY' is valid."
 
-                  # Check mediation only if provided
                   if [ -n "$MEDIATION_KEY" ]; then
-                  if ! echo "$mediation" | awk -F': ' -v k="$MEDIATION_KEY" '$1==k {exit 0} END {exit 1}'; then
-                      echo "Error: Invalid mediation key '$MEDIATION_KEY'. Valid keys are: $(echo "$mediation" | awk -F': ' '{print $1}')"
+                    if ! echo "$mediation" | tr ',' '\n' | awk -F: -v k="$MEDIATION_KEY" '$1==k {exit 0} END {exit 1}'; then
+                      echo "Error: Invalid mediation key '$MEDIATION_KEY'. Valid keys are: $(echo "$mediation" | tr ',' '\n' | awk -F: '{print $1}')"
                       exit 1
-                  fi
-                  echo "Mediation key '$MEDIATION_KEY' is valid."
+                    fi
+                    echo "Mediation key '$MEDIATION_KEY' is valid."
                   else
-                  echo "No mediation key provided; skipping validation."
+                    echo "No mediation key provided; skipping validation."
                   fi
 
             - name: Checkout repo
@@ -66,18 +58,18 @@ jobs:
             - name: Generate README from template
               run: |
                   VERSION="${{ github.event.inputs.version }}"
+                  OS_KEY="${{ github.event.inputs.os }}"
+                  MEDIATION_KEY="${{ github.event.inputs.mediation }}"
 
-                  KEY="${{ github.event.inputs.os }}"
-                  OS_VALUE=$(echo "$os" | awk -F': ' -v k="$KEY" '$1==k {print $2}')
+                  OS_VALUE=$(echo "$os" | tr ',' '\n' | awk -F: -v k="$OS_KEY" '$1==k {print $2}')
                   echo "Operating System=$OS_VALUE"
 
-                  if [ -n "${{ github.event.inputs.mediation }}" ]; then
-                    KEY="${{ github.event.inputs.mediation }}"
-                    MEDIATION_VALUE=$(echo "$mediation" | awk -F': ' -v k="$KEY" '$1==k {print $2}')
-
+                  if [ -n "$MEDIATION_KEY" ]; then
+                    MEDIATION_VALUE=$(echo "$mediation" | tr ',' '\n' | awk -F: -v k="$MEDIATION_KEY" '$1==k {print $2}')
                     TARGET_PATH="Mediation/$MEDIATION_VALUE/$OS_VALUE"
                   else
                     TARGET_PATH="Kidoz/$OS_VALUE"
+                  fi
 
                   echo "TARGET_PATH=$TARGET_PATH" >> $GITHUB_ENV
                   OUTPUT_FILE="$TARGET_PATH/README.md"
@@ -98,7 +90,8 @@ jobs:
                   CHANGELOG_FILE="$TARGET_PATH/CHANGELOG.md"
                   CHANGELOG_ENTRY="${{ github.event.inputs.changelog_entry }}"
                   DATE=$(date +"%b %d, %Y")
-                  if [ -n "${{ github.event.inputs.changelog_entry }}" ]; then
+
+                  if [ -n "$CHANGELOG_ENTRY" ]; then
                     echo -e "## $VERSION - $DATE\n- $CHANGELOG_ENTRY\n" > /tmp/changelog.tmp
                     cat "$CHANGELOG_FILE" >> /tmp/changelog.tmp
                     mv /tmp/changelog.tmp "$CHANGELOG_FILE"
@@ -111,12 +104,14 @@ jobs:
               run: |
                   OS="${{ github.event.inputs.os }}"
                   VERSION="${{ github.event.inputs.version }}"
+                  MEDIATION="${{ github.event.inputs.mediation }}"
 
-                  if [ -n "${{ github.event.inputs.mediation }}" ]; then
-                    MEDIATION="${{ github.event.inputs.mediation }}"
+                  if [ -n "$MEDIATION" ]; then
                     BRANCH_NAME="update_docs_${MEDIATION}_${OS}_v${VERSION}"
                   else
                     BRANCH_NAME="update_docs_${OS}_v${VERSION}"
+                  fi
+
                   echo "BRANCH_NAME=$BRANCH_NAME" >> $GITHUB_ENV
 
                   git checkout -b "$BRANCH_NAME"
