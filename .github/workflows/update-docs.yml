@@ -137,10 +137,6 @@ jobs:
                   echo "BRANCH_NAME=$BRANCH_NAME" >> $GITHUB_ENV
 
                   git checkout -b "$BRANCH_NAME"
-                  git add "$TARGET_PATH/README.md" "$TARGET_PATH/CHANGELOG.md"
-                  git commit -m "Update $TARGET_PATH README & changelog for $VERSION"
-                  git push origin "$BRANCH_NAME"
-                  echo "Branch $BRANCH_NAME pushed."
 
             - name: Create Pull Request
               uses: peter-evans/create-pull-request@v5
@@ -154,4 +150,4 @@ jobs:
                       - Updated: ${{ env.TARGET_PATH }}
                       - Version: ${{ github.event.inputs.version }}
                       - Changelog: ${{ github.event.inputs.changelog_entry }}
-                  commit-message: ""
+                  commit-message: "Update ${{ env.TARGET_PATH }} README & changelog for ${{ github.event.inputs.version }}"
