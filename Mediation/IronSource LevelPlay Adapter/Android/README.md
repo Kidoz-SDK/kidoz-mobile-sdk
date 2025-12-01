@@ -7,6 +7,6 @@ Include the following inside your app build.gradle dependencies:
 
 ```java
 dependencies {
-    implementation("net.kidoz.sdk:kidoz-android-ironsource-adapter:2.2.0")
+    implementation("net.kidoz.sdk:kidoz-android-ironsource-adapter:2.1.0")
 }
 ``` 
