@@ -95,7 +95,7 @@ jobs:
 
                   echo "TARGET_PATH=$TARGET_PATH" >> $GITHUB_ENV
                   OUTPUT_FILE="$TARGET_PATH/README.md"
-                  TEMPLATE_FILE="../.github/templates/$TARGET_PATH/README.template.md"
+                  TEMPLATE_FILE=".github/templates/$TARGET_PATH/README.template.md"
 
                   if [ ! -f "$TEMPLATE_FILE" ]; then
                     echo "Template $TEMPLATE_FILE not found!"
