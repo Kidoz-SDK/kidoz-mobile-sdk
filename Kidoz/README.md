@@ -9,9 +9,9 @@ Kidoz SDK offers support for the following ad types:
 
 On the following platforms:
 
-- [Native Android](/Kidoz%20Direct/Android)
-- [Native iOS](/Kidoz%20Direct/iOS)
-- [Unity](/Kidoz%20Direct/Unity)
+- [Native Android](/Kidoz/Android)
+- [Native iOS](/Kidoz/iOS)
+- [Unity](/Kidoz/Unity)
 
 ## Prerequisites
 
