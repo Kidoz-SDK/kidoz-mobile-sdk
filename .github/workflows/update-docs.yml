@@ -137,6 +137,7 @@ jobs:
                   echo "BRANCH_NAME=$BRANCH_NAME" >> $GITHUB_ENV
 
                   git checkout -b "$BRANCH_NAME"
+                  git push origin "$BRANCH_NAME"
 
             - name: Create Pull Request
               uses: peter-evans/create-pull-request@v5
