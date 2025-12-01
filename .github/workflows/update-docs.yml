@@ -21,7 +21,6 @@ jobs:
         runs-on: ubuntu-latest
         env:
             MEDIATION_FOLDER: "Mediation"
-            CORE_FOLDER: "Kidoz Direct"
             os: "android:Android,ios:iOS"
             mediation: "admob:AdMob Adapter,applovin:AppLovin Max Adapter,levelplay:IronSource LevelPlay Adapter"
 
@@ -90,7 +89,7 @@ jobs:
                     MEDIATION_VALUE=$(echo "$mediation" | tr ',' '\n' | awk -F: -v k="$MEDIATION_KEY" '$1==k {print $2}')
                     TARGET_PATH="Mediation/$MEDIATION_VALUE/$OS_VALUE"
                   else
-                    TARGET_PATH="Kidoz/$OS_VALUE"
+                    TARGET_PATH="Direct/$OS_VALUE"
                   fi
 
                   echo "TARGET_PATH=$TARGET_PATH" >> $GITHUB_ENV

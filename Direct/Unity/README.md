@@ -2,15 +2,15 @@
 
 ## Getting Started:
 
-If you don't have the [External Dependency Manager](https://github.com/googlesamples/unity-jar-resolver) already integrated in your project, please download and import [external-dependency-manager-1.2.177.unitypackage](/Kidoz%20Direct/Unity/external-dependency-manager-1.2.177.unitypackage) into your project. 
+If you don't have the [External Dependency Manager](https://github.com/googlesamples/unity-jar-resolver) already integrated in your project, please download and import [external-dependency-manager-1.2.177.unitypackage](/Direct/Unity/external-dependency-manager-1.2.177.unitypackage) into your project. 
 
-Download and import [KidozUnityPlugin.unitypackage](/Kidoz%20Direct/Unity/KidozUnityPlugin.unitypackage) into your project's Asset Folder.
+Download and import [KidozUnityPlugin.unitypackage](/Direct/Unity/KidozUnityPlugin.unitypackage) into your project's Asset Folder.
 
 
 
 ## Using the SDK
 
-See full usage example on our [Sample app Main scene script](/Kidoz%20Direct/Unity/SampleApp/Assets/Scenes/MainCode.cs)
+See full usage example on our [Sample app Main scene script](/Direct/Unity/SampleApp/Assets/Scenes/MainCode.cs)
 1. Select your relevant script file.
 2. Add ```using KidozSDK;``` in the using section of your code.
 

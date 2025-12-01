@@ -14,10 +14,10 @@ pod 'KidozSDK', {{VERSION}}
 
 See the following API integration documents:
 
-- [Swift](/Kidoz%20Direct/iOS/SampleApp/SampleAppSwift) 
-- [Objective-C](/Kidoz%20Direct/iOS/SampleApp/SampleAppObjc)
+- [Swift](/Direct/iOS/SampleApp/SampleAppSwift) 
+- [Objective-C](/Direct/iOS/SampleApp/SampleAppObjc)
 
-Or look into our [SampleApp Workspace](/Kidoz%20Direct/iOS/SampleApp).
+Or look into our [SampleApp Workspace](/Direct/iOS/SampleApp).
 
 ## SKAdNetwork Support
 
