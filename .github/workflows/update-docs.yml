@@ -21,7 +21,7 @@ jobs:
         runs-on: ubuntu-latest
         env:
             MEDIATION_FOLDER: "Mediation"
-            CORE_FOLDER: "Kidoz"
+            CORE_FOLDER: "Kidoz Direct"
             os: "android:Android,ios:iOS"
             mediation: "admob:AdMob Adapter,applovin:AppLovin Max Adapter,levelplay:IronSource LevelPlay Adapter"
 
