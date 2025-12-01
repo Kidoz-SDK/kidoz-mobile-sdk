@@ -28,17 +28,31 @@ jobs:
         steps:
             - name: Validate inputs
               run: |
-                  OS_KEY="$(echo "${{ github.event.inputs.os }}" | tr -d '[:space:]')"
-                  MEDIATION_KEY="$(echo "${{ github.event.inputs.mediation }}" | tr -d '[:space:]')"
+                  OS_KEY="$(echo "${{ github.event.inputs.os }}" | tr -d '[:space:]' | tr -d '\r')"
+                  MEDIATION_KEY="$(echo "${{ github.event.inputs.mediation }}" | tr -d '[:space:]' | tr -d '\r')"
 
-                  if ! echo "$os" | tr ',' '\n' | awk -F: -v k="$OS_KEY" '$1==k {exit 0} END {exit 1}'; then
-                  echo "Error: Invalid OS key '$OS_KEY'. Valid keys are: $(echo "$os" | tr ',' '\n' | awk -F: '{print $1}')"
-                  exit 1
+                  VALID_OS=false
+                  echo "$os" | tr ',' '\n' | while IFS=: read -r key label; do
+                    key="$(echo "$key" | tr -d '[:space:]' | tr -d '\r')"
+                    if [ "$key" = "$OS_KEY" ]; then
+                      VALID_OS=true
+                    fi
+                  done
+                  if [ "$VALID_OS" != true ]; then
+                    echo "Error: Invalid OS key '$OS_KEY'. Valid keys are: $(echo "$os" | tr ',' '\n' | awk -F: '{print $1}')"
+                    exit 1
                   fi
                   echo "OS key '$OS_KEY' is valid."
 
                   if [ -n "$MEDIATION_KEY" ]; then
-                    if ! echo "$mediation" | tr ',' '\n' | awk -F: -v k="$MEDIATION_KEY" '$1==k {exit 0} END {exit 1}'; then
+                    VALID_MED=false
+                    echo "$mediation" | tr ',' '\n' | while IFS=: read -r key label; do
+                      key="$(echo "$key" | tr -d '[:space:]' | tr -d '\r')"
+                      if [ "$key" = "$MEDIATION_KEY" ]; then
+                        VALID_MED=true
+                      fi
+                    done
+                    if [ "$VALID_MED" != true ]; then
                       echo "Error: Invalid mediation key '$MEDIATION_KEY'. Valid keys are: $(echo "$mediation" | tr ',' '\n' | awk -F: '{print $1}')"
                       exit 1
                     fi
@@ -58,8 +72,8 @@ jobs:
             - name: Generate README from template
               run: |
                   VERSION="${{ github.event.inputs.version }}"
-                  OS_KEY="$(echo "${{ github.event.inputs.os }}" | tr -d '[:space:]')"
-                  MEDIATION_KEY="$(echo "${{ github.event.inputs.mediation }}" | tr -d '[:space:]')"
+                  OS_KEY="$(echo "${{ github.event.inputs.os }}" | tr -d '[:space:]' | tr -d '\r')"
+                  MEDIATION_KEY="$(echo "${{ github.event.inputs.mediation }}" | tr -d '[:space:]' | tr -d '\r')"
 
                   OS_VALUE=$(echo "$os" | tr ',' '\n' | awk -F: -v k="$OS_KEY" '$1==k {print $2}')
                   echo "Operating System=$OS_VALUE"
@@ -98,13 +112,12 @@ jobs:
                     echo "Changelog updated."
                   else
                     echo "No changelog entry provided; skipping."
-                  fi
 
             - name: Create branch
               run: |
                   VERSION="${{ github.event.inputs.version }}"
-                  OS="$(echo "${{ github.event.inputs.os }}" | tr -d '[:space:]')"
-                  MEDIATION="$(echo "${{ github.event.inputs.mediation }}" | tr -d '[:space:]')"
+                  OS="$(echo "${{ github.event.inputs.os }}" | tr -d '[:space:]' | tr -d '\r')"
+                  MEDIATION="$(echo "${{ github.event.inputs.mediation }}" | tr -d '[:space:]' | tr -d '\r')"
 
                   if [ -n "$MEDIATION" ]; then
                     BRANCH_NAME="update_docs_${MEDIATION}_${OS}_v${VERSION}"
