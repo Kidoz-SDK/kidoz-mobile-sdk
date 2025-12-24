@@ -5,7 +5,7 @@
 #### Include the following inside your app build.gradle dependencies:
 ```groovy
 dependencies {
-    implementation("net.kidoz.sdk:kidoz-android-native:10.1.5")
+    implementation("net.kidoz.sdk:kidoz-android-native:10.1.6")
 }
 ``` 
 
