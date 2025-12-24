@@ -111,14 +111,16 @@ jobs:
                   CHANGELOG_FILE="$TARGET_PATH/CHANGELOG.md"
                   CHANGELOG_ENTRY="${{ github.event.inputs.changelog_entry }}"
                   DATE=$(date +"%b %d, %Y")
-
                   if [ -n "$CHANGELOG_ENTRY" ]; then
-                    echo -e "## $VERSION - $DATE\n- $CHANGELOG_ENTRY\n" > /tmp/changelog.tmp
-                    cat "$CHANGELOG_FILE" >> /tmp/changelog.tmp
-                    mv /tmp/changelog.tmp "$CHANGELOG_FILE"
-                    echo "Changelog updated."
+                  {
+                      head -n 2 "$CHANGELOG_FILE"
+                      echo -e "\n## $VERSION - $DATE\n- $CHANGELOG_ENTRY\n"
+                      tail -n +2 "$CHANGELOG_FILE"
+                  } > /tmp/changelog.tmp
+                  mv /tmp/changelog.tmp "$CHANGELOG_FILE"
+                  echo "Changelog updated."
                   else
-                    echo "No changelog entry provided; skipping."
+                      echo "No changelog entry provided; skipping."
                   fi
 
             - name: Create branch
