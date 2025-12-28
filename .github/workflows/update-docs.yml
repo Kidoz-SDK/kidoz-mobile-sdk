@@ -122,7 +122,36 @@ jobs:
                   else
                       echo "No changelog entry provided; skipping."
                   fi
+            - name: Update sample app dependency
+              if: ${{ github.event.inputs.mediation == '' }}
+              run: |
+                  VERSION="${{ github.event.inputs.version }}"
+                  OS_KEY="$(echo "${{ github.event.inputs.os }}" | tr -d '[:space:]' | tr -d '\r')"
 
+                  if [ "$OS_KEY" = "android" ]; then
+                    DEPENDENCY_FILE="$TARGET_PATH/sample-app/app/build.gradle"
+                    if [ ! -f "$DEPENDENCY_FILE" ]; then
+                      echo "File $DEPENDENCY_FILE not found!"
+                      exit 1
+                    fi
+                    # Replace the Kidoz SDK version dynamically
+                    sed -i "s/\(net.kidoz.sdk:kidoz-android-native:\).*/\1$VERSION/" "$DEPENDENCY_FILE"
+                    echo "Updated Kidoz SDK version to $VERSION in $DEPENDENCY_FILE"
+
+                  elif [ "$OS_KEY" = "ios" ]; then
+                    PODFILE="$TARGET_PATH/SampleApp/Podfile"
+                    if [ ! -f "$PODFILE" ]; then
+                      echo "Podfile $PODFILE not found!"
+                      exit 1
+                    fi
+                    # Replace the Kidoz SDK version dynamically in the pod definition
+                    sed -i "s/\(pod 'KidozSDK',\s*'\).*\('\)/\1$VERSION\2/" "$PODFILE"
+                    echo "Updated Kidoz SDK version to $VERSION in $PODFILE"
+
+                  else
+                    echo "Unknown OS: $OS_KEY"
+                    exit 1
+                  fi
             - name: Create branch
               run: |
                   VERSION="${{ github.event.inputs.version }}"
