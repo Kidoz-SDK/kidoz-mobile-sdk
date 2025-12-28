@@ -137,7 +137,7 @@ jobs:
                       # Replace the Kidoz SDK version dynamically
                       sed -i "s/\(net.kidoz.sdk:kidoz-android-native:\)[^']*/\1$VERSION/" "$DEPENDENCY_FILE"
 
-                      sed -i "s/\(versionName[[:space:]]*\"[^\"]*\)/\1$VERSION/" "$DEPENDENCY_FILE"
+                      sed -i "s/\(versionName[[:space:]]*\)\"[^\"]*\"/\1\"$VERSION\"/" "$DEPENDENCY_FILE"
                       
                       echo "Updated Kidoz SDK version to $VERSION in $DEPENDENCY_FILE"
 
