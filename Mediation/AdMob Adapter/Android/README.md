@@ -9,7 +9,7 @@ Include the following inside your app build.gradle dependencies:
 
 ```java
 dependencies {
-    implementation "net.kidoz.sdk:kidoz-android-admob-adapter:2.0.2"
+    implementation "net.kidoz.sdk:kidoz-android-admob-adapter:10.1.6"
 }
 ```
 Follow instructions on how to [Set Up Custom Events](https://developers.google.com/admob/android/custom-events/setup#create) on the AdMob dashboard and set up Kidoz's adapter class:
