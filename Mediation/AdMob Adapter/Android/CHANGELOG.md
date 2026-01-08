@@ -1,5 +1,14 @@
 # Changelog
 
+
+## 10.1.6 - Jan 08, 2026
+- Merged in hotfix/bannerLifecycle (pull request #4)
+
+Hotfix/bannerLifecycle
+
+Approved-by: Kfir Eliyahu
+
+
 ## 2.0.1 - Mar 19, 2025
 
 * Updated to use Kidoz SDK v10.0.1
