@@ -2,7 +2,8 @@
 
 
 ## 2.0.3 - Jan 11, 2026
-- * Fix Banner not showing
+
+* Fix Banner not showing
 
 
 ## 2.0.1 - Mar 19, 2025
