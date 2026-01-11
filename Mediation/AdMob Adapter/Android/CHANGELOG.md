@@ -1,5 +1,10 @@
 # Changelog
 
+
+## 2.0.3 - Jan 11, 2026
+- * Fix Banner not showing
+
+
 ## 2.0.1 - Mar 19, 2025
 
 * Updated to use Kidoz SDK v10.0.1
