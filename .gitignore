@@ -17,3 +17,50 @@ DerivedData/
 
 Direct/Unity/SampleApp/Build
 Direct/Unity/SampleApp/Build_BurstDebugInformation_DoNotShip
+
+
+# =========================
+# Android / Android Studio
+# =========================
+
+# Built application files
+*.apk
+*.aab
+
+# Gradle
+.gradle/
+build/
+
+# Local configuration
+local.properties
+
+# Android Studio / IntelliJ
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Keystore files (DO NOT COMMIT)
+*.jks
+*.keystore
+
+# Logs
+*.log
+
+# Native build
+.cxx/
+.externalNativeBuild/
+
+# Lint
+lint/intermediates/
+lint/generated/
+lint/outputs/
+lint/tmp/
+lint/reports/
+
+# Coverage
+*.ec
+*.exec
+
+# Kotlin
+.kotlin/
