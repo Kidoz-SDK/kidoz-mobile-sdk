@@ -8,7 +8,7 @@ Check out the [Max Mediation Documentation](https://dash.applovin.com/documentat
 
 To add the adapter to your project with CocoaPods:
 ```
-pod 'KidozApplovinAdapter', {{VERSION}}
+pod 'KidozApplovinAdapter', '{{VERSION}}'
 ```
 ## iOS SKAdNetwork Support
 
