@@ -1,6 +1,12 @@
 # Changelog
 
 
+## 10.1.5 - Feb 09, 2026
+- Fix production build configuration
+
+
+
+
 ## 10.1.4 - Feb 09, 2026
 - Make Bid confirmWin and confirmLoss methods public on OBJC
 
