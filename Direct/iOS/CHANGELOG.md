@@ -2,7 +2,7 @@
 
 
 ## 10.1.4 - Feb 09, 2026
-- * Make Bid confirmWin and confirmLoss methods public on OBJC
+- Make Bid confirmWin and confirmLoss methods public on OBJC
 
 
 ## 10.1.3 - Nov 23, 2025
