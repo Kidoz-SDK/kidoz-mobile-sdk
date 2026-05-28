@@ -1,0 +1,16 @@
+<dependencies>
+  <androidPackages>
+    <androidPackage spec="net.kidoz.sdk:kidoz-android-admob-adapter:2.0.3">
+      <repositories>
+        <repository>https://repo.maven.apache.org/maven2/</repository>
+      </repositories>
+    </androidPackage>
+  </androidPackages>
+  <iosPods>
+    <iosPod name="KidozAdmobAdapter" version="2.0.0">
+      <sources>
+        <source>https://github.com/CocoaPods/Specs</source>
+      </sources>
+    </iosPod>
+  </iosPods>
+</dependencies>
