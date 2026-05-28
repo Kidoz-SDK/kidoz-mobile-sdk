@@ -6,7 +6,7 @@ Check out the [ironSource Integration Documentation](https://developers.is.com/i
 
 ## Integration Steps:
 
-Download and import [KidozIronsourceAdapter.unitypackage](Mediation/IronSource%20LevelPlay%20Adapter/Unity/KidozIronsourceAdapter.unitypackage) into your Project's Asset Folder.
+Download and import [KidozIronSourceAdapter.unitypackage](Mediation/IronSource%20LevelPlay%20Adapter/Unity/KidozIronSourceAdapter.unitypackage) into your Project's Asset Folder.
 	
 ## iOS integration
 
