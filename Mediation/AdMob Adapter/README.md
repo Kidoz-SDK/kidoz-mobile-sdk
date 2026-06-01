@@ -35,7 +35,7 @@ Click the Select a mapping drop down
 On the Add mapping step set the Class Name and Parameter fields:<BR>
 
 - For iOS set the following full path in the `Class Name` field: </br>
-`KidozAdMobAdapter`
+`KidozAdmobAdapter`
 
 - For Android set the following full path in the `Class Name` field: </br>
 `com.kidoz.mediation.admob.adapters.KidozAdMobAdapter`
