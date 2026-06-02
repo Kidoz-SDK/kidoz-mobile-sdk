@@ -154,6 +154,7 @@ namespace KidozSDK
 			print ( "Kidoz | init:" + developerID + "," + securityToken /*+ "," + "-->" + instance.PublisherID + "," + instance.SecurityToken*/ );
 			GameObject gameObject = new GameObject("KidozObject");
 			instance = gameObject.AddComponent<Kidoz>();
+			DontDestroyOnLoad(gameObject); // Keep across scenes
 			kidozin.init ( developerID, securityToken,PLUGIN_VERSION );
 		}
 		
