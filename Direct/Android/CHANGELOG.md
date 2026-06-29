@@ -2,7 +2,7 @@
 
 
 ## 10.1.8 - Jun 29, 2026
-- Fixed ad caching reset issue
+- Fix ad caching reset issue
 
 
 
