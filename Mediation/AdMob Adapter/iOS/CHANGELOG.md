@@ -1,5 +1,10 @@
 # Changelog
 
+
+## 2.0.1 - Jul 27, 2026
+- Fixed failure callback not being triggered when show() is called before an ad has finished loading.
+
+
 ## 1.2.0 - Apr 7, 2025
 
 * Build with iOS 16.2
