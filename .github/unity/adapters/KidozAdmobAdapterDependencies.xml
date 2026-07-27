@@ -7,7 +7,7 @@
     </androidPackage>
   </androidPackages>
   <iosPods>
-    <iosPod name="KidozAdmobAdapter" version="2.0.0">
+    <iosPod name="KidozAdmobAdapter" version="2.0.1">
       <sources>
         <source>https://github.com/CocoaPods/Specs</source>
       </sources>
