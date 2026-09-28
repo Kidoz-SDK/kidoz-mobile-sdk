@@ -38,16 +38,18 @@ On the Add mapping step set the Class Name and Parameter fields:<BR>
 `KidozAdmobAdapter`
 
 - For Android set the following full path in the `Class Name` field: </br>
-`com.kidoz.mediation.admob.adapters.KidozAdMobAdapter`
+`net.kidoz.mediation.admob.adapters.KidozAdMobAdapter`
+
+  > Adapter versions before 3.0.0 used `com.kidoz.mediation.admob.adapters.KidozAdMobAdapter`. That name still works but is deprecated — update existing mappings to the new name.
 
 - Set the following json string in the `Parameter (optional)` field: </br>
 `{"AppID":"publisherId", "Token":"publisherToken"}`
 
-- Replace `publisherId` and `publisherToken` with the credentials received during [Kidoz's Publisher onboarding](http://accounts.kidoz.net/publishers/register?utm_source=prado_github).
+- Replace `publisherId` and `publisherToken` with the credentials received during [Kidoz's Publisher onboarding](http://accounts.kidoz.net/publishers/register?utm_source=kidoz_github).
 
 <img width="800" src="https://raw.githubusercontent.com/Kidoz-SDK/kidoz-mobile-sdk/refs/heads/docs/Mediation/AdMob%20Adapter/CustomEvent3.png"> 
 
-You will need to define your Admob Ad Units CPM and align them with Kidoz eCPM displayed in your Kidoz dashboard. Contact a Prado publisher representative for more information at sdk@kidoz.net
+You will need to define your Admob Ad Units CPM and align them with Kidoz eCPM displayed in your Kidoz dashboard. Contact a Kidoz publisher representative for more information at sdk@kidoz.net
 
 ## Important note:
 While mapping the Kidoz Ad unit on Admob, it is highly recommended to run some JSON validator on the parameters passed to the Class name (AppID and Token). This method may minimize parsing mistakes that may arise on initial connection.

@@ -1,7 +1,11 @@
 # Kidoz Applovin Adapters
 
-The Kidoz Applovin Max Adapter was built and tested with AppLovinSDK v12.6.0.<BR>
-The minimum supported Xcode version is 14.1.<BR><BR>
+## Requirements
+- iOS 14.0 or higher
+- Xcode 26.2 or higher
+- Kidoz iOS SDK 11.x
+- AppLovin MAX SDK 13.6.0 or higher
+
 Check out the [Max Mediation Documentation](https://dash.applovin.com/documentation/mediation/ios/getting-started/integration) for app level integration.
 
 ## Integration Steps:
@@ -9,6 +13,11 @@ Check out the [Max Mediation Documentation](https://dash.applovin.com/documentat
 To add the adapter to your project with CocoaPods:
 ```
 pod 'KidozApplovinAdapter', '{{VERSION}}'
+```
+
+To add it with Swift Package Manager, open **File > Add Package Dependencies…** in Xcode, enter the package URL below, set the dependency rule to **Exact Version** `{{VERSION}}`, and add the `KidozApplovinAdapter` product to your app target:
+```
+https://github.com/Kidoz-SDK/kidoz-applovin-adapter-swift-package
 ```
 ## iOS SKAdNetwork Support
 

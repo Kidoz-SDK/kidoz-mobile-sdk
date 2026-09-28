@@ -1,5 +1,8 @@
 # Kidoz Android Mobile SDK
 
+## Requirements
+- Android API level 21 or higher
+
 ## Getting Started:
 
 #### Include the following inside your app build.gradle dependencies:
@@ -39,6 +42,13 @@ protected void onCreate(Bundle savedInstanceState)
 }
 ```
 
+## Verbose Logging
+Verbose logging is off by default. Turn it on while integrating to see detailed SDK logs in Logcat, and turn it off before publishing your app.
+
+```kotlin
+Kidoz.setVerboseLogging(true)
+```
+
 ## Kidoz Interstitial
 The KidozInterstitialAd is a full screen single ad unit.
 
@@ -47,9 +57,9 @@ The KidozInterstitialAd is a full screen single ad unit.
 To use the Interstitial Ad you first need to load an Ad instance with an KidozInterstitialAdCallback listener :
 
 ```java
-val mInterstitialAd : KidozInterstitialAd? = null
+var kidozInterstitialAd: KidozInterstitialAd? = null
 
-KidozInterstitialAd.load(this, object : KidozInterstitialAdCallback {
+KidozInterstitialAd.load(object : KidozInterstitialAdCallback {
     override fun onAdLoaded(ad: KidozInterstitialAd) {
         kidozInterstitialAd = ad
     }
@@ -63,7 +73,7 @@ KidozInterstitialAd.load(this, object : KidozInterstitialAdCallback {
     }
 
     override fun onAdFailedToShow(ad: KidozInterstitialAd, error: KidozError) {
-        pradoInterstitialAd = null
+        kidozInterstitialAd = null
     }
 
     override fun onAdImpression(ad: KidozInterstitialAd) {
@@ -82,7 +92,7 @@ KidozInterstitialAd.load(this, object : KidozInterstitialAdCallback {
 In order to show the ad once it is loaded call:
 
 ```java
-mInterstitialAd.show();
+kidozInterstitialAd?.show();
 ```
 
 ## Kidoz Rewarded
@@ -95,7 +105,7 @@ To use the Rewarded Ad you first need to load an Ad instance with a KidozRewarde
 ```java
 var kidozRewardedAd: KidozRewardedAd? = null
 
-KidozRewardedAd.load(this, object : KidozRewardedAdCallback {
+KidozRewardedAd.load(object : KidozRewardedAdCallback {
     override fun onAdLoaded(ad: KidozRewardedAd) {
         kidozRewardedAd = ad
     }
@@ -121,7 +131,7 @@ KidozRewardedAd.load(this, object : KidozRewardedAdCallback {
     }
 
     override fun onAdClosed(ad: KidozRewardedAd) {
-        pradoRewardedAd = null
+        kidozRewardedAd = null
     }
 
 })
@@ -132,7 +142,7 @@ KidozRewardedAd.load(this, object : KidozRewardedAdCallback {
 In order to show the ad once it is loaded call:
 
 ```java
-mRewardedAd.show();
+kidozRewardedAd?.show();
 ```
 
 ## Kidoz Banner
@@ -235,5 +245,5 @@ kidozBannerView.show();
 
 * To hide banner:
 ```java
-kidozBannerView.cloas(); 
+kidozBannerView.close(); 
 ```
