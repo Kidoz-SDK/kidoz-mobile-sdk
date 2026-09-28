@@ -13,6 +13,11 @@ Add the following line to your Podfile:
 pod 'KidozSDK', '{{VERSION}}'
 ```
 
+To add it with Swift Package Manager, open **File > Add Package Dependencies…** in Xcode, enter the package URL below, set the dependency rule to **Exact Version** `{{VERSION}}`, and add the `KidozSDK` product to your app target:
+```
+https://github.com/Kidoz-SDK/kidoz-sdk-swift-package
+```
+
 ## API Usage and Sample App
 
 See the following API integration documents:

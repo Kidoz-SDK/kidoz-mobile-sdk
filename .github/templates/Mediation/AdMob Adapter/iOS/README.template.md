@@ -14,6 +14,11 @@ To add Kidoz Admob Adapter to your project with CocoaPods:
 pod 'KidozAdmobAdapter', '{{VERSION}}'
 ```
 
+To add it with Swift Package Manager, open **File > Add Package Dependencies…** in Xcode, enter the package URL below, set the dependency rule to **Exact Version** `{{VERSION}}`, and add the `KidozAdmobAdapter` product to your app target:
+```
+https://github.com/Kidoz-SDK/kidoz-admob-adapter-swift-package
+```
+
 Follow instructions on how to [Set Up Custom Events](https://developers.google.com/admob/ios/custom-events/setup#create) on the AdMob dashboard and set up Kidoz's adapter class:
 
 - Set the following full path in the `Class Name` field: </br>
