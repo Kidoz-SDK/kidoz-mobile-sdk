@@ -1,7 +1,11 @@
 # Kidoz Applovin Adapters
 
-The Kidoz Applovin Max Adapter was built and tested with AppLovinSDK v12.6.0.<BR>
-The minimum supported Xcode version is 14.1.<BR><BR>
+## Requirements
+- iOS 14.0 or higher
+- Xcode 26.2 or higher
+- Kidoz iOS SDK 11.x
+- AppLovin MAX SDK 13.6.0 or higher
+
 Check out the [Max Mediation Documentation](https://dash.applovin.com/documentation/mediation/ios/getting-started/integration) for app level integration.
 
 ## Integration Steps:

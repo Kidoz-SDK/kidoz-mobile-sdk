@@ -1,7 +1,10 @@
 # Kidoz iOS Mobile SDK
 
-Kidoz SDK is compatible with iOS 11.0 and above and is written in Objective-C and Swift.<BR>
-Minimum supported Xcode version is 14.1.
+## Requirements
+- iOS 14.0 or higher
+- Xcode 26.2 or higher
+
+Kidoz SDK is written in Objective-C and Swift.
 
 ## Getting Started
 
