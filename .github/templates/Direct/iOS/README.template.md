@@ -22,6 +22,16 @@ See the following API integration documents:
 
 Or look into our [SampleApp Workspace](/Direct/iOS/SampleApp).
 
+## Verbose Logging
+Verbose logging is off by default. Turn it on while integrating to see detailed SDK logs in the Xcode console, and turn it off before publishing your app.
+
+```Swift
+Kidoz.setVerboseLogging(true)
+```
+```objc
+[Kidoz setVerboseLogging:YES];
+```
+
 ## SKAdNetwork Support
 
 Please make sure to include the Kidoz ad network ID in your app property list file (Info.plist):

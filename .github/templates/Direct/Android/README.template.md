@@ -42,6 +42,13 @@ protected void onCreate(Bundle savedInstanceState)
 }
 ```
 
+## Verbose Logging
+Verbose logging is off by default. Turn it on while integrating to see detailed SDK logs in Logcat, and turn it off before publishing your app.
+
+```kotlin
+Kidoz.setVerboseLogging(true)
+```
+
 ## Kidoz Interstitial
 The KidozInterstitialAd is a full screen single ad unit.
 
