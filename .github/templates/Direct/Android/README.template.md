@@ -52,7 +52,7 @@ To use the Interstitial Ad you first need to load an Ad instance with an KidozIn
 ```java
 val mInterstitialAd : KidozInterstitialAd? = null
 
-KidozInterstitialAd.load(this, object : KidozInterstitialAdCallback {
+KidozInterstitialAd.load(object : KidozInterstitialAdCallback {
     override fun onAdLoaded(ad: KidozInterstitialAd) {
         kidozInterstitialAd = ad
     }
@@ -98,7 +98,7 @@ To use the Rewarded Ad you first need to load an Ad instance with a KidozRewarde
 ```java
 var kidozRewardedAd: KidozRewardedAd? = null
 
-KidozRewardedAd.load(this, object : KidozRewardedAdCallback {
+KidozRewardedAd.load(object : KidozRewardedAdCallback {
     override fun onAdLoaded(ad: KidozRewardedAd) {
         kidozRewardedAd = ad
     }
