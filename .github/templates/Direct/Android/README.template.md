@@ -57,7 +57,7 @@ The KidozInterstitialAd is a full screen single ad unit.
 To use the Interstitial Ad you first need to load an Ad instance with an KidozInterstitialAdCallback listener :
 
 ```java
-val mInterstitialAd : KidozInterstitialAd? = null
+var kidozInterstitialAd: KidozInterstitialAd? = null
 
 KidozInterstitialAd.load(object : KidozInterstitialAdCallback {
     override fun onAdLoaded(ad: KidozInterstitialAd) {
@@ -73,7 +73,7 @@ KidozInterstitialAd.load(object : KidozInterstitialAdCallback {
     }
 
     override fun onAdFailedToShow(ad: KidozInterstitialAd, error: KidozError) {
-        pradoInterstitialAd = null
+        kidozInterstitialAd = null
     }
 
     override fun onAdImpression(ad: KidozInterstitialAd) {
@@ -92,7 +92,7 @@ KidozInterstitialAd.load(object : KidozInterstitialAdCallback {
 In order to show the ad once it is loaded call:
 
 ```java
-mInterstitialAd.show();
+kidozInterstitialAd?.show();
 ```
 
 ## Kidoz Rewarded
@@ -131,7 +131,7 @@ KidozRewardedAd.load(object : KidozRewardedAdCallback {
     }
 
     override fun onAdClosed(ad: KidozRewardedAd) {
-        pradoRewardedAd = null
+        kidozRewardedAd = null
     }
 
 })
@@ -142,7 +142,7 @@ KidozRewardedAd.load(object : KidozRewardedAdCallback {
 In order to show the ad once it is loaded call:
 
 ```java
-mRewardedAd.show();
+kidozRewardedAd?.show();
 ```
 
 ## Kidoz Banner
@@ -245,5 +245,5 @@ kidozBannerView.show();
 
 * To hide banner:
 ```java
-kidozBannerView.cloas(); 
+kidozBannerView.close(); 
 ```
