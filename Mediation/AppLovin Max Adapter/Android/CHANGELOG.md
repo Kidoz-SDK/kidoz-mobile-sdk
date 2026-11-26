@@ -1,5 +1,10 @@
 # Changelog
 
+
+## 3.0.0 - Nov 26, 2026
+- Release 3.0.0
+
+
 ## 2.0.1 - Mar 19, 2025
 
 * Updated to use Kidoz SDK v10.0.1
