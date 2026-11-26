@@ -1,5 +1,14 @@
 # Changelog
 
+
+## 3.0.0 - Nov 26, 2026
+- Merged in release/3.0.0 (pull request #13)
+
+Release 3.0.0
+
+Approved-by: yarden
+
+
 ## 2.2.0 - Nov 11, 2025
 
 * Support LevelPlay SDK v9.+
