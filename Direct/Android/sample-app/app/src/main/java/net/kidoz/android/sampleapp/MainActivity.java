@@ -13,8 +13,8 @@ import android.widget.Toast;
 
 import net.kidoz.ads.banner.KidozBannerAdCallback;
 import net.kidoz.ads.banner.KidozBannerView;
-import net.kidoz.ads.fullscreen.interstial.KidozInterstitialAd;
-import net.kidoz.ads.fullscreen.interstial.KidozInterstitialAdCallback;
+import net.kidoz.ads.fullscreen.interstitial.KidozInterstitialAd;
+import net.kidoz.ads.fullscreen.interstitial.KidozInterstitialAdCallback;
 import net.kidoz.ads.fullscreen.rewarded.KidozRewardedAd;
 import net.kidoz.ads.fullscreen.rewarded.KidozRewardedAdCallback;
 import net.kidoz.sdk.Kidoz;
