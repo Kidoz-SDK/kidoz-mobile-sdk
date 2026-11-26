@@ -1,6 +1,11 @@
 # Changelog
 
 
+## 11.0.0 - Nov 26, 2026
+- Release 11.0.0
+
+
+
 ## 10.1.9 - Jul 14, 2026
 - Stability fixes
 
