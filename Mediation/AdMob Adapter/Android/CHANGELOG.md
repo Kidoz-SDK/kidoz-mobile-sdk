@@ -2,11 +2,7 @@
 
 
 ## 3.0.0 - Nov 26, 2026
-- Merged in release/3.0.0 (pull request #22)
-
-Release 3.0.0
-
-Approved-by: yarden
+- Release 3.0.0
 
 
 

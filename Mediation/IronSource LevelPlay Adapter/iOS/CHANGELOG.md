@@ -1,5 +1,8 @@
 # Changelog
 
+## 3.0.0 - Nov 26, 2026
+- Release 3.0.0
+
 ## 2.2.0 - Nov 11, 2025
 
 * Support LevelPlay SDK v9.+
