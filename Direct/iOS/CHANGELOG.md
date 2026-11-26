@@ -1,6 +1,12 @@
 # Changelog
 
 
+## 11.0.0 - Nov 26, 2026
+- Release 11.0.0
+
+
+
+
 ## 10.1.5 - Feb 09, 2026
 - Fix production build configuration
 
