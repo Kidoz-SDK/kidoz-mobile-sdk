@@ -13,7 +13,7 @@
 
 ## 2.0.0 - Jan 6, 2025
 
-* Update  Kidox SDK to v10.0.0
+* Update Kidoz SDK to v10.0.0
   
 ## 1.4.0 - Apr 7, 2025
 

@@ -6,6 +6,14 @@
 
 
 
+## 2.0.1 - Feb 19, 2025
+
+* Fix intermittent crash on Kidoz SDK init
+
+## 2.0.0 - Jan 6, 2025
+
+* Updated to use Kidoz SDK v10.0.0
+
 ## 1.2.0 - Apr 7, 2025
 
 * Build with iOS 16.2
