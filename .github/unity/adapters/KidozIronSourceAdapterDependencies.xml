@@ -7,7 +7,7 @@
     </androidPackage>
   </androidPackages>
   <iosPods>
-    <iosPod name="KidozIronSourceAdapter" version="2.2.0">
+    <iosPod name="KidozIronSourceAdapter" version="3.0.0">
       <sources>
         <source>https://github.com/CocoaPods/Specs</source>
       </sources>
