@@ -13,8 +13,8 @@ import android.widget.Toast;
 
 import net.kidoz.ads.banner.KidozBannerAdCallback;
 import net.kidoz.ads.banner.KidozBannerView;
-import net.kidoz.ads.fullscreen.interstial.KidozInterstitialAd;
-import net.kidoz.ads.fullscreen.interstial.KidozInterstitialAdCallback;
+import net.kidoz.ads.fullscreen.interstitial.KidozInterstitialAd;
+import net.kidoz.ads.fullscreen.interstitial.KidozInterstitialAdCallback;
 import net.kidoz.ads.fullscreen.rewarded.KidozRewardedAd;
 import net.kidoz.ads.fullscreen.rewarded.KidozRewardedAdCallback;
 import net.kidoz.sdk.Kidoz;
@@ -153,7 +153,7 @@ public class MainActivity extends Activity {
     // Kidoz Interstitial
 
     protected void loadInterstitial(){
-        KidozInterstitialAd.load(MainActivity.this, new KidozInterstitialAdCallback() {
+        KidozInterstitialAd.load(new KidozInterstitialAdCallback() {
             @Override
             public void onAdLoaded(KidozInterstitialAd ad) {
                 mInterstitialAd = ad;
@@ -231,7 +231,7 @@ public class MainActivity extends Activity {
     // Kidoz Rewarded
 
     protected void loadRewarded(){
-        KidozRewardedAd.load(MainActivity.this, new KidozRewardedAdCallback() {
+        KidozRewardedAd.load(new KidozRewardedAdCallback() {
             @Override
             public void onAdLoaded(KidozRewardedAd ad) {
                 mRewardedAd = ad;

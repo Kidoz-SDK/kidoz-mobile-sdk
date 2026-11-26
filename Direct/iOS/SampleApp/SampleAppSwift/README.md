@@ -217,7 +217,8 @@ KidozInterstitialAd.load(bid: kidozBid, delegate: self)
 KidozRewardedAd.load(bid: kidozBid, delegate: self)
 
 // Banner
-bannerView.load(bid: kidozBid, delegate: self)
+bannerView.delegate = self
+bannerView.load(kidozBid)
 ```
 
 You continue to implement the same delegate callbacks (`KidozInterstitialDelegate`, `KidozRewardedDelegate`, `KidozBannerDelegate`) to receive load/show/close events as with the standard loading methods.

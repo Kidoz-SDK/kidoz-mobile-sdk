@@ -1,6 +1,13 @@
 # Changelog
 
 
+## 3.0.0 - Nov 26, 2026
+- Requires Kidoz iOS SDK 11.x and Google Mobile Ads SDK 13.7.0 or higher
+- Requires iOS 14.0 or higher and Xcode 26.2 or higher
+
+
+
+
 ## 2.0.1 - Jul 27, 2026
 - Removed possible impression callback discrepancies.
 

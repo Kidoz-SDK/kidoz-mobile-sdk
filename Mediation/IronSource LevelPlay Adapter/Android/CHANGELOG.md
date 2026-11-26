@@ -1,12 +1,13 @@
 # Changelog
 
+
+## 3.0.0 - Nov 26, 2026
+- Requires Kidoz Android SDK 11.x and ironSource LevelPlay SDK 9.4.2 or higher
+
+
 ## 2.2.0 - Nov 11, 2025
 
 * Support LevelPlay SDK v9.+
-  
-## 2.1.0 - Jun 18, 2025
-
-* Fix lifecycle issues on full screen ads
   
 ## 2.1.0 - Jun 18, 2025
 

@@ -1,12 +1,22 @@
 # Kidoz Admob iOS Adapter
-The Kidoz Admob adapter was built and tested with Google-Mobile-Ads-SDK v10.8.0.<BR>
-The minimum supported Xcode version is 14.1.<BR><BR>
+
+## Requirements
+- iOS 14.0 or higher
+- Xcode 26.2 or higher
+- Kidoz iOS SDK 11.x
+- Google Mobile Ads SDK 13.7.0 or higher
+
 Check out the [Admob Mediation Documentation](https://developers.google.com/admob/ios/quick-start) for app level integration.
 
 ## Integration Steps:
 To add Kidoz Admob Adapter to your project with CocoaPods:
 ```
 pod 'KidozAdmobAdapter', '{{VERSION}}'
+```
+
+To add it with Swift Package Manager, open **File > Add Package Dependencies…** in Xcode, enter the package URL below, set the dependency rule to **Exact Version** `{{VERSION}}`, and add the `KidozAdmobAdapter` product to your app target:
+```
+https://github.com/Kidoz-SDK/kidoz-admob-adapter-swift-package
 ```
 
 Follow instructions on how to [Set Up Custom Events](https://developers.google.com/admob/ios/custom-events/setup#create) on the AdMob dashboard and set up Kidoz's adapter class:

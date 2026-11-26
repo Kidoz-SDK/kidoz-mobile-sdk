@@ -1,13 +1,21 @@
 # Kidoz iOS Mobile SDK
 
-Kidoz SDK is compatible with iOS 11.0 and above and is written in Objective-C and Swift.<BR>
-Minimum supported Xcode version is 14.1.
+## Requirements
+- iOS 14.0 or higher
+- Xcode 26.2 or higher
+
+Kidoz SDK is written in Objective-C and Swift.
 
 ## Getting Started
 
 Add the following line to your Podfile:
 ```
 pod 'KidozSDK', '{{VERSION}}'
+```
+
+To add it with Swift Package Manager, open **File > Add Package Dependencies…** in Xcode, enter the package URL below, set the dependency rule to **Exact Version** `{{VERSION}}`, and add the `KidozSDK` product to your app target:
+```
+https://github.com/Kidoz-SDK/kidoz-sdk-swift-package
 ```
 
 ## API Usage and Sample App
@@ -18,6 +26,16 @@ See the following API integration documents:
 - [Objective-C](/Direct/iOS/SampleApp/SampleAppObjc)
 
 Or look into our [SampleApp Workspace](/Direct/iOS/SampleApp).
+
+## Verbose Logging
+Verbose logging is off by default. Turn it on while integrating to see detailed SDK logs in the Xcode console, and turn it off before publishing your app.
+
+```Swift
+Kidoz.setVerboseLogging(true)
+```
+```objc
+[Kidoz setVerboseLogging:YES];
+```
 
 ## SKAdNetwork Support
 

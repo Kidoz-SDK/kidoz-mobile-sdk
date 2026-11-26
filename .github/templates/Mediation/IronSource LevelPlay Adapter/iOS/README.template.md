@@ -1,7 +1,11 @@
 # Kidoz ironSource iOS Adapter
 
-The Kidoz ironSource Adapter SDK was tested with ironSource mediation v8.1.0.0.<BR> 
-The minimum supported Xcode version is 14.3.1.<BR><BR>
+## Requirements
+- iOS 14.0 or higher
+- Xcode 26.2 or higher
+- Kidoz iOS SDK 11.x
+- ironSource LevelPlay SDK 9.4.1 or higher
+
 Check out the [ironSource Integration Documentation](https://developers.is.com/ironsource-mobile/ios/ios-sdk/) for app level integration.
 
 ## Integration Steps:
@@ -9,6 +13,11 @@ Check out the [ironSource Integration Documentation](https://developers.is.com/i
 To add Kidoz ironSource Adapter to your project with CocoaPods:
 ```
 pod 'KidozIronSourceAdapter', '{{VERSION}}'
+```
+
+To add it with Swift Package Manager, open **File > Add Package Dependencies…** in Xcode, enter the package URL below, set the dependency rule to **Exact Version** `{{VERSION}}`, and add the `KidozIronSourceAdapter` product to your app target:
+```
+https://github.com/Kidoz-SDK/kidoz-levelplay-adapter-swift-package
 ```
 
 ## iOS SKAdNetwork Support

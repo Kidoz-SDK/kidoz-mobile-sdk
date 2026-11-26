@@ -1,6 +1,12 @@
 # Changelog
 
 
+## 3.0.0 - Nov 26, 2026
+- Requires Kidoz Android SDK 11.x and Google Mobile Ads SDK 23.2.0 or higher
+- The custom event class is now `net.kidoz.mediation.admob.adapters.KidozAdMobAdapter`; the old `com.kidoz.mediation.admob.adapters.KidozAdMobAdapter` still works but is deprecated
+
+
+
 ## 2.0.4 - May 27, 2026
 - Support GMA Next-Gen SDK
 
