@@ -2,7 +2,9 @@
 
 
 ## 11.0.0 - Nov 26, 2026
-- Release 11.0.0
+- Breaking: the interstitial classes moved to `net.kidoz.ads.fullscreen.interstitial` (was `net.kidoz.ads.fullscreen.interstial`); update your imports
+- `KidozInterstitialAd.load` and `KidozRewardedAd.load` no longer need an Activity: call `load(callback)`. The Activity overloads are deprecated
+- Add `Kidoz.setVerboseLogging(Boolean)` to turn detailed SDK logs on while integrating
 
 
 

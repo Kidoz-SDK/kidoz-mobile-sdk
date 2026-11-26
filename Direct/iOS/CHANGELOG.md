@@ -2,7 +2,8 @@
 
 
 ## 11.0.0 - Nov 26, 2026
-- Release 11.0.0
+- Requires iOS 14.0 or higher and Xcode 26.2 or higher
+- Add `Kidoz.setVerboseLogging(_:)` (`[Kidoz setVerboseLogging:]`) to turn detailed SDK logs on while integrating
 
 
 

@@ -2,7 +2,7 @@
 
 
 ## 3.0.0 - Nov 26, 2026
-- Release 3.0.0
+- Requires Kidoz Android SDK 11.x and ironSource LevelPlay SDK 9.4.2 or higher
 
 
 ## 2.2.0 - Nov 11, 2025
