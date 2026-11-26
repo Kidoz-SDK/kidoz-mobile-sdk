@@ -1,5 +1,11 @@
 # Changelog
 
+
+## 3.0.0 - Nov 26, 2026
+- Release 3.0.0
+
+
+
 ## 1.2.0 - Apr 7, 2025
 
 * Build with iOS 16.2
